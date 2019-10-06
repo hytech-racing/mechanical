@@ -8,21 +8,33 @@ close all
 load Drive_Cycles/Schedule_Endurance_22km.mat;
 
 %Vehicle Parameters
-Vehicle_Mass = 260;                 % Vehicle Mass with Driver, [kg]
+Vehicle_Mass = 241;                 % Vehicle Mass with Driver, [kg]
 Vehicle_CG_in = 14;                 % Vehicle CG, [in]
 Vehicle_FrontToCG_in = 30.25;       % Vehicle Front Axle to CG, [in]
 Vehicle_RearToCG_in = 30.25;        % Vehicle Rear Axle to CG, [in]
 Vehicle_Cd = 1.17;                  % Vehicle Drag Coefficient, [-]
 Vehicle_Frontal_Area = 1.18;        % Vehicle Frontal Area, [m^2]
 Vehicle_Tire_Radius = 0.2286;       % Tire radius, [m] (9 inch)
-Vehicle_Tire_Inertia = 0.26;        % Tire Inertia, [kg-m^2]
-Vehicle_DShaft_Inertia = 0.2;       % Driveshaft Inertia, [kg-m^2]
+Wheel_Inertia = 0.02179531;         % Wheel Inertia, [kg-m^2]
+Tire_Inertia = 0.193286;            % Tire Inertia, [kg-m^2]
+Wheel_Plus_Tire_Inertia = Wheel_Inertia + Tire_Inertia;         % Combined Wheel-Tire Inertia, [kg-m^2]
+Vehicle_DShaft_Inertia = 0.00000646177;% Halfshaft Inertia, [kg-m^2]
 
-%MG Parameters
+%Drivetrain Parameters
+Big_Sprocket_Inertia = 0.0013908562;            % Big Sprocket Inertia, [kg-m^2]
+Little_Sprocket_Inertia = 0.00000291714;        % Little Sprocket Inertia, [kg-m^2]
+Differential_Inertia = 0.0021039697;            % Differential Inertia, [kg-m^2]
+Inner_Piece_Bearings_Inertia = 0.00007933483;   % Inner Piece of Bearings Inertia, [kg-m^2]
+Sprocket_Interface_Inertia = 0.00008432517;     % Sprocket Interface Inertia, [kg-m^2]
+Rear_Sprocket_Teeth = 41;                       % Teeth on Front Sprocket, [-]
+Front_Sprocket_Teeth = 8;                       % Teeth on Rear Sprocket, [-]
+
+%Motor Parameters
 load Component_Data/MG_Data_Continuous.mat;
-MG_Inertia = 0.0256;                % MG Inertia, [kg-m^2]
-Rear_Sprocket_Teeth = 80;           % Teeth on Front Sprocket, [-]
-Front_Sprocket_Teeth = 10;          % Teeth on Rear Sprocket, [-]
+Motor_Output_Shaft_Inertia = 0.0006116169;  % Motor Output Shaft Inertia, [kg-m^2]
+Emrax188_Rotor_Inertia = 0.0134;            % Emrax 188 Rotor Inertia, [kg-m^2]
+Emrax208_Rotor_Inertia = 0.0256;                  % Emrax 208 Rotor Inertia, [kg-m^2]
+Rotor_Inertia = Emrax188_Rotor_Inertia;     % Sprocket Interface Inertia, [kg-m^2]
 
 %Battery Parameters
 load Component_Data/Battery_Data.mat; 

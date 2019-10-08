@@ -35,6 +35,7 @@ Motor_Output_Shaft_Inertia = 0.0006116169;  % Motor Output Shaft Inertia, [kg-m^
 Emrax188_Rotor_Inertia = 0.0134;            % Emrax 188 Rotor Inertia, [kg-m^2]
 Emrax208_Rotor_Inertia = 0.0256;                  % Emrax 208 Rotor Inertia, [kg-m^2]
 Rotor_Inertia = Emrax188_Rotor_Inertia;     % Sprocket Interface Inertia, [kg-m^2]
+Equivalent_Drivetrain_Intertia = sum(Big_Sprocket_Inertia, Little_Sprocket_Inertia, Differential_Inertia, Inner_Piece_Bearings_Inertia, Sprocket_Interface_Inertia, Motor_Output_Shaft_Inertia, Emrax208_Rotor_Inertia);
 
 %Battery Parameters
 load Component_Data/Battery_Data.mat; 

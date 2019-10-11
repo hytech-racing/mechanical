@@ -21,7 +21,8 @@ Wheel_Plus_Tire_Inertia = Wheel_Inertia + Tire_Inertia;         % Combined Wheel
 Vehicle_DShaft_Inertia = 0.00004717091;% Halfshaft Inertia, [kg-m^2]
 
 %Drivetrain Parameters
-%Most Masses were estimate using the same density of alloy steel
+%For components with masses not readily available online, masses were
+%estimated using the alloy steel material density on SolidWorks
 Big_Sprocket_Inertia = 0.0013908562;            % Big Sprocket Inertia, [kg-m^2]
 Little_Sprocket_Inertia = 0.00002132185;        % Little Sprocket Inertia, [kg-m^2]
 Differential_Inertia = 0.0021039697;            % Differential Inertia, [kg-m^2]

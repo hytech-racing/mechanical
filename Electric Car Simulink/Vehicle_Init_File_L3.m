@@ -10,10 +10,10 @@ load Drive_Cycles/Schedule_Endurance_22km.mat;
 %Vehicle Parameters
 Vehicle_Mass = 241;                 % Vehicle Mass with Driver, [kg]
 Vehicle_CG_in = 14;                 % Vehicle CG, [in]
-Vehicle_FrontToCG_in = 30.25;       % Vehicle Front Axle to CG, [in]
-Vehicle_RearToCG_in = 30.25;        % Vehicle Rear Axle to CG, [in]
+Vehicle_FrontToCG_in = 19;       % Vehicle Front Axle to CG, [in]
+Vehicle_RearToCG_in = 34.6;        % Vehicle Rear Axle to CG, [in]
 Vehicle_Cd = 1.17;                  % Vehicle Drag Coefficient, [-]
-Vehicle_Frontal_Area = 1.18;        % Vehicle Frontal Area, [m^2]
+Vehicle_Frontal_Area = 1.32;        % Vehicle Frontal Area, [m^2]
 Vehicle_Tire_Radius = 0.2286;       % Tire radius, [m] (9 inch)
 Wheel_Inertia = 0.02179531;         % Wheel Inertia, [kg-m^2]
 Tire_Inertia = 0.193286;            % Tire Inertia, [kg-m^2]

@@ -18,7 +18,7 @@ Vehicle_Tire_Radius = 0.2286;       % Tire radius, [m] (9 inch)
 Wheel_Inertia = 0.02179531;         % Wheel Inertia, [kg-m^2]
 Tire_Inertia = 0.193286;            % Tire Inertia, [kg-m^2]
 Wheel_Plus_Tire_Inertia = Wheel_Inertia + Tire_Inertia;         % Combined Wheel-Tire Inertia, [kg-m^2]
-Vehicle_DShaft_Inertia = 0.00004717091;% Halfshaft Inertia, [kg-m^2]
+Halfshaft_Inertia = 0.00004717091;% Halfshaft Inertia, [kg-m^2]
 
 %Drivetrain Parameters
 %For components with masses not readily available online, masses were
@@ -35,9 +35,9 @@ Front_Sprocket_Teeth = 8;                       % Teeth on Rear Sprocket, [-]
 load Component_Data/MG_Data_Continuous.mat;
 Motor_Output_Shaft_Inertia = 0.0011480592;  % Motor Output Shaft Inertia, [kg-m^2]
 Emrax188_Rotor_Inertia = 0.0134;            % Emrax 188 Rotor Inertia, [kg-m^2]
-Emrax208_Rotor_Inertia = 0.0256;                  % Emrax 208 Rotor Inertia, [kg-m^2]
+Emrax208_Rotor_Inertia = 0.0256;            % Emrax 208 Rotor Inertia, [kg-m^2]
 Rotor_Inertia = Emrax188_Rotor_Inertia;     % Sprocket Interface Inertia, [kg-m^2]
-Equivalent_Drivetrain_Intertia = sum(Vehicle_DShaft_Inertia, Tire_Inertia, Wheel_Inertia, Big_Sprocket_Inertia, Little_Sprocket_Inertia, Differential_Inertia, Inner_Piece_Bearings_Inertia, Sprocket_Interface_Inertia, Motor_Output_Shaft_Inertia, Emrax208_Rotor_Inertia);
+Equivalent_Powertrain_Inertia = Emrax188_Rotor_Inertia + Big_Sprocket_Inertia + Little_Sprocket_Inertia + Differential_Inertia + Inner_Piece_Bearings_Inertia + Sprocket_Interface_Inertia + Motor_Output_Shaft_Inertia;
 
 %Battery Parameters
 load Component_Data/Battery_Data.mat; 

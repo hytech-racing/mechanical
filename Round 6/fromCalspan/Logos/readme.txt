@@ -1,0 +1,1 @@
+The "Red and Black" logo is the standard Calspan logo.

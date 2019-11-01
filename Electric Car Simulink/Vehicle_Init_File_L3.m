@@ -5,7 +5,7 @@ clear variables
 close all
 
 %Drive Cycle
-load Drive_Cycles/Schedule_Endurance_22km.mat;
+load Drive_Cycles/Schedule_Autocross_1km.mat;
 %Sch_Cycle
 
 %Vehicle Parameters
@@ -33,15 +33,7 @@ Rear_Sprocket_Teeth = 41;                       % Teeth on Front Sprocket, [-]
 Front_Sprocket_Teeth = 8;                       % Teeth on Rear Sprocket, [-]
 
 %Motor Parameters
-load Component_Data/MG_Data_Continuous.mat;
-
-%Variables of MG_Data_Continuous
-%MG_Eff_Current_Axis* (*Don't know if the efficiency data is updated.)
-%MG_Eff_Data*
-%MG_Eff_RPM_Axis*
-%MG_Torque_Data
-%MG_Torque_RPM_Axis 
-
+load Component_Data/MG_Data_Peak.mat;
 Motor_Output_Shaft_Inertia = 0.0011480592;  % Motor Output Shaft Inertia, [kg-m^2]
 Emrax188_Rotor_Inertia = 0.0134;            % Emrax 188 Rotor Inertia, [kg-m^2]
 Emrax208_Rotor_Inertia = 0.0256;            % Emrax 208 Rotor Inertia, [kg-m^2]
@@ -50,7 +42,8 @@ Equivalent_Powertrain_Inertia = Emrax188_Rotor_Inertia + Big_Sprocket_Inertia + 
 
 %Battery Parameters
 load Component_Data/Battery_Data.mat;
-
+Battery_R_SOC_Axis = Battery_R_SOC_Axis /100;
+Battery_OCV_SOC_Axis = Battery_OCV_SOC_Axis /100;
 %Variables of Battery_OCV_Data
 % Battery_OCV_SOC_Axis - We have these values same as the Resistance SOC
 % Battery_OCV_Temp_Axis - * Gonna ignore this until data is available
@@ -60,10 +53,10 @@ load Component_Data/Battery_Data.mat;
 % Battery_R_SOC_Axis - * SOC_IR
 % Battery_R_Temp_Axis - gonna ignore temp axis until data is available
 
-Battery_Capacity = 5800/300;        % Battery Max Capacity, [Ahr]
+Battery_Capacity = 22;        % Battery Max Capacity, [Ahr]
 Battery_Initial_SOC = 0.9;          % Battery Initial SOC, [Decimal]
-Max_Current_Charge = 250;           % Battery Charge Current Limit, [A]
-Max_Current_Discharge = -250;       % Battery Discharge Current Limit, [A]
+Max_Current_Charge = 200;           % Battery Charge Current Limit, [A]
+Max_Current_Discharge = -200;       % Battery Discharge Current Limit, [A]
 
 %Controller Parameters
 battery_soc_low = 0.1;              % Battery SOC Low Value, [Decimal]
@@ -71,3 +64,4 @@ battery_soc_high = 0.9;             % Battery SOC High Value, [Decimal]
 
 %Logging Parameters
 Logging_Sample_Time_s = 0.01;          %Logging time, [s]
+

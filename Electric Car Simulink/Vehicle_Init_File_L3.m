@@ -33,7 +33,7 @@ Rear_Sprocket_Teeth = 41;                       % Teeth on Front Sprocket, [-]
 Front_Sprocket_Teeth = 8;                       % Teeth on Rear Sprocket, [-]
 
 %Motor Parameters
-load Component_Data/MG_Data_Peak.mat;
+load Component_Data/MG_Data_Continuous.mat;
 Motor_Output_Shaft_Inertia = 0.0011480592;  % Motor Output Shaft Inertia, [kg-m^2]
 Emrax188_Rotor_Inertia = 0.0134;            % Emrax 188 Rotor Inertia, [kg-m^2]
 Emrax208_Rotor_Inertia = 0.0256;            % Emrax 208 Rotor Inertia, [kg-m^2]
@@ -55,7 +55,7 @@ Battery_OCV_SOC_Axis = Battery_OCV_SOC_Axis /100;
 
 Battery_Capacity = 22;        % Battery Max Capacity, [Ahr]
 Battery_Initial_SOC = 0.9;          % Battery Initial SOC, [Decimal]
-Max_Current_Charge = 200;           % Battery Charge Current Limit, [A]
+Max_Current_Charge = 0;           % Battery Charge Current Limit, [A]
 Max_Current_Discharge = -200;       % Battery Discharge Current Limit, [A]
 
 %Controller Parameters
@@ -65,3 +65,4 @@ battery_soc_high = 0.9;             % Battery SOC High Value, [Decimal]
 %Logging Parameters
 Logging_Sample_Time_s = 0.01;          %Logging time, [s]
 
+load Component_Data/Commanded_Torque.mat;

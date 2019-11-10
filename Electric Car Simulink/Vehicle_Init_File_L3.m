@@ -66,4 +66,5 @@ battery_soc_high = 0.9;             % Battery SOC High Value, [Decimal]
 Logging_Sample_Time_s = 0.01;          %Logging time, [s]
 
 load Component_Data/Commanded_Torque.mat;
-load Component_Data/motor_speed_data.mat;
+load Component_Data/Motor_Speed.mat;
+MG_Torque_Data = MG_Torque_Data / 2.52; % adjustment for emrax 208 Medium Voltage

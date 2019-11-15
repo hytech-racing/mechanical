@@ -53,7 +53,7 @@ Battery_OCV_SOC_Axis = Battery_OCV_SOC_Axis /100;
 % Battery_R_SOC_Axis - * SOC_IR
 % Battery_R_Temp_Axis - gonna ignore temp axis until data is available
 
-Battery_Capacity = 22;        % Battery Max Capacity, [Ahr]
+Battery_Capacity = 16;        % Battery Max Capacity, [Ahr]
 Battery_Initial_SOC = 0.9;          % Battery Initial SOC, [Decimal]
 Max_Current_Charge = 0;           % Battery Charge Current Limit, [A]
 Max_Current_Discharge = -200;       % Battery Discharge Current Limit, [A]
@@ -67,4 +67,5 @@ Logging_Sample_Time_s = 0.01;          %Logging time, [s]
 
 load Component_Data/Commanded_Torque.mat;
 load Component_Data/Motor_Speed.mat;
-MG_Torque_Data = MG_Torque_Data / 2.52; % adjustment for emrax 208 Medium Voltage
+MG_Torque_Data = MG_Torque_Data / (2.52+0.33); % adjustment for emrax 208 Medium Voltage
+MG_Eff_Torque_Axis = MG_Eff_Torque_Axis / (2.52+0.33);

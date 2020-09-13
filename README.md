@@ -56,7 +56,7 @@ Schedule_Endurance_22km.mat -- This is a drive cycle for the endurance event.  I
 
 
 ## More Information
-* [Software Guide](https://docs.google.com/document/d/1GRkLYabQtMDBhLXM44oBZ6nKhDef6TY2_k2GFT-w2gI/edit?usp=sharing)
+* [Software Guide](https://github.com/hytech-racing/training/tree/master/Resources)
 * [Team Site](https://hytechracing.gatech.edu/)
 * [Facebook](https://www.facebook.com/HyTechRacing/)
 * [Engage](https://gatech.campuslabs.com/engage/organization/hytech-racing)

@@ -10,7 +10,7 @@ It has since been modified by Matt Weist of HyTech to more accurately fit HyTech
 Basic HyTech parameters have been added but may not be entirely accurate.  The model is relatively self-explanatory in the signal flow.
 
 ## Getting Started with this Git Repository
-1. Follow HyTech's [Software Guide](https://docs.google.com/document/d/1GRkLYabQtMDBhLXM44oBZ6nKhDef6TY2_k2GFT-w2gI/edit?usp=sharing).
+1. Follow HyTech's [Software Guide](https://github.com/hytech-racing/training/tree/master/Resources).
 2. Create a GitHub account if you don't already have one.
 3. Download and install [GitHub Desktop](https://desktop.github.com/) (basic) or [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) (advanced).
     * If you are using GitHub Desktop for the first time, be sure to read the [User Guide](https://help.github.com/desktop/guides/).

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm/R2020a">
+  <slsa.mm.MaskTree type="slsa.mm.MaskTree" uuid="294c8028-5ad7-451d-a32d-1bc15a9d799f">
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="da78ce2d-5c12-4900-992e-4c9af500be79">
+      <blockPath>EvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model</blockPath>
+      <childrenIds>EvReferenceApplication:1264:1071</childrenIds>
+      <id>EvReferenceApplication:1264</id>
+      <masks type="slsa.mm.Mask" uuid="689e322e-4a82-4457-9316-33dee44db500">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="378c9a66-1d21-473f-98fe-9b0caa560c69">
+          <expression>0</expression>
+          <name>extAccelOvr</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3ee3b9cc-4b3b-4cbc-bd31-e54a43cf1c92">
+          <expression>0</expression>
+          <name>extDecelOvr</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="99319ac4-359f-4efc-b0aa-cd136403295b">
+          <expression>0</expression>
+          <name>extAccelHld</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="253965f2-4a9a-43b7-a52a-adcbf893ef2b">
+          <expression>0</expression>
+          <name>extDecelHld</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d82aefd8-1460-4c63-88ff-b5006bd354fe">
+          <expression>0</expression>
+          <name>extAccelZero</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="2160c1d3-5db2-4751-b7cd-f8ed05054582">
+          <expression>0</expression>
+          <name>extDecelZero</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4a74efce-b820-4423-9a9e-a482a1f8fcfb">
+          <expression>3</expression>
+          <name>cntrlType</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="070b8152-cf19-4a8c-b58e-74135e163662">
+          <expression>Reverse, Neutral, Drive</expression>
+          <name>shftType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5e3fa6be-cc27-4fd7-9698-e33e269ec970">
+          <expression>m/s</expression>
+          <name>velUnits</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="44ccf51b-479c-484a-9150-8f2c7413944d">
+          <expression>0</expression>
+          <name>gearOut</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f3d344f3-7c02-4a46-9567-1f512db8a072">
+          <expression>1500</expression>
+          <isTunable>true</isTunable>
+          <name>m</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f72f3e1e-dd8b-40d2-ade7-704cb89a8847">
+          <expression>10000</expression>
+          <isTunable>true</isTunable>
+          <name>Kpt</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3e0ac4a6-aba6-4915-978b-80b6d4031859">
+          <expression>0.12</expression>
+          <isTunable>true</isTunable>
+          <name>tau</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="976fe1b0-ec7b-45c1-bbf8-768d3b912879">
+          <expression>4</expression>
+          <isTunable>true</isTunable>
+          <name>L</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0c2d5412-839b-420b-9d07-3b4c71e3f630">
+          <expression>160</expression>
+          <isTunable>true</isTunable>
+          <name>aR</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="2f170702-2de8-4a47-a227-355fc0962146">
+          <expression>1</expression>
+          <isTunable>true</isTunable>
+          <name>bR</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c47c4879-ccbc-4021-a9eb-3b69298db352">
+          <expression>0.36</expression>
+          <isTunable>true</isTunable>
+          <name>cR</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="53c71fee-b7e7-4f13-b19f-2854e480c1d0">
+          <expression>9.81</expression>
+          <isTunable>true</isTunable>
+          <name>g</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8eedeec2-5c1f-4735-882a-c5a958371ac3">
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>GearInit</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="81e6b1ab-e6da-48d9-8156-09d254c519af">
+          <expression>.1</expression>
+          <isTunable>true</isTunable>
+          <name>tShift</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <initializationCode>[~]=autosharedicon(&apos;autoliboperlong&apos;,gcb,0);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="c6563ab9-97d3-4d03-ba62-afaea50ff9b0">
+      <blockPath>EvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver</blockPath>
+      <childrenIds>EvReferenceApplication:1264:1071:2548</childrenIds>
+      <childrenIds>EvReferenceApplication:1264:1071:2828</childrenIds>
+      <childrenIds>EvReferenceApplication:1264:1071:2838</childrenIds>
+      <childrenIds>EvReferenceApplication:1264:1071:2896</childrenIds>
+      <childrenIds>EvReferenceApplication:1264:1071:2897</childrenIds>
+      <id>EvReferenceApplication:1264:1071</id>
+      <masks type="slsa.mm.Mask" uuid="f49bdb16-72d2-4caf-bc7b-6ca23053a7fc">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="55b13f30-3127-42c5-ba29-4db77f5c56c8">
+          <expression>1</expression>
+          <isTunable>true</isTunable>
+          <name>cntrlType</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0ff9b74e-38ff-496f-961d-a78afb9f57c3">
+          <expression>Reverse, Neutral, Drive</expression>
+          <isTunable>true</isTunable>
+          <name>shftType</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="49a7b2a8-6064-4744-b14b-5f542622827a">
+          <expression>vnom</expression>
+          <isTunable>true</isTunable>
+          <name>vnom</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c7c291c9-95fd-4bdd-89fd-17f37364c80a">
+          <expression>Kp</expression>
+          <isTunable>true</isTunable>
+          <name>Kp</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="12e73e09-0927-4735-8a75-c23e074a110f">
+          <expression>Ki</expression>
+          <isTunable>true</isTunable>
+          <name>Ki</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="680473b8-10a6-42ac-8299-d983760c571d">
+          <expression>Kaw</expression>
+          <isTunable>true</isTunable>
+          <name>Kaw</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="960d9664-d663-4b6b-8573-7d076791ccd1">
+          <expression>Kff</expression>
+          <isTunable>true</isTunable>
+          <name>Kff</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0424cab3-b816-41af-8a88-c5ad315a2517">
+          <expression>Kg</expression>
+          <isTunable>true</isTunable>
+          <name>Kg</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="58b5252b-01a3-4dac-b951-0b83b509e334">
+          <expression>tauerr</expression>
+          <isTunable>true</isTunable>
+          <name>tauerr</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="09b310f9-f725-4bac-af17-0f2a26163a2c">
+          <expression>tShift</expression>
+          <isTunable>true</isTunable>
+          <name>tShift</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="69212b26-b524-45f2-bbb0-8fe3cc29a14f">
+          <expression>GearInit</expression>
+          <isTunable>true</isTunable>
+          <name>GearInit</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="272cbc3f-94ee-4c95-9a91-ae1aadc8909b">
+          <expression>VehVelVec</expression>
+          <isTunable>true</isTunable>
+          <name>VehVelVec</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="a6aa2cc1-c4b6-464d-84b1-e1681ca06b39">
+          <expression>KffVec</expression>
+          <isTunable>true</isTunable>
+          <name>KffVec</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f8131dd3-1a05-41e4-973a-f054d6c54145">
+          <expression>KiVec</expression>
+          <isTunable>true</isTunable>
+          <name>KiVec</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="382e0649-8792-4e85-b006-fb7a763e7f9b">
+          <expression>KpVec</expression>
+          <isTunable>true</isTunable>
+          <name>KpVec</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1899ed89-5f72-4a03-8192-3620d95341e9">
+          <expression>KgVec</expression>
+          <isTunable>true</isTunable>
+          <name>KgVec</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="e38df5a0-70bc-4423-bcda-80f8c45fcc5f">
+          <expression>m</expression>
+          <isTunable>true</isTunable>
+          <name>m</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="18f961c8-b668-4476-877e-5384697da9da">
+          <expression>Kpt</expression>
+          <isTunable>true</isTunable>
+          <name>Kpt</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="55444346-8404-4a1f-ae2e-ff6ad9af098d">
+          <expression>L</expression>
+          <isTunable>true</isTunable>
+          <name>Lvv</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="6393867a-29e1-4799-bd07-6c5a80491d0e">
+          <expression>g</expression>
+          <isTunable>true</isTunable>
+          <name>g</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="2db0e26a-64c9-446a-ac4b-750e8ec52c11">
+          <expression>UpGearVec</expression>
+          <isTunable>true</isTunable>
+          <name>UpGearVec</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="b8430c5d-bd7e-48ae-bb09-c08c2d0031d5">
+          <expression>DownGearVec</expression>
+          <isTunable>true</isTunable>
+          <name>DownGearVec</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="ca132b05-0343-4101-b117-1010ec721fe0">
+          <expression>m/s</expression>
+          <name>errUnit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="eee231f4-f229-4c6f-aec4-abb040dcfb6a">
+          <expression>aR</expression>
+          <isTunable>true</isTunable>
+          <name>aR</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1bc994f2-d1c3-4c83-9a94-8c2c6f41316c">
+          <expression>bR</expression>
+          <isTunable>true</isTunable>
+          <name>bR</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="b92c62cc-eb4e-4813-bccb-e2e06fc13d20">
+          <expression>cR</expression>
+          <isTunable>true</isTunable>
+          <name>cR</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="b1fcc932-26ab-4ba3-a3e5-8df90cf7c07d">
+          <expression>tauPt</expression>
+          <isTunable>true</isTunable>
+          <name>tauPt</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <initializationCode>[~]=autosharedicon(&apos;autoliboperlong&apos;,gcb,1);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>EvReferenceApplication:1264</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="6e4b228b-37e8-4162-81aa-2176e10b9529">
+      <blockPath>EvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Control/Predictive/Cont LPF</blockPath>
+      <id>EvReferenceApplication:1264:1071:2548</id>
+      <masks type="slsa.mm.Mask" uuid="326a3abc-e62a-4320-88db-077e12b0d73b">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="06f6b4f8-5e2a-4da7-a243-f164a876e36d">
+          <expression>(1/tau)*pi*2</expression>
+          <isTunable>true</isTunable>
+          <name>wc</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <initializationCode>[~]=autosharedicon(&apos;autolibutils&apos;,gcb,0);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>EvReferenceApplication:1264:1071</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="a784339e-2919-4826-b712-03470bc89fed">
+      <blockPath>EvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Shift/Basic/Reverse Change/Compare To Zero</blockPath>
+      <id>EvReferenceApplication:1264:1071:2828</id>
+      <masks type="slsa.mm.Mask" uuid="e26539f0-35b6-4fb6-bd48-1f2147c5d5f4">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8f01c115-d1cb-4709-8de7-dfd31d124c09">
+          <expression>2</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5903f734-2611-4884-bacc-76bf9d5e92d0">
+          <expression>2</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f32bd5a5-5146-4991-9931-cec5823028e9">
+          <expression>0</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+    setValue = &apos;fixdt(0, 8)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>EvReferenceApplication:1264:1071</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="8fd2c1b2-e709-4113-8fd5-0f6cca724805">
+      <blockPath>EvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Shift/Basic/Reverse Change/Compare To Zero1</blockPath>
+      <id>EvReferenceApplication:1264:1071:2838</id>
+      <masks type="slsa.mm.Mask" uuid="9982c1f1-863b-4b49-9c08-2051ea1bc33f">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="42f8c058-390e-4beb-807d-663d8127f1b5">
+          <expression>6</expression>
+          <name>relop</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="03b23bbc-f42b-45ab-b146-dec21edf9bd2">
+          <expression>2</expression>
+          <name>OutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5d2e3e62-d0dc-42b4-b924-c1c182f2df0a">
+          <expression>1</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <initializationCode>blkName = gcb;
+
+if strcmp(get_param(gcbh,&apos;OutDataTypeStr&apos;),&apos;boolean&apos;)
+	setValue = &apos;boolean&apos;;
+else
+    setValue = &apos;fixdt(0, 8)&apos;;
+end
+
+set_param([blkName,&apos;/Compare&apos;],&apos;relop&apos;,relop, ...
+	&apos;OutDataTypeStr&apos;, setValue, &apos;ZeroCross&apos;, ZeroCross);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>EvReferenceApplication:1264:1071</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="46947f81-3ac9-4cd1-a0ca-bb6cad5f5ab4">
+      <blockPath>EvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Control/Predictive/Accel Override/Signal Hold</blockPath>
+      <id>EvReferenceApplication:1264:1071:2896</id>
+      <masks type="slsa.mm.Mask" uuid="f45ffd0a-f47f-4102-b744-ff5625f9b202">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="e32ecf4a-f586-4327-9d82-a72d2c50f7ff">
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>IC</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <initializationCode>[~]=autosharedicon(&apos;autolibutils&apos;,gcb,0);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>EvReferenceApplication:1264:1071</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="0db0b8d8-dbae-4765-ab36-f82a8f19c850">
+      <blockPath>EvReferenceApplication/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Control/Predictive/Deccel Override/Signal Hold</blockPath>
+      <id>EvReferenceApplication:1264:1071:2897</id>
+      <masks type="slsa.mm.Mask" uuid="37f62337-e4a9-44a8-92b5-182b857b5826">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1e7d5e6d-bef9-4698-87df-1df5184da1aa">
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>IC</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <initializationCode>[~]=autosharedicon(&apos;autolibutils&apos;,gcb,0);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>EvReferenceApplication:1264:1071</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="c3572f4c-7c4f-45d8-bffe-fe2fff02c1a2">
+      <blockPath>EvReferenceApplication/Drive Cycle Source</blockPath>
+      <id>EvReferenceApplication:546</id>
+      <masks type="slsa.mm.Mask" uuid="852cf13f-5628-4b18-a779-0501bf32deaa">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="41207ca4-491d-47dd-870e-281003f3f35d">
+          <expression>1</expression>
+          <name>cycleVar</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="52824609-ec62-43f8-be87-b7dd1f54cc2d">
+          <expression>0</expression>
+          <name>cycleRepeat</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="9d019530-8e5f-443c-b4a4-2935f8f19b49">
+          <expression>0</expression>
+          <name>outAccPort</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="42aaee52-044e-4a1e-a3b5-fc21fc3d0a0e">
+          <expression>m/s</expression>
+          <name>outUnit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="f4545623-9271-4db5-ad58-051d91e8ca77">
+          <expression>0</expression>
+          <name>dt</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="c34fb388-4a2f-4ddc-aa2f-8af980bf14de">
+          <expression>0</expression>
+          <name>faultOption</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="ffa5db39-69e7-40f2-91ed-3baf2e177b0e">
+          <expression>2</expression>
+          <name>velBnd</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="4c6a835b-5fdd-44ad-bf5e-e43234069767">
+          <expression>mph</expression>
+          <name>velBndUnit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3151141a-e626-486e-adb6-8fb51ec34afb">
+          <expression>m/s</expression>
+          <name>inUnit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d00c51b4-fba5-432e-8ca0-d9c12279b554">
+          <expression>1</expression>
+          <name>timeBnd</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5a35e1d9-47d1-432b-b463-961b5c8940dd">
+          <expression>0</expression>
+          <name>failOption</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="9bb262f8-43f0-4de9-b9ae-7e4c5c97d599">
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>stopSim</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="2485a6e2-c2ea-4d9d-b0f4-8a7fc9067e5f">
+          <expression>10</expression>
+          <isTunable>true</isTunable>
+          <name>maxFaultCnt</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="05915106-5ba7-4ccc-b4aa-f78043997efc">
+          <expression>2</expression>
+          <isTunable>true</isTunable>
+          <name>maxFaultTime</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1f4d3ee2-4013-4f9d-8935-0858a4fb2be5">
+          <expression>15</expression>
+          <isTunable>true</isTunable>
+          <name>maxTotFaultTime</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="ce579fdd-5cd5-4e75-8c79-2e3298604f97">
+          <expression>0</expression>
+          <name>traceOption</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="37abeaae-1d76-4ac0-b9e4-7ad630ec270e">
+          <expression>1</expression>
+          <name>dtTrace</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8c07c87f-46fe-45e9-a657-f536a55c45a8">
+          <expression>10</expression>
+          <name>traceWindow</name>
+        </dialogParameters>
+        <initializationCode>[DriveCycle, AccelCycle, GearCycle, upperBound, lowerBound] = autosharedicon(&apos;autolibdrivecycle&apos;,gcb,0);
+Simulink.Block.eval([gcb &apos;/timing mode/Continuous/FaultSystem/TracePlot/SimPlotNoRate/MATLAB Function&apos;]);
+Simulink.Block.eval([gcb &apos;/timing mode/Continuous/FaultSystem/TracePlot/SimPlotRate/MATLAB Function&apos;]);
+Simulink.Block.eval([gcb &apos;/timing mode/Discrete/FaultSystem/TracePlot/SimPlotNoRate/MATLAB Function&apos;]);
+Simulink.Block.eval([gcb &apos;/timing mode/Discrete/FaultSystem/TracePlot/SimPlotRate/MATLAB Function&apos;]);
+
+</initializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="f6ae8336-a69b-4c84-a884-a3959b1f5aee">
+      <childrenIds>EvReferenceApplication:1264</childrenIds>
+      <childrenIds>EvReferenceApplication:546</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+  </slsa.mm.MaskTree>
+</MF0>

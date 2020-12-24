@@ -1,0 +1,83 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   9 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "stateChanged"\
+      Description  "StateChanged"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "lastMajorTime"\
+      Description  "LastMajorTime"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c8_autolibshared"\
+      Description  "StateIsActive"\
+      SFName       "is_active_c8_autolibshared"\
+      Path         "is_active_c8_autolibshared"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_c8_autolibshared"\
+      Description  "StateActiveChild"\
+      SFName       "is_c8_autolibshared"\
+      Path         "is_c8_autolibshared"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "sf_internal_action_state_placeholder_data"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Slipping.sf_internal_action_state_placeholder_data"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sf_internal_action_state_placeholder_data"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Locked.sf_internal_action_state_placeholder_data"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Slipping_execBlock"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Locked_execBlock"\
+      Description  "Unknown"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,67 @@
+%implements "machineSource" "C"
+%function CacheMachineDefinitions(block,system) void
+%openfile tmpFcnBuf
+%closefile tmpFcnBuf
+%<SLibCacheCodeToFile("sf_machine_data_defn",tmpFcnBuf)>\
+
+%endfunction
+%function DumpMachineInitializer(block) Output
+
+%openfile tmpFcnBuf
+
+%closefile tmpFcnBuf
+%if !WHITE_SPACE(tmpFcnBuf)
+
+  /* Machine initializer */
+  %<tmpFcnBuf>\
+%endif
+%endfunction
+%function GlobalMachineInitializer(block) void
+  %openfile tmpFcnBuf
+  %<DumpMachineInitializer(block)>\
+  %if FILE_EXISTS("autolibshared_rtw.tlc")
+    %generatefile "machineSource" "autolibshared_rtw.tlc"
+    %<GENERATE_TYPE(block,"DumpMachineInitializer","machineSource")>\
+  %endif
+  %if FILE_EXISTS("autolibshareddrivetraincommon_rtw.tlc")
+    %generatefile "machineSource" "autolibshareddrivetraincommon_rtw.tlc"
+    %<GENERATE_TYPE(block,"DumpMachineInitializer","machineSource")>\
+  %endif
+  %if FILE_EXISTS("autolibdrivetraincommon_rtw.tlc")
+    %generatefile "machineSource" "autolibdrivetraincommon_rtw.tlc"
+    %<GENERATE_TYPE(block,"DumpMachineInitializer","machineSource")>\
+  %endif
+  %closefile tmpFcnBuf
+  %return tmpFcnBuf              
+%endfunction %% GlobalMachineInitializer
+
+%function DumpMachineTerminator(block) Output
+%openfile tmpFcnBuf
+
+%closefile tmpFcnBuf
+%if !WHITE_SPACE(tmpFcnBuf)
+
+  /* Machine initializer */
+  %<tmpFcnBuf>\
+%endif
+%endfunction
+%function GlobalMachineTerminator(block) void
+  %openfile tmpFcnBuf
+  %<DumpMachineTerminator(block)>\
+  %generatefile "machineSource" "autolibshared_rtw.tlc"
+  %<GENERATE_TYPE(block,"DumpMachineTerminator","machineSource")>\
+  %generatefile "machineSource" "autolibshareddrivetraincommon_rtw.tlc"
+  %<GENERATE_TYPE(block,"DumpMachineTerminator","machineSource")>\
+  %generatefile "machineSource" "autolibdrivetraincommon_rtw.tlc"
+  %<GENERATE_TYPE(block,"DumpMachineTerminator","machineSource")>\
+  %closefile tmpFcnBuf
+  %return tmpFcnBuf              
+%endfunction %% GlobalMachineTerminator
+
+%function CacheMachineFunctions(block,system) void
+  %openfile tmpFcnBuf
+            
+            
+  %closefile tmpFcnBuf
+  %<SLibCacheCodeToFile("sf_machine_fcn_defn",tmpFcnBuf)>
+%endfunction

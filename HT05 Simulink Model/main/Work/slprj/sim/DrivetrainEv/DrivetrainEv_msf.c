@@ -51,12 +51,12 @@ hmke5fx3tcj * ) ssGetDWork ( S , 0 ) ; const real_T * i_ohqozwr3bt = ( real_T
 * ) ssGetInputPortSignal ( S , 0 ) ; const real_T * i_m5lcvgivpn = ( real_T *
 ) ssGetInputPortSignal ( S , 1 ) ; const real_T * i_fp2cs4ko5p = ( real_T * )
 ssGetInputPortSignal ( S , 2 ) ; const real_T * i_pldc422xqt = ( real_T * )
-ssGetInputPortSignal ( S , 3 ) ; real_T * o_B_17_1 = ( real_T * )
-ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_17_2 = ( real_T * )
+ssGetInputPortSignal ( S , 3 ) ; real_T * o_B_16_1 = ( real_T * )
+ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_16_2 = ( real_T * )
 ssGetOutputPortSignal ( S , 1 ) ; edp3webv0p * localX = ( edp3webv0p * )
 ssGetContStates ( S ) ; if ( tid == 0 ) { DrivetrainEv ( & ( dw -> rtm ) ,
-i_ohqozwr3bt , i_m5lcvgivpn , i_fp2cs4ko5p , i_pldc422xqt , o_B_17_1 ,
-o_B_17_2 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) )
+i_ohqozwr3bt , i_m5lcvgivpn , i_fp2cs4ko5p , i_pldc422xqt , o_B_16_1 ,
+o_B_16_2 , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) )
 ; ekz3w3o33e ( & ( dw -> rtm ) , & ( dw -> rtdw ) ) ; } } static void
 mdlInitializeSizes ( SimStruct * S ) { if ( ( S -> mdlInfo -> genericFcn != (
 NULL ) ) && ( ! ( S -> mdlInfo -> genericFcn ) ( S ,
@@ -64,7 +64,7 @@ GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL ) ) ) ) { return ; }
 ssSetNumSFcnParams ( S , 0 ) ; ssFxpSetU32BitRegionCompliant ( S , 1 ) ;
 rt_InitInfAndNaN ( sizeof ( real_T ) ) ; if ( S -> mdlInfo -> genericFcn != (
 NULL ) ) { _GenericFcn fcn = S -> mdlInfo -> genericFcn ; }
-ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 24 ) ;
+ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 21 ) ;
 ssSetNumDiscStates ( S , 0 ) ; ssSetNumPeriodicContStates ( S , 1 ) ;
 ssSetSymbolicDimsSupport ( S , true ) ; slmrInitializeIOPortDataVectors ( S ,
 4 , 2 ) ; if ( ! ssSetNumInputPorts ( S , 4 ) ) return ; if ( !
@@ -152,7 +152,7 @@ unitIdReg ) ;
 #endif
 } ssSetOutputPortSampleTime ( S , 1 , 0.0 ) ; ssSetOutputPortOffsetTime ( S ,
 1 , 0.0 ) ; ssSetOutputPortDiscreteValuedOutput ( S , 1 , 0 ) ;
-ssSetOutputPortOkToMerge ( S , 1 , SS_OK_TO_MERGE_CONDITIONAL ) ;
+ssSetOutputPortOkToMerge ( S , 1 , SS_NOT_OK_TO_MERGE ) ;
 ssSetOutputPortICAttributes ( S , 1 , false , false , false ) ;
 ssSetOutputPortOptimOpts ( S , 1 , SS_NOT_REUSABLE_AND_GLOBAL ) ;
 ssSetSimStateCompliance ( S , USE_CUSTOM_SIM_STATE ) ;
@@ -246,14 +246,14 @@ hmke5fx3tcj * ) ssGetDWork ( S , 0 ) ; const real_T * i_ohqozwr3bt = ( real_T
 * ) ssGetInputPortSignal ( S , 0 ) ; const real_T * i_m5lcvgivpn = ( real_T *
 ) ssGetInputPortSignal ( S , 1 ) ; const real_T * i_fp2cs4ko5p = ( real_T * )
 ssGetInputPortSignal ( S , 2 ) ; const real_T * i_pldc422xqt = ( real_T * )
-ssGetInputPortSignal ( S , 3 ) ; real_T * o_B_17_1 = ( real_T * )
-ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_17_2 = ( real_T * )
+ssGetInputPortSignal ( S , 3 ) ; real_T * o_B_16_1 = ( real_T * )
+ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_16_2 = ( real_T * )
 ssGetOutputPortSignal ( S , 1 ) ; edp3webv0p * localX = ( edp3webv0p * )
 ssGetContStates ( S ) ; if ( tid == PARAMETER_TUNING_TID ) { DrivetrainEvTID2
 ( & ( dw -> rtb ) ) ; } if ( tid != CONSTANT_TID && tid !=
 PARAMETER_TUNING_TID ) { if ( ssIsSampleHit ( S , 0 , tid ) ||
 ssIsMinorTimeStep ( S ) ) { DrivetrainEv ( & ( dw -> rtm ) , i_ohqozwr3bt ,
-i_m5lcvgivpn , i_fp2cs4ko5p , i_pldc422xqt , o_B_17_1 , o_B_17_2 , & ( dw ->
+i_m5lcvgivpn , i_fp2cs4ko5p , i_pldc422xqt , o_B_16_1 , o_B_16_2 , & ( dw ->
 rtb ) , & ( dw -> rtdw ) , localX , & ( dw -> rtzce ) ) ; } } }
 #define MDL_UPDATE
 static void mdlUpdate ( SimStruct * S , int_T tid ) { hmke5fx3tcj * dw = (

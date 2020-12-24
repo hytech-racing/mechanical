@@ -5,7 +5,7 @@ static DataTypeInfo rtDataTypeInfoTable [ ] = { { "real_T" , 0 , 8 } , {
 "uint32_T" , 7 , 4 } , { "boolean_T" , 8 , 1 } , { "fcn_call_T" , 9 , 0 } , {
 "int_T" , 10 , 4 } , { "pointer_T" , 11 , 8 } , { "action_T" , 12 , 8 } , {
 "timer_uint32_pair_T" , 13 , 8 } , { "pwecol01r52" , 14 , 272 } , {
-"hmke5fx3tcj" , 15 , 2792 } , { "lobjb0lvrdo" , 16 , 208 } , { "l0vfpqnnodc"
+"hmke5fx3tcj" , 15 , 2728 } , { "lobjb0lvrdo" , 16 , 208 } , { "l0vfpqnnodc"
 , 17 , 768 } } ; static uint_T rtDataTypeSizes [ ] = { sizeof ( real_T ) ,
 sizeof ( real32_T ) , sizeof ( int8_T ) , sizeof ( uint8_T ) , sizeof (
 int16_T ) , sizeof ( uint16_T ) , sizeof ( int32_T ) , sizeof ( uint32_T ) ,
@@ -31,5 +31,5 @@ hrypfmrlkd ) , 7 , 0 , 2 } , { ( char_T * ) ( & bcuvylxhefc . hn5nuy0lbc ) ,
 , { ( char_T * ) ( & bcuvylxhefc . alzb1lqr5t ) , 14 , 0 , 1 } } ; static
 DataTypeTransitionTable rtBTransTable = { 14U , rtBTransitions } ; static
 DataTypeTransition rtPTransitions [ ] = { { ( char_T * ) ( & ihnh5ag1lp .
-LongitudinalDriverModel_GearInit ) , 0 , 0 , 5005 } } ; static
+LongitudinalDriverModel_GearInit ) , 0 , 0 , 859 } } ; static
 DataTypeTransitionTable rtPTransTable = { 1U , rtPTransitions } ;

@@ -72,7 +72,7 @@ bcuvylxhefc . itzcefxwhd = - 1 ; bcuvylxhefc . hztxj1g4oa = 0U ; bcuvylxhefc
 . ln4xezh4u1 = 0U ; bcuvylxhefc . hm0lgp00gr = 0.0 ; bcuvylxhefc . dfwyqajqi3
 = 0U ; bcuvylxhefc . a2qtt2hfe5 = 0.0 ; hfe00hbwscw . etuneoeubc = 0.0 ;
 bcuvylxhefc . d2sayk0vr5 = 0.0 ; bcuvylxhefc . ojbxwztebs = 0.0 ; bcuvylxhefc
-. ggyum1qn3e = 0.0 ; { int_T rootPeriodicContStateIndices [ 2 ] = { 7 , 28 }
+. ggyum1qn3e = 0.0 ; { int_T rootPeriodicContStateIndices [ 2 ] = { 7 , 25 }
 ; real_T rootPeriodicContStateRanges [ 4 ] = { - 3.1415926535897931 ,
 3.1415926535897931 , - 3.1415926535897931 , 3.1415926535897931 } ; ( void )
 memcpy ( ( void * ) ngqsle4aqnz , rootPeriodicContStateIndices , 2 * sizeof (
@@ -281,7 +281,7 @@ muDoubleScalarMod ( cbv1b3vtl5 , ihnh5ag1lp . tFinal_Value ) ; } else {
 hfe00hbwscw . dn2ipr3mo1 = cbv1b3vtl5 ; } hfe00hbwscw . e4yqhpgtcf =
 look1_pbinlcapw ( hfe00hbwscw . dn2ipr3mo1 , ihnh5ag1lp .
 uDLookupTable_bp01Data , ihnh5ag1lp . uDLookupTable_tableData , & bcuvylxhefc
-. hrypfmrlkd , 2473U ) ; hfe00hbwscw . kwter11yih = 0.0 ; hfe00hbwscw .
+. hrypfmrlkd , 400U ) ; hfe00hbwscw . kwter11yih = 0.0 ; hfe00hbwscw .
 kwter11yih += ihnh5ag1lp . MotorCouplingDynamics_C * nltnw1e5gkl . i4qubohzc1
 ; if ( ssIsSampleHit ( rtS , 1 , 0 ) ) { hfe00hbwscw . cvgkryez0y =
 bcuvylxhefc . k0zcask0cc [ bcuvylxhefc . ep2boc231g ] ; } DrivetrainEv ( & (
@@ -295,7 +295,7 @@ e4yqhpgtcf ; hfe00hbwscw . bejosqgptz [ 1 ] = ihnh5ag1lp . mstomph_Gain *
 hfe00hbwscw . k2nvq1dfvz ; if ( ssIsSampleHit ( rtS , 1 , 0 ) && (
 bcuvylxhefc . piumrtffmp == 0 ) ) { bcuvylxhefc . ngtzwyl1pu [ 0 ] =
 hfe00hbwscw . bejosqgptz [ 0 ] ; bcuvylxhefc . ngtzwyl1pu [ 1 ] = hfe00hbwscw
-. bejosqgptz [ 1 ] ; } if ( ssIsSampleHit ( rtS , 4 , 0 ) ) { bcuvylxhefc .
+. bejosqgptz [ 1 ] ; } if ( ssIsSampleHit ( rtS , 5 , 0 ) ) { bcuvylxhefc .
 piumrtffmp = 1 ; hfe00hbwscw . k0jcwtesdh [ 0 ] = bcuvylxhefc . ngtzwyl1pu [
 0 ] ; hfe00hbwscw . k0jcwtesdh [ 1 ] = bcuvylxhefc . ngtzwyl1pu [ 1 ] ;
 bcuvylxhefc . piumrtffmp = 0 ; } hfe00hbwscw . hawg1v30vs = ihnh5ag1lp .
@@ -303,7 +303,7 @@ radstoRPM_Gain * hfe00hbwscw . krfdbjpt0e ; if ( ssIsSampleHit ( rtS , 1 , 0
 ) ) { if ( bcuvylxhefc . oijmj1tdxd == 0 ) { bcuvylxhefc . e4gjlzj1lq =
 hfe00hbwscw . hawg1v30vs ; } if ( bcuvylxhefc . anfmogqnpx == 0 ) {
 bcuvylxhefc . i5uql30i2j = hfe00hbwscw . kwter11yih ; } } if ( ssIsSampleHit
-( rtS , 4 , 0 ) ) { bcuvylxhefc . oijmj1tdxd = 1 ; hfe00hbwscw . awbv4lz2br =
+( rtS , 5 , 0 ) ) { bcuvylxhefc . oijmj1tdxd = 1 ; hfe00hbwscw . awbv4lz2br =
 bcuvylxhefc . e4gjlzj1lq ; bcuvylxhefc . oijmj1tdxd = 0 ; bcuvylxhefc .
 anfmogqnpx = 1 ; hfe00hbwscw . cawpxxfynl = bcuvylxhefc . i5uql30i2j ;
 bcuvylxhefc . anfmogqnpx = 0 ; } hfe00hbwscw . op2bbilkhu = 0.0 ; hfe00hbwscw
@@ -314,7 +314,7 @@ hfe00hbwscw . k5wjbiecdv , & ( bcuvylxhefc . ondfxuidp3 . rtb ) , & (
 bcuvylxhefc . ondfxuidp3 . rtdw ) , & ( nltnw1e5gkl . fqvhaqjss0 ) ) ; if (
 ssIsSampleHit ( rtS , 1 , 0 ) && ( bcuvylxhefc . jse5bdwgjj == 0 ) ) {
 bcuvylxhefc . kap0odr3kj = hfe00hbwscw . i4av10pedr ; } if ( ssIsSampleHit (
-rtS , 4 , 0 ) ) { bcuvylxhefc . jse5bdwgjj = 1 ; hfe00hbwscw . jcnijfpmie =
+rtS , 5 , 0 ) ) { bcuvylxhefc . jse5bdwgjj = 1 ; hfe00hbwscw . jcnijfpmie =
 bcuvylxhefc . kap0odr3kj ; bcuvylxhefc . jse5bdwgjj = 0 ; } if (
 ssIsSampleHit ( rtS , 2 , 0 ) ) { hfe00hbwscw . hs1nxcdsu1 = bcuvylxhefc .
 klgv0izvyu [ bcuvylxhefc . fqundvylsh ] ; } MotGenEvDynamic ( & ( bcuvylxhefc
@@ -324,7 +324,7 @@ hfe00hbwscw . pb4y5y3noy , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & (
 bcuvylxhefc . enbv0wioc4 . rtdw ) , & ( nltnw1e5gkl . b04e30byfs ) ) ; if (
 ssIsSampleHit ( rtS , 1 , 0 ) && ( bcuvylxhefc . egwjbtmbyq == 0 ) ) {
 bcuvylxhefc . hp5pufrajm = hfe00hbwscw . pb4y5y3noy ; } if ( ssIsSampleHit (
-rtS , 4 , 0 ) ) { bcuvylxhefc . egwjbtmbyq = 1 ; hfe00hbwscw . kwlhepleti =
+rtS , 5 , 0 ) ) { bcuvylxhefc . egwjbtmbyq = 1 ; hfe00hbwscw . kwlhepleti =
 bcuvylxhefc . hp5pufrajm ; bcuvylxhefc . egwjbtmbyq = 0 ; } hfe00hbwscw .
 egwqx4bk1t = nltnw1e5gkl . a1yytga2i4 ; hfe00hbwscw . jglg55uozd =
 nltnw1e5gkl . d2vzwae4a0 ; hfe00hbwscw . bki5dqleao = ihnh5ag1lp .
@@ -337,7 +337,7 @@ ihnh5ag1lp . Saturation1_UpperSat : bcuvylxhefc . hn5nuy0lbc == - 1 ?
 ihnh5ag1lp . Saturation1_LowerSat : hfe00hbwscw . bki5dqleao ) ; if (
 ssIsSampleHit ( rtS , 1 , 0 ) && ( bcuvylxhefc . bsjrzyb4mr == 0 ) ) {
 bcuvylxhefc . j1c3q5x2i4 = hfe00hbwscw . jtp5gfufnu ; } if ( ssIsSampleHit (
-rtS , 4 , 0 ) ) { bcuvylxhefc . bsjrzyb4mr = 1 ; hfe00hbwscw . ajoldyqnvn =
+rtS , 5 , 0 ) ) { bcuvylxhefc . bsjrzyb4mr = 1 ; hfe00hbwscw . ajoldyqnvn =
 bcuvylxhefc . j1c3q5x2i4 ; bcuvylxhefc . bsjrzyb4mr = 0 ; } hfe00hbwscw .
 o035i4hwxg = hfe00hbwscw . k5wjbiecdv * hfe00hbwscw . pb4y5y3noy ;
 hfe00hbwscw . pue040sedo = hfe00hbwscw . o035i4hwxg / ihnh5ag1lp .
@@ -472,8 +472,8 @@ bcuvylxhefc . kgr2bmvhtp = 0 ; EvPowertrainController ( & hfe00hbwscw .
 lfrzqxjyja , & hfe00hbwscw . o5n5eexjon , & hfe00hbwscw . e51yutiqek , &
 hfe00hbwscw . fbfzjqwa5a , & hfe00hbwscw . ldaenjp42v , & hfe00hbwscw .
 f53jjpuuxm , & hfe00hbwscw . hhj0p0jony , & ( bcuvylxhefc . alzb1lqr5t . rtb
-) ) ; } if ( ssIsSampleHit ( rtS , 5 , 0 ) ) { hfe00hbwscw . fkmxmxweyx =
-ssGetTaskTime ( rtS , 5 ) ; } hfe00hbwscw . j3cdx1rby1 = cbv1b3vtl5 -
+) ) ; } if ( ssIsSampleHit ( rtS , 4 , 0 ) ) { hfe00hbwscw . fkmxmxweyx =
+ssGetTaskTime ( rtS , 4 ) ; } hfe00hbwscw . j3cdx1rby1 = cbv1b3vtl5 -
 hfe00hbwscw . fkmxmxweyx ; cbv1b3vtl5 = muDoubleScalarAbs ( hfe00hbwscw .
 k2nvq1dfvz ) ; iy = 0 ; if ( cbv1b3vtl5 < 0.001 ) { iy = 1 ; } if ( 0 <= iy -
 1 ) { z_data = cbv1b3vtl5 / 0.001 ; } if ( 0 <= iy - 1 ) { z1_data = z_data ;
@@ -627,20 +627,20 @@ rt_slioCatalogueAddr ( ) ; rtwSaveDatasetsToMatFile (
 rtwGetPointerFromUniquePtr ( rt_slioCatalogue ( ) ) ,
 rt_GetMatSigstreamLoggingFileName ( ) ) ; rtwTerminateSlioCatalogue (
 slioCatalogueAddr ) ; * slioCatalogueAddr = NULL ; } } void
-MdlInitializeSizes ( void ) { ssSetNumContStates ( rtS , 34 ) ;
+MdlInitializeSizes ( void ) { ssSetNumContStates ( rtS , 31 ) ;
 ssSetNumPeriodicContStates ( rtS , 2 ) ; ssSetNumY ( rtS , 0 ) ; ssSetNumU (
 rtS , 0 ) ; ssSetDirectFeedThrough ( rtS , 0 ) ; ssSetNumSampleTimes ( rtS ,
 6 ) ; ssSetNumBlocks ( rtS , 132 ) ; ssSetNumBlockIO ( rtS , 70 ) ;
-ssSetNumBlockParams ( rtS , 5005 ) ; } void MdlInitializeSampleTimes ( void )
+ssSetNumBlockParams ( rtS , 859 ) ; } void MdlInitializeSampleTimes ( void )
 { ssSetSampleTime ( rtS , 0 , 0.0 ) ; ssSetSampleTime ( rtS , 1 , 0.0 ) ;
 ssSetSampleTime ( rtS , 2 , 5.0E-5 ) ; ssSetSampleTime ( rtS , 3 , 0.01 ) ;
-ssSetSampleTime ( rtS , 4 , 0.1 ) ; ssSetSampleTime ( rtS , 5 , 0.5 ) ;
+ssSetSampleTime ( rtS , 4 , 0.05 ) ; ssSetSampleTime ( rtS , 5 , 0.1 ) ;
 ssSetOffsetTime ( rtS , 0 , 0.0 ) ; ssSetOffsetTime ( rtS , 1 , 1.0 ) ;
 ssSetOffsetTime ( rtS , 2 , 0.0 ) ; ssSetOffsetTime ( rtS , 3 , 0.0 ) ;
 ssSetOffsetTime ( rtS , 4 , 0.0 ) ; ssSetOffsetTime ( rtS , 5 , 0.0 ) ; }
-void raccel_set_checksum ( ) { ssSetChecksumVal ( rtS , 0 , 1284232737U ) ;
-ssSetChecksumVal ( rtS , 1 , 3961008968U ) ; ssSetChecksumVal ( rtS , 2 ,
-3492614050U ) ; ssSetChecksumVal ( rtS , 3 , 1102623904U ) ; }
+void raccel_set_checksum ( ) { ssSetChecksumVal ( rtS , 0 , 504722902U ) ;
+ssSetChecksumVal ( rtS , 1 , 2250330730U ) ; ssSetChecksumVal ( rtS , 2 ,
+2710263453U ) ; ssSetChecksumVal ( rtS , 3 , 1519803584U ) ; }
 #if defined(_MSC_VER)
 #pragma optimize( "", off )
 #endif
@@ -700,7 +700,7 @@ mmi ) , 1 ) ) , tempStr , 1 ) ; utFree ( tempStr ) ; } lst5ppimoh ( rtS , 0 ,
 0 , & ( bcuvylxhefc . ondfxuidp3 . rtm ) , & ( bcuvylxhefc . ondfxuidp3 . rtb
 ) , & ( bcuvylxhefc . ondfxuidp3 . rtdw ) , & ( nltnw1e5gkl . fqvhaqjss0 ) ,
 NULL , 0 , & ( rt_dataMapInfoPtr -> mmi ) ,
-"HT05Model/Passenger Car/Electric Plant/Battery" , 2 , 26 ) ; { char_T *
+"HT05Model/Passenger Car/Electric Plant/Battery" , 2 , 23 ) ; { char_T *
 tempStr = rtwCAPI_EncodePath (
 "HT05Model/Passenger Car/Electric Plant/Battery" ) ; rtwCAPI_UpdateFullPaths
 ( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr -> mmi ) , 2 ) ) , tempStr ,
@@ -709,7 +709,7 @@ mr_MotGenEvDynamic_13_3_0nonContOutputArray , 0 , 1 , 2 , 0 , & ( bcuvylxhefc
 . enbv0wioc4 . rtm ) , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & ( bcuvylxhefc
 . enbv0wioc4 . rtdw ) , & ( nltnw1e5gkl . b04e30byfs ) , NULL , 0 , & (
 rt_dataMapInfoPtr -> mmi ) ,
-"HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" , 3 , 27 ) ; {
+"HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" , 3 , 24 ) ; {
 char_T * tempStr = rtwCAPI_EncodePath (
 "HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" ) ;
 rtwCAPI_UpdateFullPaths ( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr ->
@@ -733,34 +733,33 @@ ssSetPeriodicContStateRanges ( rtS , hpzwhjywixq ) ; ( void ) memset ( ( void
 * ) hpzwhjywixq , 0 , 4 * sizeof ( real_T ) ) ; } { static
 ssJacobianPerturbationBounds jacobianPerturbationBounds ;
 ssSetJacobianPerturbationBounds ( rtS , & jacobianPerturbationBounds ) ; } {
-static ssSolverInfo slvrInfo ; static boolean_T contStatesDisabled [ 34 ] ;
-static real_T absTol [ 34 ] = { 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 ,
+static ssSolverInfo slvrInfo ; static boolean_T contStatesDisabled [ 31 ] ;
+static real_T absTol [ 31 ] = { 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 ,
 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 ,
 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 ,
 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 ,
-1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 , 1.0E-6 } ; static uint8_T absTolControl [
-34 ] = { 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U
+1.0E-6 , 1.0E-6 } ; static uint8_T absTolControl [ 31 ] = { 0U , 0U , 0U , 0U
 , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U ,
-0U , 0U , 0U , 0U , 0U } ; static real_T contStateJacPerturbBoundMinVec [ 34
-] ; static real_T contStateJacPerturbBoundMaxVec [ 34 ] ; static uint8_T
-zcAttributes [ 19 ] = { ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_UP
-) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_UP ) , (
-ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_UP ) , (
-ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_UP ) , (
-ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) ,
-( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_DN )
-} ; static uint8_T zcEvents [ 19 ] = { ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 |
-ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , (
-0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_DN ) , ( 0x40 | ZC_EVENT_ALL
-) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_DN ) , ( 0x40 |
-ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_DN ) , (
-0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , (
-0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , (
-0x40 | ZC_EVENT_ALL_DN ) } ; static ssNonContDerivSigInfo nonContDerivSigInfo
-[ 5 ] = { { 0 , ( NULL ) , ( NULL ) } , { 0 , ( NULL ) , ( NULL ) } , { 0 , (
-NULL ) , ( NULL ) } , { 0 , ( NULL ) , ( NULL ) } , { 1 * sizeof ( real_T ) ,
-( char * ) ( & hfe00hbwscw . cvgkryez0y ) , ( NULL ) } } ;
-nonContDerivSigInfo [ 0 ] . sizeInBytes =
+0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U } ; static real_T
+contStateJacPerturbBoundMinVec [ 31 ] ; static real_T
+contStateJacPerturbBoundMaxVec [ 31 ] ; static uint8_T zcAttributes [ 19 ] =
+{ ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( ZC_EVENT_ALL )
+, ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_UP ) , ( ZC_EVENT_ALL_DN ) , (
+ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_UP ) , ( ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL )
+, ( ZC_EVENT_ALL_UP ) , ( ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL ) , (
+ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , (
+ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_DN ) } ; static uint8_T zcEvents [ 19 ] = { (
+0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL
+) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 |
+ZC_EVENT_ALL_DN ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL_UP ) , (
+0x40 | ZC_EVENT_ALL_DN ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL_UP
+) , ( 0x40 | ZC_EVENT_ALL_DN ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 |
+ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 |
+ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL_DN ) } ;
+static ssNonContDerivSigInfo nonContDerivSigInfo [ 5 ] = { { 0 , ( NULL ) , (
+NULL ) } , { 0 , ( NULL ) , ( NULL ) } , { 0 , ( NULL ) , ( NULL ) } , { 0 ,
+( NULL ) , ( NULL ) } , { 1 * sizeof ( real_T ) , ( char * ) ( & hfe00hbwscw
+. cvgkryez0y ) , ( NULL ) } } ; nonContDerivSigInfo [ 0 ] . sizeInBytes =
 mr_MotGenEvDynamic_13_3_0nonContOutputArray [ 1 ] [ 0 ] . sizeInBytes ;
 nonContDerivSigInfo [ 0 ] . pCurrVal = ( char * )
 mr_MotGenEvDynamic_13_3_0nonContOutputArray [ 1 ] [ 0 ] . currVal ;
@@ -776,7 +775,7 @@ nonContDerivSigInfo [ 3 ] . sizeInBytes =
 mr_MotGenEvDynamic_13_3_0nonContOutputArray [ 1 ] [ 3 ] . sizeInBytes ;
 nonContDerivSigInfo [ 3 ] . pCurrVal = ( char * )
 mr_MotGenEvDynamic_13_3_0nonContOutputArray [ 1 ] [ 3 ] . currVal ; { int i ;
-for ( i = 0 ; i < 34 ; ++ i ) { contStateJacPerturbBoundMinVec [ i ] = 0 ;
+for ( i = 0 ; i < 31 ; ++ i ) { contStateJacPerturbBoundMinVec [ i ] = 0 ;
 contStateJacPerturbBoundMaxVec [ i ] = rtGetInf ( ) ; } } ssSetSolverRelTol (
 rtS , 0.001 ) ; ssSetStepSize ( rtS , 0.0 ) ; ssSetMinStepSize ( rtS , 0.0 )
 ; ssSetMaxNumMinSteps ( rtS , - 1 ) ; ssSetMinStepViolatedError ( rtS , 0 ) ;
@@ -813,9 +812,9 @@ ssSetSolverShapePreserveControl ( rtS , 2 ) ; ssSetTNextTid ( rtS , INT_MIN )
 ; ssSetTNext ( rtS , rtMinusInf ) ; ssSetSolverNeedsReset ( rtS ) ;
 ssSetNumNonsampledZCs ( rtS , 17 ) ; ssSetContStateDisabled ( rtS ,
 contStatesDisabled ) ; ssSetSolverMaxConsecutiveMinStep ( rtS , 1 ) ; }
-ssSetChecksumVal ( rtS , 0 , 1284232737U ) ; ssSetChecksumVal ( rtS , 1 ,
-3961008968U ) ; ssSetChecksumVal ( rtS , 2 , 3492614050U ) ; ssSetChecksumVal
-( rtS , 3 , 1102623904U ) ; { static const sysRanDType rtAlwaysEnabled =
+ssSetChecksumVal ( rtS , 0 , 504722902U ) ; ssSetChecksumVal ( rtS , 1 ,
+2250330730U ) ; ssSetChecksumVal ( rtS , 2 , 2710263453U ) ; ssSetChecksumVal
+( rtS , 3 , 1519803584U ) ; { static const sysRanDType rtAlwaysEnabled =
 SUBSYS_RAN_BC_ENABLE ; static RTWExtModeInfo rt_ExtModeInfo ; static const
 sysRanDType * systemRan [ 14 ] ; gblRTWExtModeInfo = & rt_ExtModeInfo ;
 ssSetRTWExtModeInfo ( rtS , & rt_ExtModeInfo ) ;

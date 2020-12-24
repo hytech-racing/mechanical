@@ -23,55 +23,56 @@
 static rtwCAPI_Signals rtBlockSignals [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) ,
 0 , 0 , 0 , 0 , 0 } } ; static rtwCAPI_States rtBlockStates [ ] = { { 0 , 2 ,
 TARGET_STRING ( "DrivetrainEv/Vehicle/Integrator" ) , TARGET_STRING ( "" ) ,
-TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1 , 0 } , { 1 , 13 ,
-TARGET_STRING ( "DrivetrainEv/Gearbox/Ideal Gear Tin/Integrator" ) ,
-TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1 , 0
-} , { 2 , 18 , TARGET_STRING (
+TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1 , 0 } , { 1 , 15 ,
+TARGET_STRING (
+ "DrivetrainEv/Rotational Inertia/Rotational Inertia/Rotational Inertia External Input/Integrator"
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
+, 0 } , { 2 , 14 , TARGET_STRING (
  "DrivetrainEv/Torsional Compliance/Torsional Compliance Linear 2way/Torsional Compliance Linear/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
-, 0 } , { 3 , 19 , TARGET_STRING (
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
+, 0 } , { 3 , 16 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Limited Slip Differential/Limited Slip Differential/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
-, 0 } , { 4 , 17 , TARGET_STRING (
+, 0 } , { 4 , 13 , TARGET_STRING (
  "DrivetrainEv/Torsional Compliance/Torsional Compliance Linear 2way/Torsional Compliance Linear/Cont LPF IC Dyn/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 5 , 4 , TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/3DOF (Body Axes)/Position"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
 , 0 } , { 6 , 6 , TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/3DOF (Body Axes)/Theta"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 7 , 0 , TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/3DOF (Body Axes)/U,w"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
 , 0 } , { 8 , 7 , TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/3DOF (Body Axes)/q"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
-, 0 } , { 9 , 21 , TARGET_STRING (
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
+, 0 } , { 9 , 18 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Limited Slip Differential/Limited Slip Differential/Clutch Response/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 10 , 10 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Rear Axle Compliance 1/Torsional Compliance Linear 2way/Torsional Compliance Linear/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 11 , 8 , TARGET_STRING (
  "DrivetrainEv/Wheels and Brakes/Longitudinal Wheel - Front 1/Wheel Module/relaxation/Cont LPF Dyn/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 12 , 11 , TARGET_STRING (
  "DrivetrainEv/Wheels and Brakes/Longitudinal Wheel - Rear 1/Wheel Module/relaxation/Cont LPF Dyn/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 13 , 9 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Rear Axle Compliance 1/Torsional Compliance Linear 2way/Torsional Compliance Linear/Cont LPF IC Dyn/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 14 , 12 , TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/Bus Creation/Body Frame/Longitudinal 3DOF/Integrator3"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 2 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
 - 1 , 0 } } ;
 #ifndef HOST_CAPI_BUILD
 static void DrivetrainEv_InitializeDataAddr ( void * dataAddr [ ] ,
 lvsoqlxlcs * localDW , edp3webv0p * localX ) { dataAddr [ 0 ] = ( void * ) (
 & localX -> d5vyxqghh0 [ 0 ] ) ; dataAddr [ 1 ] = ( void * ) ( & localX ->
-a0guk0zs0d [ 0 ] ) ; dataAddr [ 2 ] = ( void * ) ( & localX -> fxodvuf53f ) ;
+lavyvivx1k ) ; dataAddr [ 2 ] = ( void * ) ( & localX -> fxodvuf53f ) ;
 dataAddr [ 3 ] = ( void * ) ( & localX -> mjiky0nofi [ 0 ] ) ; dataAddr [ 4 ]
 = ( void * ) ( & localX -> cs3cbynlcj ) ; dataAddr [ 5 ] = ( void * ) ( &
 localX -> noatsby3ej [ 0 ] ) ; dataAddr [ 6 ] = ( void * ) ( & localX ->
@@ -104,24 +105,23 @@ static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 #endif
 static TARGET_CONST rtwCAPI_ElementMap rtElementMap [ ] = { { ( NULL ) , 0 ,
 0 , 0 , 0 } , } ; static rtwCAPI_DimensionMap rtDimensionMap [ ] = { {
-rtwCAPI_VECTOR , 0 , 2 , 0 } , { rtwCAPI_VECTOR , 2 , 2 , 0 } , {
-rtwCAPI_SCALAR , 4 , 2 , 0 } } ; static uint_T rtDimensionArray [ ] = { 2 , 1
-, 4 , 1 , 1 , 1 } ; static const real_T rtcapiStoredFloats [ ] = { 0.0 } ;
-static rtwCAPI_FixPtMap rtFixPtMap [ ] = { { ( NULL ) , ( NULL ) ,
-rtwCAPI_FIX_RESERVED , 0 , 0 , 0 } , } ; static rtwCAPI_SampleTimeMap
-rtSampleTimeMap [ ] = { { ( const void * ) & rtcapiStoredFloats [ 0 ] , (
-const void * ) & rtcapiStoredFloats [ 0 ] , 0 , 0 } } ; static int_T
-rtContextSystems [ 26 ] ; static rtwCAPI_LoggingMetaInfo loggingMetaInfo [ ]
-= { { 0 , 0 , "" , 0 } } ; static rtwCAPI_ModelMapLoggingStaticInfo
-mmiStaticInfoLogging = { 26 , rtContextSystems , loggingMetaInfo , 0 , NULL ,
-{ 0 , NULL , NULL } , 0 , ( NULL ) } ; static rtwCAPI_ModelMappingStaticInfo
-mmiStatic = { { rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL
-) , 0 , ( NULL ) , 0 } , { rtBlockStates , 15 } , { rtDataTypeMap ,
-rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 1926769498U , 2526366958U , 3767042740U ,
-254949204U } , & mmiStaticInfoLogging , 0 , 0 } ; const
-rtwCAPI_ModelMappingStaticInfo * DrivetrainEv_GetCAPIStaticMap ( void ) {
-return & mmiStatic ; }
+rtwCAPI_VECTOR , 0 , 2 , 0 } , { rtwCAPI_SCALAR , 2 , 2 , 0 } } ; static
+uint_T rtDimensionArray [ ] = { 2 , 1 , 1 , 1 } ; static const real_T
+rtcapiStoredFloats [ ] = { 0.0 } ; static rtwCAPI_FixPtMap rtFixPtMap [ ] = {
+{ ( NULL ) , ( NULL ) , rtwCAPI_FIX_RESERVED , 0 , 0 , 0 } , } ; static
+rtwCAPI_SampleTimeMap rtSampleTimeMap [ ] = { { ( const void * ) &
+rtcapiStoredFloats [ 0 ] , ( const void * ) & rtcapiStoredFloats [ 0 ] , 0 ,
+0 } } ; static int_T rtContextSystems [ 25 ] ; static rtwCAPI_LoggingMetaInfo
+loggingMetaInfo [ ] = { { 0 , 0 , "" , 0 } } ; static
+rtwCAPI_ModelMapLoggingStaticInfo mmiStaticInfoLogging = { 25 ,
+rtContextSystems , loggingMetaInfo , 0 , NULL , { 0 , NULL , NULL } , 0 , (
+NULL ) } ; static rtwCAPI_ModelMappingStaticInfo mmiStatic = { {
+rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
+) , 0 } , { rtBlockStates , 15 } , { rtDataTypeMap , rtDimensionMap ,
+rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
+{ 2137829015U , 1225820561U , 2702400977U , 1804579957U } , &
+mmiStaticInfoLogging , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
+DrivetrainEv_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 static void DrivetrainEv_InitializeSystemRan ( hcopmldpph * const a5ree4wwe5
 , sysRanDType * systemRan [ ] , lvsoqlxlcs * localDW , int_T systemTid [ ] ,
@@ -129,59 +129,56 @@ void * rootSysRanPtr , int rootTid ) { UNUSED_PARAMETER ( a5ree4wwe5 ) ;
 UNUSED_PARAMETER ( localDW ) ; systemRan [ 0 ] = ( sysRanDType * )
 rootSysRanPtr ; systemRan [ 1 ] = ( NULL ) ; systemRan [ 2 ] = ( NULL ) ;
 systemRan [ 3 ] = ( NULL ) ; systemRan [ 4 ] = ( NULL ) ; systemRan [ 5 ] = (
-NULL ) ; systemRan [ 6 ] = ( sysRanDType * ) & localDW -> fbnwpfi1ef3 [ 0 ] .
-nod5vp1cyy . fate2u2iog . lim0ml1jqw ; systemRan [ 7 ] = ( sysRanDType * ) &
-localDW -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog . iojd2jlc3k ;
+sysRanDType * ) & localDW -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog .
+lim0ml1jqw ; systemRan [ 6 ] = ( sysRanDType * ) & localDW -> fbnwpfi1ef3 [ 0
+] . nod5vp1cyy . fate2u2iog . iojd2jlc3k ; systemRan [ 7 ] = ( sysRanDType *
+) & localDW -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog . d3vznomj0x ;
 systemRan [ 8 ] = ( sysRanDType * ) & localDW -> fbnwpfi1ef3 [ 0 ] .
-nod5vp1cyy . fate2u2iog . d3vznomj0x ; systemRan [ 9 ] = ( sysRanDType * ) &
-localDW -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog . k3j1amkab5 ;
-systemRan [ 10 ] = ( NULL ) ; systemRan [ 11 ] = ( NULL ) ; systemRan [ 12 ]
-= ( NULL ) ; systemRan [ 13 ] = ( NULL ) ; systemRan [ 14 ] = ( NULL ) ;
-systemRan [ 15 ] = ( NULL ) ; systemRan [ 16 ] = ( sysRanDType * ) & localDW
--> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog . lim0ml1jqw ; systemRan [ 17 ]
-= ( sysRanDType * ) & localDW -> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog .
-iojd2jlc3k ; systemRan [ 18 ] = ( sysRanDType * ) & localDW -> cg32ix3bhp [ 0
-] . nod5vp1cyy . fate2u2iog . d3vznomj0x ; systemRan [ 19 ] = ( sysRanDType *
-) & localDW -> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog . k3j1amkab5 ;
+nod5vp1cyy . fate2u2iog . k3j1amkab5 ; systemRan [ 9 ] = ( NULL ) ; systemRan
+[ 10 ] = ( NULL ) ; systemRan [ 11 ] = ( NULL ) ; systemRan [ 12 ] = ( NULL )
+; systemRan [ 13 ] = ( NULL ) ; systemRan [ 14 ] = ( NULL ) ; systemRan [ 15
+] = ( sysRanDType * ) & localDW -> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog
+. lim0ml1jqw ; systemRan [ 16 ] = ( sysRanDType * ) & localDW -> cg32ix3bhp [
+0 ] . nod5vp1cyy . fate2u2iog . iojd2jlc3k ; systemRan [ 17 ] = ( sysRanDType
+* ) & localDW -> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog . d3vznomj0x ;
+systemRan [ 18 ] = ( sysRanDType * ) & localDW -> cg32ix3bhp [ 0 ] .
+nod5vp1cyy . fate2u2iog . k3j1amkab5 ; systemRan [ 19 ] = ( NULL ) ;
 systemRan [ 20 ] = ( NULL ) ; systemRan [ 21 ] = ( NULL ) ; systemRan [ 22 ]
 = ( NULL ) ; systemRan [ 23 ] = ( NULL ) ; systemRan [ 24 ] = ( NULL ) ;
-systemRan [ 25 ] = ( NULL ) ; systemTid [ 1 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 2 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 3 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 4 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 5 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 15 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 9 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 19 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 8 ] = a5ree4wwe5 -> Timing .
+systemTid [ 1 ] = a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [
+2 ] = a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 3 ] =
+a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 4 ] = a5ree4wwe5
+-> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 14 ] = a5ree4wwe5 -> Timing
+. mdlref_GlobalTID [ 0 ] ; systemTid [ 8 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 1 ] ; systemTid [ 18 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 1 ] ; systemTid [ 6 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 1 ] ; systemTid [ 7 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 1 ] ; systemTid [ 17 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 1 ] ; systemTid [ 5 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 15 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 6 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 16 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 7 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 17 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 9 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 19 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 10 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 20 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 11 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 21 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 12 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 22 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 13 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 14 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 22 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 23 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 24 ] = a5ree4wwe5 -> Timing .
-mdlref_GlobalTID [ 0 ] ; systemTid [ 25 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 0 ] ; systemTid [ 0 ] = rootTid ; rtContextSystems [ 0 ] =
 0 ; rtContextSystems [ 1 ] = 0 ; rtContextSystems [ 2 ] = 0 ;
 rtContextSystems [ 3 ] = 0 ; rtContextSystems [ 4 ] = 0 ; rtContextSystems [
-5 ] = 0 ; rtContextSystems [ 6 ] = 6 ; rtContextSystems [ 7 ] = 7 ;
-rtContextSystems [ 8 ] = 8 ; rtContextSystems [ 9 ] = 9 ; rtContextSystems [
+5 ] = 5 ; rtContextSystems [ 6 ] = 6 ; rtContextSystems [ 7 ] = 7 ;
+rtContextSystems [ 8 ] = 8 ; rtContextSystems [ 9 ] = 0 ; rtContextSystems [
 10 ] = 0 ; rtContextSystems [ 11 ] = 0 ; rtContextSystems [ 12 ] = 0 ;
 rtContextSystems [ 13 ] = 0 ; rtContextSystems [ 14 ] = 0 ; rtContextSystems
-[ 15 ] = 0 ; rtContextSystems [ 16 ] = 16 ; rtContextSystems [ 17 ] = 17 ;
-rtContextSystems [ 18 ] = 18 ; rtContextSystems [ 19 ] = 19 ;
-rtContextSystems [ 20 ] = 0 ; rtContextSystems [ 21 ] = 0 ; rtContextSystems
-[ 22 ] = 0 ; rtContextSystems [ 23 ] = 0 ; rtContextSystems [ 24 ] = 0 ;
-rtContextSystems [ 25 ] = 0 ; }
+[ 15 ] = 15 ; rtContextSystems [ 16 ] = 16 ; rtContextSystems [ 17 ] = 17 ;
+rtContextSystems [ 18 ] = 18 ; rtContextSystems [ 19 ] = 0 ; rtContextSystems
+[ 20 ] = 0 ; rtContextSystems [ 21 ] = 0 ; rtContextSystems [ 22 ] = 0 ;
+rtContextSystems [ 23 ] = 0 ; rtContextSystems [ 24 ] = 0 ; }
 #endif
 #ifndef HOST_CAPI_BUILD
 void DrivetrainEv_InitializeDataMapInfo ( hcopmldpph * const a5ree4wwe5 ,

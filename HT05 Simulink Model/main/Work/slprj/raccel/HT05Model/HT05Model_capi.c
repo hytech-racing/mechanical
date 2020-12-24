@@ -295,26 +295,26 @@ TARGET_STRING (
 ) , TARGET_STRING ( "Value" ) , 0 , 0 , 0 } , { 132 , TARGET_STRING (
  "HT05Model/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Shift/Basic/Reverse Change/Compare To Zero1/Constant"
 ) , TARGET_STRING ( "Value" ) , 0 , 0 , 0 } , { 0 , ( NULL ) , ( NULL ) , 0 ,
-0 , 0 } } ; static const rtwCAPI_States rtBlockStates [ ] = { { 133 , 25 ,
+0 , 0 } } ; static const rtwCAPI_States rtBlockStates [ ] = { { 133 , 22 ,
 TARGET_STRING (
 "HT05Model/Passenger Car/Electric Plant/Battery Discharge Dynamics" ) ,
 TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1 , 0
 } , { 134 , 0 , TARGET_STRING (
 "HT05Model/Passenger Car/Electric Plant/Motor Coupling Dynamics" ) ,
 TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1 , 0
-} , { 135 , 30 , TARGET_STRING (
+} , { 135 , 27 , TARGET_STRING (
 "HT05Model/Visualization/Performance Calculations/Integrator" ) ,
 TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1 , 0
-} , { 136 , 31 , TARGET_STRING (
+} , { 136 , 28 , TARGET_STRING (
 "HT05Model/Visualization/Performance Calculations/Integrator1" ) ,
 TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1 , 0
-} , { 137 , 33 , TARGET_STRING (
+} , { 137 , 30 , TARGET_STRING (
  "HT05Model/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Routing/Error Metrics/Integrator2"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1
 , 0 } , { 138 , - 1 , TARGET_STRING (
  "HT05Model/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Routing/Error Metrics/Unit Delay"
 ) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 1 , 0 , 4 , 0 , - 1 , 0 } , {
-139 , 32 , TARGET_STRING (
+139 , 29 , TARGET_STRING (
  "HT05Model/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Control/Predictive/Cont LPF/Integrator1"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
@@ -402,25 +402,25 @@ static TARGET_CONST rtwCAPI_ElementMap rtElementMap [ ] = { { ( NULL ) , 0 ,
 0 , 0 , 0 } , } ; static const rtwCAPI_DimensionMap rtDimensionMap [ ] = { {
 rtwCAPI_SCALAR , 0 , 2 , 0 } , { rtwCAPI_VECTOR , 2 , 2 , 0 } , {
 rtwCAPI_VECTOR , 4 , 2 , 0 } , { rtwCAPI_VECTOR , 6 , 2 , 0 } } ; static
-const uint_T rtDimensionArray [ ] = { 1 , 1 , 2 , 1 , 2474 , 1 , 1 , 2 } ;
+const uint_T rtDimensionArray [ ] = { 1 , 1 , 2 , 1 , 401 , 1 , 1 , 2 } ;
 static const real_T rtcapiStoredFloats [ ] = { 0.01 , 0.0 , 0.1 , 1.0 ,
-5.0E-5 , 0.5 } ; static const rtwCAPI_FixPtMap rtFixPtMap [ ] = { { ( NULL )
+5.0E-5 , 0.05 } ; static const rtwCAPI_FixPtMap rtFixPtMap [ ] = { { ( NULL )
 , ( NULL ) , rtwCAPI_FIX_RESERVED , 0 , 0 , 0 } , } ; static const
 rtwCAPI_SampleTimeMap rtSampleTimeMap [ ] = { { ( const void * ) &
 rtcapiStoredFloats [ 0 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 3 ,
 0 } , { ( const void * ) & rtcapiStoredFloats [ 1 ] , ( const void * ) &
 rtcapiStoredFloats [ 1 ] , 0 , 0 } , { ( const void * ) & rtcapiStoredFloats
-[ 2 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 4 , 0 } , { ( const
+[ 2 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 5 , 0 } , { ( const
 void * ) & rtcapiStoredFloats [ 1 ] , ( const void * ) & rtcapiStoredFloats [
 3 ] , 1 , 0 } , { ( const void * ) & rtcapiStoredFloats [ 4 ] , ( const void
 * ) & rtcapiStoredFloats [ 1 ] , 2 , 0 } , { ( const void * ) &
-rtcapiStoredFloats [ 5 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 5 ,
+rtcapiStoredFloats [ 5 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 4 ,
 0 } , { ( NULL ) , ( NULL ) , 6 , 0 } } ; static
 rtwCAPI_ModelMappingStaticInfo mmiStatic = { { rtBlockSignals , 75 , ( NULL )
 , 0 , ( NULL ) , 0 } , { rtBlockParameters , 58 , rtModelParameters , 0 } , {
 rtBlockStates , 7 } , { rtDataTypeMap , rtDimensionMap , rtFixPtMap ,
-rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" , { 1284232737U
-, 3961008968U , 3492614050U , 1102623904U } , ( NULL ) , 0 , 0 } ; const
+rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" , { 504722902U
+, 2250330730U , 2710263453U , 1519803584U } , ( NULL ) , 0 , 0 } ; const
 rtwCAPI_ModelMappingStaticInfo * HT05Model_GetCAPIStaticMap ( void ) { return
 & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD

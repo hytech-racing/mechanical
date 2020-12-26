@@ -1,6 +1,6 @@
 The argument '-tgtconn_server_info_file' passed to rtiostream_tcpip is not valid and will be ignored.
-The argument 'C:\Users\xboxl\AppData\Local\Temp\tgtconnp20d8e4e2_ab00_45a8_bfca_fd5323c97c75.info' passed to rtiostream_tcpip is not valid and will be ignored.
+The argument 'C:\Users\xboxl\AppData\Local\Temp\tgtconnpcec993b7_3db2_4ec3_9b1e_c2ffc8f865b6.info' passed to rtiostream_tcpip is not valid and will be ignored.
 The argument '-tgtconn_port' passed to rtiostream_tcpip is not valid and will be ignored.
 The argument '0' passed to rtiostream_tcpip is not valid and will be ignored.
-Warning: Solver is encountering difficulty in simulating model 'HT05Model' at time 3.409548233938012e-07 . It will continue to simulate with warnings. Check the model for errors.
+Warning: Solver is encountering difficulty in simulating model 'HT05Model' at time 3.2506032754547782e-09 . It will continue to simulate with warnings. Check the model for errors.
 Warning: During the simulation time step from 3.1554436208840472e-30 to 5.0000000000000002e-05 (step size = 5.0000000000000002e-05), found #1 masked zero crossings, i.e., signal(s) with an even number of zero crossings. The search algorithm only detected these zero crossings because of the presence of other zero crossings in this time step. Masked zero crossings are caused by one or more zero crossing signals that have an even number of zero crossings in the current time step. Masked zero crossings may not be detected in all cases.

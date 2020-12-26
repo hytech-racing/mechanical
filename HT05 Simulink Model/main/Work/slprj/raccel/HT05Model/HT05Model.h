@@ -125,7 +125,7 @@ LongitudinalDriverModel_m ; real_T LongitudinalDriverModel_tShift ; real_T
 LongitudinalDriverModel_tau ; real_T u1_UpperSat ; real_T u1_LowerSat ;
 real_T u0_UpperSat ; real_T u0_LowerSat ; real_T Constant_Value ; real_T
 Constant_Value_nhp3htkj21 ; real_T Switch_Threshold ; real_T
-uDLookupTable_tableData [ 401 ] ; real_T uDLookupTable_bp01Data [ 401 ] ;
+uDLookupTable_tableData [ 2474 ] ; real_T uDLookupTable_bp01Data [ 2474 ] ;
 real_T MotorCouplingDynamics_A ; real_T MotorCouplingDynamics_C ; real_T
 RateTransition3_InitialCondition ; real_T mstomph_Gain ; real_T
 radstoRPM_Gain ; real_T BatteryDischargeDynamics_A ; real_T

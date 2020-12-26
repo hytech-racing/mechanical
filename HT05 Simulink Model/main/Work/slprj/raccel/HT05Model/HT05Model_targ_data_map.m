@@ -109,159 +109,159 @@
 	
 	  ;% ihnh5ag1lp.uDLookupTable_bp01Data
 	  section.data(20).logicalSrcIdx = 19;
-	  section.data(20).dtTransOffset = 419;
+	  section.data(20).dtTransOffset = 2492;
 	
 	  ;% ihnh5ag1lp.MotorCouplingDynamics_A
 	  section.data(21).logicalSrcIdx = 20;
-	  section.data(21).dtTransOffset = 820;
+	  section.data(21).dtTransOffset = 4966;
 	
 	  ;% ihnh5ag1lp.MotorCouplingDynamics_C
 	  section.data(22).logicalSrcIdx = 21;
-	  section.data(22).dtTransOffset = 821;
+	  section.data(22).dtTransOffset = 4967;
 	
 	  ;% ihnh5ag1lp.RateTransition3_InitialCondition
 	  section.data(23).logicalSrcIdx = 22;
-	  section.data(23).dtTransOffset = 822;
+	  section.data(23).dtTransOffset = 4968;
 	
 	  ;% ihnh5ag1lp.mstomph_Gain
 	  section.data(24).logicalSrcIdx = 23;
-	  section.data(24).dtTransOffset = 823;
+	  section.data(24).dtTransOffset = 4969;
 	
 	  ;% ihnh5ag1lp.radstoRPM_Gain
 	  section.data(25).logicalSrcIdx = 24;
-	  section.data(25).dtTransOffset = 824;
+	  section.data(25).dtTransOffset = 4970;
 	
 	  ;% ihnh5ag1lp.BatteryDischargeDynamics_A
 	  section.data(26).logicalSrcIdx = 25;
-	  section.data(26).dtTransOffset = 825;
+	  section.data(26).dtTransOffset = 4971;
 	
 	  ;% ihnh5ag1lp.BatteryDischargeDynamics_C
 	  section.data(27).logicalSrcIdx = 26;
-	  section.data(27).dtTransOffset = 826;
+	  section.data(27).dtTransOffset = 4972;
 	
 	  ;% ihnh5ag1lp.RateTransition5_InitialCondition
 	  section.data(28).logicalSrcIdx = 27;
-	  section.data(28).dtTransOffset = 827;
+	  section.data(28).dtTransOffset = 4973;
 	
 	  ;% ihnh5ag1lp.Integrator_IC
 	  section.data(29).logicalSrcIdx = 28;
-	  section.data(29).dtTransOffset = 828;
+	  section.data(29).dtTransOffset = 4974;
 	
 	  ;% ihnh5ag1lp.mtomile_Gain
 	  section.data(30).logicalSrcIdx = 29;
-	  section.data(30).dtTransOffset = 829;
+	  section.data(30).dtTransOffset = 4975;
 	
 	  ;% ihnh5ag1lp.Integrator1_IC
 	  section.data(31).logicalSrcIdx = 30;
-	  section.data(31).dtTransOffset = 830;
+	  section.data(31).dtTransOffset = 4976;
 	
 	  ;% ihnh5ag1lp.m3toUSGal_Gain
 	  section.data(32).logicalSrcIdx = 31;
-	  section.data(32).dtTransOffset = 831;
+	  section.data(32).dtTransOffset = 4977;
 	
 	  ;% ihnh5ag1lp.Saturation1_UpperSat
 	  section.data(33).logicalSrcIdx = 32;
-	  section.data(33).dtTransOffset = 832;
+	  section.data(33).dtTransOffset = 4978;
 	
 	  ;% ihnh5ag1lp.Saturation1_LowerSat
 	  section.data(34).logicalSrcIdx = 33;
-	  section.data(34).dtTransOffset = 833;
+	  section.data(34).dtTransOffset = 4979;
 	
 	  ;% ihnh5ag1lp.mto100Km_Gain
 	  section.data(35).logicalSrcIdx = 34;
-	  section.data(35).dtTransOffset = 834;
+	  section.data(35).dtTransOffset = 4980;
 	
 	  ;% ihnh5ag1lp.Saturation_UpperSat
 	  section.data(36).logicalSrcIdx = 35;
-	  section.data(36).dtTransOffset = 835;
+	  section.data(36).dtTransOffset = 4981;
 	
 	  ;% ihnh5ag1lp.Saturation_LowerSat
 	  section.data(37).logicalSrcIdx = 36;
-	  section.data(37).dtTransOffset = 836;
+	  section.data(37).dtTransOffset = 4982;
 	
 	  ;% ihnh5ag1lp.m3pergal_Gain
 	  section.data(38).logicalSrcIdx = 37;
-	  section.data(38).dtTransOffset = 837;
+	  section.data(38).dtTransOffset = 4983;
 	
 	  ;% ihnh5ag1lp.Integrator1_IC_ajivek24xs
 	  section.data(39).logicalSrcIdx = 38;
-	  section.data(39).dtTransOffset = 838;
+	  section.data(39).dtTransOffset = 4984;
 	
 	  ;% ihnh5ag1lp.Saturation_UpperSat_ejlhkaxvm3
 	  section.data(40).logicalSrcIdx = 39;
-	  section.data(40).dtTransOffset = 839;
+	  section.data(40).dtTransOffset = 4985;
 	
 	  ;% ihnh5ag1lp.Saturation_LowerSat_jq5vbx40o3
 	  section.data(41).logicalSrcIdx = 40;
-	  section.data(41).dtTransOffset = 840;
+	  section.data(41).dtTransOffset = 4986;
 	
 	  ;% ihnh5ag1lp.Saturation_UpperSat_n5cfzewtp3
 	  section.data(42).logicalSrcIdx = 41;
-	  section.data(42).dtTransOffset = 841;
+	  section.data(42).dtTransOffset = 4987;
 	
 	  ;% ihnh5ag1lp.Saturation_LowerSat_jdvecoiqp4
 	  section.data(43).logicalSrcIdx = 42;
-	  section.data(43).dtTransOffset = 842;
+	  section.data(43).dtTransOffset = 4988;
 	
 	  ;% ihnh5ag1lp.HitCrossing_Offset
 	  section.data(44).logicalSrcIdx = 43;
-	  section.data(44).dtTransOffset = 843;
+	  section.data(44).dtTransOffset = 4989;
 	
 	  ;% ihnh5ag1lp.Integrator2_IC
 	  section.data(45).logicalSrcIdx = 44;
-	  section.data(45).dtTransOffset = 844;
+	  section.data(45).dtTransOffset = 4990;
 	
 	  ;% ihnh5ag1lp.UnitDelay_InitialCondition
 	  section.data(46).logicalSrcIdx = 45;
-	  section.data(46).dtTransOffset = 845;
+	  section.data(46).dtTransOffset = 4991;
 	
 	  ;% ihnh5ag1lp.USEPAkwhUSgalequivalent_Value
 	  section.data(47).logicalSrcIdx = 46;
-	  section.data(47).dtTransOffset = 847;
+	  section.data(47).dtTransOffset = 4993;
 	
 	  ;% ihnh5ag1lp.sperh_Value
 	  section.data(48).logicalSrcIdx = 47;
-	  section.data(48).dtTransOffset = 848;
+	  section.data(48).dtTransOffset = 4994;
 	
 	  ;% ihnh5ag1lp.wperkw_Value
 	  section.data(49).logicalSrcIdx = 48;
-	  section.data(49).dtTransOffset = 849;
+	  section.data(49).dtTransOffset = 4995;
 	
 	  ;% ihnh5ag1lp.repeat_Value
 	  section.data(50).logicalSrcIdx = 49;
-	  section.data(50).dtTransOffset = 850;
+	  section.data(50).dtTransOffset = 4996;
 	
 	  ;% ihnh5ag1lp.tFinal_Value
 	  section.data(51).logicalSrcIdx = 50;
-	  section.data(51).dtTransOffset = 851;
+	  section.data(51).dtTransOffset = 4997;
 	
 	  ;% ihnh5ag1lp.Constant2_Value
 	  section.data(52).logicalSrcIdx = 51;
-	  section.data(52).dtTransOffset = 852;
+	  section.data(52).dtTransOffset = 4998;
 	
 	  ;% ihnh5ag1lp.Constant3_Value
 	  section.data(53).logicalSrcIdx = 52;
-	  section.data(53).dtTransOffset = 853;
+	  section.data(53).dtTransOffset = 4999;
 	
 	  ;% ihnh5ag1lp.Constant6_Value
 	  section.data(54).logicalSrcIdx = 53;
-	  section.data(54).dtTransOffset = 854;
+	  section.data(54).dtTransOffset = 5000;
 	
 	  ;% ihnh5ag1lp.Constant_Value_mg0ii2c5jx
 	  section.data(55).logicalSrcIdx = 54;
-	  section.data(55).dtTransOffset = 855;
+	  section.data(55).dtTransOffset = 5001;
 	
 	  ;% ihnh5ag1lp.Constant_Value_lfd1si2n0l
 	  section.data(56).logicalSrcIdx = 55;
-	  section.data(56).dtTransOffset = 856;
+	  section.data(56).dtTransOffset = 5002;
 	
 	  ;% ihnh5ag1lp.Constant_Value_fb5mg350bv
 	  section.data(57).logicalSrcIdx = 56;
-	  section.data(57).dtTransOffset = 857;
+	  section.data(57).dtTransOffset = 5003;
 	
 	  ;% ihnh5ag1lp.Constant1_Value
 	  section.data(58).logicalSrcIdx = 57;
-	  section.data(58).dtTransOffset = 858;
+	  section.data(58).dtTransOffset = 5004;
 	
       nTotData = nTotData + section.nData;
       paramMap.sections(1) = section;
@@ -973,8 +973,8 @@
   ;%
 
 
-  targMap.checksum0 = 504722902;
-  targMap.checksum1 = 2250330730;
-  targMap.checksum2 = 2710263453;
-  targMap.checksum3 = 1519803584;
+  targMap.checksum0 = 233266599;
+  targMap.checksum1 = 3622045272;
+  targMap.checksum2 = 1722335398;
+  targMap.checksum3 = 1348532806;
 

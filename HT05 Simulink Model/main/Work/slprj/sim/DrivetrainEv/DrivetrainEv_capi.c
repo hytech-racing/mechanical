@@ -119,7 +119,7 @@ NULL ) } ; static rtwCAPI_ModelMappingStaticInfo mmiStatic = { {
 rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
 ) , 0 } , { rtBlockStates , 15 } , { rtDataTypeMap , rtDimensionMap ,
 rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
-{ 2137829015U , 1225820561U , 2702400977U , 1804579957U } , &
+{ 2879836764U , 3023237175U , 1087458528U , 4123480202U } , &
 mmiStaticInfoLogging , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
 DrivetrainEv_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD

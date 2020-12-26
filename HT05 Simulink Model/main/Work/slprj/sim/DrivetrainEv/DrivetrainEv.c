@@ -219,7 +219,7 @@ MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
 , 287.058 , 0.0 , 0.0 , 0.203 , 0.203 , 0.15 , 0.15 , 273.0 , { - 100.0 , -
 90.0 , - 50.0 , - 5.0 , 0.0 , 5.0 , 50.0 , 90.0 , 100.0 } , 0.206 , 0.206 ,
 2.0 , 2.0 , 1.1880000000000002 , 0.01 , 0.01 , 0.0 , 0.0 , 1.5120000000000002
-, 400.0 , 100.0 , 0.001 , 0.0 , 0.0 , 0.001 , 1.0 , 1.0 , { - 1.0 , 1.0 } ,
+, 400.0 , 100.0 , 0.0 , 0.0 , 0.0 , 0.001 , 1.0 , 1.0 , { - 1.0 , 1.0 } ,
 0.001 , 0.001 , 0.001 , 0.001 , 0.0 , 0.0 , 0.05 , 0.05 , 0.0 , 0.0 , { -
 200.0 , - 175.0 , - 100.0 , - 50.0 , 0.0 , 50.0 , 100.0 , 175.0 , 200.0 } , {
 - 10.0 , - 1.0 , - 0.1 , 0.0 , 0.1 , 1.0 , 10.0 } , { - 10.0 , - 1.0 , - 0.1
@@ -234,78 +234,79 @@ MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
 1.0 , 1.0 } , 0.0 , { 0.0 , 1.0 , - 1.0 , 0.0 } , { 2.0 , 2.0 } , { 2.0 , 2.0
 } , 0.0 , 5000.0 , - 5000.0 , 0.5 , 0.0 , 0.0 , 0.0 , 0.0 , { 0.0 , 0.0 , 0.0
 } , { 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , { 1.0 , 1.0 ,
-1.0 } , 0.0 , 1.0 , 1.65 , 10.0 , 0.01 , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 10000.0 , 1.0E+6 , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 0.0 , 0.78539816339744828 , 0.0 , 1.0 ,
-1.65 , 10.0 , 0.01 , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
+1.0 } , 0.0 , 4741.694487 , 1.5 , 0.05798777 , - 2.0 , { 0.0 , 0.0 , 0.0 ,
 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , {
-0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 10000.0 ,
-1.0E+6 , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 1.0 , 0.0 , 0.78539816339744828 , 6.2831853071795862 , 1.0
-, 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , { { { 0.0 , 0.0
-, 0.0 , 0.0 , - 4.0 , 0 , 0 , 0 , { 0 , 1 , 0 , 0 , 1 , 1 , 1 , 0 } } } } , {
-{ { 0.0 , 0.0 , 0.0 , 0.0 , - 4.0 , 0 , 0 , 0 , { 0 , 1 , 0 , 0 , 1 , 1 , 1 ,
-0 } } } } , { 0.0 , 0.0 } } ; static void mmkivrlpqb ( real_T rhoz , real_T
-omega , real_T * Re , real_T * Fz ) ; static void n5teuatb0z ( const real_T
-a_data [ ] , const int32_T a_size [ 2 ] , real_T y_data [ ] , int32_T y_size
-[ 2 ] ) ; static real_T ak2ysaxv1o ( real_T Re , real_T omega , real_T Vx ,
-real_T b_VXLOW , real_T b_kappamax ) ; static real_T o4pauiv4gj ( real_T
-kappa , real_T Fz , real_T D , real_T C , real_T B , real_T E , real_T
-lam_mux , real_T b_FZMIN , real_T b_FZMAX ) ; static real_T njagxepmjm (
-real_T kappa , real_T Vx , real_T Fz , real_T b_gamma , real_T LONGVL ,
-real_T FNOMIN , real_T b_FZMIN , real_T b_FZMAX , real_T press , real_T
-NOMPRES , real_T PRESMIN , real_T PRESMAX , real_T PCX1 , real_T PDX1 ,
-real_T PDX2 , real_T PDX3 , real_T PEX1 , real_T PEX2 , real_T PEX3 , real_T
-PEX4 , real_T PKX1 , real_T PKX2 , real_T PKX3 , real_T PHX1 , real_T PHX2 ,
-real_T PVX1 , real_T PVX2 , real_T PPX1 , real_T PPX2 , real_T PPX3 , real_T
-PPX4 , real_T lam_Fzo , real_T lam_muV , real_T lam_mux , real_T lam_Kxkappa
-, real_T lam_Cx , real_T lam_Ex , real_T lam_Hx , real_T lam_Vx ) ; static
-real_T iggcenaiwj ( real_T Fz , real_T omega , real_T Vx , real_T press ,
-real_T QSY1 , real_T QSY2 , real_T QSY3 , real_T QSY7 , real_T QSY8 , real_T
-UNLOADED_RADIUS , real_T b_FZMIN , real_T b_FZMAX , real_T PRESMIN , real_T
-PRESMAX ) ; static real_T ipmaflmbfh ( real_T Fz , real_T omega , real_T Tamb
-, real_T Fpl , real_T Cr , real_T Kt , real_T Tmeas , real_T Re , real_T
-b_FZMIN , real_T b_FZMAX , real_T TMIN , real_T TMAX ) ; static boolean_T
-gppluqklue ( real_T Tout , real_T Tfmaxs , dmpx2jc2pu * localB , fmdhv4fck3 *
-localDW ) ; static boolean_T g0el31fu5q ( real_T Tout , real_T Tfmaxs ,
-dmpx2jc2pu * localB , fmdhv4fck3 * localDW , pymb3fi5g4 * localP ) ; static
-void mmkivrlpqb ( real_T rhoz , real_T omega , real_T * Re , real_T * Fz ) {
-* Re = 0.0 * muDoubleScalarAbs ( omega ) + rhoz ; if ( * Re < 0.001 ) { * Re
-= 0.001 ; } * Fz = ( rtNaN ) ; } static void n5teuatb0z ( const real_T a_data
-[ ] , const int32_T a_size [ 2 ] , real_T y_data [ ] , int32_T y_size [ 2 ] )
-{ real_T z1_data ; int32_T loop_ub ; y_size [ 1 ] = ( int8_T ) a_size [ 1 ] ;
-loop_ub = y_size [ 1 ] - 1 ; if ( 0 <= loop_ub ) { memcpy ( & z1_data , &
-y_data [ 0 ] , ( loop_ub + 1 ) * sizeof ( real_T ) ) ; } if ( 0 <= y_size [ 1
-] - 1 ) { z1_data = a_data [ 0 ] * a_data [ 0 ] ; } y_size [ 0 ] = 1 ;
-loop_ub = y_size [ 1 ] - 1 ; if ( 0 <= loop_ub ) { memcpy ( & y_data [ 0 ] ,
-& z1_data , ( loop_ub + 1 ) * sizeof ( real_T ) ) ; } } static real_T
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , {
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 10000.0 , 1.0E+6 , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 ,
+0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 0.0 ,
+0.78539816339744828 , 0.0 , 4741.694487 , 1.5 , 0.05798777 , - 2.0 , { 0.0 ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0
+, 0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 10000.0 , 1.0E+6 , { 0.0 , 0.0 , 0.0 } , {
+0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 0.0 ,
+0.78539816339744828 , 6.2831853071795862 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0
+, 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , { { { 0.0 , 0.0 , 0.0 , 0.0 , - 4.0 , 0 , 0 ,
+0 , { 0 , 1 , 0 , 0 , 1 , 1 , 1 , 0 } } } } , { { { 0.0 , 0.0 , 0.0 , 0.0 , -
+4.0 , 0 , 0 , 0 , { 0 , 1 , 0 , 0 , 1 , 1 , 1 , 0 } } } } , { 0.0 , 0.0 } } ;
+static void mmkivrlpqb ( real_T rhoz , real_T omega , real_T * Re , real_T *
+Fz ) ; static void n5teuatb0z ( const real_T a_data [ ] , const int32_T
+a_size [ 2 ] , real_T y_data [ ] , int32_T y_size [ 2 ] ) ; static real_T
 ak2ysaxv1o ( real_T Re , real_T omega , real_T Vx , real_T b_VXLOW , real_T
-b_kappamax ) { real_T kappa ; real_T Vxpabs ; int32_T b_trueCount ; real_T
-Vxpabs_data ; real_T tmp_data ; int32_T Vxpabs_size [ 2 ] ; int32_T tmp_size
-[ 2 ] ; Vxpabs = muDoubleScalarAbs ( Vx ) ; b_trueCount = 0 ; if ( Vxpabs <
-b_VXLOW ) { b_trueCount = 1 ; } Vxpabs_size [ 0 ] = 1 ; Vxpabs_size [ 1 ] =
-b_trueCount ; if ( 0 <= b_trueCount - 1 ) { Vxpabs_data = Vxpabs / b_VXLOW ;
-} n5teuatb0z ( & Vxpabs_data , Vxpabs_size , & tmp_data , tmp_size ) ; if ( 0
-<= b_trueCount - 1 ) { Vxpabs_data = 2.0 * b_VXLOW / ( 3.0 - tmp_data ) ; }
-if ( Vxpabs < b_VXLOW ) { Vxpabs = Vxpabs_data ; } kappa = ( Re * omega - Vx
-) / Vxpabs ; b_trueCount = 0 ; if ( kappa < - b_kappamax ) { b_trueCount = 1
-; } if ( 0 <= b_trueCount - 1 ) { kappa = - b_kappamax ; } if ( kappa >
-b_kappamax ) { kappa = b_kappamax ; } return kappa ; } static real_T
-o4pauiv4gj ( real_T kappa , real_T Fz , real_T D , real_T C , real_T B ,
-real_T E , real_T lam_mux , real_T b_FZMIN , real_T b_FZMAX ) { real_T
-b_idx_0 ; real_T Fx_tmp ; b_idx_0 = Fz ; if ( Fz < b_FZMIN ) { b_idx_0 =
-b_FZMIN ; } if ( b_idx_0 > b_FZMAX ) { b_idx_0 = b_FZMAX ; } Fx_tmp = B *
-kappa ; return muDoubleScalarSin ( muDoubleScalarAtan ( Fx_tmp - ( Fx_tmp -
+b_kappamax ) ; static real_T o4pauiv4gj ( real_T kappa , real_T Fz , real_T D
+, real_T C , real_T B , real_T E , real_T lam_mux , real_T b_FZMIN , real_T
+b_FZMAX ) ; static real_T njagxepmjm ( real_T kappa , real_T Vx , real_T Fz ,
+real_T b_gamma , real_T LONGVL , real_T FNOMIN , real_T b_FZMIN , real_T
+b_FZMAX , real_T press , real_T NOMPRES , real_T PRESMIN , real_T PRESMAX ,
+real_T PCX1 , real_T PDX1 , real_T PDX2 , real_T PDX3 , real_T PEX1 , real_T
+PEX2 , real_T PEX3 , real_T PEX4 , real_T PKX1 , real_T PKX2 , real_T PKX3 ,
+real_T PHX1 , real_T PHX2 , real_T PVX1 , real_T PVX2 , real_T PPX1 , real_T
+PPX2 , real_T PPX3 , real_T PPX4 , real_T lam_Fzo , real_T lam_muV , real_T
+lam_mux , real_T lam_Kxkappa , real_T lam_Cx , real_T lam_Ex , real_T lam_Hx
+, real_T lam_Vx ) ; static real_T iggcenaiwj ( real_T Fz , real_T omega ,
+real_T Vx , real_T press , real_T QSY1 , real_T QSY2 , real_T QSY3 , real_T
+QSY7 , real_T QSY8 , real_T UNLOADED_RADIUS , real_T b_FZMIN , real_T b_FZMAX
+, real_T PRESMIN , real_T PRESMAX ) ; static real_T ipmaflmbfh ( real_T Fz ,
+real_T omega , real_T Tamb , real_T Fpl , real_T Cr , real_T Kt , real_T
+Tmeas , real_T Re , real_T b_FZMIN , real_T b_FZMAX , real_T TMIN , real_T
+TMAX ) ; static boolean_T gppluqklue ( real_T Tout , real_T Tfmaxs ,
+dmpx2jc2pu * localB , fmdhv4fck3 * localDW ) ; static boolean_T g0el31fu5q (
+real_T Tout , real_T Tfmaxs , dmpx2jc2pu * localB , fmdhv4fck3 * localDW ,
+pymb3fi5g4 * localP ) ; static void mmkivrlpqb ( real_T rhoz , real_T omega ,
+real_T * Re , real_T * Fz ) { * Re = 0.0 * muDoubleScalarAbs ( omega ) + rhoz
+; if ( * Re < 0.001 ) { * Re = 0.001 ; } * Fz = ( rtNaN ) ; } static void
+n5teuatb0z ( const real_T a_data [ ] , const int32_T a_size [ 2 ] , real_T
+y_data [ ] , int32_T y_size [ 2 ] ) { real_T z1_data ; int32_T loop_ub ;
+y_size [ 1 ] = ( int8_T ) a_size [ 1 ] ; loop_ub = y_size [ 1 ] - 1 ; if ( 0
+<= loop_ub ) { memcpy ( & z1_data , & y_data [ 0 ] , ( loop_ub + 1 ) * sizeof
+( real_T ) ) ; } if ( 0 <= y_size [ 1 ] - 1 ) { z1_data = a_data [ 0 ] *
+a_data [ 0 ] ; } y_size [ 0 ] = 1 ; loop_ub = y_size [ 1 ] - 1 ; if ( 0 <=
+loop_ub ) { memcpy ( & y_data [ 0 ] , & z1_data , ( loop_ub + 1 ) * sizeof (
+real_T ) ) ; } } static real_T ak2ysaxv1o ( real_T Re , real_T omega , real_T
+Vx , real_T b_VXLOW , real_T b_kappamax ) { real_T kappa ; real_T Vxpabs ;
+int32_T b_trueCount ; real_T Vxpabs_data ; real_T tmp_data ; int32_T
+Vxpabs_size [ 2 ] ; int32_T tmp_size [ 2 ] ; Vxpabs = muDoubleScalarAbs ( Vx
+) ; b_trueCount = 0 ; if ( Vxpabs < b_VXLOW ) { b_trueCount = 1 ; }
+Vxpabs_size [ 0 ] = 1 ; Vxpabs_size [ 1 ] = b_trueCount ; if ( 0 <=
+b_trueCount - 1 ) { Vxpabs_data = Vxpabs / b_VXLOW ; } n5teuatb0z ( &
+Vxpabs_data , Vxpabs_size , & tmp_data , tmp_size ) ; if ( 0 <= b_trueCount -
+1 ) { Vxpabs_data = 2.0 * b_VXLOW / ( 3.0 - tmp_data ) ; } if ( Vxpabs <
+b_VXLOW ) { Vxpabs = Vxpabs_data ; } kappa = ( Re * omega - Vx ) / Vxpabs ;
+b_trueCount = 0 ; if ( kappa < - b_kappamax ) { b_trueCount = 1 ; } if ( 0 <=
+b_trueCount - 1 ) { kappa = - b_kappamax ; } if ( kappa > b_kappamax ) {
+kappa = b_kappamax ; } return kappa ; } static real_T o4pauiv4gj ( real_T
+kappa , real_T Fz , real_T D , real_T C , real_T B , real_T E , real_T
+lam_mux , real_T b_FZMIN , real_T b_FZMAX ) { real_T b_idx_0 ; real_T Fx_tmp
+; b_idx_0 = Fz ; if ( Fz < b_FZMIN ) { b_idx_0 = b_FZMIN ; } if ( b_idx_0 >
+b_FZMAX ) { b_idx_0 = b_FZMAX ; } Fx_tmp = B * kappa ; return
+muDoubleScalarSin ( muDoubleScalarAtan ( Fx_tmp - ( Fx_tmp -
 muDoubleScalarAtan ( Fx_tmp ) ) * E ) * C ) * D * ( b_idx_0 * lam_mux ) ; }
 static real_T njagxepmjm ( real_T kappa , real_T Vx , real_T Fz , real_T
 b_gamma , real_T LONGVL , real_T FNOMIN , real_T b_FZMIN , real_T b_FZMAX ,

@@ -402,25 +402,25 @@ static TARGET_CONST rtwCAPI_ElementMap rtElementMap [ ] = { { ( NULL ) , 0 ,
 0 , 0 , 0 } , } ; static const rtwCAPI_DimensionMap rtDimensionMap [ ] = { {
 rtwCAPI_SCALAR , 0 , 2 , 0 } , { rtwCAPI_VECTOR , 2 , 2 , 0 } , {
 rtwCAPI_VECTOR , 4 , 2 , 0 } , { rtwCAPI_VECTOR , 6 , 2 , 0 } } ; static
-const uint_T rtDimensionArray [ ] = { 1 , 1 , 2 , 1 , 401 , 1 , 1 , 2 } ;
+const uint_T rtDimensionArray [ ] = { 1 , 1 , 2 , 1 , 2474 , 1 , 1 , 2 } ;
 static const real_T rtcapiStoredFloats [ ] = { 0.01 , 0.0 , 0.1 , 1.0 ,
-5.0E-5 , 0.05 } ; static const rtwCAPI_FixPtMap rtFixPtMap [ ] = { { ( NULL )
+5.0E-5 , 0.5 } ; static const rtwCAPI_FixPtMap rtFixPtMap [ ] = { { ( NULL )
 , ( NULL ) , rtwCAPI_FIX_RESERVED , 0 , 0 , 0 } , } ; static const
 rtwCAPI_SampleTimeMap rtSampleTimeMap [ ] = { { ( const void * ) &
 rtcapiStoredFloats [ 0 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 3 ,
 0 } , { ( const void * ) & rtcapiStoredFloats [ 1 ] , ( const void * ) &
 rtcapiStoredFloats [ 1 ] , 0 , 0 } , { ( const void * ) & rtcapiStoredFloats
-[ 2 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 5 , 0 } , { ( const
+[ 2 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 4 , 0 } , { ( const
 void * ) & rtcapiStoredFloats [ 1 ] , ( const void * ) & rtcapiStoredFloats [
 3 ] , 1 , 0 } , { ( const void * ) & rtcapiStoredFloats [ 4 ] , ( const void
 * ) & rtcapiStoredFloats [ 1 ] , 2 , 0 } , { ( const void * ) &
-rtcapiStoredFloats [ 5 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 4 ,
+rtcapiStoredFloats [ 5 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 5 ,
 0 } , { ( NULL ) , ( NULL ) , 6 , 0 } } ; static
 rtwCAPI_ModelMappingStaticInfo mmiStatic = { { rtBlockSignals , 75 , ( NULL )
 , 0 , ( NULL ) , 0 } , { rtBlockParameters , 58 , rtModelParameters , 0 } , {
 rtBlockStates , 7 } , { rtDataTypeMap , rtDimensionMap , rtFixPtMap ,
-rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" , { 504722902U
-, 2250330730U , 2710263453U , 1519803584U } , ( NULL ) , 0 , 0 } ; const
+rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" , { 233266599U
+, 3622045272U , 1722335398U , 1348532806U } , ( NULL ) , 0 , 0 } ; const
 rtwCAPI_ModelMappingStaticInfo * HT05Model_GetCAPIStaticMap ( void ) { return
 & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD

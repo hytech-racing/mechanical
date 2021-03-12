@@ -20,31 +20,45 @@
 #define TARGET_STRING(s)               (s)
 #endif
 #endif
-static rtwCAPI_Signals rtBlockSignals [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) ,
-0 , 0 , 0 , 0 , 0 } } ; static rtwCAPI_States rtBlockStates [ ] = { { 0 , 1 ,
-TARGET_STRING (
+static const rtwCAPI_SignalHierLoggingInfo rtSigHierLoggingInfo [ ] = { { ""
+, 4 , 0 } , { "SrcPwr" , 0 , - 1 } , { "LdPwr" , 0 , - 1 } , { "PwrLoss" , 0
+, - 1 } , { "MtrTrqEst" , 0 , - 1 } } ; static const uint_T
+rtSigHierLoggingChildIdxs [ ] = { 1 , 2 , 3 , 4 } ; static rtwCAPI_Signals
+rtBlockSignals [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 } }
+; static rtwCAPI_States rtBlockStates [ ] = { { 0 , - 1 , TARGET_STRING (
+"MotGenEvDynamic/Unit Delay" ) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0
+, 0 , 0 , 0 , 0 , 0 } , { 1 , - 1 , TARGET_STRING (
+"MotGenEvDynamic/Unit Delay" ) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0
+, 0 , 0 , 0 , 0 , 1 } , { 2 , - 1 , TARGET_STRING (
+"MotGenEvDynamic/Unit Delay" ) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0
+, 0 , 0 , 0 , 0 , 2 } , { 3 , - 1 , TARGET_STRING (
+"MotGenEvDynamic/Unit Delay" ) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0
+, 0 , 0 , 0 , 0 , 3 } , { 4 , 1 , TARGET_STRING (
  "MotGenEvDynamic/Interior PMSM/PMSM Speed Input Continuous/PMSM Speed Input Core/Mechanical and Angle/Int1"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
-, 0 } , { 1 , - 1 , TARGET_STRING (
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1
+, 0 } , { 5 , - 1 , TARGET_STRING (
  "MotGenEvDynamic/Interior PM Controller/Interior PMSM Torque Control Drive TL/Current Controller/DQ Current Control and Decouple/Integrator/Unit Delay"
-) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0 , 0 , 1 , 0 , - 1 , 0 } , { 2
+) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } , { 6
 , - 1 , TARGET_STRING (
  "MotGenEvDynamic/Interior PM Controller/Interior PMSM Torque Control Drive TL/Current Controller/DQ Current Control and Decouple/Integrator1/Unit Delay"
-) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0 , 0 , 1 , 0 , - 1 , 0 } , { 3
+) , TARGET_STRING ( "DSTATE" ) , "" , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } , { 7
 , 0 , TARGET_STRING (
  "MotGenEvDynamic/Interior PMSM/PMSM Speed Input Continuous/PMSM Speed Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
-, 0 } , { 4 , 2 , TARGET_STRING (
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1
+, 0 } , { 8 , 2 , TARGET_STRING (
  "MotGenEvDynamic/Interior PMSM/PMSM Speed Input Continuous/PMSM Speed Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage1/Integrator"
-) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
 - 1 , 0 } } ;
 #ifndef HOST_CAPI_BUILD
 static void MotGenEvDynamic_InitializeDataAddr ( void * dataAddr [ ] ,
 cloq5bin3y * localDW , fsi3zxjdsv * localX ) { dataAddr [ 0 ] = ( void * ) (
-& localX -> lsis3mvtl3 ) ; dataAddr [ 1 ] = ( void * ) ( & localDW ->
-hh4vgn0tkn ) ; dataAddr [ 2 ] = ( void * ) ( & localDW -> n1xqcq4unv ) ;
-dataAddr [ 3 ] = ( void * ) ( & localX -> jjrb01sfag ) ; dataAddr [ 4 ] = (
+& localDW -> lmqwggutck ) ; dataAddr [ 1 ] = ( void * ) ( & localDW ->
+pdv153zdu5 ) ; dataAddr [ 2 ] = ( void * ) ( & localDW -> omrrdh0nvo ) ;
+dataAddr [ 3 ] = ( void * ) ( & localDW -> gxkwygbb4g ) ; dataAddr [ 4 ] = (
+void * ) ( & localX -> lsis3mvtl3 ) ; dataAddr [ 5 ] = ( void * ) ( & localDW
+-> hh4vgn0tkn ) ; dataAddr [ 6 ] = ( void * ) ( & localDW -> n1xqcq4unv ) ;
+dataAddr [ 7 ] = ( void * ) ( & localX -> jjrb01sfag ) ; dataAddr [ 8 ] = (
 void * ) ( & localX -> kqb0spkyga ) ; }
 #endif
 #ifndef HOST_CAPI_BUILD
@@ -55,7 +69,8 @@ static void MotGenEvDynamic_InitializeVarDimsAddr ( int32_T * vardimsAddr [ ]
 static void MotGenEvDynamic_InitializeLoggingFunctions ( RTWLoggingFcnPtr
 loggingPtrs [ ] ) { loggingPtrs [ 0 ] = ( NULL ) ; loggingPtrs [ 1 ] = ( NULL
 ) ; loggingPtrs [ 2 ] = ( NULL ) ; loggingPtrs [ 3 ] = ( NULL ) ; loggingPtrs
-[ 4 ] = ( NULL ) ; }
+[ 4 ] = ( NULL ) ; loggingPtrs [ 5 ] = ( NULL ) ; loggingPtrs [ 6 ] = ( NULL
+) ; loggingPtrs [ 7 ] = ( NULL ) ; loggingPtrs [ 8 ] = ( NULL ) ; }
 #endif
 static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 "real_T" , 0 , 0 , sizeof ( real_T ) , SS_DOUBLE , 0 , 0 , 0 } } ;
@@ -65,23 +80,24 @@ static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 static TARGET_CONST rtwCAPI_ElementMap rtElementMap [ ] = { { ( NULL ) , 0 ,
 0 , 0 , 0 } , } ; static rtwCAPI_DimensionMap rtDimensionMap [ ] = { {
 rtwCAPI_SCALAR , 0 , 2 , 0 } } ; static uint_T rtDimensionArray [ ] = { 1 , 1
-} ; static const real_T rtcapiStoredFloats [ ] = { 0.0 , 5.0E-5 } ; static
+} ; static const real_T rtcapiStoredFloats [ ] = { 5.0E-5 , 0.0 } ; static
 rtwCAPI_FixPtMap rtFixPtMap [ ] = { { ( NULL ) , ( NULL ) ,
 rtwCAPI_FIX_RESERVED , 0 , 0 , 0 } , } ; static rtwCAPI_SampleTimeMap
 rtSampleTimeMap [ ] = { { ( const void * ) & rtcapiStoredFloats [ 0 ] , (
-const void * ) & rtcapiStoredFloats [ 0 ] , 0 , 0 } , { ( const void * ) &
-rtcapiStoredFloats [ 1 ] , ( const void * ) & rtcapiStoredFloats [ 0 ] , 2 ,
+const void * ) & rtcapiStoredFloats [ 1 ] , 2 , 0 } , { ( const void * ) &
+rtcapiStoredFloats [ 1 ] , ( const void * ) & rtcapiStoredFloats [ 1 ] , 0 ,
 0 } } ; static int_T rtContextSystems [ 10 ] ; static rtwCAPI_LoggingMetaInfo
 loggingMetaInfo [ ] = { { 0 , 0 , "" , 0 } } ; static
 rtwCAPI_ModelMapLoggingStaticInfo mmiStaticInfoLogging = { 10 ,
-rtContextSystems , loggingMetaInfo , 0 , NULL , { 0 , NULL , NULL } , 0 , (
-NULL ) } ; static rtwCAPI_ModelMappingStaticInfo mmiStatic = { {
-rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
-) , 0 } , { rtBlockStates , 5 } , { rtDataTypeMap , rtDimensionMap ,
-rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
-{ 2955343371U , 1264446524U , 1925214134U , 3563414767U } , &
-mmiStaticInfoLogging , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
-MotGenEvDynamic_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
+rtContextSystems , loggingMetaInfo , 0 , NULL , { 5 , rtSigHierLoggingInfo ,
+rtSigHierLoggingChildIdxs } , 0 , ( NULL ) } ; static
+rtwCAPI_ModelMappingStaticInfo mmiStatic = { { rtBlockSignals , 0 , ( NULL )
+, 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL ) , 0 } , { rtBlockStates , 9
+} , { rtDataTypeMap , rtDimensionMap , rtFixPtMap , rtElementMap ,
+rtSampleTimeMap , rtDimensionArray } , "float" , { 3703348903U , 643259519U ,
+934699292U , 929775685U } , & mmiStaticInfoLogging , 0 , 0 } ; const
+rtwCAPI_ModelMappingStaticInfo * MotGenEvDynamic_GetCAPIStaticMap ( void ) {
+return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 static void MotGenEvDynamic_InitializeSystemRan ( mv4ga5jwa1 * const
 oczxsqne0n , sysRanDType * systemRan [ ] , cloq5bin3y * localDW , int_T

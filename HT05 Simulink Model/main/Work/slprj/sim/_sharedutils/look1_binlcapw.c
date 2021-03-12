@@ -5,11 +5,12 @@
 real_T look1_binlcapw(real_T u0, const real_T bp0[], const real_T table[],
                       uint32_T maxIndex)
 {
-  real_T y;
   real_T frac;
-  uint32_T iRght;
-  uint32_T iLeft;
+  real_T y;
+  real_T yL_0d0;
   uint32_T bpIdx;
+  uint32_T iLeft;
+  uint32_T iRght;
   if (u0 <= bp0[0U]) {
     iLeft = 0U;
     frac = 0.0;
@@ -36,7 +37,8 @@ real_T look1_binlcapw(real_T u0, const real_T bp0[], const real_T table[],
   if (iLeft == maxIndex) {
     y = table[iLeft];
   } else {
-    y = (table[iLeft + 1U] - table[iLeft]) * frac + table[iLeft];
+    yL_0d0 = table[iLeft];
+    y = (table[iLeft + 1U] - yL_0d0) * frac + yL_0d0;
   }
 
   return y;

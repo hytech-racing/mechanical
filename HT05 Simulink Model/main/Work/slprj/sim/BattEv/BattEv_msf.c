@@ -22,44 +22,45 @@ nargs , ... ) { void * voidPtrDiagnostic = NULL ; va_list args ; va_start (
 args , nargs ) ; slmrCreateDiagnostic ( id , nargs , args , &
 voidPtrDiagnostic ) ; va_end ( args ) ; return voidPtrDiagnostic ; } void
 rt_ssSet_slErrMsg ( SimStruct * S , void * diag ) { if ( !
-_ssIsErrorStatusAslErrMsg ( S ) ) { _ssSet_slErrMsg ( S , diag ) ; } else {
-_ssDiscardDiagnostic ( S , diag ) ; } } void rt_ssReportDiagnosticAsWarning (
-SimStruct * S , void * diag ) { _ssReportDiagnosticAsWarning ( S , diag ) ; }
-const char * rt_CreateFullPathToTop ( const char * toppath , const char *
-subpath ) { char * fullpath = NULL ; slmrCreateFullPathToTop ( toppath ,
-subpath , & fullpath ) ; return fullpath ; } boolean_T
-slIsRapidAcceleratorSimulating ( void ) { return false ; } void
-rt_RAccelReplaceFromFilename ( const char * blockpath , char * fileName ) { (
-void ) blockpath ; ( void ) fileName ; } void rt_RAccelReplaceToFilename (
-const char * blockpath , char * fileName ) { ( void ) blockpath ; ( void )
-fileName ; } static void mdlInitializeConditions ( SimStruct * S ) {
-lobjb0lvrdo * dw = ( lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; hkgv0zhr3w *
-localX = ( hkgv0zhr3w * ) ssGetContStates ( S ) ; poo3kmg0ob ( & ( dw -> rtm
-) , & ( dw -> rtdw ) , localX ) ; } static void mdlReset ( SimStruct * S ) {
-lobjb0lvrdo * dw = ( lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; hkgv0zhr3w *
-localX = ( hkgv0zhr3w * ) ssGetContStates ( S ) ; havtbmuleg ( & ( dw -> rtm
-) , & ( dw -> rtdw ) , localX ) ; } static void mdlPeriodicOutputUpdate (
-SimStruct * S , int_T tid ) { lobjb0lvrdo * dw = ( lobjb0lvrdo * ) ssGetDWork
-( S , 0 ) ; const real_T * i_ge3d2oowpp = ( real_T * ) ssGetInputPortSignal (
-S , 0 ) ; const real_T * i_ohnku1jn0r = ( real_T * ) ssGetInputPortSignal ( S
-, 1 ) ; real_T * o_B_1_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ;
-real_T * o_B_1_2 = ( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; hkgv0zhr3w
-* localX = ( hkgv0zhr3w * ) ssGetContStates ( S ) ; if ( tid == 0 ) { BattEv
-( & ( dw -> rtm ) , i_ge3d2oowpp , i_ohnku1jn0r , o_B_1_1 , o_B_1_2 , & ( dw
--> rtb ) , & ( dw -> rtdw ) , localX ) ; c0hgp3wnut ( & ( dw -> rtm ) , & (
-dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } } static void
-mdlInitializeSizes ( SimStruct * S ) { if ( ( S -> mdlInfo -> genericFcn != (
-NULL ) ) && ( ! ( S -> mdlInfo -> genericFcn ) ( S ,
-GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL ) ) ) ) { return ; }
-ssSetNumSFcnParams ( S , 0 ) ; ssFxpSetU32BitRegionCompliant ( S , 1 ) ;
-rt_InitInfAndNaN ( sizeof ( real_T ) ) ; if ( S -> mdlInfo -> genericFcn != (
-NULL ) ) { _GenericFcn fcn = S -> mdlInfo -> genericFcn ; }
-ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 1 ) ;
-ssSetNumDiscStates ( S , 0 ) ; ssSetNumPeriodicContStates ( S , 0 ) ;
-ssSetSymbolicDimsSupport ( S , true ) ; slmrInitializeIOPortDataVectors ( S ,
-2 , 2 ) ; if ( ! ssSetNumInputPorts ( S , 2 ) ) return ; if ( !
-ssSetInputPortVectorDimension ( S , 0 , 1 ) ) return ;
-ssSetInputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
+_ssIsErrorStatusAslErrMsg ( S ) ) { _ssSet_slLocalErrMsg ( S , diag ) ; }
+else { _ssDiscardDiagnostic ( S , diag ) ; } } void
+rt_ssReportDiagnosticAsWarning ( SimStruct * S , void * diag ) {
+_ssReportDiagnosticAsWarning ( S , diag ) ; } const char *
+rt_CreateFullPathToTop ( const char * toppath , const char * subpath ) { char
+* fullpath = NULL ; slmrCreateFullPathToTop ( toppath , subpath , & fullpath
+) ; return fullpath ; } boolean_T slIsRapidAcceleratorSimulating ( void ) {
+return false ; } void rt_RAccelReplaceFromFilename ( const char * blockpath ,
+char * fileName ) { ( void ) blockpath ; ( void ) fileName ; } void
+rt_RAccelReplaceToFilename ( const char * blockpath , char * fileName ) { (
+void ) blockpath ; ( void ) fileName ; } static void mdlInitializeConditions
+( SimStruct * S ) { lobjb0lvrdo * dw = ( lobjb0lvrdo * ) ssGetDWork ( S , 0 )
+; hkgv0zhr3w * localX = ( hkgv0zhr3w * ) ssGetContStates ( S ) ; poo3kmg0ob (
+& ( dw -> rtm ) , & ( dw -> rtdw ) , localX ) ; } static void mdlReset (
+SimStruct * S ) { lobjb0lvrdo * dw = ( lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ;
+hkgv0zhr3w * localX = ( hkgv0zhr3w * ) ssGetContStates ( S ) ; havtbmuleg ( &
+( dw -> rtm ) , & ( dw -> rtdw ) , localX ) ; } static void
+mdlPeriodicOutputUpdate ( SimStruct * S , int_T tid ) { lobjb0lvrdo * dw = (
+lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; const real_T * i_ge3d2oowpp = ( real_T
+* ) ssGetInputPortSignal ( S , 0 ) ; const real_T * i_ohnku1jn0r = ( real_T *
+) ssGetInputPortSignal ( S , 1 ) ; real_T * o_B_1_1 = ( real_T * )
+ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_1_2 = ( real_T * )
+ssGetOutputPortSignal ( S , 1 ) ; hkgv0zhr3w * localX = ( hkgv0zhr3w * )
+ssGetContStates ( S ) ; khjrgybdwv * localXdis = ( khjrgybdwv * )
+ssGetContStateDisabled ( S ) ; if ( tid == 0 ) { BattEv ( & ( dw -> rtm ) ,
+i_ge3d2oowpp , i_ohnku1jn0r , o_B_1_1 , o_B_1_2 , & ( dw -> rtb ) , & ( dw ->
+rtdw ) , localX ) ; c0hgp3wnut ( & ( dw -> rtm ) , & ( dw -> rtb ) , & ( dw
+-> rtdw ) , localXdis ) ; } } static void mdlInitializeSizes ( SimStruct * S
+) { if ( ( S -> mdlInfo -> genericFcn != ( NULL ) ) && ( ! ( S -> mdlInfo ->
+genericFcn ) ( S , GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL )
+) ) ) { return ; } ssSetNumSFcnParams ( S , 0 ) ;
+ssFxpSetU32BitRegionCompliant ( S , 1 ) ; rt_InitInfAndNaN ( sizeof ( real_T
+) ) ; if ( S -> mdlInfo -> genericFcn != ( NULL ) ) { _GenericFcn fcn = S ->
+mdlInfo -> genericFcn ; } ssSetRTWGeneratedSFcn ( S , 2 ) ;
+ssSetNumContStates ( S , 1 ) ; ssSetNumDiscStates ( S , 0 ) ;
+ssSetNumPeriodicContStates ( S , 0 ) ; ssSetSymbolicDimsSupport ( S , true )
+; slmrInitializeIOPortDataVectors ( S , 2 , 2 ) ; if ( ! ssSetNumInputPorts (
+S , 2 ) ) return ; if ( ! ssSetInputPortVectorDimension ( S , 0 , 1 ) )
+return ; ssSetInputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetInputPortDataType ( S , 0 , SS_DOUBLE ) ;
 } if ( ssGetSimMode ( S ) != SS_SIMMODE_SIZES_CALL_ONLY ) {
@@ -164,7 +165,7 @@ if ( ! ssSetNumDWork ( S , 1 ) ) { return ; }
 slmrRegisterSystemInitializeMethod ( S , mdlInitializeConditions ) ;
 slmrRegisterSystemResetMethod ( S , mdlReset ) ;
 slmrRegisterPeriodicOutputUpdateMethod ( S , mdlPeriodicOutputUpdate ) ;
-ssSetSimulinkVersionGeneratedIn ( S , "10.1" ) ; ssSetNeedAbsoluteTime ( S ,
+ssSetSimulinkVersionGeneratedIn ( S , "10.2" ) ; ssSetNeedAbsoluteTime ( S ,
 1 ) ; } static void mdlInitializeSampleTimes ( SimStruct * S ) {
 ssSetSampleTime ( S , 0 , 0 ) ; ssSetOffsetTime ( S , 0 , 0 ) ;
 ssSetSampleTime ( S , 1 , mxGetInf ( ) ) ; ssSetOffsetTime ( S , 1 , 0 ) ;
@@ -204,9 +205,10 @@ i_ohnku1jn0r , o_B_1_1 , o_B_1_2 , & ( dw -> rtb ) , & ( dw -> rtdw ) ,
 localX ) ; } } }
 #define MDL_UPDATE
 static void mdlUpdate ( SimStruct * S , int_T tid ) { lobjb0lvrdo * dw = (
-lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; hkgv0zhr3w * localX = ( hkgv0zhr3w * )
-ssGetContStates ( S ) ; if ( ssIsSampleHit ( S , 0 , tid ) ) { c0hgp3wnut ( &
-( dw -> rtm ) , & ( dw -> rtb ) , & ( dw -> rtdw ) , localX ) ; } return ; }
+lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; khjrgybdwv * localXdis = ( khjrgybdwv
+* ) ssGetContStateDisabled ( S ) ; if ( ssIsSampleHit ( S , 0 , tid ) ) {
+c0hgp3wnut ( & ( dw -> rtm ) , & ( dw -> rtb ) , & ( dw -> rtdw ) , localXdis
+) ; } return ; }
 #define MDL_ZERO_CROSSINGS
 static void mdlZeroCrossings ( SimStruct * S ) { lobjb0lvrdo * dw = (
 lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; hkgv0zhr3w * localX = ( hkgv0zhr3w * )
@@ -217,10 +219,9 @@ localX , localZCSV ) ; }
 static void mdlDerivatives ( SimStruct * S ) { lobjb0lvrdo * dw = (
 lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; khjrgybdwv * localXdis = ( khjrgybdwv
 * ) ssGetContStateDisabled ( S ) ; nvyvwtjtwa * localXdot = ( nvyvwtjtwa * )
-ssGetdX ( S ) ; pexk2pi1gg ( & ( dw -> rtb ) , & ( dw -> rtdw ) , localXdis ,
-localXdot ) ; } static void mdlTerminate ( SimStruct * S ) { lobjb0lvrdo * dw
-= ( lobjb0lvrdo * ) ssGetDWork ( S , 0 ) ; m5uwyjpoin ( & ( dw -> rtm ) ) ;
-return ; }
+ssGetdX ( S ) ; pexk2pi1gg ( & ( dw -> rtb ) , localXdis , localXdot ) ; }
+static void mdlTerminate ( SimStruct * S ) { lobjb0lvrdo * dw = ( lobjb0lvrdo
+* ) ssGetDWork ( S , 0 ) ; m5uwyjpoin ( & ( dw -> rtm ) ) ; return ; }
 #define MDL_CLEANUP_RUNTIME_RESOURCES
 static void mdlCleanupRuntimeResources ( SimStruct * S ) { }
 #if !defined(MDL_SIM_STATE)

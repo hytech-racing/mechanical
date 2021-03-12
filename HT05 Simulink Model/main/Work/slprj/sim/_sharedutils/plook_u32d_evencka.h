@@ -1,5 +1,5 @@
-#ifndef SHARE_plook_u32d_evencka
-#define SHARE_plook_u32d_evencka
+#ifndef RTW_HEADER_plook_u32d_evencka_h_
+#define RTW_HEADER_plook_u32d_evencka_h_
 #include "rtwtypes.h"
 #include "multiword_types.h"
 

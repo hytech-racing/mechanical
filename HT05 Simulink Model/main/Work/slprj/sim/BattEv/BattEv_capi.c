@@ -60,8 +60,8 @@ mmiStaticInfoLogging = { 2 , rtContextSystems , loggingMetaInfo , 0 , NULL ,
 mmiStatic = { { rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL
 ) , 0 , ( NULL ) , 0 } , { rtBlockStates , 1 } , { rtDataTypeMap ,
 rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 2630729822U , 4281388535U , 4025192798U ,
-2384138663U } , & mmiStaticInfoLogging , 0 , 0 } ; const
+rtDimensionArray } , "float" , { 3009111158U , 3412542136U , 679538173U ,
+7752279U } , & mmiStaticInfoLogging , 0 , 0 } ; const
 rtwCAPI_ModelMappingStaticInfo * BattEv_GetCAPIStaticMap ( void ) { return &
 mmiStatic ; }
 #ifndef HOST_CAPI_BUILD

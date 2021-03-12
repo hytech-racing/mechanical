@@ -102,59 +102,49 @@ ssGetGlobalInitialStatesAvailable ( n4jdqa0poy -> _mdlRefSfcnS ) ; localDW ->
 c0lxguzdmo = ! tmp ; } else { localDW -> c0lxguzdmo = 1 ; } } } void BattEv (
 euywnbmp33 * const n4jdqa0poy , const real_T * bgau4kdtsz , const real_T *
 nend3jcwem , real_T * icwqjgxcm3 , real_T * jovjkqw4dc , nw51lwywlm * localB
-, dmy10bqvs5 * localDW , hkgv0zhr3w * localX ) { real_T awwyaae3xe_p ; localB
--> cxft4ixm0k = - 1.0 / ( a2kiykjvrx . P_6 * 3600.0 ) * * bgau4kdtsz ; if (
-localDW -> c0lxguzdmo != 0 ) { localX -> hflmlajctv = localB -> awwyaae3xe ;
-} if ( rtmIsMajorTimeStep ( n4jdqa0poy ) ) { if ( localX -> hflmlajctv >=
-a2kiykjvrx . P_1 ) { if ( localX -> hflmlajctv > a2kiykjvrx . P_1 ) {
+, dmy10bqvs5 * localDW , hkgv0zhr3w * localX ) { real_T ax24xfmgjs_p ; real_T
+bonvrr20bz ; real_T f02u25iae3_p ; localB -> cxft4ixm0k = - 1.0 / (
+a2kiykjvrx . P_6 * 3600.0 ) * * bgau4kdtsz ; if ( rtmIsMajorTimeStep (
+n4jdqa0poy ) ) { if ( localDW -> c0lxguzdmo != 0 ) { localX -> hflmlajctv =
+localB -> awwyaae3xe ; } if ( localX -> hflmlajctv >= a2kiykjvrx . P_1 ) { if
+( localX -> hflmlajctv != a2kiykjvrx . P_1 ) { localX -> hflmlajctv =
+a2kiykjvrx . P_1 ; ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy ->
+_mdlRefSfcnS ) ; } localDW -> aq4rfpgnmi = 3 ; } else if ( localX ->
+hflmlajctv <= a2kiykjvrx . P_9 ) { if ( localX -> hflmlajctv != a2kiykjvrx .
+P_9 ) { localX -> hflmlajctv = a2kiykjvrx . P_9 ;
 ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ; }
-localX -> hflmlajctv = a2kiykjvrx . P_1 ; } else { if ( localX -> hflmlajctv
-<= a2kiykjvrx . P_9 ) { if ( localX -> hflmlajctv < a2kiykjvrx . P_9 ) {
+localDW -> aq4rfpgnmi = 4 ; } else { if ( localDW -> aq4rfpgnmi != 0 ) {
 ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ; }
-localX -> hflmlajctv = a2kiykjvrx . P_9 ; } } } awwyaae3xe_p = localX ->
-hflmlajctv / a2kiykjvrx . P_1 ; * jovjkqw4dc = ( look1_binlcapw (
-awwyaae3xe_p , a2kiykjvrx . P_3 , a2kiykjvrx . P_5 , 100U ) - 1.0 /
-a2kiykjvrx . P_6 * * bgau4kdtsz * look2_binlcapw ( * nend3jcwem ,
-awwyaae3xe_p , a2kiykjvrx . P_2 , a2kiykjvrx . P_4 , a2kiykjvrx . P_8 ,
-a2kiykjvrx . P_11 , 7U ) ) * a2kiykjvrx . P_7 ; * icwqjgxcm3 = a2kiykjvrx .
-P_10 * awwyaae3xe_p ; } void BattEvTID1 ( nw51lwywlm * localB ) { if (
+localDW -> aq4rfpgnmi = 0 ; } f02u25iae3_p = localX -> hflmlajctv ; } else {
+f02u25iae3_p = localX -> hflmlajctv ; } f02u25iae3_p /= a2kiykjvrx . P_1 ;
+bonvrr20bz = look2_binlcapw ( * nend3jcwem , f02u25iae3_p , a2kiykjvrx . P_2
+, a2kiykjvrx . P_4 , a2kiykjvrx . P_8 , a2kiykjvrx . P_11 , 7U ) ;
+ax24xfmgjs_p = 1.0 / a2kiykjvrx . P_6 * * bgau4kdtsz ; * jovjkqw4dc = (
+look1_binlcapw ( f02u25iae3_p , a2kiykjvrx . P_3 , a2kiykjvrx . P_5 , 100U )
+- bonvrr20bz * ax24xfmgjs_p ) * a2kiykjvrx . P_7 ; * icwqjgxcm3 = a2kiykjvrx
+. P_10 * f02u25iae3_p ; } void BattEvTID1 ( nw51lwywlm * localB ) { if (
 a2kiykjvrx . P_0 > a2kiykjvrx . P_1 ) { localB -> awwyaae3xe = a2kiykjvrx .
 P_1 ; } else { localB -> awwyaae3xe = a2kiykjvrx . P_0 ; } } void c0hgp3wnut
 ( euywnbmp33 * const n4jdqa0poy , nw51lwywlm * localB , dmy10bqvs5 * localDW
-, hkgv0zhr3w * localX ) { localDW -> c0lxguzdmo = 0 ; if ( localX ->
-hflmlajctv == a2kiykjvrx . P_1 ) { switch ( localDW -> aq4rfpgnmi ) { case 3
-: if ( localB -> cxft4ixm0k < 0.0 ) {
-ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ;
-localDW -> aq4rfpgnmi = 1 ; } break ; case 1 : if ( localB -> cxft4ixm0k >=
-0.0 ) { localDW -> aq4rfpgnmi = 3 ;
-ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ; }
-break ; default : ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy ->
-_mdlRefSfcnS ) ; if ( localB -> cxft4ixm0k < 0.0 ) { localDW -> aq4rfpgnmi =
-1 ; } else { localDW -> aq4rfpgnmi = 3 ; } break ; } } else if ( localX ->
-hflmlajctv == a2kiykjvrx . P_9 ) { switch ( localDW -> aq4rfpgnmi ) { case 4
-: if ( localB -> cxft4ixm0k > 0.0 ) {
-ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ;
-localDW -> aq4rfpgnmi = 2 ; } break ; case 2 : if ( localB -> cxft4ixm0k <=
-0.0 ) { localDW -> aq4rfpgnmi = 4 ;
-ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ; }
-break ; default : ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy ->
-_mdlRefSfcnS ) ; if ( localB -> cxft4ixm0k > 0.0 ) { localDW -> aq4rfpgnmi =
-2 ; } else { localDW -> aq4rfpgnmi = 4 ; } break ; } } else { localDW ->
-aq4rfpgnmi = 0 ; } } void c0hgp3wnutTID1 ( void ) { } void pexk2pi1gg (
-nw51lwywlm * localB , dmy10bqvs5 * localDW , khjrgybdwv * localXdis ,
-nvyvwtjtwa * localXdot ) { if ( ( localDW -> aq4rfpgnmi != 3 ) && ( localDW
--> aq4rfpgnmi != 4 ) ) { localXdot -> hflmlajctv = localB -> cxft4ixm0k ;
-localXdis -> hflmlajctv = false ; } else { localXdot -> hflmlajctv = 0.0 ;
-localXdis -> hflmlajctv = ( ( localDW -> aq4rfpgnmi == 3 ) || ( localDW ->
-aq4rfpgnmi == 4 ) || localXdis -> hflmlajctv ) ; } } void d3sayc4aih (
-nw51lwywlm * localB , dmy10bqvs5 * localDW , hkgv0zhr3w * localX , o3ciyyrlrx
-* localZCSV ) { if ( ( localDW -> aq4rfpgnmi == 1 ) && ( localX -> hflmlajctv
->= a2kiykjvrx . P_1 ) ) { localZCSV -> jlvu1k5feu = 0.0 ; } else { localZCSV
--> jlvu1k5feu = localX -> hflmlajctv - a2kiykjvrx . P_1 ; } if ( ( localDW ->
-aq4rfpgnmi == 2 ) && ( localX -> hflmlajctv <= a2kiykjvrx . P_9 ) ) {
-localZCSV -> dghrbykmv0 = 0.0 ; } else { localZCSV -> dghrbykmv0 = localX ->
-hflmlajctv - a2kiykjvrx . P_9 ; } if ( ( localDW -> aq4rfpgnmi == 3 ) || (
-localDW -> aq4rfpgnmi == 4 ) ) { localZCSV -> mknsjhdkfa = localB ->
+, khjrgybdwv * localXdis ) { localDW -> c0lxguzdmo = 0 ; switch ( localDW ->
+aq4rfpgnmi ) { case 3 : if ( localB -> cxft4ixm0k < 0.0 ) { localDW ->
+aq4rfpgnmi = 1 ; ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy ->
+_mdlRefSfcnS ) ; } break ; case 4 : if ( localB -> cxft4ixm0k > 0.0 ) {
+localDW -> aq4rfpgnmi = 2 ; ssSetBlockStateForSolverChangedAtMajorStep (
+n4jdqa0poy -> _mdlRefSfcnS ) ; } break ; } localXdis -> hflmlajctv = ( (
+localDW -> aq4rfpgnmi == 3 ) || ( localDW -> aq4rfpgnmi == 4 ) ) ; } void
+c0hgp3wnutTID1 ( void ) { } void pexk2pi1gg ( nw51lwywlm * localB ,
+khjrgybdwv * localXdis , nvyvwtjtwa * localXdot ) { if ( localXdis ->
+hflmlajctv ) { localXdot -> hflmlajctv = 0.0 ; } else { localXdot ->
+hflmlajctv = localB -> cxft4ixm0k ; } } void d3sayc4aih ( nw51lwywlm * localB
+, dmy10bqvs5 * localDW , hkgv0zhr3w * localX , o3ciyyrlrx * localZCSV ) {
+switch ( localDW -> aq4rfpgnmi ) { case 1 : localZCSV -> jlvu1k5feu = 0.0 ;
+localZCSV -> dghrbykmv0 = a2kiykjvrx . P_1 - a2kiykjvrx . P_9 ; break ; case
+2 : localZCSV -> jlvu1k5feu = a2kiykjvrx . P_9 - a2kiykjvrx . P_1 ; localZCSV
+-> dghrbykmv0 = 0.0 ; break ; default : localZCSV -> jlvu1k5feu = localX ->
+hflmlajctv - a2kiykjvrx . P_1 ; localZCSV -> dghrbykmv0 = localX ->
+hflmlajctv - a2kiykjvrx . P_9 ; break ; } if ( ( localDW -> aq4rfpgnmi == 3 )
+|| ( localDW -> aq4rfpgnmi == 4 ) ) { localZCSV -> mknsjhdkfa = localB ->
 cxft4ixm0k ; } else { localZCSV -> mknsjhdkfa = 0.0 ; } } void m5uwyjpoin (
 euywnbmp33 * const n4jdqa0poy ) { if ( ! slIsRapidAcceleratorSimulating ( ) )
 { slmrRunPluginEvent ( n4jdqa0poy -> _mdlRefSfcnS , "BattEv" ,
@@ -251,6 +241,6 @@ rtdwData , 0 , 0 , sizeof ( mdlrefDW -> rtdw . c0lxguzdmo ) ) ;
 mr_BattEv_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . aq4rfpgnmi ) ,
 rtdwData , 0 , 1 , sizeof ( mdlrefDW -> rtdw . aq4rfpgnmi ) ) ; } } void
 mr_BattEv_RegisterSimStateChecksum ( SimStruct * S ) { const uint32_T chksum
-[ 4 ] = { 73731692U , 200672486U , 396141083U , 3643993749U , } ;
+[ 4 ] = { 1348885384U , 483056610U , 96337899U , 3095277435U , } ;
 slmrModelRefRegisterSimStateChecksum ( S , "BattEv" , & chksum [ 0 ] ) ; }
 mxArray * mr_BattEv_GetSimStateDisallowedBlocks ( ) { return NULL ; }

@@ -11,11 +11,11 @@
 #define RT_EF                          2.7182817F
 
 #ifndef UNUSED_PARAMETER
-# if defined(__LCC__)
-#   define UNUSED_PARAMETER(x)
-# else
+#if defined(__LCC__)
+#define UNUSED_PARAMETER(x)
+#else
 
-#   define UNUSED_PARAMETER(x)         (void) (x)
-# endif
+#define UNUSED_PARAMETER(x)            (void) (x)
+#endif
 #endif
 #endif

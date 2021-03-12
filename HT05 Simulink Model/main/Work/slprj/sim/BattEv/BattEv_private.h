@@ -35,8 +35,11 @@ fileNam ) ; extern void * gblLoggingInterval ;
 #ifndef rtmIsMinorTimeStep
 #define rtmIsMinorTimeStep(rtm) ssIsMinorTimeStep((rtm)->_mdlRefSfcnS)
 #endif
-#ifndef rtmRaiseEventWithEnqueueUsingRateIndex
-#define rtmRaiseEventWithEnqueueUsingRateIndex(rtm, sti) simTgtRaiseEventWithEnqueueUsingRateIndex(ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[sti])
+#ifndef rtmRaiseEvent
+#define rtmRaiseEvent(rtm, runtimeEventIndex) simTgtRaiseEvent(ssGetRootSS((rtm)->_mdlRefSfcnS), [runtimeEventIndex])
+#endif
+#ifndef rtmRaiseEventWithEnqueue
+#define rtmRaiseEventWithEnqueue(rtm, runtimeEventIndex) simTgtRaiseEventWithEnqueue(ssGetRootSS((rtm)->_mdlRefSfcnS), [runtimeEventIndex])
 #endif
 #ifndef rtmGetDataMapInfo
 #define rtmGetDataMapInfo(rtm) ((rtm)->DataMapInfo)

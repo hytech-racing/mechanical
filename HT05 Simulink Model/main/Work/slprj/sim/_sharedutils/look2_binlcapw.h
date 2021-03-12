@@ -1,5 +1,5 @@
-#ifndef SHARE_look2_binlcapw
-#define SHARE_look2_binlcapw
+#ifndef RTW_HEADER_look2_binlcapw_h_
+#define RTW_HEADER_look2_binlcapw_h_
 #include "rtwtypes.h"
 #include "multiword_types.h"
 

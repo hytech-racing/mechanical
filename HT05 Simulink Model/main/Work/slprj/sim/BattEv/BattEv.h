@@ -47,14 +47,14 @@ rtwCAPI_ModelMappingStaticInfo * BattEv_GetCAPIStaticMap ( void ) ; extern
 void poo3kmg0ob ( euywnbmp33 * const n4jdqa0poy , dmy10bqvs5 * localDW ,
 hkgv0zhr3w * localX ) ; extern void havtbmuleg ( euywnbmp33 * const
 n4jdqa0poy , dmy10bqvs5 * localDW , hkgv0zhr3w * localX ) ; extern void
-pexk2pi1gg ( nw51lwywlm * localB , dmy10bqvs5 * localDW , khjrgybdwv *
-localXdis , nvyvwtjtwa * localXdot ) ; extern void d3sayc4aih ( nw51lwywlm *
-localB , dmy10bqvs5 * localDW , hkgv0zhr3w * localX , o3ciyyrlrx * localZCSV
-) ; extern void c0hgp3wnut ( euywnbmp33 * const n4jdqa0poy , nw51lwywlm *
-localB , dmy10bqvs5 * localDW , hkgv0zhr3w * localX ) ; extern void
-c0hgp3wnutTID1 ( void ) ; extern void BattEv ( euywnbmp33 * const n4jdqa0poy
-, const real_T * bgau4kdtsz , const real_T * nend3jcwem , real_T * icwqjgxcm3
-, real_T * jovjkqw4dc , nw51lwywlm * localB , dmy10bqvs5 * localDW ,
-hkgv0zhr3w * localX ) ; extern void BattEvTID1 ( nw51lwywlm * localB ) ;
-extern void m5uwyjpoin ( euywnbmp33 * const n4jdqa0poy ) ;
+pexk2pi1gg ( nw51lwywlm * localB , khjrgybdwv * localXdis , nvyvwtjtwa *
+localXdot ) ; extern void d3sayc4aih ( nw51lwywlm * localB , dmy10bqvs5 *
+localDW , hkgv0zhr3w * localX , o3ciyyrlrx * localZCSV ) ; extern void
+c0hgp3wnut ( euywnbmp33 * const n4jdqa0poy , nw51lwywlm * localB , dmy10bqvs5
+* localDW , khjrgybdwv * localXdis ) ; extern void c0hgp3wnutTID1 ( void ) ;
+extern void BattEv ( euywnbmp33 * const n4jdqa0poy , const real_T *
+bgau4kdtsz , const real_T * nend3jcwem , real_T * icwqjgxcm3 , real_T *
+jovjkqw4dc , nw51lwywlm * localB , dmy10bqvs5 * localDW , hkgv0zhr3w * localX
+) ; extern void BattEvTID1 ( nw51lwywlm * localB ) ; extern void m5uwyjpoin (
+euywnbmp33 * const n4jdqa0poy ) ;
 #endif

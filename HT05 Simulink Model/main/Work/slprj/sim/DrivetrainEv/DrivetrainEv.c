@@ -1,14 +1,14 @@
 #include "DrivetrainEv_capi.h"
 #include "DrivetrainEv.h"
 #include "DrivetrainEv_private.h"
-#include "automldiffls_syVMxf7d.h"
-#include "interp2_MfPDUf1L.h"
+#include "automldiffls_dSTh3vGq.h"
+#include "interp2_2bdLjAnv.h"
 #include "look1_binlcpw.h"
 #include "look1_binlxpw.h"
 #define ixrnqnhdfr ((uint8_T)0U)
 #define mcuvnmapwy ((uint8_T)1U)
 #define ns2cbkftdn ((uint8_T)2U)
-static RegMdlInfo rtMdlInfo_DrivetrainEv [ 147 ] = { { "pibajuhrfy" ,
+static RegMdlInfo rtMdlInfo_DrivetrainEv [ 144 ] = { { "pibajuhrfy" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
 "kgdb5tut5v" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
 "DrivetrainEv" } , { "kckfzckqe5" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
@@ -120,55 +120,51 @@ MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
 1 , ( void * ) "DrivetrainEv" } , { "gjrktinair" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
 "lcrhwa0gkm" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "ehifyxeeav" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "a2spfqi5as" ,
+"DrivetrainEv" } , { "a2spfqi5as" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "ekz3w3o33e" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"ekz3w3o33e" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "er1nyhy4k5" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "eqyc2wn3m1" ,
+"er1nyhy4k5" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "eqyc2wn3m1" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "ktxb3gprz3" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"ktxb3gprz3" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "ka5dospcnh" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "fzkpqsvdo4" ,
+"ka5dospcnh" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "fzkpqsvdo4" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "d3jmc0mufb" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"d3jmc0mufb" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "bf5dwwwzlu" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "knmpdzz5nn" ,
+"bf5dwwwzlu" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "knmpdzz5nn" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "ep4sqnxgpl" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"ep4sqnxgpl" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "e5sjzctfw0" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "gpz5hks1w1" ,
+"e5sjzctfw0" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "cxtxb3yrrw" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "cv2c3rhalg" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"cxtxb3yrrw" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "cv2c3rhalg" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "ahv1dfpeau" ,
+"ahv1dfpeau" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "mqqbpxd21e" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "fsc2yd1uus" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"mqqbpxd21e" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "fsc2yd1uus" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "k3wrgascwa" ,
-MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"a2x2nps5f0" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "fbnwpfi1ef" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , 0
-, ( void * ) "Clutch" } , { "bhfnq0gvty" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT ,
-0 , - 1 , ( void * ) "DrivetrainEv" } , { "diav50533w" ,
-MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"fpkexilwx0" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "pa01ypljzv" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "hbitco4kzk" ,
-MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"jza4d3rkqd" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "blmwtgrkjm" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "jchsnf4kft" ,
-MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"hjtn2cfetd" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "fhk5xmrghf" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "kbesg5n00g" ,
-MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
-"jzxqghlsdl" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"DrivetrainEv" } , { "ncnwl1puqr" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
-1 , ( void * ) "DrivetrainEv" } , { "cddyh02qci" ,
+"k3wrgascwa" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "a2x2nps5f0" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "fbnwpfi1ef" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , 0 , ( void * ) "Clutch" } , {
-"k4kq5a5ocp" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"bhfnq0gvty" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "diav50533w" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "fpkexilwx0" ,
+MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
+"pa01ypljzv" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "hbitco4kzk" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "blmwtgrkjm" ,
+MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
+"jchsnf4kft" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "hjtn2cfetd" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "fhk5xmrghf" ,
+MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
+"kbesg5n00g" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"DrivetrainEv" } , { "jzxqghlsdl" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
+1 , ( void * ) "DrivetrainEv" } , { "ncnwl1puqr" ,
+MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
+"cddyh02qci" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , 0 , ( void * ) "Clutch"
+} , { "k4kq5a5ocp" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
 "DrivetrainEv" } , { "gv3b21mocx" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , -
 1 , ( void * ) "DrivetrainEv" } , { "pkbppjdhhu" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
@@ -208,120 +204,114 @@ MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
 MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * ) "DrivetrainEv" } , {
 "DrivetrainEv.h" , MDL_INFO_MODEL_FILENAME , 0 , - 1 , ( NULL ) } , {
 "DrivetrainEv.c" , MDL_INFO_MODEL_FILENAME , 0 , - 1 , ( void * )
-"DrivetrainEv" } } ; akbgnuupjzy akbgnuupjz = { 2.27 , 0.28 , 0.1 , 0.1 , {
-0.0 , 0.0 } , { 0.0 , 0.0 } , 6570.0 , 6570.0 , 0.0 , 0.0 , { - 700000.0 , -
-7000.0 , - 700.0 , 0.0 , 700.0 , 7000.0 , 700000.0 } , { - 700000.0 , -
-7000.0 , - 700.0 , 0.0 , 700.0 , 7000.0 , 700000.0 } , { - 8928.57142857143 ,
-- 178.57142857142858 , 0.0 , 357.14285714285717 , 535.71428571428567 ,
-9285.7142857142862 } , { - 5357.1428571428569 , - 107.14285714285714 , 0.0 ,
-214.28571428571428 , 321.42857142857144 , 5571.4285714285716 } , 0.8 , 0.8 ,
-3000.0 , 0.01 , 0.1 , 0.1 , 0.1 , 0.15 , 0.15 , 4.4444444444444446 , 101325.0
-, 287.058 , 0.0 , 0.0 , 0.203 , 0.203 , 0.15 , 0.15 , 273.0 , { - 100.0 , -
-90.0 , - 50.0 , - 5.0 , 0.0 , 5.0 , 50.0 , 90.0 , 100.0 } , 0.206 , 0.206 ,
-2.0 , 2.0 , 1.1880000000000002 , 0.01 , 0.01 , 0.0 , 0.0 , 1.5120000000000002
-, 400.0 , 100.0 , 0.0 , 0.0 , 0.0 , 0.001 , 1.0 , 1.0 , { - 1.0 , 1.0 } ,
-0.001 , 0.001 , 0.001 , 0.001 , 0.0 , 0.0 , 0.05 , 0.05 , 0.0 , 0.0 , { -
-200.0 , - 175.0 , - 100.0 , - 50.0 , 0.0 , 50.0 , 100.0 , 175.0 , 200.0 } , {
-- 10.0 , - 1.0 , - 0.1 , 0.0 , 0.1 , 1.0 , 10.0 } , { - 10.0 , - 1.0 , - 0.1
-, 0.0 , 0.1 , 1.0 , 10.0 } , { - 0.005 , - 0.0001 , 0.0 , 0.2 , 0.2001 ,
-0.2051 } , { - 0.005 , - 0.0001 , 0.0 , 0.2 , 0.2001 , 0.2051 } , 1.0 , 0.0 ,
-9.81 , 0.5 , 10000.0 , 10000.0 , 1.5 , 1.5 , 1.0 , 1.0 , 235.45 , 0.35 , 0.35
-, 0.45 , 0.45 , 2.0 , 2.0 , 100.0 , 3000.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , {
-0.0 , - 0.35 } , 234400.0 , 234400.0 , 0.0 , 0.01 , 0.0 , 0.0 , 0.0 , 1.0E-6
-, 0.0 , 0.0 , 0.0 , 1.0 , 0.0 , 3.1415926535897931 , - 3.1415926535897931 , {
-2.0 , 2.0 } , 0.5 , 0.0 , - 1.0 , 0.6 , 0.0 , 2.2204460492503131E-16 , 0.5 ,
-0.0 , 0.0 , - 1.0 , 0.4 , 0.0 , 2.2204460492503131E-16 , { 0.0 , 0.0 } , { -
-1.0 , 1.0 } , 0.0 , { 0.0 , 1.0 , - 1.0 , 0.0 } , { 2.0 , 2.0 } , { 2.0 , 2.0
-} , 0.0 , 5000.0 , - 5000.0 , 0.5 , 0.0 , 0.0 , 0.0 , 0.0 , { 0.0 , 0.0 , 0.0
-} , { 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , { 1.0 , 1.0 ,
-1.0 } , 0.0 , 4741.694487 , 1.5 , 0.05798777 , - 2.0 , { 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , {
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 10000.0 , 1.0E+6 , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 ,
-0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 0.0 ,
-0.78539816339744828 , 0.0 , 4741.694487 , 1.5 , 0.05798777 , - 2.0 , { 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0
-, 0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0
-, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 10000.0 , 1.0E+6 , { 0.0 , 0.0 , 0.0 } , {
+"DrivetrainEv" } } ; akbgnuupjzy akbgnuupjz = { 0.65 , 0.28 , 0.1 , 0.1 , {
+0.0 , 0.0 } , { 0.0 , 0.0 } , 0.0 , 6570.0 , 6570.0 , 0.0 , 0.0 , { -
+700000.0 , - 7000.0 , - 700.0 , 0.0 , 700.0 , 7000.0 , 700000.0 } , { -
+700000.0 , - 7000.0 , - 700.0 , 0.0 , 700.0 , 7000.0 , 700000.0 } , { -
+8928.57142857143 , - 178.57142857142858 , 0.0 , 357.14285714285717 ,
+535.71428571428567 , 9285.7142857142862 } , { - 5357.1428571428569 , -
+107.14285714285714 , 0.0 , 214.28571428571428 , 321.42857142857144 ,
+5571.4285714285716 } , 0.0 , 0.0 , 0.0 , 1.063359266 , 1.063359266 , 3000.0 ,
+0.01 , 0.1 , 0.1 , 0.1 , 0.15 , 0.15 , 100.0 , 4.4444444444444446 , 0.0 ,
+101325.0 , 287.058 , 0.0 , 0.0 , 0.203 , 0.203 , 0.0775 , 0.0725 , 273.0 , {
+- 100.0 , - 90.0 , - 50.0 , - 5.0 , 0.0 , 5.0 , 50.0 , 90.0 , 100.0 } , 2.0 ,
+2.0 , 0.765 , 0.765 , 400.0 , 100.0 , 0.001 , 0.001 , { - 1.0 , 1.0 } , 0.001
+, 0.001 , 0.001 , 0.001 , 0.05 , 0.05 , 0.0 , 0.0 , { - 200.0 , - 175.0 , -
+100.0 , - 50.0 , 0.0 , 50.0 , 100.0 , 175.0 , 200.0 } , { - 10.0 , - 1.0 , -
+0.1 , 0.0 , 0.1 , 1.0 , 10.0 } , { - 10.0 , - 1.0 , - 0.1 , 0.0 , 0.1 , 1.0 ,
+10.0 } , { - 0.005 , - 0.0001 , 0.0 , 0.2 , 0.2001 , 0.2051 } , { - 0.005 , -
+0.0001 , 0.0 , 0.2 , 0.2001 , 0.2051 } , 1.0 , 0.0 , 9.81 , 0.0 , 10000.0 ,
+10000.0 , 1.5 , 1.5 , 1.0 , 1.0 , 235.45 , 0.4 , 0.4 , 0.45 , 0.45 , 2.0 ,
+2.0 , 100.0 , 3000.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , { 0.0 , - 0.35 } , 0.0 ,
+0.01 , 0.0 , 0.0 , 0.0 , 1.0E-6 , 0.0 , 0.0 , 0.0 , 1.0 , 0.0 ,
+3.1415926535897931 , - 3.1415926535897931 , { 2.0 , 2.0 } , 0.5 , 0.0 , - 1.0
+, 0.6 , 0.0 , 2.2204460492503131E-16 , 0.5 , 0.0 , 0.0 , - 1.0 , 0.4 , 0.0 ,
+2.2204460492503131E-16 , { 0.0 , 0.0 } , { - 1.0 , 1.0 } , 0.0 , { 0.0 , 1.0
+, - 1.0 , 0.0 } , { 2.0 , 2.0 } , { 2.0 , 2.0 } , 0.0 , 5000.0 , - 5000.0 ,
+0.5 , 0.0 , 0.0 , 0.0 , 0.0 , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , { 1.0 , 1.0 , 1.0 } , 0.07 , 1.0 , 0.0 ,
+4741.694487 , 1.5 , 0.05798777 , - 2.0 , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 1.0 , 1.0 , 0.0 , 0.0 , 0.0 ,
+0.0 , 0.0 , 0.0 , 1.0 , 1.0 , 0.0 , 1.0 , 0.0 , 0.0 , 1.0 , { 0.0 , 0.0 , 0.0
+} , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
+0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.78539816339744828 , 0.0 , 4741.694487 , 1.5 , 0.05798777 , - 2.0 ,
+{ 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , {
 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 ,
-0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 0.0 ,
-0.78539816339744828 , 6.2831853071795862 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0
-, 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , { { { 0.0 , 0.0 , 0.0 , 0.0 , - 4.0 , 0 , 0 ,
-0 , { 0 , 1 , 0 , 0 , 1 , 1 , 1 , 0 } } } } , { { { 0.0 , 0.0 , 0.0 , 0.0 , -
-4.0 , 0 , 0 , 0 , { 0 , 1 , 0 , 0 , 1 , 1 , 1 , 0 } } } } , { 0.0 , 0.0 } } ;
-static void mmkivrlpqb ( real_T rhoz , real_T omega , real_T * Re , real_T *
-Fz ) ; static void n5teuatb0z ( const real_T a_data [ ] , const int32_T
-a_size [ 2 ] , real_T y_data [ ] , int32_T y_size [ 2 ] ) ; static real_T
-ak2ysaxv1o ( real_T Re , real_T omega , real_T Vx , real_T b_VXLOW , real_T
-b_kappamax ) ; static real_T o4pauiv4gj ( real_T kappa , real_T Fz , real_T D
-, real_T C , real_T B , real_T E , real_T lam_mux , real_T b_FZMIN , real_T
-b_FZMAX ) ; static real_T njagxepmjm ( real_T kappa , real_T Vx , real_T Fz ,
-real_T b_gamma , real_T LONGVL , real_T FNOMIN , real_T b_FZMIN , real_T
-b_FZMAX , real_T press , real_T NOMPRES , real_T PRESMIN , real_T PRESMAX ,
-real_T PCX1 , real_T PDX1 , real_T PDX2 , real_T PDX3 , real_T PEX1 , real_T
-PEX2 , real_T PEX3 , real_T PEX4 , real_T PKX1 , real_T PKX2 , real_T PKX3 ,
-real_T PHX1 , real_T PHX2 , real_T PVX1 , real_T PVX2 , real_T PPX1 , real_T
-PPX2 , real_T PPX3 , real_T PPX4 , real_T lam_Fzo , real_T lam_muV , real_T
-lam_mux , real_T lam_Kxkappa , real_T lam_Cx , real_T lam_Ex , real_T lam_Hx
-, real_T lam_Vx ) ; static real_T iggcenaiwj ( real_T Fz , real_T omega ,
-real_T Vx , real_T press , real_T QSY1 , real_T QSY2 , real_T QSY3 , real_T
-QSY7 , real_T QSY8 , real_T UNLOADED_RADIUS , real_T b_FZMIN , real_T b_FZMAX
-, real_T PRESMIN , real_T PRESMAX ) ; static real_T ipmaflmbfh ( real_T Fz ,
-real_T omega , real_T Tamb , real_T Fpl , real_T Cr , real_T Kt , real_T
-Tmeas , real_T Re , real_T b_FZMIN , real_T b_FZMAX , real_T TMIN , real_T
-TMAX ) ; static boolean_T gppluqklue ( real_T Tout , real_T Tfmaxs ,
-dmpx2jc2pu * localB , fmdhv4fck3 * localDW ) ; static boolean_T g0el31fu5q (
-real_T Tout , real_T Tfmaxs , dmpx2jc2pu * localB , fmdhv4fck3 * localDW ,
-pymb3fi5g4 * localP ) ; static void mmkivrlpqb ( real_T rhoz , real_T omega ,
-real_T * Re , real_T * Fz ) { * Re = 0.0 * muDoubleScalarAbs ( omega ) + rhoz
-; if ( * Re < 0.001 ) { * Re = 0.001 ; } * Fz = ( rtNaN ) ; } static void
+0.0 , 1.0 , 1.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 1.0 , 1.0 , 0.0 , 1.0 ,
+0.0 , 0.0 , 1.0 , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 , 0.0 } , { 0.0 , 0.0 ,
+0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 } , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0
+, 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.0 , 0.78539816339744828 ,
+6.2831853071795862 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 ,
+1.0 , 1.0 , { { { 0.0 , 0.0 , 0.0 , 0.0 , - 4.0 , 0 , 0 , 0 , { 0 , 1 , 0 , 0
+, 1 , 1 , 1 , 0 } } } } , { { { 0.0 , 0.0 , 0.0 , 0.0 , - 4.0 , 0 , 0 , 0 , {
+0 , 1 , 0 , 0 , 1 , 1 , 1 , 0 } } } } , { 0.0 , 0.0 } } ; static void
+n5teuatb0z ( const real_T a_data [ ] , const int32_T a_size [ 2 ] , real_T
+y_data [ ] , int32_T y_size [ 2 ] ) ; static real_T ak2ysaxv1o ( real_T Re ,
+real_T omega , real_T Vx , real_T b_VXLOW , real_T b_kappamax ) ; static
+real_T njagxepmjm ( real_T kappa , real_T Vx , real_T Fz , real_T b_gamma ,
+real_T LONGVL , real_T FNOMIN , real_T b_FZMIN , real_T b_FZMAX , real_T
+press , real_T NOMPRES , real_T PRESMIN , real_T PRESMAX , real_T PCX1 ,
+real_T PDX1 , real_T PDX2 , real_T PDX3 , real_T PEX1 , real_T PEX2 , real_T
+PEX3 , real_T PEX4 , real_T PKX1 , real_T PKX2 , real_T PKX3 , real_T PHX1 ,
+real_T PHX2 , real_T PVX1 , real_T PVX2 , real_T PPX1 , real_T PPX2 , real_T
+PPX3 , real_T PPX4 , real_T lam_Fzo , real_T lam_muV , real_T lam_mux ,
+real_T lam_Kxkappa , real_T lam_Cx , real_T lam_Ex , real_T lam_Hx , real_T
+lam_Vx ) ; static real_T er2ke5cfku ( real_T kappa , real_T Fz , const real_T
+kappaFx [ 3 ] , const real_T FzFx [ 3 ] , const real_T FxMap [ 9 ] , real_T
+b_FZMIN , real_T b_FZMAX , real_T lam_mux ) ; static real_T iggcenaiwj (
+real_T Fz , real_T omega , real_T Vx , real_T press , real_T QSY1 , real_T
+QSY2 , real_T QSY3 , real_T QSY7 , real_T QSY8 , real_T UNLOADED_RADIUS ,
+real_T b_FZMIN , real_T b_FZMAX , real_T PRESMIN , real_T PRESMAX ) ; static
+real_T nnh25h0kmd ( real_T omega , real_T Fz , real_T Vx , const real_T VxMy
+[ 3 ] , const real_T FzMy [ 3 ] , const real_T MyMap [ 9 ] , real_T b_FZMAX )
+; static real_T ipmaflmbfh ( real_T Fz , real_T omega , real_T Tamb , real_T
+Fpl , real_T Cr , real_T Kt , real_T Tmeas , real_T Re , real_T b_FZMIN ,
+real_T b_FZMAX , real_T TMIN , real_T TMAX ) ; static boolean_T gppluqklue (
+real_T Tout , real_T Tfmaxs , dmpx2jc2pu * localB , fmdhv4fck3 * localDW ) ;
+static boolean_T g0el31fu5q ( real_T Tout , real_T Tfmaxs , dmpx2jc2pu *
+localB , fmdhv4fck3 * localDW , pymb3fi5g4 * localP ) ; static void
 n5teuatb0z ( const real_T a_data [ ] , const int32_T a_size [ 2 ] , real_T
 y_data [ ] , int32_T y_size [ 2 ] ) { real_T z1_data ; int32_T loop_ub ;
-y_size [ 1 ] = ( int8_T ) a_size [ 1 ] ; loop_ub = y_size [ 1 ] - 1 ; if ( 0
-<= loop_ub ) { memcpy ( & z1_data , & y_data [ 0 ] , ( loop_ub + 1 ) * sizeof
-( real_T ) ) ; } if ( 0 <= y_size [ 1 ] - 1 ) { z1_data = a_data [ 0 ] *
-a_data [ 0 ] ; } y_size [ 0 ] = 1 ; loop_ub = y_size [ 1 ] - 1 ; if ( 0 <=
-loop_ub ) { memcpy ( & y_data [ 0 ] , & z1_data , ( loop_ub + 1 ) * sizeof (
-real_T ) ) ; } } static real_T ak2ysaxv1o ( real_T Re , real_T omega , real_T
-Vx , real_T b_VXLOW , real_T b_kappamax ) { real_T kappa ; real_T Vxpabs ;
-int32_T b_trueCount ; real_T Vxpabs_data ; real_T tmp_data ; int32_T
-Vxpabs_size [ 2 ] ; int32_T tmp_size [ 2 ] ; Vxpabs = muDoubleScalarAbs ( Vx
-) ; b_trueCount = 0 ; if ( Vxpabs < b_VXLOW ) { b_trueCount = 1 ; }
-Vxpabs_size [ 0 ] = 1 ; Vxpabs_size [ 1 ] = b_trueCount ; if ( 0 <=
-b_trueCount - 1 ) { Vxpabs_data = Vxpabs / b_VXLOW ; } n5teuatb0z ( &
-Vxpabs_data , Vxpabs_size , & tmp_data , tmp_size ) ; if ( 0 <= b_trueCount -
-1 ) { Vxpabs_data = 2.0 * b_VXLOW / ( 3.0 - tmp_data ) ; } if ( Vxpabs <
-b_VXLOW ) { Vxpabs = Vxpabs_data ; } kappa = ( Re * omega - Vx ) / Vxpabs ;
-b_trueCount = 0 ; if ( kappa < - b_kappamax ) { b_trueCount = 1 ; } if ( 0 <=
-b_trueCount - 1 ) { kappa = - b_kappamax ; } if ( kappa > b_kappamax ) {
-kappa = b_kappamax ; } return kappa ; } static real_T o4pauiv4gj ( real_T
-kappa , real_T Fz , real_T D , real_T C , real_T B , real_T E , real_T
-lam_mux , real_T b_FZMIN , real_T b_FZMAX ) { real_T b_idx_0 ; real_T Fx_tmp
-; b_idx_0 = Fz ; if ( Fz < b_FZMIN ) { b_idx_0 = b_FZMIN ; } if ( b_idx_0 >
-b_FZMAX ) { b_idx_0 = b_FZMAX ; } Fx_tmp = B * kappa ; return
-muDoubleScalarSin ( muDoubleScalarAtan ( Fx_tmp - ( Fx_tmp -
-muDoubleScalarAtan ( Fx_tmp ) ) * E ) * C ) * D * ( b_idx_0 * lam_mux ) ; }
-static real_T njagxepmjm ( real_T kappa , real_T Vx , real_T Fz , real_T
-b_gamma , real_T LONGVL , real_T FNOMIN , real_T b_FZMIN , real_T b_FZMAX ,
-real_T press , real_T NOMPRES , real_T PRESMIN , real_T PRESMAX , real_T PCX1
-, real_T PDX1 , real_T PDX2 , real_T PDX3 , real_T PEX1 , real_T PEX2 ,
-real_T PEX3 , real_T PEX4 , real_T PKX1 , real_T PKX2 , real_T PKX3 , real_T
-PHX1 , real_T PHX2 , real_T PVX1 , real_T PVX2 , real_T PPX1 , real_T PPX2 ,
-real_T PPX3 , real_T PPX4 , real_T lam_Fzo , real_T lam_muV , real_T lam_mux
-, real_T lam_Kxkappa , real_T lam_Cx , real_T lam_Ex , real_T lam_Hx , real_T
-lam_Vx ) { real_T Fxo ; real_T dpi ; real_T dfz ; real_T kappa_x ; real_T Vsx
-; real_T Cx ; real_T unusedU0 ; int32_T trueCount ; real_T unusedU0_data ;
-real_T tmp_data ; int32_T unusedU0_size [ 2 ] ; int32_T tmp_size [ 2 ] ;
-real_T b_idx_0 ; real_T f_idx_0 ; real_T g_idx_0 ; real_T h_idx_0 ; real_T
-Cx_tmp ; b_idx_0 = Fz ; if ( Fz < b_FZMIN ) { b_idx_0 = b_FZMIN ; } if (
-b_idx_0 > b_FZMAX ) { b_idx_0 = b_FZMAX ; } dfz = press ; if ( press <
+loop_ub = ( int8_T ) a_size [ 1 ] - 1 ; if ( 0 <= loop_ub ) { memcpy ( &
+z1_data , & y_data [ 0 ] , ( loop_ub + 1 ) * sizeof ( real_T ) ) ; } if ( 0
+<= ( int8_T ) a_size [ 1 ] - 1 ) { z1_data = a_data [ 0 ] * a_data [ 0 ] ; }
+y_size [ 0 ] = 1 ; y_size [ 1 ] = ( int8_T ) a_size [ 1 ] ; loop_ub = (
+int8_T ) a_size [ 1 ] - 1 ; if ( 0 <= loop_ub ) { memcpy ( & y_data [ 0 ] , &
+z1_data , ( loop_ub + 1 ) * sizeof ( real_T ) ) ; } } static real_T
+ak2ysaxv1o ( real_T Re , real_T omega , real_T Vx , real_T b_VXLOW , real_T
+b_kappamax ) { real_T Vxpabs ; real_T Vxpabs_data ; real_T kappa ; real_T
+tmp_data ; int32_T Vxpabs_size [ 2 ] ; int32_T tmp_size [ 2 ] ; int32_T
+b_trueCount ; Vxpabs = muDoubleScalarAbs ( Vx ) ; b_trueCount = 0 ; if (
+Vxpabs < b_VXLOW ) { b_trueCount = 1 ; } Vxpabs_size [ 0 ] = 1 ; Vxpabs_size
+[ 1 ] = b_trueCount ; if ( 0 <= b_trueCount - 1 ) { Vxpabs_data = Vxpabs /
+b_VXLOW ; } n5teuatb0z ( & Vxpabs_data , Vxpabs_size , & tmp_data , tmp_size
+) ; if ( 0 <= b_trueCount - 1 ) { Vxpabs_data = 2.0 * b_VXLOW / ( 3.0 -
+tmp_data ) ; } if ( Vxpabs < b_VXLOW ) { Vxpabs = Vxpabs_data ; } kappa = (
+Re * omega - Vx ) / Vxpabs ; b_trueCount = 0 ; if ( kappa < - b_kappamax ) {
+b_trueCount = 1 ; } if ( 0 <= b_trueCount - 1 ) { kappa = - b_kappamax ; } if
+( kappa > b_kappamax ) { kappa = b_kappamax ; } return kappa ; } static
+real_T njagxepmjm ( real_T kappa , real_T Vx , real_T Fz , real_T b_gamma ,
+real_T LONGVL , real_T FNOMIN , real_T b_FZMIN , real_T b_FZMAX , real_T
+press , real_T NOMPRES , real_T PRESMIN , real_T PRESMAX , real_T PCX1 ,
+real_T PDX1 , real_T PDX2 , real_T PDX3 , real_T PEX1 , real_T PEX2 , real_T
+PEX3 , real_T PEX4 , real_T PKX1 , real_T PKX2 , real_T PKX3 , real_T PHX1 ,
+real_T PHX2 , real_T PVX1 , real_T PVX2 , real_T PPX1 , real_T PPX2 , real_T
+PPX3 , real_T PPX4 , real_T lam_Fzo , real_T lam_muV , real_T lam_mux ,
+real_T lam_Kxkappa , real_T lam_Cx , real_T lam_Ex , real_T lam_Hx , real_T
+lam_Vx ) { real_T Cx ; real_T Cx_tmp ; real_T Fxo ; real_T Vsx ; real_T
+b_idx_0 ; real_T dfz ; real_T dpi ; real_T f_idx_0 ; real_T g_idx_0 ; real_T
+h_idx_0 ; real_T kappa_x ; real_T tmp_data ; real_T unusedU0 ; real_T
+unusedU0_data ; int32_T tmp_size [ 2 ] ; int32_T unusedU0_size [ 2 ] ;
+int32_T trueCount ; b_idx_0 = Fz ; if ( Fz < b_FZMIN ) { b_idx_0 = b_FZMIN ;
+} if ( b_idx_0 > b_FZMAX ) { b_idx_0 = b_FZMAX ; } dfz = press ; if ( press <
 PRESMIN ) { dfz = PRESMIN ; } if ( dfz > PRESMAX ) { dfz = PRESMAX ; } dpi =
 ( dfz - NOMPRES ) / NOMPRES ; dfz = ( b_idx_0 - FNOMIN * lam_Fzo ) / FNOMIN *
 lam_Fzo ; kappa_x = ( PHX2 * dfz + PHX1 ) * lam_Hx + kappa ; Vsx = -
@@ -345,7 +335,15 @@ muDoubleScalarExp ( PKX3 * dfz ) * ( ( PPX1 * dpi + 1.0 ) + Cx_tmp * PPX2 ) *
 lam_Kxkappa / unusedU0 ; dpi *= kappa_x ; Fxo = muDoubleScalarSin (
 muDoubleScalarAtan ( dpi - ( dpi - muDoubleScalarAtan ( dpi ) ) * h_idx_0 ) *
 f_idx_0 ) * g_idx_0 + ( PVX2 * dfz + PVX1 ) * b_idx_0 * ( Vsx * 10.0 / ( 9.0
-* Vsx + 1.0 ) ) * lam_Vx ; return Fxo ; } static real_T iggcenaiwj ( real_T
+* Vsx + 1.0 ) ) * lam_Vx ; return Fxo ; } static real_T er2ke5cfku ( real_T
+kappa , real_T Fz , const real_T kappaFx [ 3 ] , const real_T FzFx [ 3 ] ,
+const real_T FxMap [ 9 ] , real_T b_FZMIN , real_T b_FZMAX , real_T lam_mux )
+{ real_T FxMap_p [ 9 ] ; real_T Fx ; real_T b_idx_0 ; int32_T i ; b_idx_0 =
+Fz ; if ( Fz < b_FZMIN ) { b_idx_0 = b_FZMIN ; } if ( b_idx_0 > b_FZMAX ) {
+b_idx_0 = b_FZMAX ; } for ( i = 0 ; i < 3 ; i ++ ) { FxMap_p [ 3 * i ] =
+FxMap [ i ] ; FxMap_p [ 3 * i + 1 ] = FxMap [ i + 3 ] ; FxMap_p [ 3 * i + 2 ]
+= FxMap [ i + 6 ] ; } Fx = interp2_2bdLjAnv ( kappaFx , FzFx , FxMap_p ,
+kappa , b_idx_0 ) * lam_mux ; return Fx ; } static real_T iggcenaiwj ( real_T
 Fz , real_T omega , real_T Vx , real_T press , real_T QSY1 , real_T QSY2 ,
 real_T QSY3 , real_T QSY7 , real_T QSY8 , real_T UNLOADED_RADIUS , real_T
 b_FZMIN , real_T b_FZMAX , real_T PRESMIN , real_T PRESMAX ) { real_T b_idx_0
@@ -355,13 +353,21 @@ if ( Fz < b_FZMIN ) { d_idx_0 = b_FZMIN ; } if ( d_idx_0 > b_FZMAX ) {
 d_idx_0 = b_FZMAX ; } return ( ( QSY2 * muDoubleScalarAbs ( Vx ) + QSY1 ) +
 Vx * Vx * QSY3 ) * ( muDoubleScalarTanh ( omega ) * UNLOADED_RADIUS ) * (
 muDoubleScalarPower ( d_idx_0 , QSY7 ) * muDoubleScalarPower ( b_idx_0 , QSY8
-) ) ; } static real_T ipmaflmbfh ( real_T Fz , real_T omega , real_T Tamb ,
-real_T Fpl , real_T Cr , real_T Kt , real_T Tmeas , real_T Re , real_T
-b_FZMIN , real_T b_FZMAX , real_T TMIN , real_T TMAX ) { real_T b_idx_0 ;
-real_T d_idx_0 ; b_idx_0 = Tamb ; if ( Tamb < TMIN ) { b_idx_0 = TMIN ; } if
-( b_idx_0 > TMAX ) { b_idx_0 = TMAX ; } d_idx_0 = Fz ; if ( Fz < b_FZMIN ) {
+) ) ; } static real_T nnh25h0kmd ( real_T omega , real_T Fz , real_T Vx ,
+const real_T VxMy [ 3 ] , const real_T FzMy [ 3 ] , const real_T MyMap [ 9 ]
+, real_T b_FZMAX ) { real_T MyMap_p [ 9 ] ; real_T My ; real_T b_idx_0 ;
+int32_T i ; b_idx_0 = Fz ; if ( Fz < 0.0 ) { b_idx_0 = 0.0 ; } if ( b_idx_0 >
+b_FZMAX ) { b_idx_0 = b_FZMAX ; } for ( i = 0 ; i < 3 ; i ++ ) { MyMap_p [ 3
+* i ] = MyMap [ i ] ; MyMap_p [ 3 * i + 1 ] = MyMap [ i + 3 ] ; MyMap_p [ 3 *
+i + 2 ] = MyMap [ i + 6 ] ; } My = muDoubleScalarTanh ( omega ) *
+interp2_2bdLjAnv ( VxMy , FzMy , MyMap_p , Vx , b_idx_0 ) ; return My ; }
+static real_T ipmaflmbfh ( real_T Fz , real_T omega , real_T Tamb , real_T
+Fpl , real_T Cr , real_T Kt , real_T Tmeas , real_T Re , real_T b_FZMIN ,
+real_T b_FZMAX , real_T TMIN , real_T TMAX ) { real_T b_idx_0 ; real_T
+d_idx_0 ; b_idx_0 = Tamb ; if ( Tamb < TMIN ) { b_idx_0 = TMIN ; } if (
+b_idx_0 > TMAX ) { b_idx_0 = TMAX ; } d_idx_0 = Fz ; if ( Fz < b_FZMIN ) {
 d_idx_0 = b_FZMIN ; } if ( d_idx_0 > b_FZMAX ) { d_idx_0 = b_FZMAX ; } return
-( d_idx_0 * Cr * 0.001 / ( ( b_idx_0 - Tmeas ) * Kt + 1.0 ) + Fpl ) * (
+( d_idx_0 * Cr * 0.001 / ( ( b_idx_0 - Tmeas ) * Kt + 1.0 ) + Fpl ) * ( -
 muDoubleScalarTanh ( omega ) * Re ) ; } void pafzrlxpms ( real_T lhfh0lgexg ,
 real_T dddksvopvu , real_T aqziyf45vh , real_T kmxusdamtu , real_T kvgp2fkjhy
 , real_T gnoj3vvd04 , real_T i5tazc1u4j , real_T hrxlzevx3z , real_T
@@ -379,135 +385,129 @@ b55yk0qpmy , real_T c4pn3rsir2 , real_T hhd1av5ez0 , real_T epvhuoa1qy ,
 real_T p4b5kxhudx , real_T a5c4goqooi , real_T fs3ildlixj , real_T prsb4scvfy
 , real_T cmj0idhrc5 , real_T m2do5j31ef , real_T dgy4icut3a , real_T
 kh4hnzmazk , real_T jtbjysdjqj , real_T iypogydhcm , real_T lkloq2embq ,
-real_T pvhuw1msck , real_T d3jy5zi252 , real_T fg54spf2n5 , lc2agjjnwf *
-localB , real_T rtp_FZMAX , real_T rtp_FZMIN , real_T rtp_VXLOW , real_T
-rtp_kappamax ) { real_T Re ; real_T b_FzTire ; real_T csyrzuatjk_p [ 9 ] ;
-int32_T i ; real_T b_idx_0 ; localB -> eh3bmirodr [ 0 ] = kvgp2fkjhy ; localB
--> eh3bmirodr [ 1 ] = gnoj3vvd04 ; localB -> eh3bmirodr [ 2 ] = i5tazc1u4j ;
-localB -> eh3bmirodr [ 3 ] = hrxlzevx3z ; localB -> eh3bmirodr [ 4 ] =
-jblgopnf1i ; localB -> k3pqpt3554 [ 0 ] = hiqsfmypee ; localB -> k3pqpt3554 [
-1 ] = mx5so5mgvw ; localB -> k3pqpt3554 [ 2 ] = inchkh4kac ; localB ->
-k3pqpt3554 [ 3 ] = gycdhdasg2 ; localB -> k3pqpt3554 [ 4 ] = few2l1fwxa ;
-localB -> k3pqpt3554 [ 5 ] = jklaqvkxfe ; localB -> k3pqpt3554 [ 6 ] =
-otfgbpbyhn ; localB -> k3pqpt3554 [ 7 ] = kv2iqsifba ; localB -> k3pqpt3554 [
-8 ] = hiawd1p1fx ; localB -> k3pqpt3554 [ 9 ] = o5ygoxqi30 ; localB ->
-k3pqpt3554 [ 10 ] = ig4mu234iu ; localB -> k3pqpt3554 [ 11 ] = dbtrggoxo1 ;
-localB -> k3pqpt3554 [ 12 ] = fdpxrz5vmb ; localB -> k3pqpt3554 [ 13 ] =
-k2udx51syx ; localB -> k3pqpt3554 [ 14 ] = pfq2eyet0u ; localB -> k3pqpt3554
-[ 15 ] = e3zacyak04 ; localB -> myssjwdee1 [ 0 ] = hiqsfmypee ; localB ->
-myssjwdee1 [ 1 ] = bodbaw1ynp ; localB -> myssjwdee1 [ 2 ] = gehf3geyns ;
-localB -> myssjwdee1 [ 3 ] = gakbsgqcve ; localB -> myssjwdee1 [ 4 ] =
-hdwkghxa4l ; localB -> myssjwdee1 [ 5 ] = bt0sy4q3zx ; localB -> myssjwdee1 [
-6 ] = djkh3gvlkv ; localB -> myssjwdee1 [ 7 ] = bbl12fnfds ; localB ->
-myssjwdee1 [ 8 ] = maogfv1bti ; localB -> myssjwdee1 [ 9 ] = b55yk0qpmy ;
-localB -> myssjwdee1 [ 10 ] = c4pn3rsir2 ; localB -> myssjwdee1 [ 11 ] =
-hhd1av5ez0 ; localB -> myssjwdee1 [ 12 ] = epvhuoa1qy ; localB -> myssjwdee1
-[ 13 ] = p4b5kxhudx ; localB -> myssjwdee1 [ 14 ] = a5c4goqooi ; localB ->
-myssjwdee1 [ 15 ] = fs3ildlixj ; localB -> myssjwdee1 [ 16 ] = prsb4scvfy ;
-localB -> myssjwdee1 [ 17 ] = cmj0idhrc5 ; localB -> myssjwdee1 [ 18 ] =
-m2do5j31ef ; localB -> myssjwdee1 [ 19 ] = dgy4icut3a ; localB -> myssjwdee1
-[ 20 ] = kh4hnzmazk ; localB -> myssjwdee1 [ 21 ] = jtbjysdjqj ; localB ->
-myssjwdee1 [ 22 ] = iypogydhcm ; localB -> myssjwdee1 [ 23 ] = lkloq2embq ;
-switch ( ( int32_T ) fg54spf2n5 ) { case 0 : Re = lhfh0lgexg ; break ; case 1
-: mmkivrlpqb ( n5xjjpqvhi , aqziyf45vh , & Re , & b_FzTire ) ; break ; case 2
-: Re = lhfh0lgexg ; break ; default : Re = lhfh0lgexg ; break ; } b_FzTire =
-ak2ysaxv1o ( lhfh0lgexg , aqziyf45vh , kmxusdamtu , rtp_VXLOW , rtp_kappamax
-) ; switch ( ( int32_T ) pvhuw1msck ) { case 0 : b_FzTire = o4pauiv4gj (
-b_FzTire , dddksvopvu , localB -> eh3bmirodr [ 0 ] , localB -> eh3bmirodr [ 1
-] , localB -> eh3bmirodr [ 2 ] , localB -> eh3bmirodr [ 3 ] , localB ->
-eh3bmirodr [ 4 ] , rtp_FZMIN , rtp_FZMAX ) ; break ; case 2 : b_FzTire =
-njagxepmjm ( b_FzTire , kmxusdamtu , dddksvopvu , pkjxdlvuwn [ 0 ] ,
-pkjxdlvuwn [ 1 ] , pkjxdlvuwn [ 2 ] , rtp_FZMIN , rtp_FZMAX , pkjxdlvuwn [ 3
-] , pkjxdlvuwn [ 4 ] , pkjxdlvuwn [ 5 ] , pkjxdlvuwn [ 6 ] , pkjxdlvuwn [ 7 ]
-, pkjxdlvuwn [ 8 ] , pkjxdlvuwn [ 9 ] , pkjxdlvuwn [ 10 ] , pkjxdlvuwn [ 11 ]
-, pkjxdlvuwn [ 12 ] , pkjxdlvuwn [ 13 ] , pkjxdlvuwn [ 14 ] , pkjxdlvuwn [ 15
-] , pkjxdlvuwn [ 16 ] , pkjxdlvuwn [ 17 ] , pkjxdlvuwn [ 18 ] , pkjxdlvuwn [
-19 ] , pkjxdlvuwn [ 20 ] , pkjxdlvuwn [ 21 ] , pkjxdlvuwn [ 22 ] , pkjxdlvuwn
-[ 23 ] , pkjxdlvuwn [ 24 ] , pkjxdlvuwn [ 25 ] , pkjxdlvuwn [ 26 ] ,
-pkjxdlvuwn [ 27 ] , pkjxdlvuwn [ 28 ] , pkjxdlvuwn [ 29 ] , pkjxdlvuwn [ 30 ]
-, pkjxdlvuwn [ 31 ] , pkjxdlvuwn [ 32 ] , pkjxdlvuwn [ 33 ] ) ; break ; case
-3 : b_idx_0 = dddksvopvu ; if ( dddksvopvu < rtp_FZMIN ) { b_idx_0 =
-rtp_FZMIN ; } if ( b_idx_0 > rtp_FZMAX ) { b_idx_0 = rtp_FZMAX ; } for ( i =
-0 ; i < 3 ; i ++ ) { csyrzuatjk_p [ 3 * i ] = csyrzuatjk [ i ] ; csyrzuatjk_p
-[ 3 * i + 1 ] = csyrzuatjk [ i + 3 ] ; csyrzuatjk_p [ 3 * i + 2 ] =
-csyrzuatjk [ i + 6 ] ; } b_FzTire = interp2_MfPDUf1L ( n0mhhr4t1h ,
-cjgdxidpon , csyrzuatjk_p , b_FzTire , b_idx_0 ) * localB -> eh3bmirodr [ 4 ]
-; break ; default : b_FzTire = 0.0 ; break ; } switch ( ( int32_T )
-d3jy5zi252 ) { case 0 : localB -> kxfugx0x5t = 0.0 ; break ; case 1 : localB
--> kxfugx0x5t = iggcenaiwj ( dddksvopvu , aqziyf45vh , kmxusdamtu , localB ->
-k3pqpt3554 [ 0 ] , localB -> k3pqpt3554 [ 3 ] , localB -> k3pqpt3554 [ 4 ] ,
-localB -> k3pqpt3554 [ 5 ] , localB -> k3pqpt3554 [ 9 ] , localB ->
-k3pqpt3554 [ 10 ] , Re , rtp_FZMIN , rtp_FZMAX , localB -> k3pqpt3554 [ 14 ]
-, localB -> k3pqpt3554 [ 15 ] ) ; break ; case 2 : Re = localB -> k3pqpt3554
-[ 0 ] ; if ( localB -> k3pqpt3554 [ 0 ] < localB -> k3pqpt3554 [ 14 ] ) { Re
-= localB -> k3pqpt3554 [ 14 ] ; } if ( Re > localB -> k3pqpt3554 [ 15 ] ) {
-Re = localB -> k3pqpt3554 [ 15 ] ; } b_idx_0 = dddksvopvu ; if ( dddksvopvu <
-0.0 ) { b_idx_0 = 0.0 ; } if ( b_idx_0 > rtp_FZMAX ) { b_idx_0 = rtp_FZMAX ;
-} localB -> kxfugx0x5t = ( ( ( ( localB -> k3pqpt3554 [ 4 ] * b_FzTire /
-localB -> k3pqpt3554 [ 1 ] + localB -> k3pqpt3554 [ 3 ] ) + muDoubleScalarAbs
-( kmxusdamtu / 16.7 ) * localB -> k3pqpt3554 [ 5 ] ) + muDoubleScalarPower (
-kmxusdamtu / 16.7 , 4.0 ) * localB -> k3pqpt3554 [ 6 ] ) + ( localB ->
-k3pqpt3554 [ 8 ] * b_idx_0 / localB -> k3pqpt3554 [ 1 ] + localB ->
-k3pqpt3554 [ 7 ] ) * ( localB -> k3pqpt3554 [ 11 ] * localB -> k3pqpt3554 [
-11 ] ) ) * ( muDoubleScalarTanh ( aqziyf45vh ) * b_idx_0 * localB ->
-k3pqpt3554 [ 13 ] ) * ( muDoubleScalarPower ( b_idx_0 / localB -> k3pqpt3554
-[ 1 ] , localB -> k3pqpt3554 [ 9 ] ) * muDoubleScalarPower ( Re / localB ->
-k3pqpt3554 [ 2 ] , localB -> k3pqpt3554 [ 10 ] ) ) * localB -> k3pqpt3554 [
-12 ] ; break ; case 3 : Re = dddksvopvu ; if ( dddksvopvu < 0.0 ) { Re = 0.0
-; } if ( Re > rtp_FZMAX ) { Re = rtp_FZMAX ; } for ( i = 0 ; i < 3 ; i ++ ) {
-csyrzuatjk_p [ 3 * i ] = govy01dn4l [ i ] ; csyrzuatjk_p [ 3 * i + 1 ] =
-govy01dn4l [ i + 3 ] ; csyrzuatjk_p [ 3 * i + 2 ] = govy01dn4l [ i + 6 ] ; }
-localB -> kxfugx0x5t = - ( muDoubleScalarTanh ( aqziyf45vh ) *
-interp2_MfPDUf1L ( i11thzoaok , jiefker5rr , csyrzuatjk_p , kmxusdamtu , Re )
-) ; break ; case 4 : localB -> kxfugx0x5t = ipmaflmbfh ( dddksvopvu ,
-aqziyf45vh , localB -> k3pqpt3554 [ 0 ] , localB -> k3pqpt3554 [ 3 ] , localB
--> k3pqpt3554 [ 4 ] , localB -> k3pqpt3554 [ 5 ] , localB -> k3pqpt3554 [ 6 ]
-, Re , rtp_FZMIN , rtp_FZMAX , localB -> k3pqpt3554 [ 14 ] , localB ->
-k3pqpt3554 [ 15 ] ) ; break ; default : localB -> kxfugx0x5t = 0.0 ; break ;
-} localB -> c4zmcdhw0l = b_FzTire ; } static boolean_T gppluqklue ( real_T
-Tout , real_T Tfmaxs , dmpx2jc2pu * localB , fmdhv4fck3 * localDW ) { localB
--> nd0y5c0uli = Tout ; localB -> gbfn2dmyrg = Tfmaxs ; localB -> kzk2m4ro0k =
-( muDoubleScalarAbs ( localB -> nd0y5c0uli ) >= localB -> gbfn2dmyrg ) ;
-localDW -> k3j1amkab5 = 4 ; return localB -> kzk2m4ro0k ; } static boolean_T
-g0el31fu5q ( real_T Tout , real_T Tfmaxs , dmpx2jc2pu * localB , fmdhv4fck3 *
-localDW , pymb3fi5g4 * localP ) { localB -> deodfjbdgl = Tout ; localB ->
-a2nlilzn31 = Tfmaxs ; localB -> jvxaiqibhb = localP -> P_8 [ ( ( (
-muDoubleScalarAbs ( ( ( 0.0 - localB -> deodfjbdgl ) - localB -> mjdk2hab1e )
-+ localB -> mjdk2hab1e ) >= localB -> a2nlilzn31 ) + ( ( uint32_T ) (
-muDoubleScalarAbs ( - localB -> deodfjbdgl ) <= localB -> a2nlilzn31 ) << 1 )
-) << 1 ) + localDW -> jrdv3hmnoc ] ; localDW -> jrdv3hmnoc = localB ->
-jvxaiqibhb ; localDW -> d3vznomj0x = 4 ; return localB -> jvxaiqibhb ; } void
-fhk5xmrghf ( dmpx2jc2pu * localB , fmdhv4fck3 * localDW , pymb3fi5g4 * localP
-, bobjql0acy * localX , real_T rtp_omegao ) { localDW -> kzmq5ayuhp = 0U ;
-localDW -> jp5trqmghp = ixrnqnhdfr ; localB -> ebmccrxjeh = 0.0 ; localB ->
-lfwwseijkh = 0.0 ; localB -> oqbsnhfjuf = 0.0 ; localB -> ngac1fpctz = 0.0 ;
-localB -> kzk2m4ro0k = localP -> P_5 ; localDW -> jrdv3hmnoc = localP -> P_7
-; localB -> jvxaiqibhb = localP -> P_6 ; localX -> cxk3fsuqri = rtp_omegao ;
-} void hjtn2cfetd ( dmpx2jc2pu * localB , fmdhv4fck3 * localDW , bobjql0acy *
-localX ) { localDW -> kzmq5ayuhp = 0U ; localDW -> jp5trqmghp = ixrnqnhdfr ;
-localX -> cxk3fsuqri = 0.0 ; localB -> ebmccrxjeh = 0.0 ; localB ->
-lfwwseijkh = 0.0 ; localB -> oqbsnhfjuf = 0.0 ; localB -> ngac1fpctz = 0.0 ;
-} void jzxqghlsdl ( dmpx2jc2pu * localB ) { localB -> nd0y5c0uli = 0.0 ;
-localB -> gbfn2dmyrg = 0.0 ; localB -> deodfjbdgl = 0.0 ; localB ->
-a2nlilzn31 = 0.0 ; localB -> ebmccrxjeh = 0.0 ; localB -> ngac1fpctz = 0.0 ;
-localB -> kzk2m4ro0k = false ; localB -> jvxaiqibhb = false ; localB ->
-mjdk2hab1e = 0.0 ; localB -> ewkfjng1l4 = 0.0 ; localB -> hcmrnlatk5 = 0.0 ;
-localB -> mwz5tssn5o = 0.0 ; localB -> exbq33mn51 = 0.0 ; localB ->
-oqbsnhfjuf = 0.0 ; localB -> dgykadrj5y = 0.0 ; localB -> aereisbden = 0.0 ;
-localB -> lfwwseijkh = 0.0 ; } void cddyh02qci ( hcopmldpph * const
-a5ree4wwe5 , real_T fgvs5banyw , real_T auareadgka , real_T ka4js1rmku ,
-dmpx2jc2pu * localB , fmdhv4fck3 * localDW , pymb3fi5g4 * localP , bobjql0acy
-* localX , real_T rtp_omegao , real_T rtp_br , real_T rtp_Iyy , real_T
-rtp_OmegaTol ) { if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) ) { localDW ->
-bsjj0oya40 = rtmGetTaskTime ( a5ree4wwe5 , 0 ) ; if ( localDW -> kzmq5ayuhp
-== 0U ) { localDW -> kzmq5ayuhp = 1U ; localX -> cxk3fsuqri = rtp_omegao ;
-localDW -> jp5trqmghp = ns2cbkftdn ; localB -> ewkfjng1l4 = localX ->
-cxk3fsuqri ; localB -> hcmrnlatk5 = localP -> P_4 * localB -> ewkfjng1l4 ;
-localB -> mwz5tssn5o = ka4js1rmku * muDoubleScalarTanh ( localB -> hcmrnlatk5
-) ; localB -> exbq33mn51 = rtp_br * localB -> ewkfjng1l4 ; localB ->
-oqbsnhfjuf = localB -> exbq33mn51 ; localB -> ebmccrxjeh = localB ->
-ewkfjng1l4 ; localB -> dgykadrj5y = ( localB -> mwz5tssn5o - fgvs5banyw ) -
-localB -> exbq33mn51 ; localB -> aereisbden = 1.0 / rtp_Iyy * localB ->
+real_T k2p5404yxi , real_T egsq4zjrg3 , real_T mqv0lzc44j , real_T g2qbvrcl1j
+, lc2agjjnwf * localB , real_T rtp_FZMAX , real_T rtp_FZMIN , real_T
+rtp_VXLOW , real_T rtp_kappamax ) { real_T Fx ; real_T Fx_tmp ; real_T Kappa
+; real_T Re ; localB -> eh3bmirodr [ 0 ] = kvgp2fkjhy ; localB -> eh3bmirodr
+[ 1 ] = gnoj3vvd04 ; localB -> eh3bmirodr [ 2 ] = i5tazc1u4j ; localB ->
+eh3bmirodr [ 3 ] = hrxlzevx3z ; localB -> eh3bmirodr [ 4 ] = jblgopnf1i ;
+localB -> k3pqpt3554 [ 0 ] = hiqsfmypee ; localB -> k3pqpt3554 [ 1 ] =
+mx5so5mgvw ; localB -> k3pqpt3554 [ 2 ] = inchkh4kac ; localB -> k3pqpt3554 [
+3 ] = gycdhdasg2 ; localB -> k3pqpt3554 [ 4 ] = few2l1fwxa ; localB ->
+k3pqpt3554 [ 5 ] = jklaqvkxfe ; localB -> k3pqpt3554 [ 6 ] = otfgbpbyhn ;
+localB -> k3pqpt3554 [ 7 ] = kv2iqsifba ; localB -> k3pqpt3554 [ 8 ] =
+hiawd1p1fx ; localB -> k3pqpt3554 [ 9 ] = o5ygoxqi30 ; localB -> k3pqpt3554 [
+10 ] = ig4mu234iu ; localB -> k3pqpt3554 [ 11 ] = dbtrggoxo1 ; localB ->
+k3pqpt3554 [ 12 ] = fdpxrz5vmb ; localB -> k3pqpt3554 [ 13 ] = k2udx51syx ;
+localB -> k3pqpt3554 [ 14 ] = pfq2eyet0u ; localB -> k3pqpt3554 [ 15 ] =
+e3zacyak04 ; localB -> myssjwdee1 [ 0 ] = bodbaw1ynp ; localB -> myssjwdee1 [
+1 ] = gehf3geyns ; localB -> myssjwdee1 [ 2 ] = gakbsgqcve ; localB ->
+myssjwdee1 [ 3 ] = hdwkghxa4l ; localB -> myssjwdee1 [ 4 ] = bt0sy4q3zx ;
+localB -> myssjwdee1 [ 5 ] = djkh3gvlkv ; localB -> myssjwdee1 [ 6 ] =
+bbl12fnfds ; localB -> myssjwdee1 [ 7 ] = maogfv1bti ; localB -> myssjwdee1 [
+8 ] = b55yk0qpmy ; localB -> myssjwdee1 [ 9 ] = c4pn3rsir2 ; localB ->
+myssjwdee1 [ 10 ] = hhd1av5ez0 ; localB -> myssjwdee1 [ 11 ] = epvhuoa1qy ;
+localB -> myssjwdee1 [ 12 ] = p4b5kxhudx ; localB -> myssjwdee1 [ 13 ] =
+a5c4goqooi ; localB -> myssjwdee1 [ 14 ] = fs3ildlixj ; localB -> myssjwdee1
+[ 15 ] = prsb4scvfy ; localB -> myssjwdee1 [ 16 ] = cmj0idhrc5 ; localB ->
+myssjwdee1 [ 17 ] = m2do5j31ef ; localB -> myssjwdee1 [ 18 ] = dgy4icut3a ;
+localB -> myssjwdee1 [ 19 ] = kh4hnzmazk ; localB -> myssjwdee1 [ 20 ] =
+jtbjysdjqj ; localB -> myssjwdee1 [ 21 ] = iypogydhcm ; localB -> myssjwdee1
+[ 22 ] = lkloq2embq ; localB -> myssjwdee1 [ 23 ] = k2p5404yxi ; switch ( (
+int32_T ) g2qbvrcl1j ) { case 0 : Re = lhfh0lgexg ; break ; case 1 : Re = 0.0
+* muDoubleScalarAbs ( aqziyf45vh ) + n5xjjpqvhi ; if ( Re < 0.001 ) { Re =
+0.001 ; } break ; case 2 : Re = lhfh0lgexg ; break ; default : Re =
+lhfh0lgexg ; break ; } Kappa = ak2ysaxv1o ( lhfh0lgexg , aqziyf45vh ,
+kmxusdamtu , rtp_VXLOW , rtp_kappamax ) ; switch ( ( int32_T ) egsq4zjrg3 ) {
+case 0 : Fx = dddksvopvu ; if ( dddksvopvu < rtp_FZMIN ) { Fx = rtp_FZMIN ; }
+if ( Fx > rtp_FZMAX ) { Fx = rtp_FZMAX ; } Fx_tmp = localB -> eh3bmirodr [ 2
+] * Kappa ; Fx = muDoubleScalarSin ( muDoubleScalarAtan ( Fx_tmp - ( Fx_tmp -
+muDoubleScalarAtan ( Fx_tmp ) ) * localB -> eh3bmirodr [ 3 ] ) * localB ->
+eh3bmirodr [ 1 ] ) * localB -> eh3bmirodr [ 0 ] * ( Fx * localB -> eh3bmirodr
+[ 4 ] ) ; break ; case 2 : Fx = njagxepmjm ( Kappa , kmxusdamtu , dddksvopvu
+, pkjxdlvuwn [ 0 ] , pkjxdlvuwn [ 1 ] , pkjxdlvuwn [ 2 ] , rtp_FZMIN ,
+rtp_FZMAX , pkjxdlvuwn [ 3 ] , pkjxdlvuwn [ 4 ] , pkjxdlvuwn [ 5 ] ,
+pkjxdlvuwn [ 6 ] , pkjxdlvuwn [ 7 ] , pkjxdlvuwn [ 8 ] , pkjxdlvuwn [ 9 ] ,
+pkjxdlvuwn [ 10 ] , pkjxdlvuwn [ 11 ] , pkjxdlvuwn [ 12 ] , pkjxdlvuwn [ 13 ]
+, pkjxdlvuwn [ 14 ] , pkjxdlvuwn [ 15 ] , pkjxdlvuwn [ 16 ] , pkjxdlvuwn [ 17
+] , pkjxdlvuwn [ 18 ] , pkjxdlvuwn [ 19 ] , pkjxdlvuwn [ 20 ] , pkjxdlvuwn [
+21 ] , pkjxdlvuwn [ 22 ] , pkjxdlvuwn [ 23 ] , pkjxdlvuwn [ 24 ] , pkjxdlvuwn
+[ 25 ] , pkjxdlvuwn [ 26 ] , pkjxdlvuwn [ 27 ] , pkjxdlvuwn [ 28 ] ,
+pkjxdlvuwn [ 29 ] , pkjxdlvuwn [ 30 ] , pkjxdlvuwn [ 31 ] , pkjxdlvuwn [ 32 ]
+, pkjxdlvuwn [ 33 ] ) ; break ; case 3 : Fx = er2ke5cfku ( Kappa , dddksvopvu
+, n0mhhr4t1h , cjgdxidpon , csyrzuatjk , rtp_FZMIN , rtp_FZMAX , localB ->
+eh3bmirodr [ 4 ] ) ; break ; default : Fx = 0.0 ; Kappa = 0.0 ; break ; }
+switch ( ( int32_T ) mqv0lzc44j ) { case 0 : localB -> kxfugx0x5t = 0.0 ;
+break ; case 1 : localB -> kxfugx0x5t = iggcenaiwj ( dddksvopvu , aqziyf45vh
+, kmxusdamtu , localB -> k3pqpt3554 [ 0 ] , localB -> k3pqpt3554 [ 3 ] ,
+localB -> k3pqpt3554 [ 4 ] , localB -> k3pqpt3554 [ 5 ] , localB ->
+k3pqpt3554 [ 9 ] , localB -> k3pqpt3554 [ 10 ] , Re , rtp_FZMIN , rtp_FZMAX ,
+localB -> k3pqpt3554 [ 14 ] , localB -> k3pqpt3554 [ 15 ] ) ; break ; case 2
+: Re = localB -> k3pqpt3554 [ 0 ] ; if ( localB -> k3pqpt3554 [ 0 ] < localB
+-> k3pqpt3554 [ 14 ] ) { Re = localB -> k3pqpt3554 [ 14 ] ; } if ( Re >
+localB -> k3pqpt3554 [ 15 ] ) { Re = localB -> k3pqpt3554 [ 15 ] ; } Fx_tmp =
+dddksvopvu ; if ( dddksvopvu < 0.0 ) { Fx_tmp = 0.0 ; } if ( Fx_tmp >
+rtp_FZMAX ) { Fx_tmp = rtp_FZMAX ; } localB -> kxfugx0x5t = ( ( ( ( localB ->
+k3pqpt3554 [ 4 ] * Fx / localB -> k3pqpt3554 [ 1 ] + localB -> k3pqpt3554 [ 3
+] ) + muDoubleScalarAbs ( kmxusdamtu / 16.7 ) * localB -> k3pqpt3554 [ 5 ] )
++ muDoubleScalarPower ( kmxusdamtu / 16.7 , 4.0 ) * localB -> k3pqpt3554 [ 6
+] ) + ( localB -> k3pqpt3554 [ 8 ] * Fx_tmp / localB -> k3pqpt3554 [ 1 ] +
+localB -> k3pqpt3554 [ 7 ] ) * ( localB -> k3pqpt3554 [ 11 ] * localB ->
+k3pqpt3554 [ 11 ] ) ) * ( muDoubleScalarTanh ( aqziyf45vh ) * Fx_tmp * localB
+-> k3pqpt3554 [ 13 ] ) * ( muDoubleScalarPower ( Fx_tmp / localB ->
+k3pqpt3554 [ 1 ] , localB -> k3pqpt3554 [ 9 ] ) * muDoubleScalarPower ( Re /
+localB -> k3pqpt3554 [ 2 ] , localB -> k3pqpt3554 [ 10 ] ) ) * localB ->
+k3pqpt3554 [ 12 ] ; break ; case 3 : localB -> kxfugx0x5t = - nnh25h0kmd (
+aqziyf45vh , dddksvopvu , kmxusdamtu , i11thzoaok , jiefker5rr , govy01dn4l ,
+rtp_FZMAX ) ; break ; case 4 : localB -> kxfugx0x5t = - ipmaflmbfh (
+dddksvopvu , aqziyf45vh , localB -> k3pqpt3554 [ 0 ] , localB -> k3pqpt3554 [
+3 ] , localB -> k3pqpt3554 [ 4 ] , localB -> k3pqpt3554 [ 5 ] , localB ->
+k3pqpt3554 [ 6 ] , Re , rtp_FZMIN , rtp_FZMAX , localB -> k3pqpt3554 [ 14 ] ,
+localB -> k3pqpt3554 [ 15 ] ) ; break ; default : localB -> kxfugx0x5t = 0.0
+; break ; } localB -> c4zmcdhw0l = Fx ; localB -> n0kmac1huv = Kappa ; }
+static boolean_T gppluqklue ( real_T Tout , real_T Tfmaxs , dmpx2jc2pu *
+localB , fmdhv4fck3 * localDW ) { localB -> nd0y5c0uli = Tout ; localB ->
+gbfn2dmyrg = Tfmaxs ; localB -> kzk2m4ro0k = ( muDoubleScalarAbs ( localB ->
+nd0y5c0uli ) >= localB -> gbfn2dmyrg ) ; localDW -> k3j1amkab5 = 4 ; return
+localB -> kzk2m4ro0k ; } static boolean_T g0el31fu5q ( real_T Tout , real_T
+Tfmaxs , dmpx2jc2pu * localB , fmdhv4fck3 * localDW , pymb3fi5g4 * localP ) {
+localB -> deodfjbdgl = Tout ; localB -> a2nlilzn31 = Tfmaxs ; localB ->
+jvxaiqibhb = localP -> P_8 [ ( ( ( muDoubleScalarAbs ( ( ( 0.0 - localB ->
+deodfjbdgl ) - localB -> mjdk2hab1e ) + localB -> mjdk2hab1e ) >= localB ->
+a2nlilzn31 ) + ( ( uint32_T ) ( muDoubleScalarAbs ( - localB -> deodfjbdgl )
+<= localB -> a2nlilzn31 ) << 1 ) ) << 1 ) + localDW -> jrdv3hmnoc ] ; localDW
+-> jrdv3hmnoc = localB -> jvxaiqibhb ; localDW -> d3vznomj0x = 4 ; return
+localB -> jvxaiqibhb ; } void fhk5xmrghf ( dmpx2jc2pu * localB , fmdhv4fck3 *
+localDW , pymb3fi5g4 * localP , bobjql0acy * localX , real_T rtp_omegao ) {
+localDW -> kzmq5ayuhp = 0U ; localDW -> jp5trqmghp = ixrnqnhdfr ; localB ->
+ebmccrxjeh = 0.0 ; localB -> lfwwseijkh = 0.0 ; localB -> oqbsnhfjuf = 0.0 ;
+localB -> ngac1fpctz = 0.0 ; localB -> kzk2m4ro0k = localP -> P_5 ; localDW
+-> jrdv3hmnoc = localP -> P_7 ; localB -> jvxaiqibhb = localP -> P_6 ; localX
+-> cxk3fsuqri = rtp_omegao ; } void hjtn2cfetd ( dmpx2jc2pu * localB ,
+fmdhv4fck3 * localDW , bobjql0acy * localX ) { localDW -> kzmq5ayuhp = 0U ;
+localDW -> jp5trqmghp = ixrnqnhdfr ; localX -> cxk3fsuqri = 0.0 ; localB ->
+ebmccrxjeh = 0.0 ; localB -> lfwwseijkh = 0.0 ; localB -> oqbsnhfjuf = 0.0 ;
+localB -> ngac1fpctz = 0.0 ; } void jzxqghlsdl ( dmpx2jc2pu * localB ) {
+localB -> nd0y5c0uli = 0.0 ; localB -> gbfn2dmyrg = 0.0 ; localB ->
+deodfjbdgl = 0.0 ; localB -> a2nlilzn31 = 0.0 ; localB -> ebmccrxjeh = 0.0 ;
+localB -> ngac1fpctz = 0.0 ; localB -> kzk2m4ro0k = false ; localB ->
+jvxaiqibhb = false ; localB -> mjdk2hab1e = 0.0 ; localB -> ewkfjng1l4 = 0.0
+; localB -> hcmrnlatk5 = 0.0 ; localB -> mwz5tssn5o = 0.0 ; localB ->
+exbq33mn51 = 0.0 ; localB -> oqbsnhfjuf = 0.0 ; localB -> dgykadrj5y = 0.0 ;
+localB -> aereisbden = 0.0 ; localB -> lfwwseijkh = 0.0 ; } void cddyh02qci (
+hcopmldpph * const a5ree4wwe5 , real_T fgvs5banyw , real_T auareadgka ,
+real_T ka4js1rmku , dmpx2jc2pu * localB , fmdhv4fck3 * localDW , pymb3fi5g4 *
+localP , bobjql0acy * localX , real_T rtp_omegao , real_T rtp_br , real_T
+rtp_Iyy , real_T rtp_OmegaTol ) { if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) ) {
+localDW -> bsjj0oya40 = rtmGetTaskTime ( a5ree4wwe5 , 0 ) ; if ( localDW ->
+kzmq5ayuhp == 0U ) { localDW -> kzmq5ayuhp = 1U ; localX -> cxk3fsuqri =
+rtp_omegao ; localDW -> jp5trqmghp = ns2cbkftdn ; localB -> ewkfjng1l4 =
+localX -> cxk3fsuqri ; localB -> hcmrnlatk5 = localP -> P_4 * localB ->
+ewkfjng1l4 ; localB -> mwz5tssn5o = ka4js1rmku * muDoubleScalarTanh ( localB
+-> hcmrnlatk5 ) ; localB -> exbq33mn51 = rtp_br * localB -> ewkfjng1l4 ;
+localB -> oqbsnhfjuf = localB -> exbq33mn51 ; localB -> ebmccrxjeh = localB
+-> ewkfjng1l4 ; localB -> dgykadrj5y = ( localB -> mwz5tssn5o - fgvs5banyw )
+- localB -> exbq33mn51 ; localB -> aereisbden = 1.0 / rtp_Iyy * localB ->
 dgykadrj5y ; localB -> lfwwseijkh = localB -> aereisbden ; localB ->
 ngac1fpctz = localB -> dgykadrj5y ;
 ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ; }
@@ -546,55 +546,43 @@ cddyh02qciTID2 ( dmpx2jc2pu * localB , pymb3fi5g4 * localP , real_T rtp_br )
 { localB -> mjdk2hab1e = rtp_br * localP -> P_0 ; } void blmwtgrkjm (
 dmpx2jc2pu * localB , fmdhv4fck3 * localDW , pjvirltsck * localXdot ) {
 localXdot -> cxk3fsuqri = 0.0 ; if ( localDW -> jp5trqmghp == 2 ) { localXdot
--> cxk3fsuqri = localB -> aereisbden ; } } void jza4d3rkqd ( hcopmldpph *
-const a5ree4wwe5 , real_T fgvs5banyw , real_T auareadgka , dmpx2jc2pu *
-localB , fmdhv4fck3 * localDW , pymb3fi5g4 * localP , pibajuhrfy * localZCSV
-, real_T rtp_OmegaTol ) { boolean_T stateChanged ; if ( localDW -> bsjj0oya40
-== rtmGetTaskTime ( a5ree4wwe5 , 0 ) ) { localZCSV -> fjgehigr1q = - 1.0 ; }
-else { stateChanged = false ; if ( localDW -> kzmq5ayuhp == 0U ) {
-stateChanged = true ; } else if ( localDW -> jp5trqmghp == mcuvnmapwy ) { if
-( gppluqklue ( fgvs5banyw , auareadgka , localB , localDW ) ) { stateChanged
-= true ; } } else { if ( g0el31fu5q ( fgvs5banyw , auareadgka , localB ,
-localDW , localP ) ) { stateChanged = ( muDoubleScalarAbs ( localB ->
-ebmccrxjeh ) <= rtp_OmegaTol ) ; } } if ( stateChanged ) { localZCSV ->
-fjgehigr1q = 1.0 ; } else { localZCSV -> fjgehigr1q = - 1.0 ; } } } void
-mqqbpxd21e ( int32_T NumIters , giz1qdggjn localB [ 1 ] , eumkmfr5s3 localDW
-[ 1 ] , lk2f0i2dh3 * localP , bndvzro3yj localX [ 1 ] , real_T rtp_omegao ) {
-int32_T jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ;
-jzsp3rpdl2 ++ ) { fhk5xmrghf ( & localB [ jzsp3rpdl2 ] . nod5vp1cyy .
-fate2u2iog , & localDW [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , & localP ->
-nod5vp1cyy . fate2u2iog , & localX [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog ,
-rtp_omegao ) ; } } void ahv1dfpeau ( int32_T NumIters , giz1qdggjn localB [ 1
-] , eumkmfr5s3 localDW [ 1 ] , bndvzro3yj localX [ 1 ] ) { int32_T jzsp3rpdl2
-; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ; jzsp3rpdl2 ++ ) { hjtn2cfetd
-( & localB [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , & localDW [ jzsp3rpdl2
-] . nod5vp1cyy . fate2u2iog , & localX [ jzsp3rpdl2 ] . nod5vp1cyy .
-fate2u2iog ) ; } } void k3wrgascwa ( int32_T NumIters , giz1qdggjn localB [ 1
-] ) { int32_T jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ;
-jzsp3rpdl2 ++ ) { jzxqghlsdl ( & localB [ jzsp3rpdl2 ] . nod5vp1cyy .
-fate2u2iog ) ; } } void fbnwpfi1ef ( int32_T NumIters , hcopmldpph * const
-a5ree4wwe5 , const real_T * ghilmr1vn0 , const real_T * op0zcmofju , const
-real_T * kq3ayvvoyg , real_T * glgzd2jqy5 , giz1qdggjn localB [ 1 ] ,
-eumkmfr5s3 localDW [ 1 ] , lk2f0i2dh3 * localP , bndvzro3yj localX [ 1 ] ,
-real_T rtp_omegao , real_T rtp_br , real_T rtp_Iyy , real_T rtp_VXLOW ,
-real_T rtp_Re ) { real_T nk1xmdxlpn ; real_T o1qidg1pg0 ; real_T m5qo1tbbq5 ;
-int32_T jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ;
-jzsp3rpdl2 ++ ) { nk1xmdxlpn = ghilmr1vn0 [ jzsp3rpdl2 ] ; o1qidg1pg0 =
-op0zcmofju [ jzsp3rpdl2 ] ; m5qo1tbbq5 = kq3ayvvoyg [ jzsp3rpdl2 ] ;
-cddyh02qci ( a5ree4wwe5 , nk1xmdxlpn , o1qidg1pg0 , m5qo1tbbq5 , & localB [
-jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , & localDW [ jzsp3rpdl2 ] .
+-> cxk3fsuqri = localB -> aereisbden ; } } void mqqbpxd21e ( int32_T NumIters
+, giz1qdggjn localB [ 1 ] , eumkmfr5s3 localDW [ 1 ] , lk2f0i2dh3 * localP ,
+bndvzro3yj localX [ 1 ] , real_T rtp_omegao ) { int32_T jzsp3rpdl2 ; for (
+jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ; jzsp3rpdl2 ++ ) { fhk5xmrghf ( &
+localB [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , & localDW [ jzsp3rpdl2 ] .
 nod5vp1cyy . fate2u2iog , & localP -> nod5vp1cyy . fate2u2iog , & localX [
-jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , rtp_omegao , rtp_br , rtp_Iyy ,
-rtp_VXLOW * rtp_Re * 0.0 ) ; glgzd2jqy5 [ jzsp3rpdl2 ] = localB [ jzsp3rpdl2
-] . nod5vp1cyy . fate2u2iog . ebmccrxjeh ; } } void fbnwpfi1efTID2 ( int32_T
-NumIters , const real_T * ghilmr1vn0 , const real_T * op0zcmofju , const
-real_T * kq3ayvvoyg , giz1qdggjn localB [ 1 ] , lk2f0i2dh3 * localP , real_T
-rtp_br ) { real_T nk1xmdxlpn ; real_T o1qidg1pg0 ; real_T m5qo1tbbq5 ;
-int32_T jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ;
-jzsp3rpdl2 ++ ) { cddyh02qciTID2 ( & localB [ jzsp3rpdl2 ] . nod5vp1cyy .
-fate2u2iog , & localP -> nod5vp1cyy . fate2u2iog , rtp_br ) ; nk1xmdxlpn =
+jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , rtp_omegao ) ; } } void ahv1dfpeau (
+int32_T NumIters , giz1qdggjn localB [ 1 ] , eumkmfr5s3 localDW [ 1 ] ,
+bndvzro3yj localX [ 1 ] ) { int32_T jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ;
+jzsp3rpdl2 < NumIters ; jzsp3rpdl2 ++ ) { hjtn2cfetd ( & localB [ jzsp3rpdl2
+] . nod5vp1cyy . fate2u2iog , & localDW [ jzsp3rpdl2 ] . nod5vp1cyy .
+fate2u2iog , & localX [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog ) ; } } void
+k3wrgascwa ( int32_T NumIters , giz1qdggjn localB [ 1 ] ) { int32_T
+jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ; jzsp3rpdl2 ++ ) {
+jzxqghlsdl ( & localB [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog ) ; } } void
+fbnwpfi1ef ( int32_T NumIters , hcopmldpph * const a5ree4wwe5 , const real_T
+* ghilmr1vn0 , const real_T * op0zcmofju , const real_T * kq3ayvvoyg , real_T
+* glgzd2jqy5 , giz1qdggjn localB [ 1 ] , eumkmfr5s3 localDW [ 1 ] ,
+lk2f0i2dh3 * localP , bndvzro3yj localX [ 1 ] , real_T rtp_omegao , real_T
+rtp_br , real_T rtp_Iyy , real_T rtp_VXLOW , real_T rtp_Re ) { real_T
+nk1xmdxlpn ; real_T o1qidg1pg0 ; real_T m5qo1tbbq5 ; int32_T jzsp3rpdl2 ; for
+( jzsp3rpdl2 = 0 ; jzsp3rpdl2 < NumIters ; jzsp3rpdl2 ++ ) { nk1xmdxlpn =
 ghilmr1vn0 [ jzsp3rpdl2 ] ; o1qidg1pg0 = op0zcmofju [ jzsp3rpdl2 ] ;
-m5qo1tbbq5 = kq3ayvvoyg [ jzsp3rpdl2 ] ; } } void cxtxb3yrrw ( int32_T
+m5qo1tbbq5 = kq3ayvvoyg [ jzsp3rpdl2 ] ; cddyh02qci ( a5ree4wwe5 , nk1xmdxlpn
+, o1qidg1pg0 , m5qo1tbbq5 , & localB [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog
+, & localDW [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , & localP -> nod5vp1cyy
+. fate2u2iog , & localX [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , rtp_omegao
+, rtp_br , rtp_Iyy , rtp_VXLOW * rtp_Re * 0.0 ) ; glgzd2jqy5 [ jzsp3rpdl2 ] =
+localB [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog . ebmccrxjeh ; } } void
+fbnwpfi1efTID2 ( int32_T NumIters , const real_T * ghilmr1vn0 , const real_T
+* op0zcmofju , const real_T * kq3ayvvoyg , giz1qdggjn localB [ 1 ] ,
+lk2f0i2dh3 * localP , real_T rtp_br ) { real_T nk1xmdxlpn ; real_T o1qidg1pg0
+; real_T m5qo1tbbq5 ; int32_T jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2
+< NumIters ; jzsp3rpdl2 ++ ) { cddyh02qciTID2 ( & localB [ jzsp3rpdl2 ] .
+nod5vp1cyy . fate2u2iog , & localP -> nod5vp1cyy . fate2u2iog , rtp_br ) ;
+nk1xmdxlpn = ghilmr1vn0 [ jzsp3rpdl2 ] ; o1qidg1pg0 = op0zcmofju [ jzsp3rpdl2
+] ; m5qo1tbbq5 = kq3ayvvoyg [ jzsp3rpdl2 ] ; } } void cxtxb3yrrw ( int32_T
 NumIters , const real_T * ghilmr1vn0 , const real_T * op0zcmofju , const
 real_T * kq3ayvvoyg , giz1qdggjn localB [ 1 ] , eumkmfr5s3 localDW [ 1 ] ,
 evacbcz0zx localXdot [ 1 ] ) { real_T nk1xmdxlpn ; real_T o1qidg1pg0 ; real_T
@@ -603,26 +591,143 @@ NumIters ; jzsp3rpdl2 ++ ) { nk1xmdxlpn = ghilmr1vn0 [ jzsp3rpdl2 ] ;
 o1qidg1pg0 = op0zcmofju [ jzsp3rpdl2 ] ; m5qo1tbbq5 = kq3ayvvoyg [ jzsp3rpdl2
 ] ; blmwtgrkjm ( & localB [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , &
 localDW [ jzsp3rpdl2 ] . nod5vp1cyy . fate2u2iog , & localXdot [ jzsp3rpdl2 ]
-. nod5vp1cyy . fate2u2iog ) ; } } void gpz5hks1w1 ( int32_T NumIters ,
-hcopmldpph * const a5ree4wwe5 , const real_T * ghilmr1vn0 , const real_T *
-op0zcmofju , const real_T * kq3ayvvoyg , giz1qdggjn localB [ 1 ] , eumkmfr5s3
-localDW [ 1 ] , lk2f0i2dh3 * localP , meg4msrzkc localZCSV [ 1 ] , real_T
-rtp_VXLOW , real_T rtp_Re ) { real_T nk1xmdxlpn ; real_T o1qidg1pg0 ; real_T
-m5qo1tbbq5 ; int32_T jzsp3rpdl2 ; for ( jzsp3rpdl2 = 0 ; jzsp3rpdl2 <
-NumIters ; jzsp3rpdl2 ++ ) { nk1xmdxlpn = ghilmr1vn0 [ jzsp3rpdl2 ] ;
-o1qidg1pg0 = op0zcmofju [ jzsp3rpdl2 ] ; m5qo1tbbq5 = kq3ayvvoyg [ jzsp3rpdl2
-] ; jza4d3rkqd ( a5ree4wwe5 , nk1xmdxlpn , o1qidg1pg0 , & localB [ jzsp3rpdl2
-] . nod5vp1cyy . fate2u2iog , & localDW [ jzsp3rpdl2 ] . nod5vp1cyy .
-fate2u2iog , & localP -> nod5vp1cyy . fate2u2iog , & localZCSV [ jzsp3rpdl2 ]
-. nod5vp1cyy . fate2u2iog , rtp_VXLOW * rtp_Re * 0.0 ) ; } } void fzkpqsvdo4
-( hcopmldpph * const a5ree4wwe5 , lvsoqlxlcs * localDW ) { if ( (
+. nod5vp1cyy . fate2u2iog ) ; } } void fzkpqsvdo4 ( hcopmldpph * const
+a5ree4wwe5 , lvsoqlxlcs * localDW ) { if ( ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( ( a5ree4wwe5 -> _mdlRefSfcnS )
+-> mdlInfo -> rtwgenMode != SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { { if (
+slIsRapidAcceleratorSimulating ( ) || ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) == SS_SIMMODE_NORMAL ) || ssRTWGenIsAccelerator ( a5ree4wwe5
+-> _mdlRefSfcnS ) ) { { sdiSignalSourceInfoU srcInfo ; sdiLabelU loggedName =
+sdiGetLabelFromChars ( "<Kappa>" ) ; sdiLabelU origSigName =
+sdiGetLabelFromChars ( "<Kappa>" ) ; sdiLabelU propName =
+sdiGetLabelFromChars ( "" ) ; sdiLabelU blockPath = sdiGetLabelFromChars (
+"DrivetrainEv/Wheels and Brakes/Bus Selector4" ) ; sdiLabelU blockSID =
+sdiGetLabelFromChars ( "" ) ; sdiLabelU subPath = sdiGetLabelFromChars ( "" )
+; sdiDims sigDims ; sdiDims forEachMdlRefDims ; int_T forEachMdlRefDimsArray
+[ 32 ] ; sdiLabelU sigName = sdiGetLabelFromChars ( "<Kappa>" ) ;
+sdiAsyncQueueHandle hForEachParent = ( NULL ) ; sdiAsyncRepoDataTypeHandle
+hDT = sdiAsyncRepoGetBuiltInDataTypeHandle ( DATA_TYPE_DOUBLE ) ; {
+sdiComplexity sigComplexity = REAL ; sdiSampleTimeContinuity stCont =
+SAMPLE_TIME_CONTINUOUS ; int_T sigDimsArray [ 1 ] = { 1 } ; sigDims . nDims =
+1 ; sigDims . dimensions = sigDimsArray ; srcInfo . numBlockPathElems = 1 ;
+srcInfo . fullBlockPath = ( sdiFullBlkPathU ) & blockPath ; srcInfo . SID = (
+sdiSignalIDU ) & blockSID ; srcInfo . subPath = subPath ; srcInfo . portIndex
+= 0 + 1 ; srcInfo . signalName = sigName ; srcInfo . sigSourceUUID = 0 ; if (
+slIsRapidAcceleratorSimulating ( ) ) { forEachMdlRefDims . nDims = 0 ; } else
+{ forEachMdlRefDims . nDims = slSigLogGetForEachDimsForRefModel ( a5ree4wwe5
+-> _mdlRefSfcnS , forEachMdlRefDimsArray ) ; forEachMdlRefDims . dimensions =
+forEachMdlRefDimsArray ; } if ( forEachMdlRefDims . nDims > 0 ) {
+hForEachParent = sdiCreateForEachParent ( & srcInfo , a5ree4wwe5 ->
+DataMapInfo . mmi . InstanceMap . fullPath , ( NULL ) , loggedName ,
+origSigName , propName , & forEachMdlRefDims ) ; sdiUpdateForEachLeafName ( &
+srcInfo , hForEachParent ) ; } localDW -> haavmmrpns . AQHandles =
+sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , a5ree4wwe5 -> DataMapInfo
+. mmi . InstanceMap . fullPath , "70446daa-459d-4a46-ae62-8fd390846f3b" ,
+sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "1" ) ; if (
+localDW -> haavmmrpns . AQHandles ) { sdiSetSignalSampleTimeString ( localDW
+-> haavmmrpns . AQHandles , "Continuous" , 0.0 , rtmGetTFinal ( a5ree4wwe5 )
+) ; sdiSetRunStartTime ( localDW -> haavmmrpns . AQHandles , rtmGetTaskTime (
+a5ree4wwe5 , 0 ) ) ; sdiAsyncRepoSetSignalExportSettings ( localDW ->
+haavmmrpns . AQHandles , 1 , 0 ) ; sdiAsyncRepoSetSignalExportName ( localDW
+-> haavmmrpns . AQHandles , loggedName , origSigName , propName ) ; if (
+forEachMdlRefDims . nDims > 0 ) { sdiAttachForEachIterationToParent (
+hForEachParent , localDW -> haavmmrpns . AQHandles , ( NULL ) ) ; if (
+srcInfo . signalName != sigName ) { sdiFreeName ( srcInfo . signalName ) ; }
+} } sdiFreeLabel ( sigName ) ; sdiFreeLabel ( loggedName ) ; sdiFreeLabel (
+origSigName ) ; sdiFreeLabel ( propName ) ; sdiFreeLabel ( blockPath ) ;
+sdiFreeLabel ( blockSID ) ; sdiFreeLabel ( subPath ) ; } } } } } if ( (
 ssGetSimMode ( a5ree4wwe5 -> _mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( (
 a5ree4wwe5 -> _mdlRefSfcnS ) -> mdlInfo -> rtwgenMode !=
-SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { void * slioCatalogue =
-rt_slioCatalogue ( ) ? rtwGetPointerFromUniquePtr ( rt_slioCatalogue ( ) ) :
-sdiGetSlioCatalogue ( a5ree4wwe5 -> DataMapInfo . mmi . InstanceMap .
-fullPath ) ; if ( ! slioCatalogue || ! rtwIsLoggingToFile ( slioCatalogue ) )
-{ if ( slIsRapidAcceleratorSimulating ( ) || ( ssGetSimMode ( a5ree4wwe5 ->
+SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { { if (
+slIsRapidAcceleratorSimulating ( ) || ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) == SS_SIMMODE_NORMAL ) || ssRTWGenIsAccelerator ( a5ree4wwe5
+-> _mdlRefSfcnS ) ) { { sdiSignalSourceInfoU srcInfo ; sdiLabelU loggedName =
+sdiGetLabelFromChars ( "Optimal Theta" ) ; sdiLabelU origSigName =
+sdiGetLabelFromChars ( "Optimal Theta" ) ; sdiLabelU propName =
+sdiGetLabelFromChars ( "" ) ; sdiLabelU blockPath = sdiGetLabelFromChars (
+"DrivetrainEv/Wheels and Brakes/Divide" ) ; sdiLabelU blockSID =
+sdiGetLabelFromChars ( "" ) ; sdiLabelU subPath = sdiGetLabelFromChars ( "" )
+; sdiDims sigDims ; sdiDims forEachMdlRefDims ; int_T forEachMdlRefDimsArray
+[ 32 ] ; sdiLabelU sigName = sdiGetLabelFromChars ( "Optimal Theta" ) ;
+sdiAsyncQueueHandle hForEachParent = ( NULL ) ; sdiAsyncRepoDataTypeHandle
+hDT = sdiAsyncRepoGetBuiltInDataTypeHandle ( DATA_TYPE_DOUBLE ) ; {
+sdiComplexity sigComplexity = REAL ; sdiSampleTimeContinuity stCont =
+SAMPLE_TIME_CONTINUOUS ; int_T sigDimsArray [ 1 ] = { 1 } ; sigDims . nDims =
+1 ; sigDims . dimensions = sigDimsArray ; srcInfo . numBlockPathElems = 1 ;
+srcInfo . fullBlockPath = ( sdiFullBlkPathU ) & blockPath ; srcInfo . SID = (
+sdiSignalIDU ) & blockSID ; srcInfo . subPath = subPath ; srcInfo . portIndex
+= 0 + 1 ; srcInfo . signalName = sigName ; srcInfo . sigSourceUUID = 0 ; if (
+slIsRapidAcceleratorSimulating ( ) ) { forEachMdlRefDims . nDims = 0 ; } else
+{ forEachMdlRefDims . nDims = slSigLogGetForEachDimsForRefModel ( a5ree4wwe5
+-> _mdlRefSfcnS , forEachMdlRefDimsArray ) ; forEachMdlRefDims . dimensions =
+forEachMdlRefDimsArray ; } if ( forEachMdlRefDims . nDims > 0 ) {
+hForEachParent = sdiCreateForEachParent ( & srcInfo , a5ree4wwe5 ->
+DataMapInfo . mmi . InstanceMap . fullPath , ( NULL ) , loggedName ,
+origSigName , propName , & forEachMdlRefDims ) ; sdiUpdateForEachLeafName ( &
+srcInfo , hForEachParent ) ; } localDW -> aztcqpbxjo . AQHandles =
+sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , a5ree4wwe5 -> DataMapInfo
+. mmi . InstanceMap . fullPath , "da0921e6-4dec-44c5-99b8-a9059ba6eb91" ,
+sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if (
+localDW -> aztcqpbxjo . AQHandles ) { sdiSetSignalSampleTimeString ( localDW
+-> aztcqpbxjo . AQHandles , "Continuous" , 0.0 , rtmGetTFinal ( a5ree4wwe5 )
+) ; sdiSetRunStartTime ( localDW -> aztcqpbxjo . AQHandles , rtmGetTaskTime (
+a5ree4wwe5 , 0 ) ) ; sdiAsyncRepoSetSignalExportSettings ( localDW ->
+aztcqpbxjo . AQHandles , 1 , 0 ) ; sdiAsyncRepoSetSignalExportName ( localDW
+-> aztcqpbxjo . AQHandles , loggedName , origSigName , propName ) ; if (
+forEachMdlRefDims . nDims > 0 ) { sdiAttachForEachIterationToParent (
+hForEachParent , localDW -> aztcqpbxjo . AQHandles , ( NULL ) ) ; if (
+srcInfo . signalName != sigName ) { sdiFreeName ( srcInfo . signalName ) ; }
+} } sdiFreeLabel ( sigName ) ; sdiFreeLabel ( loggedName ) ; sdiFreeLabel (
+origSigName ) ; sdiFreeLabel ( propName ) ; sdiFreeLabel ( blockPath ) ;
+sdiFreeLabel ( blockSID ) ; sdiFreeLabel ( subPath ) ; } } } } } if ( (
+ssGetSimMode ( a5ree4wwe5 -> _mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( (
+a5ree4wwe5 -> _mdlRefSfcnS ) -> mdlInfo -> rtwgenMode !=
+SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { { if (
+slIsRapidAcceleratorSimulating ( ) || ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) == SS_SIMMODE_NORMAL ) || ssRTWGenIsAccelerator ( a5ree4wwe5
+-> _mdlRefSfcnS ) ) { { sdiSignalSourceInfoU srcInfo ; sdiLabelU loggedName =
+sdiGetLabelFromChars ( "PID out" ) ; sdiLabelU origSigName =
+sdiGetLabelFromChars ( "PID out" ) ; sdiLabelU propName =
+sdiGetLabelFromChars ( "" ) ; sdiLabelU blockPath = sdiGetLabelFromChars (
+"DrivetrainEv/Wheels and Brakes/PID Controller" ) ; sdiLabelU blockSID =
+sdiGetLabelFromChars ( "" ) ; sdiLabelU subPath = sdiGetLabelFromChars ( "" )
+; sdiDims sigDims ; sdiDims forEachMdlRefDims ; int_T forEachMdlRefDimsArray
+[ 32 ] ; sdiLabelU sigName = sdiGetLabelFromChars ( "PID out" ) ;
+sdiAsyncQueueHandle hForEachParent = ( NULL ) ; sdiAsyncRepoDataTypeHandle
+hDT = sdiAsyncRepoGetBuiltInDataTypeHandle ( DATA_TYPE_DOUBLE ) ; {
+sdiComplexity sigComplexity = REAL ; sdiSampleTimeContinuity stCont =
+SAMPLE_TIME_CONTINUOUS ; int_T sigDimsArray [ 1 ] = { 1 } ; sigDims . nDims =
+1 ; sigDims . dimensions = sigDimsArray ; srcInfo . numBlockPathElems = 1 ;
+srcInfo . fullBlockPath = ( sdiFullBlkPathU ) & blockPath ; srcInfo . SID = (
+sdiSignalIDU ) & blockSID ; srcInfo . subPath = subPath ; srcInfo . portIndex
+= 0 + 1 ; srcInfo . signalName = sigName ; srcInfo . sigSourceUUID = 0 ; if (
+slIsRapidAcceleratorSimulating ( ) ) { forEachMdlRefDims . nDims = 0 ; } else
+{ forEachMdlRefDims . nDims = slSigLogGetForEachDimsForRefModel ( a5ree4wwe5
+-> _mdlRefSfcnS , forEachMdlRefDimsArray ) ; forEachMdlRefDims . dimensions =
+forEachMdlRefDimsArray ; } if ( forEachMdlRefDims . nDims > 0 ) {
+hForEachParent = sdiCreateForEachParent ( & srcInfo , a5ree4wwe5 ->
+DataMapInfo . mmi . InstanceMap . fullPath , ( NULL ) , loggedName ,
+origSigName , propName , & forEachMdlRefDims ) ; sdiUpdateForEachLeafName ( &
+srcInfo , hForEachParent ) ; } localDW -> crrfuulwci . AQHandles =
+sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , a5ree4wwe5 -> DataMapInfo
+. mmi . InstanceMap . fullPath , "6a67ca66-2731-437e-829e-688a35f19371" ,
+sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if (
+localDW -> crrfuulwci . AQHandles ) { sdiSetSignalSampleTimeString ( localDW
+-> crrfuulwci . AQHandles , "Continuous" , 0.0 , rtmGetTFinal ( a5ree4wwe5 )
+) ; sdiSetRunStartTime ( localDW -> crrfuulwci . AQHandles , rtmGetTaskTime (
+a5ree4wwe5 , 0 ) ) ; sdiAsyncRepoSetSignalExportSettings ( localDW ->
+crrfuulwci . AQHandles , 1 , 0 ) ; sdiAsyncRepoSetSignalExportName ( localDW
+-> crrfuulwci . AQHandles , loggedName , origSigName , propName ) ; if (
+forEachMdlRefDims . nDims > 0 ) { sdiAttachForEachIterationToParent (
+hForEachParent , localDW -> crrfuulwci . AQHandles , ( NULL ) ) ; if (
+srcInfo . signalName != sigName ) { sdiFreeName ( srcInfo . signalName ) ; }
+} } sdiFreeLabel ( sigName ) ; sdiFreeLabel ( loggedName ) ; sdiFreeLabel (
+origSigName ) ; sdiFreeLabel ( propName ) ; sdiFreeLabel ( blockPath ) ;
+sdiFreeLabel ( blockSID ) ; sdiFreeLabel ( subPath ) ; } } } } } if ( (
+ssGetSimMode ( a5ree4wwe5 -> _mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( (
+a5ree4wwe5 -> _mdlRefSfcnS ) -> mdlInfo -> rtwgenMode !=
+SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { { if (
+slIsRapidAcceleratorSimulating ( ) || ( ssGetSimMode ( a5ree4wwe5 ->
 _mdlRefSfcnS ) == SS_SIMMODE_NORMAL ) || ssRTWGenIsAccelerator ( a5ree4wwe5
 -> _mdlRefSfcnS ) ) { { sdiSignalSourceInfoU srcInfo ; sdiLabelU loggedName =
 sdiGetLabelFromChars ( "<C>" ) ; sdiLabelU origSigName = sdiGetLabelFromChars
@@ -663,143 +768,119 @@ hForEachParent , localDW -> fv3mchw1jn . AQHandles , ( NULL ) ) ; if (
 srcInfo . signalName != sigName ) { sdiFreeName ( srcInfo . signalName ) ; }
 } } sdiFreeLabel ( sigName ) ; sdiFreeLabel ( loggedName ) ; sdiFreeLabel (
 origSigName ) ; sdiFreeLabel ( propName ) ; sdiFreeLabel ( blockPath ) ;
-sdiFreeLabel ( blockSID ) ; sdiFreeLabel ( subPath ) ; } } } } localDW ->
-fv3mchw1jn . SlioLTF = ( NULL ) ; { void * treeVector = ( NULL ) ; void *
-accessor = ( NULL ) ; const void * signalDescriptor = ( NULL ) ; void *
-loggingInterval = ( NULL ) ; char * datasetName = "tmp_raccel_logsout" ; void
-* slioCatalogue = rt_slioCatalogue ( ) ? rtwGetPointerFromUniquePtr (
-rt_slioCatalogue ( ) ) : sdiGetSlioCatalogue ( a5ree4wwe5 -> DataMapInfo .
-mmi . InstanceMap . fullPath ) ; if ( slioCatalogue && rtwIsLoggingToFile (
-slioCatalogue ) ) { int_T forEachMdlRefDimsArray [ 32 ] ; int_T
-forEachMdlRefDimsArraySize = 0 ; if ( ! slIsRapidAcceleratorSimulating ( ) )
-{ forEachMdlRefDimsArraySize = slSigLogGetForEachDimsForRefModel ( a5ree4wwe5
--> _mdlRefSfcnS , forEachMdlRefDimsArray ) ; } treeVector = rtwGetTreeVector
-( ) ; { int_T sigDimsArray [ 1 ] = { 1 } ; rtwAddLeafNode ( 0 , "<C>" ,
-"linear" , 0 , ( unsigned int * ) sigDimsArray , 1 , "double" , "N*m" ,
-"Continuous" , 0.0 , rtmGetTFinal ( a5ree4wwe5 ) , treeVector ) ; }
-signalDescriptor = rtwGetSignalDescriptor ( treeVector , 1 , 1 , 0 , 1 ,
-"<C>" , "" , a5ree4wwe5 -> DataMapInfo . mmi . InstanceMap . fullPath ,
- "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Rear Axle Compliance 2/Bus Selector1"
-, 2 , 0 , slioCatalogue , forEachMdlRefDimsArraySize ? ( const uint_T * )
-forEachMdlRefDimsArray : ( NULL ) , forEachMdlRefDimsArraySize , ( NULL ) , 0
-) ; if ( ! rt_slioCatalogue ( ) ) { sdiSlioIsLoggingSignal ( a5ree4wwe5 ->
-DataMapInfo . mmi . InstanceMap . fullPath ,
- "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Rear Axle Compliance 2/Bus Selector1"
-, 2 , "<C>" ) ; } if ( rtwLoggingOverride ( signalDescriptor , slioCatalogue
-) ) { if ( a5ree4wwe5 -> _mdlRefSfcnS -> mdlInfo -> rtwLogInfo ) {
-loggingInterval = rtliGetLoggingInterval ( a5ree4wwe5 -> _mdlRefSfcnS ->
-mdlInfo -> rtwLogInfo ) ; } else { loggingInterval = sdiGetLoggingIntervals (
-a5ree4wwe5 -> DataMapInfo . mmi . InstanceMap . fullPath ) ; datasetName = ""
-; } accessor = rtwGetAccessor ( signalDescriptor , loggingInterval ) ;
-rtwAddR2Client ( accessor , signalDescriptor , slioCatalogue , datasetName ,
-1 ) ; localDW -> fv3mchw1jn . SlioLTF = accessor ; } } } } } void eqyc2wn3m1
-( hcopmldpph * const a5ree4wwe5 , pw4f2kjo3k * localB , lvsoqlxlcs * localDW
-, edp3webv0p * localX ) { boolean_T tmp ; localDW -> jg0qnrcaox = 1 ; if (
-rtmIsFirstInitCond ( a5ree4wwe5 ) ) { localX -> ncmmxrrgvr [ 0 ] = 0.0 ;
-localX -> ncmmxrrgvr [ 1 ] = 0.0 ; tmp = slIsRapidAcceleratorSimulating ( ) ;
-if ( tmp ) { tmp = ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 ->
+sdiFreeLabel ( blockSID ) ; sdiFreeLabel ( subPath ) ; } } } } } } void
+eqyc2wn3m1 ( hcopmldpph * const a5ree4wwe5 , pw4f2kjo3k * localB , lvsoqlxlcs
+* localDW , edp3webv0p * localX ) { boolean_T tmp ; localDW -> jg0qnrcaox = 1
+; if ( rtmIsFirstInitCond ( a5ree4wwe5 ) ) { localX -> ncmmxrrgvr [ 0 ] = 0.0
+; localX -> ncmmxrrgvr [ 1 ] = 0.0 ; tmp = slIsRapidAcceleratorSimulating ( )
+; if ( tmp ) { tmp = ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 ->
 _mdlRefSfcnS ) ; localDW -> jg0qnrcaox = ! tmp ; } else { localDW ->
 jg0qnrcaox = 1 ; } localX -> m5tmby1aqo = 0.0 ; } localX -> d5vyxqghh0 [ 0 ]
-= akbgnuupjz . P_105 ; localX -> noatsby3ej [ 0 ] = akbgnuupjz . P_92 [ 0 ] ;
-localX -> d5vyxqghh0 [ 1 ] = akbgnuupjz . P_105 ; localX -> noatsby3ej [ 1 ]
-= akbgnuupjz . P_92 [ 1 ] ; localX -> in4ouu3rj0 = akbgnuupjz . P_97 ; localX
--> fmsvpqigtm = akbgnuupjz . P_95 ; localX -> neffdf1vy0 = akbgnuupjz . P_110
-; localDW -> hdxujtbohd = akbgnuupjz . P_116 ; localDW -> avmrav1eka = 1 ; if
+= akbgnuupjz . P_97 ; localX -> noatsby3ej [ 0 ] = akbgnuupjz . P_86 [ 0 ] ;
+localX -> d5vyxqghh0 [ 1 ] = akbgnuupjz . P_97 ; localX -> noatsby3ej [ 1 ] =
+akbgnuupjz . P_86 [ 1 ] ; localX -> in4ouu3rj0 = akbgnuupjz . P_89 ; localX
+-> fmsvpqigtm = akbgnuupjz . P_87 ; localX -> neffdf1vy0 = akbgnuupjz . P_102
+; localDW -> hdxujtbohd = akbgnuupjz . P_108 ; localDW -> avmrav1eka = 1 ; if
 ( rtmIsFirstInitCond ( a5ree4wwe5 ) ) { tmp = slIsRapidAcceleratorSimulating
 ( ) ; if ( tmp ) { tmp = ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 ->
 _mdlRefSfcnS ) ; localDW -> avmrav1eka = ! tmp ; } else { localDW ->
 avmrav1eka = 1 ; } localX -> cs3cbynlcj = 0.0 ; } localX -> dkpe1jeg2m =
-akbgnuupjz . P_98 ; localX -> exw1srp224 = akbgnuupjz . P_117 ; localX ->
-lwzedupgn2 = akbgnuupjz . P_102 ; localDW -> mk2q5nw0z4 = akbgnuupjz . P_128
-; localDW -> f53xce00cm = 1 ; if ( rtmIsFirstInitCond ( a5ree4wwe5 ) ) { tmp
-= slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp =
+akbgnuupjz . P_90 ; localX -> exw1srp224 = akbgnuupjz . P_109 ; localX ->
+lwzedupgn2 = akbgnuupjz . P_94 ; localDW -> mk2q5nw0z4 = akbgnuupjz . P_120 ;
+localDW -> f53xce00cm = 1 ; if ( rtmIsFirstInitCond ( a5ree4wwe5 ) ) { tmp =
+slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp =
 ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 -> _mdlRefSfcnS ) ; localDW ->
 f53xce00cm = ! tmp ; } else { localDW -> f53xce00cm = 1 ; } localX ->
 mjiky0nofi [ 0 ] = 0.0 ; localX -> mjiky0nofi [ 1 ] = 0.0 ; } localX ->
-fxodvuf53f = akbgnuupjz . P_99 ; localX -> lavyvivx1k = akbgnuupjz . P_87 ;
-localDW -> pzaicq2iw5 = 1 ; if ( rtmIsFirstInitCond ( a5ree4wwe5 ) ) { tmp =
-slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp =
+fxodvuf53f = akbgnuupjz . P_91 ; localX -> lavyvivx1k = akbgnuupjz . P_81 ;
+localX -> jin1n3lghh = akbgnuupjz . P_17 ; localX -> durnydrbng = akbgnuupjz
+. P_16 ; localDW -> pzaicq2iw5 = 1 ; if ( rtmIsFirstInitCond ( a5ree4wwe5 ) )
+{ tmp = slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp =
 ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 -> _mdlRefSfcnS ) ; localDW ->
 pzaicq2iw5 = ! tmp ; } else { localDW -> pzaicq2iw5 = 1 ; } } localX ->
-pvkalczr1c = akbgnuupjz . P_135 ; mqqbpxd21e ( 1 , localB -> fbnwpfi1ef3 ,
+pvkalczr1c = akbgnuupjz . P_127 ; mqqbpxd21e ( 1 , localB -> fbnwpfi1ef3 ,
 localDW -> fbnwpfi1ef3 , & akbgnuupjz . fbnwpfi1ef3 , localX -> fbnwpfi1ef3 ,
-akbgnuupjz . P_88 ) ; mqqbpxd21e ( 1 , localB -> cg32ix3bhp , localDW ->
+akbgnuupjz . P_82 ) ; mqqbpxd21e ( 1 , localB -> cg32ix3bhp , localDW ->
 cg32ix3bhp , & akbgnuupjz . cg32ix3bhp , localX -> cg32ix3bhp , akbgnuupjz .
-P_89 ) ; } void er1nyhy4k5 ( hcopmldpph * const a5ree4wwe5 , pw4f2kjo3k *
+P_83 ) ; } void er1nyhy4k5 ( hcopmldpph * const a5ree4wwe5 , pw4f2kjo3k *
 localB , lvsoqlxlcs * localDW , edp3webv0p * localX ) { boolean_T tmp ;
 localDW -> jg0qnrcaox = 1 ; if ( rtmIsFirstInitCond ( a5ree4wwe5 ) ) { localX
 -> ncmmxrrgvr [ 0 ] = 0.0 ; localX -> ncmmxrrgvr [ 1 ] = 0.0 ; tmp =
 slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp =
 ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 -> _mdlRefSfcnS ) ; localDW ->
 jg0qnrcaox = ! tmp ; } else { localDW -> jg0qnrcaox = 1 ; } localX ->
-m5tmby1aqo = 0.0 ; } localX -> d5vyxqghh0 [ 0 ] = akbgnuupjz . P_105 ; localX
--> noatsby3ej [ 0 ] = akbgnuupjz . P_92 [ 0 ] ; localX -> d5vyxqghh0 [ 1 ] =
-akbgnuupjz . P_105 ; localX -> noatsby3ej [ 1 ] = akbgnuupjz . P_92 [ 1 ] ;
-localX -> in4ouu3rj0 = akbgnuupjz . P_97 ; localX -> fmsvpqigtm = akbgnuupjz
-. P_95 ; localX -> neffdf1vy0 = akbgnuupjz . P_110 ; localDW -> hdxujtbohd =
-akbgnuupjz . P_116 ; localDW -> avmrav1eka = 1 ; if ( rtmIsFirstInitCond (
+m5tmby1aqo = 0.0 ; } localX -> d5vyxqghh0 [ 0 ] = akbgnuupjz . P_97 ; localX
+-> noatsby3ej [ 0 ] = akbgnuupjz . P_86 [ 0 ] ; localX -> d5vyxqghh0 [ 1 ] =
+akbgnuupjz . P_97 ; localX -> noatsby3ej [ 1 ] = akbgnuupjz . P_86 [ 1 ] ;
+localX -> in4ouu3rj0 = akbgnuupjz . P_89 ; localX -> fmsvpqigtm = akbgnuupjz
+. P_87 ; localX -> neffdf1vy0 = akbgnuupjz . P_102 ; localDW -> hdxujtbohd =
+akbgnuupjz . P_108 ; localDW -> avmrav1eka = 1 ; if ( rtmIsFirstInitCond (
 a5ree4wwe5 ) ) { tmp = slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp
 = ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 -> _mdlRefSfcnS ) ; localDW
 -> avmrav1eka = ! tmp ; } else { localDW -> avmrav1eka = 1 ; } localX ->
-cs3cbynlcj = 0.0 ; } localX -> dkpe1jeg2m = akbgnuupjz . P_98 ; localX ->
-exw1srp224 = akbgnuupjz . P_117 ; localX -> lwzedupgn2 = akbgnuupjz . P_102 ;
-localDW -> mk2q5nw0z4 = akbgnuupjz . P_128 ; localDW -> f53xce00cm = 1 ; if (
+cs3cbynlcj = 0.0 ; } localX -> dkpe1jeg2m = akbgnuupjz . P_90 ; localX ->
+exw1srp224 = akbgnuupjz . P_109 ; localX -> lwzedupgn2 = akbgnuupjz . P_94 ;
+localDW -> mk2q5nw0z4 = akbgnuupjz . P_120 ; localDW -> f53xce00cm = 1 ; if (
 rtmIsFirstInitCond ( a5ree4wwe5 ) ) { tmp = slIsRapidAcceleratorSimulating (
 ) ; if ( tmp ) { tmp = ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 ->
 _mdlRefSfcnS ) ; localDW -> f53xce00cm = ! tmp ; } else { localDW ->
 f53xce00cm = 1 ; } localX -> mjiky0nofi [ 0 ] = 0.0 ; localX -> mjiky0nofi [
-1 ] = 0.0 ; } localX -> fxodvuf53f = akbgnuupjz . P_99 ; localX -> lavyvivx1k
-= akbgnuupjz . P_87 ; localDW -> pzaicq2iw5 = 1 ; if ( rtmIsFirstInitCond (
-a5ree4wwe5 ) ) { tmp = slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp
-= ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 -> _mdlRefSfcnS ) ; localDW
--> pzaicq2iw5 = ! tmp ; } else { localDW -> pzaicq2iw5 = 1 ; } } localX ->
-pvkalczr1c = akbgnuupjz . P_135 ; ahv1dfpeau ( 1 , localB -> fbnwpfi1ef3 ,
-localDW -> fbnwpfi1ef3 , localX -> fbnwpfi1ef3 ) ; ahv1dfpeau ( 1 , localB ->
-cg32ix3bhp , localDW -> cg32ix3bhp , localX -> cg32ix3bhp ) ; } void
-ka5dospcnh ( pw4f2kjo3k * localB , lvsoqlxlcs * localDW ) { int32_T
-ji4pzz2y51 ; for ( ji4pzz2y51 = 0 ; ji4pzz2y51 < 4 ; ji4pzz2y51 ++ ) { localB
--> izrftnejci [ ji4pzz2y51 ] . oqgrsi0ejr [ 0 ] = 0.0 ; localB -> izrftnejci
-[ ji4pzz2y51 ] . oqgrsi0ejr [ 1 ] = 0.0 ; localB -> izrftnejci [ ji4pzz2y51 ]
-. oqgrsi0ejr [ 2 ] = 0.0 ; } k3wrgascwa ( 1 , localB -> fbnwpfi1ef3 ) ;
-k3wrgascwa ( 1 , localB -> cg32ix3bhp ) ; localB -> a2ouo0ho2h = akbgnuupjz .
-P_61 ; localB -> m0jqa1b1km = akbgnuupjz . P_62 ; localDW -> kxp34i0kfp = 0 ;
-localDW -> mdigxevyus = 0 ; localDW -> bbyh2lmjuh = 0 ; } void DrivetrainEv (
-hcopmldpph * const a5ree4wwe5 , const real_T * a10dw5c4tm , const real_T *
-ccn5sowg0n , const real_T * dxefyqzind , const real_T * iudgegw2lz , real_T *
-hk0t0gzq0m , real_T * jnhw4b1r4n , pw4f2kjo3k * localB , lvsoqlxlcs * localDW
-, edp3webv0p * localX , at3vnbf5fi * localZCE ) { real_T mgifohxfpu ; int32_T
-ji4pzz2y51 ; ZCEventType zcEvent ; real_T fj4qdbbcdn ; real_T jb4mtkb30x ;
-real_T nh1w3novru ; real_T lezo4vnn1w [ 3 ] ; real_T fzak5q5isu_p [ 12 ] ;
-real_T di4vinm4lt_p ; real_T a1lc0bzspv_p [ 3 ] ; real_T kq3ho01jf4_p [ 9 ] ;
-real_T lnwgoxkd41_p [ 4 ] ; real_T nvq24ipryj_p ; real_T aggo5314p1_p ;
-real_T omskzwfqex_p [ 6 ] ; real_T pehck35b41_p ; real_T fntetdbqf5_p ;
-real_T gh1z5yz2rb_p ; real_T nikxuk2zi0_p ; real_T jxt0ik3zwq_p ; real_T
-lfuoa2u22f_p [ 3 ] ; real_T kq3ho01jf4_e [ 3 ] ; real_T jes2d31iaz [ 4 ] ;
-int32_T i ; real_T fyrdkrtnna_idx_1 ; real_T evdpmikvu1_idx_0 ; real_T
-evdpmikvu1_idx_1 ; real_T ow4uoan4mg_idx_0 ; real_T ow4uoan4mg_idx_2 ; real_T
-ow4uoan4mg_idx_1 ; real_T ibz4iecg5m_idx_0 ; real_T g3arwv4dau_idx_0 ; real_T
-g3arwv4dau_idx_1 ; if ( localDW -> jg0qnrcaox != 0 ) { nh1w3novru =
-muDoubleScalarAtan2 ( akbgnuupjz . P_103 , akbgnuupjz . P_102 ) ; localX ->
-ncmmxrrgvr [ 0 ] = akbgnuupjz . P_101 * muDoubleScalarCos ( nh1w3novru ) ;
-localX -> ncmmxrrgvr [ 1 ] = akbgnuupjz . P_101 * muDoubleScalarSin (
-nh1w3novru ) ; } g3arwv4dau_idx_0 = localX -> ncmmxrrgvr [ 0 ] ;
-g3arwv4dau_idx_1 = localX -> ncmmxrrgvr [ 1 ] ; localB -> kn3kq1dbud [ 0 ] =
-localX -> ncmmxrrgvr [ 0 ] ; localB -> kn3kq1dbud [ 1 ] = 0.0 ; localB ->
-kn3kq1dbud [ 2 ] = localX -> ncmmxrrgvr [ 1 ] ; * hk0t0gzq0m = localB ->
-kn3kq1dbud [ 0 ] ; localB -> if3fq2sidt [ 0 ] = 0.0 ; localB -> if3fq2sidt [
-1 ] = 0.0 ; fzak5q5isu_p [ 0 ] = - * iudgegw2lz ; fzak5q5isu_p [ 1 ] = - 0.0
-; fzak5q5isu_p [ 2 ] = - 0.0 ; fzak5q5isu_p [ 3 ] = 0.0 ; fzak5q5isu_p [ 4 ]
-= 0.0 ; di4vinm4lt_p = localX -> in4ouu3rj0 ; fyrdkrtnna_idx_1 = localX ->
-in4ouu3rj0 ; muDoubleScalarSinCos ( akbgnuupjz . P_142 , & lezo4vnn1w [ 0 ] ,
-& ow4uoan4mg_idx_0 ) ; muDoubleScalarSinCos ( localX -> in4ouu3rj0 , &
+1 ] = 0.0 ; } localX -> fxodvuf53f = akbgnuupjz . P_91 ; localX -> lavyvivx1k
+= akbgnuupjz . P_81 ; localX -> jin1n3lghh = akbgnuupjz . P_17 ; localX ->
+durnydrbng = akbgnuupjz . P_16 ; localDW -> pzaicq2iw5 = 1 ; if (
+rtmIsFirstInitCond ( a5ree4wwe5 ) ) { tmp = slIsRapidAcceleratorSimulating (
+) ; if ( tmp ) { tmp = ssGetGlobalInitialStatesAvailable ( a5ree4wwe5 ->
+_mdlRefSfcnS ) ; localDW -> pzaicq2iw5 = ! tmp ; } else { localDW ->
+pzaicq2iw5 = 1 ; } } localX -> pvkalczr1c = akbgnuupjz . P_127 ; ahv1dfpeau (
+1 , localB -> fbnwpfi1ef3 , localDW -> fbnwpfi1ef3 , localX -> fbnwpfi1ef3 )
+; ahv1dfpeau ( 1 , localB -> cg32ix3bhp , localDW -> cg32ix3bhp , localX ->
+cg32ix3bhp ) ; } void ka5dospcnh ( pw4f2kjo3k * localB , lvsoqlxlcs * localDW
+) { int32_T ji4pzz2y51 ; for ( ji4pzz2y51 = 0 ; ji4pzz2y51 < 4 ; ji4pzz2y51
+++ ) { localB -> izrftnejci [ ji4pzz2y51 ] . oqgrsi0ejr [ 0 ] = 0.0 ; localB
+-> izrftnejci [ ji4pzz2y51 ] . oqgrsi0ejr [ 1 ] = 0.0 ; localB -> izrftnejci
+[ ji4pzz2y51 ] . oqgrsi0ejr [ 2 ] = 0.0 ; } k3wrgascwa ( 1 , localB ->
+fbnwpfi1ef3 ) ; k3wrgascwa ( 1 , localB -> cg32ix3bhp ) ; localB ->
+lernmx4ihz_mbvzarwird = akbgnuupjz . P_55 ; localB -> pbgxyjcpso = akbgnuupjz
+. P_56 ; localDW -> kxp34i0kfp = 0 ; localDW -> mdigxevyus = 0 ; localDW ->
+bbyh2lmjuh = 0 ; } void DrivetrainEv ( hcopmldpph * const a5ree4wwe5 , const
+real_T * a10dw5c4tm , const real_T * ccn5sowg0n , const real_T * dxefyqzind ,
+const real_T * iudgegw2lz , real_T * hk0t0gzq0m , real_T * jnhw4b1r4n ,
+real_T * epu24awsw0 , real_T * gd1s5pp2od , pw4f2kjo3k * localB , lvsoqlxlcs
+* localDW , edp3webv0p * localX , at3vnbf5fi * localZCE ) { real_T mgifohxfpu
+; int32_T ji4pzz2y51 ; real_T fzak5q5isu_p [ 12 ] ; real_T kq3ho01jf4_p [ 9 ]
+; real_T omskzwfqex_p [ 6 ] ; real_T jes2d31iaz [ 4 ] ; real_T lnwgoxkd41_p [
+4 ] ; real_T a1lc0bzspv_p [ 3 ] ; real_T kq3ho01jf4_e [ 3 ] ; real_T
+lezo4vnn1w [ 3 ] ; real_T lfuoa2u22f_p [ 3 ] ; real_T g3arwv4dau_p [ 2 ] ;
+real_T aggo5314p1_p ; real_T di4vinm4lt_p ; real_T evdpmikvu1_idx_0 ; real_T
+fyrdkrtnna_idx_1 ; real_T gh1z5yz2rb_p ; real_T ibz4iecg5m_idx_0 ; real_T
+ibz4iecg5m_idx_1 ; real_T jb4mtkb30x ; real_T jwb5qwtbaz_p ; real_T
+nh1w3novru ; real_T nikxuk2zi0_p ; real_T nrktqrfkmk_p ; real_T nvq24ipryj_p
+; real_T ow4uoan4mg_idx_0 ; real_T ow4uoan4mg_idx_1 ; real_T ow4uoan4mg_idx_2
+; real_T p41leqie3i_p ; real_T pehck35b41_p ; int32_T i ; ZCEventType zcEvent
+; if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) ) { if ( localDW -> jg0qnrcaox != 0
+) { nh1w3novru = muDoubleScalarAtan2 ( akbgnuupjz . P_95 , akbgnuupjz . P_94
+) ; localX -> ncmmxrrgvr [ 0 ] = akbgnuupjz . P_93 * muDoubleScalarCos (
+nh1w3novru ) ; localX -> ncmmxrrgvr [ 1 ] = akbgnuupjz . P_93 *
+muDoubleScalarSin ( nh1w3novru ) ; } g3arwv4dau_p [ 0 ] = localX ->
+ncmmxrrgvr [ 0 ] ; g3arwv4dau_p [ 1 ] = localX -> ncmmxrrgvr [ 1 ] ; } else {
+g3arwv4dau_p [ 0 ] = localX -> ncmmxrrgvr [ 0 ] ; g3arwv4dau_p [ 1 ] = localX
+-> ncmmxrrgvr [ 1 ] ; } localB -> kn3kq1dbud [ 0 ] = g3arwv4dau_p [ 0 ] ;
+localB -> kn3kq1dbud [ 1 ] = 0.0 ; localB -> kn3kq1dbud [ 2 ] = g3arwv4dau_p
+[ 1 ] ; * hk0t0gzq0m = localB -> kn3kq1dbud [ 0 ] ; localB -> if3fq2sidt [ 0
+] = 0.0 ; localB -> if3fq2sidt [ 1 ] = 0.0 ; fzak5q5isu_p [ 0 ] = - *
+iudgegw2lz ; fzak5q5isu_p [ 1 ] = - 0.0 ; fzak5q5isu_p [ 2 ] = - 0.0 ;
+fzak5q5isu_p [ 3 ] = 0.0 ; fzak5q5isu_p [ 4 ] = 0.0 ; di4vinm4lt_p = localX
+-> in4ouu3rj0 ; fyrdkrtnna_idx_1 = localX -> in4ouu3rj0 ;
+muDoubleScalarSinCos ( akbgnuupjz . P_134 , & lezo4vnn1w [ 0 ] , &
+ow4uoan4mg_idx_0 ) ; muDoubleScalarSinCos ( localX -> in4ouu3rj0 , &
 lezo4vnn1w [ 1 ] , & ow4uoan4mg_idx_1 ) ; muDoubleScalarSinCos ( akbgnuupjz .
-P_140 , & lezo4vnn1w [ 2 ] , & ow4uoan4mg_idx_2 ) ; kq3ho01jf4_p [ 0 ] =
-ow4uoan4mg_idx_1 * ow4uoan4mg_idx_0 ; jxt0ik3zwq_p = lezo4vnn1w [ 2 ] *
-lezo4vnn1w [ 1 ] ; kq3ho01jf4_p [ 1 ] = jxt0ik3zwq_p * ow4uoan4mg_idx_0 -
+P_132 , & lezo4vnn1w [ 2 ] , & ow4uoan4mg_idx_2 ) ; kq3ho01jf4_p [ 0 ] =
+ow4uoan4mg_idx_1 * ow4uoan4mg_idx_0 ; nrktqrfkmk_p = lezo4vnn1w [ 2 ] *
+lezo4vnn1w [ 1 ] ; kq3ho01jf4_p [ 1 ] = nrktqrfkmk_p * ow4uoan4mg_idx_0 -
 ow4uoan4mg_idx_2 * lezo4vnn1w [ 0 ] ; nh1w3novru = ow4uoan4mg_idx_2 *
 lezo4vnn1w [ 1 ] ; kq3ho01jf4_p [ 2 ] = nh1w3novru * ow4uoan4mg_idx_0 +
 lezo4vnn1w [ 2 ] * lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 3 ] = ow4uoan4mg_idx_1 *
-lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 4 ] = jxt0ik3zwq_p * lezo4vnn1w [ 0 ] +
+lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 4 ] = nrktqrfkmk_p * lezo4vnn1w [ 0 ] +
 ow4uoan4mg_idx_2 * ow4uoan4mg_idx_0 ; kq3ho01jf4_p [ 5 ] = nh1w3novru *
 lezo4vnn1w [ 0 ] - lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_0 ; kq3ho01jf4_p [ 6 ] =
 - lezo4vnn1w [ 1 ] ; kq3ho01jf4_p [ 7 ] = lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_1
@@ -807,17 +888,17 @@ lezo4vnn1w [ 0 ] - lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_0 ; kq3ho01jf4_p [ 6 ] =
 < 3 ; i ++ ) { lfuoa2u22f_p [ i ] = kq3ho01jf4_p [ 3 * i + 2 ] * localB ->
 kqttujkp5i [ 2 ] + ( kq3ho01jf4_p [ 3 * i + 1 ] * localB -> kqttujkp5i [ 1 ]
 + kq3ho01jf4_p [ 3 * i ] * localB -> kqttujkp5i [ 0 ] ) ; }
-muDoubleScalarSinCos ( akbgnuupjz . P_142 , & ow4uoan4mg_idx_0 , & lezo4vnn1w
+muDoubleScalarSinCos ( akbgnuupjz . P_134 , & ow4uoan4mg_idx_0 , & lezo4vnn1w
 [ 0 ] ) ; muDoubleScalarSinCos ( localX -> in4ouu3rj0 , & ow4uoan4mg_idx_1 ,
-& lezo4vnn1w [ 1 ] ) ; muDoubleScalarSinCos ( akbgnuupjz . P_140 , &
+& lezo4vnn1w [ 1 ] ) ; muDoubleScalarSinCos ( akbgnuupjz . P_132 , &
 ow4uoan4mg_idx_2 , & lezo4vnn1w [ 2 ] ) ; kq3ho01jf4_p [ 0 ] = lezo4vnn1w [ 1
 ] * lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 1 ] = ow4uoan4mg_idx_2 *
 ow4uoan4mg_idx_1 * lezo4vnn1w [ 0 ] - lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_0 ;
-jxt0ik3zwq_p = lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_1 ; kq3ho01jf4_p [ 2 ] =
-jxt0ik3zwq_p * lezo4vnn1w [ 0 ] + ow4uoan4mg_idx_2 * ow4uoan4mg_idx_0 ;
+nrktqrfkmk_p = lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_1 ; kq3ho01jf4_p [ 2 ] =
+nrktqrfkmk_p * lezo4vnn1w [ 0 ] + ow4uoan4mg_idx_2 * ow4uoan4mg_idx_0 ;
 kq3ho01jf4_p [ 3 ] = lezo4vnn1w [ 1 ] * ow4uoan4mg_idx_0 ; kq3ho01jf4_p [ 4 ]
 = ow4uoan4mg_idx_2 * ow4uoan4mg_idx_1 * ow4uoan4mg_idx_0 + lezo4vnn1w [ 2 ] *
-lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 5 ] = jxt0ik3zwq_p * ow4uoan4mg_idx_0 -
+lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 5 ] = nrktqrfkmk_p * ow4uoan4mg_idx_0 -
 ow4uoan4mg_idx_2 * lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 6 ] = - ow4uoan4mg_idx_1
 ; kq3ho01jf4_p [ 7 ] = ow4uoan4mg_idx_2 * lezo4vnn1w [ 1 ] ; kq3ho01jf4_p [ 8
 ] = lezo4vnn1w [ 2 ] * lezo4vnn1w [ 1 ] ; for ( i = 0 ; i < 3 ; i ++ ) {
@@ -826,16 +907,16 @@ a1lc0bzspv_p [ i ] = kq3ho01jf4_p [ 3 * i + 2 ] * localB -> a1lc0bzspv [ 2 ]
 3 * i ] * localB -> a1lc0bzspv [ 0 ] ) ; } localB -> b1gikpnzh3 = localX ->
 fmsvpqigtm ; fzak5q5isu_p [ 5 ] = ( look1_binlxpw ( ( ( 0.0 * localB ->
 kqttujkp5i [ 1 ] - localB -> b1gikpnzh3 * localB -> kqttujkp5i [ 0 ] ) +
-localB -> kn3kq1dbud [ 2 ] ) - localB -> if3fq2sidt [ 0 ] , akbgnuupjz . P_64
-, akbgnuupjz . P_10 , 6U ) + look1_binlxpw ( ( localX -> noatsby3ej [ 1 ] +
-lfuoa2u22f_p [ 2 ] ) - localX -> d5vyxqghh0 [ 0 ] , akbgnuupjz . P_66 ,
-akbgnuupjz . P_12 , 5U ) ) * akbgnuupjz . P_108 [ 0 ] ; fzak5q5isu_p [ 6 ] =
+localB -> kn3kq1dbud [ 2 ] ) - localB -> if3fq2sidt [ 0 ] , akbgnuupjz . P_58
+, akbgnuupjz . P_11 , 6U ) + look1_binlxpw ( ( localX -> noatsby3ej [ 1 ] +
+lfuoa2u22f_p [ 2 ] ) - localX -> d5vyxqghh0 [ 0 ] , akbgnuupjz . P_60 ,
+akbgnuupjz . P_13 , 5U ) ) * akbgnuupjz . P_100 [ 0 ] ; fzak5q5isu_p [ 6 ] =
 0.0 ; fzak5q5isu_p [ 7 ] = 0.0 ; fzak5q5isu_p [ 8 ] = ( look1_binlxpw ( ( (
 0.0 * localB -> a1lc0bzspv [ 1 ] - localB -> b1gikpnzh3 * localB ->
 a1lc0bzspv [ 0 ] ) + localB -> kn3kq1dbud [ 2 ] ) - localB -> if3fq2sidt [ 1
-] , akbgnuupjz . P_65 , akbgnuupjz . P_11 , 6U ) + look1_binlxpw ( ( localX
+] , akbgnuupjz . P_59 , akbgnuupjz . P_12 , 6U ) + look1_binlxpw ( ( localX
 -> noatsby3ej [ 1 ] + a1lc0bzspv_p [ 2 ] ) - localX -> d5vyxqghh0 [ 1 ] ,
-akbgnuupjz . P_67 , akbgnuupjz . P_13 , 5U ) ) * akbgnuupjz . P_108 [ 1 ] ;
+akbgnuupjz . P_61 , akbgnuupjz . P_14 , 5U ) ) * akbgnuupjz . P_100 [ 1 ] ;
 fzak5q5isu_p [ 9 ] = localB -> iyfd34wurk [ 0 ] ; fzak5q5isu_p [ 10 ] =
 localB -> iyfd34wurk [ 1 ] ; fzak5q5isu_p [ 11 ] = localB -> iyfd34wurk [ 2 ]
 ; lnwgoxkd41_p [ 0 ] = - localX -> in4ouu3rj0 ; lnwgoxkd41_p [ 1 ] = - localX
@@ -850,25 +931,25 @@ oqgrsi0ejr [ 0 ] = akbgnuupjz . izrftnejci . P_1 ; localB -> izrftnejci [
 ji4pzz2y51 ] . oqgrsi0ejr [ 2 ] = akbgnuupjz . izrftnejci . P_0 ;
 muDoubleScalarSinCos ( localB -> izrftnejci [ ji4pzz2y51 ] . oqgrsi0ejr [ 0 ]
 , & evdpmikvu1_idx_0 , & ibz4iecg5m_idx_0 ) ; muDoubleScalarSinCos ( localB
--> izrftnejci [ ji4pzz2y51 ] . oqgrsi0ejr [ 1 ] , & evdpmikvu1_idx_1 , &
-fj4qdbbcdn ) ; muDoubleScalarSinCos ( localB -> izrftnejci [ ji4pzz2y51 ] .
-oqgrsi0ejr [ 2 ] , & ow4uoan4mg_idx_0 , & ow4uoan4mg_idx_1 ) ; kq3ho01jf4_p [
-0 ] = fj4qdbbcdn * ibz4iecg5m_idx_0 ; jxt0ik3zwq_p = ow4uoan4mg_idx_0 *
-evdpmikvu1_idx_1 ; kq3ho01jf4_p [ 1 ] = jxt0ik3zwq_p * ibz4iecg5m_idx_0 -
-ow4uoan4mg_idx_1 * evdpmikvu1_idx_0 ; nh1w3novru = ow4uoan4mg_idx_1 *
-evdpmikvu1_idx_1 ; kq3ho01jf4_p [ 2 ] = nh1w3novru * ibz4iecg5m_idx_0 +
-ow4uoan4mg_idx_0 * evdpmikvu1_idx_0 ; kq3ho01jf4_p [ 3 ] = fj4qdbbcdn *
-evdpmikvu1_idx_0 ; kq3ho01jf4_p [ 4 ] = jxt0ik3zwq_p * evdpmikvu1_idx_0 +
-ow4uoan4mg_idx_1 * ibz4iecg5m_idx_0 ; kq3ho01jf4_p [ 5 ] = nh1w3novru *
-evdpmikvu1_idx_0 - ow4uoan4mg_idx_0 * ibz4iecg5m_idx_0 ; kq3ho01jf4_p [ 6 ] =
-- evdpmikvu1_idx_1 ; kq3ho01jf4_p [ 7 ] = ow4uoan4mg_idx_0 * fj4qdbbcdn ;
-kq3ho01jf4_p [ 8 ] = ow4uoan4mg_idx_1 * fj4qdbbcdn ; for ( i = 0 ; i < 3 ; i
-++ ) { kq3ho01jf4_e [ i ] = kq3ho01jf4_p [ 3 * i + 2 ] * a1lc0bzspv_p [ 2 ] +
-( kq3ho01jf4_p [ 3 * i + 1 ] * a1lc0bzspv_p [ 1 ] + kq3ho01jf4_p [ 3 * i ] *
-a1lc0bzspv_p [ 0 ] ) ; } localB -> cpxmevd5ln [ 3 * ji4pzz2y51 ] =
-kq3ho01jf4_e [ 0 ] ; localB -> cpxmevd5ln [ 3 * ji4pzz2y51 + 1 ] =
-kq3ho01jf4_e [ 1 ] ; localB -> cpxmevd5ln [ 3 * ji4pzz2y51 + 2 ] =
-kq3ho01jf4_e [ 2 ] ; } nvq24ipryj_p = akbgnuupjz . P_38 * localB ->
+-> izrftnejci [ ji4pzz2y51 ] . oqgrsi0ejr [ 1 ] , & p41leqie3i_p , &
+ibz4iecg5m_idx_1 ) ; muDoubleScalarSinCos ( localB -> izrftnejci [ ji4pzz2y51
+] . oqgrsi0ejr [ 2 ] , & ow4uoan4mg_idx_0 , & ow4uoan4mg_idx_1 ) ;
+kq3ho01jf4_p [ 0 ] = ibz4iecg5m_idx_1 * ibz4iecg5m_idx_0 ; nrktqrfkmk_p =
+ow4uoan4mg_idx_0 * p41leqie3i_p ; kq3ho01jf4_p [ 1 ] = nrktqrfkmk_p *
+ibz4iecg5m_idx_0 - ow4uoan4mg_idx_1 * evdpmikvu1_idx_0 ; nh1w3novru =
+ow4uoan4mg_idx_1 * p41leqie3i_p ; kq3ho01jf4_p [ 2 ] = nh1w3novru *
+ibz4iecg5m_idx_0 + ow4uoan4mg_idx_0 * evdpmikvu1_idx_0 ; kq3ho01jf4_p [ 3 ] =
+ibz4iecg5m_idx_1 * evdpmikvu1_idx_0 ; kq3ho01jf4_p [ 4 ] = nrktqrfkmk_p *
+evdpmikvu1_idx_0 + ow4uoan4mg_idx_1 * ibz4iecg5m_idx_0 ; kq3ho01jf4_p [ 5 ] =
+nh1w3novru * evdpmikvu1_idx_0 - ow4uoan4mg_idx_0 * ibz4iecg5m_idx_0 ;
+kq3ho01jf4_p [ 6 ] = - p41leqie3i_p ; kq3ho01jf4_p [ 7 ] = ow4uoan4mg_idx_0 *
+ibz4iecg5m_idx_1 ; kq3ho01jf4_p [ 8 ] = ow4uoan4mg_idx_1 * ibz4iecg5m_idx_1 ;
+for ( i = 0 ; i < 3 ; i ++ ) { kq3ho01jf4_e [ i ] = kq3ho01jf4_p [ 3 * i + 2
+] * a1lc0bzspv_p [ 2 ] + ( kq3ho01jf4_p [ 3 * i + 1 ] * a1lc0bzspv_p [ 1 ] +
+kq3ho01jf4_p [ 3 * i ] * a1lc0bzspv_p [ 0 ] ) ; } localB -> cpxmevd5ln [ 3 *
+ji4pzz2y51 ] = kq3ho01jf4_e [ 0 ] ; localB -> cpxmevd5ln [ 3 * ji4pzz2y51 + 1
+] = kq3ho01jf4_e [ 1 ] ; localB -> cpxmevd5ln [ 3 * ji4pzz2y51 + 2 ] =
+kq3ho01jf4_e [ 2 ] ; } nvq24ipryj_p = akbgnuupjz . P_42 * localB ->
 cpxmevd5ln [ 5 ] ; aggo5314p1_p = akbgnuupjz . P_43 * localB -> cpxmevd5ln [
 8 ] ; evdpmikvu1_idx_0 = localB -> cpxmevd5ln [ 3 ] ; ibz4iecg5m_idx_0 =
 localB -> cpxmevd5ln [ 6 ] ; omskzwfqex_p [ 3 ] = localB -> cpxmevd5ln [ 6 ]
@@ -883,270 +964,295 @@ kxp34i0kfp != 0 ) { ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5
 muDoubleScalarSqrt ( pehck35b41_p ) ; } else if ( pehck35b41_p < 0.0 ) {
 nh1w3novru = - muDoubleScalarSqrt ( muDoubleScalarAbs ( pehck35b41_p ) ) ;
 localDW -> kxp34i0kfp = 1 ; } else { nh1w3novru = muDoubleScalarSqrt (
-pehck35b41_p ) ; } nh1w3novru *= akbgnuupjz . P_109 ; pehck35b41_p = localX
+pehck35b41_p ) ; } nh1w3novru *= akbgnuupjz . P_101 ; pehck35b41_p = localX
 -> neffdf1vy0 ; localB -> mq5brxdy0l = ( 0.0 - localX -> neffdf1vy0 * localB
--> kbmx45xxxk ) * akbgnuupjz . P_111 ; jxt0ik3zwq_p = akbgnuupjz . P_112 * *
-ccn5sowg0n * localB -> njqarujyaq * akbgnuupjz . P_59 * akbgnuupjz . P_83 ;
-if ( jxt0ik3zwq_p > akbgnuupjz . P_113 ) { jxt0ik3zwq_p = akbgnuupjz . P_113
-; } else { if ( jxt0ik3zwq_p < akbgnuupjz . P_114 ) { jxt0ik3zwq_p =
-akbgnuupjz . P_114 ; } } localB -> mdbtlgl3mq = akbgnuupjz . P_30 *
-akbgnuupjz . P_79 * jxt0ik3zwq_p ; localB -> ehcwhnstlp = akbgnuupjz . P_81 /
-akbgnuupjz . P_79 * localB -> mdbtlgl3mq ; fbnwpfi1ef ( 1 , a5ree4wwe5 , &
-localB -> mq5brxdy0l , & localB -> ehcwhnstlp , & localB -> mdbtlgl3mq , &
-localB -> kms3o3yk0z , localB -> fbnwpfi1ef3 , localDW -> fbnwpfi1ef3 , &
-akbgnuupjz . fbnwpfi1ef3 , localX -> fbnwpfi1ef3 , akbgnuupjz . P_88 ,
-akbgnuupjz . P_53 , akbgnuupjz . P_14 , akbgnuupjz . P_36 , akbgnuupjz . P_28
-) ; pafzrlxpms ( localB -> kbmx45xxxk , nh1w3novru , localB -> kms3o3yk0z ,
-localB -> kn3kq1dbud [ 0 ] , akbgnuupjz . P_146 , akbgnuupjz . P_147 ,
-akbgnuupjz . P_148 , akbgnuupjz . P_149 , akbgnuupjz . P_76 , akbgnuupjz .
-P_150 , akbgnuupjz . P_151 , akbgnuupjz . P_152 , akbgnuupjz . P_153 ,
-akbgnuupjz . P_93 , akbgnuupjz . P_154 , akbgnuupjz . P_155 , akbgnuupjz .
-P_39 , akbgnuupjz . P_47 , akbgnuupjz . P_57 , akbgnuupjz . P_156 ,
-akbgnuupjz . P_157 , akbgnuupjz . P_158 , akbgnuupjz . P_50 , akbgnuupjz .
-P_41 , akbgnuupjz . P_159 , akbgnuupjz . P_160 , akbgnuupjz . P_34 ,
-akbgnuupjz . P_161 , akbgnuupjz . P_162 , akbgnuupjz . P_163 , akbgnuupjz .
-P_164 , akbgnuupjz . P_165 , 0.0 , akbgnuupjz . P_166 , akbgnuupjz . P_167 ,
-akbgnuupjz . P_168 , akbgnuupjz . P_169 , akbgnuupjz . P_170 , akbgnuupjz .
-P_171 , akbgnuupjz . P_172 , akbgnuupjz . P_173 , akbgnuupjz . P_174 ,
-akbgnuupjz . P_175 , akbgnuupjz . P_176 , akbgnuupjz . P_177 , akbgnuupjz .
-P_178 , akbgnuupjz . P_179 , akbgnuupjz . P_180 , akbgnuupjz . P_181 ,
-akbgnuupjz . P_182 , akbgnuupjz . P_183 , akbgnuupjz . P_184 , akbgnuupjz .
-P_185 , akbgnuupjz . P_186 , akbgnuupjz . P_187 , akbgnuupjz . P_188 ,
-akbgnuupjz . P_145 , akbgnuupjz . P_189 , akbgnuupjz . P_190 , & localB ->
-f0qvxxi2xz , akbgnuupjz . P_6 , akbgnuupjz . P_8 , akbgnuupjz . P_36 ,
-akbgnuupjz . P_74 ) ; fntetdbqf5_p = localB -> f0qvxxi2xz . c4zmcdhw0l +
-localB -> f0qvxxi2xz . c4zmcdhw0l ; gh1z5yz2rb_p = ( omskzwfqex_p [ 3 ] *
-omskzwfqex_p [ 3 ] + omskzwfqex_p [ 4 ] * omskzwfqex_p [ 4 ] ) + omskzwfqex_p
-[ 5 ] * omskzwfqex_p [ 5 ] ; if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) ) { if (
-localDW -> mdigxevyus != 0 ) { ssSetBlockStateForSolverChangedAtMajorStep (
-a5ree4wwe5 -> _mdlRefSfcnS ) ; localDW -> mdigxevyus = 0 ; } nh1w3novru =
-muDoubleScalarSqrt ( gh1z5yz2rb_p ) ; } else if ( gh1z5yz2rb_p < 0.0 ) {
-nh1w3novru = - muDoubleScalarSqrt ( muDoubleScalarAbs ( gh1z5yz2rb_p ) ) ;
-localDW -> mdigxevyus = 1 ; } else { nh1w3novru = muDoubleScalarSqrt (
-gh1z5yz2rb_p ) ; } nikxuk2zi0_p = akbgnuupjz . P_115 * nh1w3novru ; if (
-rtmIsMajorTimeStep ( a5ree4wwe5 ) && rtmIsSampleHit ( a5ree4wwe5 , 1 , 0 ) )
-{ localB -> gqgx10mle3 = localDW -> hdxujtbohd ; } if ( rtmIsMajorTimeStep (
-a5ree4wwe5 ) ) { zcEvent = rt_ZCFcn ( RISING_ZERO_CROSSING , & localZCE ->
-bgqk1jku3c , ( localB -> gqgx10mle3 ) ) ; if ( ( zcEvent != NO_ZCEVENT ) || (
-localDW -> avmrav1eka != 0 ) ) { localX -> m5tmby1aqo = localB -> a2ouo0ho2h
-; ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ;
-} } gh1z5yz2rb_p = localX -> m5tmby1aqo ; localB -> gmj2qteurg = akbgnuupjz .
-P_44 * localX -> m5tmby1aqo + akbgnuupjz . P_72 * localX -> dkpe1jeg2m ;
-nh1w3novru = localX -> exw1srp224 ; localB -> mxxvqktr4f = ( localB ->
-gmj2qteurg - localX -> exw1srp224 * localB -> pehck35b41 ) * akbgnuupjz .
-P_118 ; jxt0ik3zwq_p = akbgnuupjz . P_119 * * ccn5sowg0n * localB ->
-p4biilgfgf * akbgnuupjz . P_60 * akbgnuupjz . P_84 ; if ( jxt0ik3zwq_p >
-akbgnuupjz . P_120 ) { jxt0ik3zwq_p = akbgnuupjz . P_120 ; } else { if (
-jxt0ik3zwq_p < akbgnuupjz . P_121 ) { jxt0ik3zwq_p = akbgnuupjz . P_121 ; } }
-localB -> djwjslokxk = akbgnuupjz . P_31 * akbgnuupjz . P_80 * jxt0ik3zwq_p ;
-localB -> hcj35ee5xv = akbgnuupjz . P_82 / akbgnuupjz . P_80 * localB ->
-djwjslokxk ; fbnwpfi1ef ( 1 , a5ree4wwe5 , & localB -> mxxvqktr4f , & localB
--> hcj35ee5xv , & localB -> djwjslokxk , & localB -> g3qrjs4pvm , localB ->
-cg32ix3bhp , localDW -> cg32ix3bhp , & akbgnuupjz . cg32ix3bhp , localX ->
-cg32ix3bhp , akbgnuupjz . P_89 , akbgnuupjz . P_54 , akbgnuupjz . P_15 ,
-akbgnuupjz . P_37 , akbgnuupjz . P_29 ) ; pafzrlxpms ( localB -> pehck35b41 ,
-nikxuk2zi0_p , localB -> g3qrjs4pvm , localB -> kn3kq1dbud [ 0 ] , akbgnuupjz
-. P_193 , akbgnuupjz . P_194 , akbgnuupjz . P_195 , akbgnuupjz . P_196 ,
-akbgnuupjz . P_77 , akbgnuupjz . P_197 , akbgnuupjz . P_198 , akbgnuupjz .
-P_199 , akbgnuupjz . P_200 , akbgnuupjz . P_94 , akbgnuupjz . P_201 ,
-akbgnuupjz . P_202 , akbgnuupjz . P_40 , akbgnuupjz . P_48 , akbgnuupjz .
-P_58 , akbgnuupjz . P_203 , akbgnuupjz . P_204 , akbgnuupjz . P_205 ,
-akbgnuupjz . P_51 , akbgnuupjz . P_42 , akbgnuupjz . P_206 , akbgnuupjz .
-P_207 , akbgnuupjz . P_35 , akbgnuupjz . P_208 , akbgnuupjz . P_209 ,
-akbgnuupjz . P_210 , akbgnuupjz . P_211 , akbgnuupjz . P_212 , 0.0 ,
-akbgnuupjz . P_213 , akbgnuupjz . P_214 , akbgnuupjz . P_215 , akbgnuupjz .
-P_216 , akbgnuupjz . P_217 , akbgnuupjz . P_218 , akbgnuupjz . P_219 ,
-akbgnuupjz . P_220 , akbgnuupjz . P_221 , akbgnuupjz . P_222 , akbgnuupjz .
-P_223 , akbgnuupjz . P_224 , akbgnuupjz . P_225 , akbgnuupjz . P_226 ,
-akbgnuupjz . P_227 , akbgnuupjz . P_228 , akbgnuupjz . P_229 , akbgnuupjz .
-P_230 , akbgnuupjz . P_231 , akbgnuupjz . P_232 , akbgnuupjz . P_233 ,
-akbgnuupjz . P_234 , akbgnuupjz . P_235 , akbgnuupjz . P_192 , akbgnuupjz .
-P_236 , akbgnuupjz . P_237 , & localB -> cl0311alh3 , akbgnuupjz . P_7 ,
-akbgnuupjz . P_9 , akbgnuupjz . P_37 , akbgnuupjz . P_75 ) ; nikxuk2zi0_p =
+-> jtrwu1h3mg ) * akbgnuupjz . P_103 ; jwb5qwtbaz_p = akbgnuupjz . P_104 * *
+ccn5sowg0n ; nrktqrfkmk_p = jwb5qwtbaz_p * localB -> b55pc2gukd * akbgnuupjz
+. P_53 * akbgnuupjz . P_77 ; if ( nrktqrfkmk_p > akbgnuupjz . P_105 ) {
+nrktqrfkmk_p = akbgnuupjz . P_105 ; } else { if ( nrktqrfkmk_p < akbgnuupjz .
+P_106 ) { nrktqrfkmk_p = akbgnuupjz . P_106 ; } } localB -> mdbtlgl3mq =
+akbgnuupjz . P_36 * akbgnuupjz . P_73 * nrktqrfkmk_p ; localB -> ehcwhnstlp =
+akbgnuupjz . P_75 / akbgnuupjz . P_73 * localB -> mdbtlgl3mq ; fbnwpfi1ef ( 1
+, a5ree4wwe5 , & localB -> mq5brxdy0l , & localB -> ehcwhnstlp , & localB ->
+mdbtlgl3mq , gd1s5pp2od , localB -> fbnwpfi1ef3 , localDW -> fbnwpfi1ef3 , &
+akbgnuupjz . fbnwpfi1ef3 , localX -> fbnwpfi1ef3 , akbgnuupjz . P_82 ,
+akbgnuupjz . P_49 , akbgnuupjz . P_18 , akbgnuupjz . P_40 , akbgnuupjz . P_34
+) ; pafzrlxpms ( localB -> jtrwu1h3mg , nh1w3novru , * gd1s5pp2od , localB ->
+kn3kq1dbud [ 0 ] , akbgnuupjz . P_140 , akbgnuupjz . P_141 , akbgnuupjz .
+P_142 , akbgnuupjz . P_143 , akbgnuupjz . P_70 , akbgnuupjz . P_144 ,
+akbgnuupjz . P_145 , akbgnuupjz . P_146 , akbgnuupjz . P_147 , akbgnuupjz .
+P_148 , akbgnuupjz . P_149 , akbgnuupjz . P_150 , akbgnuupjz . P_151 ,
+akbgnuupjz . P_152 , akbgnuupjz . P_153 , akbgnuupjz . P_154 , akbgnuupjz .
+P_155 , akbgnuupjz . P_156 , akbgnuupjz . P_157 , akbgnuupjz . P_158 ,
+akbgnuupjz . P_159 , akbgnuupjz . P_160 , akbgnuupjz . P_161 , akbgnuupjz .
+P_162 , akbgnuupjz . P_163 , akbgnuupjz . P_164 , akbgnuupjz . P_165 ,
+akbgnuupjz . P_166 , 0.0 , akbgnuupjz . P_167 , akbgnuupjz . P_168 ,
+akbgnuupjz . P_169 , akbgnuupjz . P_170 , akbgnuupjz . P_171 , akbgnuupjz .
+P_172 , akbgnuupjz . P_173 , akbgnuupjz . P_174 , akbgnuupjz . P_175 ,
+akbgnuupjz . P_176 , akbgnuupjz . P_177 , akbgnuupjz . P_178 , akbgnuupjz .
+P_179 , akbgnuupjz . P_180 , akbgnuupjz . P_181 , akbgnuupjz . P_182 ,
+akbgnuupjz . P_183 , akbgnuupjz . P_184 , akbgnuupjz . P_185 , akbgnuupjz .
+P_186 , akbgnuupjz . P_187 , akbgnuupjz . P_188 , akbgnuupjz . P_189 ,
+akbgnuupjz . P_190 , akbgnuupjz . P_139 , akbgnuupjz . P_191 , akbgnuupjz .
+P_192 , & localB -> f0qvxxi2xz , akbgnuupjz . P_7 , akbgnuupjz . P_9 ,
+akbgnuupjz . P_40 , akbgnuupjz . P_68 ) ; jwb5qwtbaz_p = localB -> f0qvxxi2xz
+. c4zmcdhw0l + localB -> f0qvxxi2xz . c4zmcdhw0l ; gh1z5yz2rb_p = (
+omskzwfqex_p [ 3 ] * omskzwfqex_p [ 3 ] + omskzwfqex_p [ 4 ] * omskzwfqex_p [
+4 ] ) + omskzwfqex_p [ 5 ] * omskzwfqex_p [ 5 ] ; if ( rtmIsMajorTimeStep (
+a5ree4wwe5 ) ) { if ( localDW -> mdigxevyus != 0 ) {
+ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ;
+localDW -> mdigxevyus = 0 ; } nh1w3novru = muDoubleScalarSqrt ( gh1z5yz2rb_p
+) ; } else if ( gh1z5yz2rb_p < 0.0 ) { nh1w3novru = - muDoubleScalarSqrt (
+muDoubleScalarAbs ( gh1z5yz2rb_p ) ) ; localDW -> mdigxevyus = 1 ; } else {
+nh1w3novru = muDoubleScalarSqrt ( gh1z5yz2rb_p ) ; } nikxuk2zi0_p =
+akbgnuupjz . P_107 * nh1w3novru ; if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) &&
+rtmIsSampleHit ( a5ree4wwe5 , 1 , 0 ) ) { localB -> gqgx10mle3 = localDW ->
+hdxujtbohd ; } if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) ) { zcEvent = rt_ZCFcn
+( RISING_ZERO_CROSSING , & localZCE -> bgqk1jku3c , ( localB -> gqgx10mle3 )
+) ; if ( ( zcEvent != NO_ZCEVENT ) || ( localDW -> avmrav1eka != 0 ) ) {
+localX -> m5tmby1aqo = localB -> lernmx4ihz_mbvzarwird ;
+ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ; }
+gh1z5yz2rb_p = localX -> m5tmby1aqo ; } else { gh1z5yz2rb_p = localX ->
+m5tmby1aqo ; } localB -> gmj2qteurg = akbgnuupjz . P_44 * gh1z5yz2rb_p +
+akbgnuupjz . P_66 * localX -> dkpe1jeg2m ; nh1w3novru = localX -> exw1srp224
+; localB -> mxxvqktr4f = ( localB -> gmj2qteurg - localX -> exw1srp224 *
+localB -> eopftl2pcu ) * akbgnuupjz . P_110 ; nrktqrfkmk_p = akbgnuupjz .
+P_111 * * ccn5sowg0n ; nrktqrfkmk_p = nrktqrfkmk_p * localB -> dwtcw2v0qq *
+akbgnuupjz . P_54 * akbgnuupjz . P_78 ; if ( nrktqrfkmk_p > akbgnuupjz .
+P_112 ) { nrktqrfkmk_p = akbgnuupjz . P_112 ; } else { if ( nrktqrfkmk_p <
+akbgnuupjz . P_113 ) { nrktqrfkmk_p = akbgnuupjz . P_113 ; } } localB ->
+djwjslokxk = akbgnuupjz . P_37 * akbgnuupjz . P_74 * nrktqrfkmk_p ; localB ->
+hcj35ee5xv = akbgnuupjz . P_76 / akbgnuupjz . P_74 * localB -> djwjslokxk ;
+fbnwpfi1ef ( 1 , a5ree4wwe5 , & localB -> mxxvqktr4f , & localB -> hcj35ee5xv
+, & localB -> djwjslokxk , & localB -> g3qrjs4pvm , localB -> cg32ix3bhp ,
+localDW -> cg32ix3bhp , & akbgnuupjz . cg32ix3bhp , localX -> cg32ix3bhp ,
+akbgnuupjz . P_83 , akbgnuupjz . P_50 , akbgnuupjz . P_19 , akbgnuupjz . P_41
+, akbgnuupjz . P_35 ) ; pafzrlxpms ( localB -> eopftl2pcu , nikxuk2zi0_p ,
+localB -> g3qrjs4pvm , localB -> kn3kq1dbud [ 0 ] , akbgnuupjz . P_195 ,
+akbgnuupjz . P_196 , akbgnuupjz . P_197 , akbgnuupjz . P_198 , akbgnuupjz .
+P_71 , akbgnuupjz . P_199 , akbgnuupjz . P_200 , akbgnuupjz . P_201 ,
+akbgnuupjz . P_202 , akbgnuupjz . P_203 , akbgnuupjz . P_204 , akbgnuupjz .
+P_205 , akbgnuupjz . P_206 , akbgnuupjz . P_207 , akbgnuupjz . P_208 ,
+akbgnuupjz . P_209 , akbgnuupjz . P_210 , akbgnuupjz . P_211 , akbgnuupjz .
+P_212 , akbgnuupjz . P_213 , akbgnuupjz . P_214 , akbgnuupjz . P_215 ,
+akbgnuupjz . P_216 , akbgnuupjz . P_217 , akbgnuupjz . P_218 , akbgnuupjz .
+P_219 , akbgnuupjz . P_220 , akbgnuupjz . P_221 , 0.0 , akbgnuupjz . P_222 ,
+akbgnuupjz . P_223 , akbgnuupjz . P_224 , akbgnuupjz . P_225 , akbgnuupjz .
+P_226 , akbgnuupjz . P_227 , akbgnuupjz . P_228 , akbgnuupjz . P_229 ,
+akbgnuupjz . P_230 , akbgnuupjz . P_231 , akbgnuupjz . P_232 , akbgnuupjz .
+P_233 , akbgnuupjz . P_234 , akbgnuupjz . P_235 , akbgnuupjz . P_236 ,
+akbgnuupjz . P_237 , akbgnuupjz . P_238 , akbgnuupjz . P_239 , akbgnuupjz .
+P_240 , akbgnuupjz . P_241 , akbgnuupjz . P_242 , akbgnuupjz . P_243 ,
+akbgnuupjz . P_244 , akbgnuupjz . P_245 , akbgnuupjz . P_194 , akbgnuupjz .
+P_246 , akbgnuupjz . P_247 , & localB -> cl0311alh3 , akbgnuupjz . P_8 ,
+akbgnuupjz . P_10 , akbgnuupjz . P_41 , akbgnuupjz . P_69 ) ; nikxuk2zi0_p =
 localB -> cl0311alh3 . c4zmcdhw0l + localB -> cl0311alh3 . c4zmcdhw0l ;
-evdpmikvu1_idx_0 += ibz4iecg5m_idx_0 ; ibz4iecg5m_idx_0 = ( evdpmikvu1_idx_0
-+ ( fntetdbqf5_p + nikxuk2zi0_p ) ) * akbgnuupjz . P_71 ; evdpmikvu1_idx_1 =
+ibz4iecg5m_idx_0 += evdpmikvu1_idx_0 ; p41leqie3i_p = ( ibz4iecg5m_idx_0 + (
+jwb5qwtbaz_p + nikxuk2zi0_p ) ) * akbgnuupjz . P_65 ; ibz4iecg5m_idx_1 =
 localB -> kn3kq1dbud [ 0 ] - localB -> cpxmevd5ln [ 0 ] ; lfuoa2u22f_p [ 0 ]
-= evdpmikvu1_idx_1 * evdpmikvu1_idx_1 ; a1lc0bzspv_p [ 0 ] = evdpmikvu1_idx_1
-; evdpmikvu1_idx_1 = localB -> kn3kq1dbud [ 1 ] - localB -> cpxmevd5ln [ 1 ]
-; lfuoa2u22f_p [ 1 ] = evdpmikvu1_idx_1 * evdpmikvu1_idx_1 ; a1lc0bzspv_p [ 1
-] = evdpmikvu1_idx_1 ; evdpmikvu1_idx_1 = localB -> kn3kq1dbud [ 2 ] - localB
--> cpxmevd5ln [ 2 ] ; jxt0ik3zwq_p = ( lfuoa2u22f_p [ 0 ] + lfuoa2u22f_p [ 1
-] ) + evdpmikvu1_idx_1 * evdpmikvu1_idx_1 ; if ( rtmIsMajorTimeStep (
+= ibz4iecg5m_idx_1 * ibz4iecg5m_idx_1 ; a1lc0bzspv_p [ 0 ] = ibz4iecg5m_idx_1
+; ibz4iecg5m_idx_1 = localB -> kn3kq1dbud [ 1 ] - localB -> cpxmevd5ln [ 1 ]
+; lfuoa2u22f_p [ 1 ] = ibz4iecg5m_idx_1 * ibz4iecg5m_idx_1 ; a1lc0bzspv_p [ 1
+] = ibz4iecg5m_idx_1 ; ibz4iecg5m_idx_1 = localB -> kn3kq1dbud [ 2 ] - localB
+-> cpxmevd5ln [ 2 ] ; evdpmikvu1_idx_0 = ( lfuoa2u22f_p [ 0 ] + lfuoa2u22f_p
+[ 1 ] ) + ibz4iecg5m_idx_1 * ibz4iecg5m_idx_1 ; if ( rtmIsMajorTimeStep (
 a5ree4wwe5 ) ) { if ( localDW -> bbyh2lmjuh != 0 ) {
 ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ;
-localDW -> bbyh2lmjuh = 0 ; } fj4qdbbcdn = muDoubleScalarSqrt ( jxt0ik3zwq_p
-) ; } else if ( jxt0ik3zwq_p < 0.0 ) { fj4qdbbcdn = - muDoubleScalarSqrt (
-muDoubleScalarAbs ( jxt0ik3zwq_p ) ) ; localDW -> bbyh2lmjuh = 1 ; } else {
-fj4qdbbcdn = muDoubleScalarSqrt ( jxt0ik3zwq_p ) ; } fj4qdbbcdn *= fj4qdbbcdn
-; omskzwfqex_p [ 0 ] = akbgnuupjz . P_1 ; jxt0ik3zwq_p = muDoubleScalarAtan2
-( a1lc0bzspv_p [ 1 ] , a1lc0bzspv_p [ 0 ] ) ; omskzwfqex_p [ 1 ] =
-look1_binlcpw ( jxt0ik3zwq_p , akbgnuupjz . P_52 , akbgnuupjz . P_4 , 1U ) ;
-omskzwfqex_p [ 2 ] = akbgnuupjz . P_2 ; omskzwfqex_p [ 3 ] = look1_binlxpw (
-jxt0ik3zwq_p , akbgnuupjz . P_123 , akbgnuupjz . P_122 , 1U ) ; if (
-a1lc0bzspv_p [ 0 ] >= akbgnuupjz . P_124 ) { a1lc0bzspv_p [ 0 ] = akbgnuupjz
-. P_144 [ 0 ] ; } else { a1lc0bzspv_p [ 0 ] = localB -> cs2xhnaqym [ 0 ] ; }
+localDW -> bbyh2lmjuh = 0 ; } nrktqrfkmk_p = muDoubleScalarSqrt (
+evdpmikvu1_idx_0 ) ; } else if ( evdpmikvu1_idx_0 < 0.0 ) { nrktqrfkmk_p = -
+muDoubleScalarSqrt ( muDoubleScalarAbs ( evdpmikvu1_idx_0 ) ) ; localDW ->
+bbyh2lmjuh = 1 ; } else { nrktqrfkmk_p = muDoubleScalarSqrt (
+evdpmikvu1_idx_0 ) ; } nrktqrfkmk_p *= nrktqrfkmk_p ; omskzwfqex_p [ 0 ] =
+akbgnuupjz . P_1 ; evdpmikvu1_idx_0 = muDoubleScalarAtan2 ( a1lc0bzspv_p [ 1
+] , a1lc0bzspv_p [ 0 ] ) ; omskzwfqex_p [ 1 ] = look1_binlcpw (
+evdpmikvu1_idx_0 , akbgnuupjz . P_48 , akbgnuupjz . P_4 , 1U ) ; omskzwfqex_p
+[ 2 ] = akbgnuupjz . P_2 ; omskzwfqex_p [ 3 ] = look1_binlxpw (
+evdpmikvu1_idx_0 , akbgnuupjz . P_115 , akbgnuupjz . P_114 , 1U ) ; if (
+a1lc0bzspv_p [ 0 ] >= akbgnuupjz . P_116 ) { a1lc0bzspv_p [ 0 ] = akbgnuupjz
+. P_136 [ 0 ] ; } else { a1lc0bzspv_p [ 0 ] = localB -> cs2xhnaqym [ 0 ] ; }
 omskzwfqex_p [ 4 ] = a1lc0bzspv_p [ 0 ] * akbgnuupjz . P_3 ; omskzwfqex_p [ 5
-] = look1_binlxpw ( jxt0ik3zwq_p , akbgnuupjz . P_52 , akbgnuupjz . P_5 , 1U
-) ; jxt0ik3zwq_p = 0.5 * akbgnuupjz . P_0 * akbgnuupjz . P_24 / akbgnuupjz .
-P_25 ; for ( i = 0 ; i < 6 ; i ++ ) { omskzwfqex_p [ i ] = fj4qdbbcdn *
-omskzwfqex_p [ i ] / akbgnuupjz . P_32 * jxt0ik3zwq_p ; } localB ->
-prsdl3hoy3 = ( ( ( ( ( nvq24ipryj_p - aggo5314p1_p ) + ibz4iecg5m_idx_0 ) + (
-akbgnuupjz . P_38 + akbgnuupjz . P_43 ) * omskzwfqex_p [ 4 ] ) + akbgnuupjz .
-P_137 [ 1 ] ) - akbgnuupjz . P_138 * localB -> b1gikpnzh3 ) / akbgnuupjz .
-P_16 ; muDoubleScalarSinCos ( di4vinm4lt_p , & nvq24ipryj_p , & aggo5314p1_p
-) ; a1lc0bzspv_p [ 0 ] *= omskzwfqex_p [ 0 ] ; localB -> aqx4je4mq1 [ 0 ] = (
-( ( ( ( ( fntetdbqf5_p + nikxuk2zi0_p ) + evdpmikvu1_idx_0 ) - a1lc0bzspv_p [
-0 ] ) + localB -> cpxmevd5ln [ 9 ] ) + akbgnuupjz . P_136 [ 0 ] ) /
-akbgnuupjz . P_78 + - nvq24ipryj_p * akbgnuupjz . P_69 ) + ( akbgnuupjz .
-P_125 [ 0 ] * g3arwv4dau_idx_0 + akbgnuupjz . P_125 [ 2 ] * g3arwv4dau_idx_1
-) * localB -> b1gikpnzh3 ; if ( evdpmikvu1_idx_1 >= akbgnuupjz . P_124 ) {
-evdpmikvu1_idx_1 = akbgnuupjz . P_144 [ 2 ] ; } else { evdpmikvu1_idx_1 =
-localB -> cs2xhnaqym [ 2 ] ; } localB -> aqx4je4mq1 [ 1 ] = ( ( ( (
-evdpmikvu1_idx_1 * omskzwfqex_p [ 2 ] - ( ow4uoan4mg_idx_0 + ow4uoan4mg_idx_1
-) ) + localB -> cpxmevd5ln [ 11 ] ) + akbgnuupjz . P_136 [ 2 ] ) / akbgnuupjz
-. P_78 + aggo5314p1_p * akbgnuupjz . P_69 ) + ( akbgnuupjz . P_125 [ 1 ] *
-g3arwv4dau_idx_0 + akbgnuupjz . P_125 [ 3 ] * g3arwv4dau_idx_1 ) * localB ->
-b1gikpnzh3 ; muDoubleScalarSinCos ( akbgnuupjz . P_139 , & ow4uoan4mg_idx_0 ,
-& lezo4vnn1w [ 0 ] ) ; muDoubleScalarSinCos ( di4vinm4lt_p , &
-ow4uoan4mg_idx_1 , & lezo4vnn1w [ 1 ] ) ; muDoubleScalarSinCos ( akbgnuupjz .
-P_139 , & ow4uoan4mg_idx_2 , & lezo4vnn1w [ 2 ] ) ; kq3ho01jf4_p [ 0 ] =
-lezo4vnn1w [ 1 ] * lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 1 ] = ow4uoan4mg_idx_2 *
-ow4uoan4mg_idx_1 * lezo4vnn1w [ 0 ] - lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_0 ;
-jxt0ik3zwq_p = lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_1 ; kq3ho01jf4_p [ 2 ] =
-jxt0ik3zwq_p * lezo4vnn1w [ 0 ] + ow4uoan4mg_idx_2 * ow4uoan4mg_idx_0 ;
-kq3ho01jf4_p [ 3 ] = lezo4vnn1w [ 1 ] * ow4uoan4mg_idx_0 ; kq3ho01jf4_p [ 4 ]
-= ow4uoan4mg_idx_2 * ow4uoan4mg_idx_1 * ow4uoan4mg_idx_0 + lezo4vnn1w [ 2 ] *
-lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 5 ] = jxt0ik3zwq_p * ow4uoan4mg_idx_0 -
-ow4uoan4mg_idx_2 * lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 6 ] = - ow4uoan4mg_idx_1
-; kq3ho01jf4_p [ 7 ] = ow4uoan4mg_idx_2 * lezo4vnn1w [ 1 ] ; kq3ho01jf4_p [ 8
-] = lezo4vnn1w [ 2 ] * lezo4vnn1w [ 1 ] ; for ( i = 0 ; i < 3 ; i ++ ) {
-lezo4vnn1w [ i ] = kq3ho01jf4_p [ 3 * i + 2 ] * g3arwv4dau_idx_1 + (
-kq3ho01jf4_p [ 3 * i + 1 ] * akbgnuupjz . P_139 + kq3ho01jf4_p [ 3 * i ] *
-g3arwv4dau_idx_0 ) ; } localB -> lernmx4ihz [ 0 ] = lezo4vnn1w [ 0 ] ; localB
--> lernmx4ihz [ 1 ] = lezo4vnn1w [ 2 ] ; muDoubleScalarSinCos ( akbgnuupjz .
-P_143 , & di4vinm4lt_p , & lezo4vnn1w [ 0 ] ) ; muDoubleScalarSinCos (
-jb4mtkb30x + fyrdkrtnna_idx_1 , & di4vinm4lt_p , & lezo4vnn1w [ 1 ] ) ;
-muDoubleScalarSinCos ( akbgnuupjz . P_143 , & di4vinm4lt_p , & lezo4vnn1w [ 2
-] ) ; if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) && rtmIsSampleHit ( a5ree4wwe5 ,
-1 , 0 ) ) { localB -> gdoligonio = localDW -> mk2q5nw0z4 ; } if (
-rtmIsMajorTimeStep ( a5ree4wwe5 ) ) { zcEvent = rt_ZCFcn (
-RISING_ZERO_CROSSING , & localZCE -> f2oklvkjqk , ( localB -> gdoligonio ) )
-; if ( ( zcEvent != NO_ZCEVENT ) || ( localDW -> f53xce00cm != 0 ) ) { localX
--> cs3cbynlcj = localB -> m0jqa1b1km ;
+] = look1_binlxpw ( evdpmikvu1_idx_0 , akbgnuupjz . P_48 , akbgnuupjz . P_5 ,
+1U ) ; evdpmikvu1_idx_0 = 0.5 * akbgnuupjz . P_0 * akbgnuupjz . P_30 /
+akbgnuupjz . P_31 ; for ( i = 0 ; i < 6 ; i ++ ) { omskzwfqex_p [ i ] =
+nrktqrfkmk_p * omskzwfqex_p [ i ] / akbgnuupjz . P_38 * evdpmikvu1_idx_0 ; }
+localB -> prsdl3hoy3 = ( ( ( ( ( nvq24ipryj_p - aggo5314p1_p ) + p41leqie3i_p
+) + ( akbgnuupjz . P_42 + akbgnuupjz . P_43 ) * omskzwfqex_p [ 4 ] ) +
+akbgnuupjz . P_129 [ 1 ] ) - akbgnuupjz . P_130 * localB -> b1gikpnzh3 ) /
+akbgnuupjz . P_20 ; muDoubleScalarSinCos ( di4vinm4lt_p , & nvq24ipryj_p , &
+aggo5314p1_p ) ; a1lc0bzspv_p [ 0 ] *= omskzwfqex_p [ 0 ] ; localB ->
+aqx4je4mq1 [ 0 ] = ( ( ( ( ( ( jwb5qwtbaz_p + nikxuk2zi0_p ) +
+ibz4iecg5m_idx_0 ) - a1lc0bzspv_p [ 0 ] ) + localB -> cpxmevd5ln [ 9 ] ) +
+akbgnuupjz . P_128 [ 0 ] ) / akbgnuupjz . P_72 + - nvq24ipryj_p * akbgnuupjz
+. P_63 ) + ( akbgnuupjz . P_117 [ 0 ] * g3arwv4dau_p [ 0 ] + akbgnuupjz .
+P_117 [ 2 ] * g3arwv4dau_p [ 1 ] ) * localB -> b1gikpnzh3 ; if (
+ibz4iecg5m_idx_1 >= akbgnuupjz . P_116 ) { ibz4iecg5m_idx_1 = akbgnuupjz .
+P_136 [ 2 ] ; } else { ibz4iecg5m_idx_1 = localB -> cs2xhnaqym [ 2 ] ; }
+localB -> aqx4je4mq1 [ 1 ] = ( ( ( ( ibz4iecg5m_idx_1 * omskzwfqex_p [ 2 ] -
+( ow4uoan4mg_idx_0 + ow4uoan4mg_idx_1 ) ) + localB -> cpxmevd5ln [ 11 ] ) +
+akbgnuupjz . P_128 [ 2 ] ) / akbgnuupjz . P_72 + aggo5314p1_p * akbgnuupjz .
+P_63 ) + ( akbgnuupjz . P_117 [ 1 ] * g3arwv4dau_p [ 0 ] + akbgnuupjz . P_117
+[ 3 ] * g3arwv4dau_p [ 1 ] ) * localB -> b1gikpnzh3 ; muDoubleScalarSinCos (
+akbgnuupjz . P_131 , & ow4uoan4mg_idx_0 , & lezo4vnn1w [ 0 ] ) ;
+muDoubleScalarSinCos ( di4vinm4lt_p , & ow4uoan4mg_idx_1 , & lezo4vnn1w [ 1 ]
+) ; muDoubleScalarSinCos ( akbgnuupjz . P_131 , & ow4uoan4mg_idx_2 , &
+lezo4vnn1w [ 2 ] ) ; kq3ho01jf4_p [ 0 ] = lezo4vnn1w [ 1 ] * lezo4vnn1w [ 0 ]
+; kq3ho01jf4_p [ 1 ] = ow4uoan4mg_idx_2 * ow4uoan4mg_idx_1 * lezo4vnn1w [ 0 ]
+- lezo4vnn1w [ 2 ] * ow4uoan4mg_idx_0 ; nrktqrfkmk_p = lezo4vnn1w [ 2 ] *
+ow4uoan4mg_idx_1 ; kq3ho01jf4_p [ 2 ] = nrktqrfkmk_p * lezo4vnn1w [ 0 ] +
+ow4uoan4mg_idx_2 * ow4uoan4mg_idx_0 ; kq3ho01jf4_p [ 3 ] = lezo4vnn1w [ 1 ] *
+ow4uoan4mg_idx_0 ; kq3ho01jf4_p [ 4 ] = ow4uoan4mg_idx_2 * ow4uoan4mg_idx_1 *
+ow4uoan4mg_idx_0 + lezo4vnn1w [ 2 ] * lezo4vnn1w [ 0 ] ; kq3ho01jf4_p [ 5 ] =
+nrktqrfkmk_p * ow4uoan4mg_idx_0 - ow4uoan4mg_idx_2 * lezo4vnn1w [ 0 ] ;
+kq3ho01jf4_p [ 6 ] = - ow4uoan4mg_idx_1 ; kq3ho01jf4_p [ 7 ] =
+ow4uoan4mg_idx_2 * lezo4vnn1w [ 1 ] ; kq3ho01jf4_p [ 8 ] = lezo4vnn1w [ 2 ] *
+lezo4vnn1w [ 1 ] ; di4vinm4lt_p = g3arwv4dau_p [ 0 ] ; nvq24ipryj_p =
+g3arwv4dau_p [ 1 ] ; for ( i = 0 ; i < 3 ; i ++ ) { lezo4vnn1w [ i ] =
+kq3ho01jf4_p [ 3 * i + 2 ] * nvq24ipryj_p + ( kq3ho01jf4_p [ 3 * i + 1 ] *
+akbgnuupjz . P_131 + kq3ho01jf4_p [ 3 * i ] * di4vinm4lt_p ) ; } localB ->
+lernmx4ihz [ 0 ] = lezo4vnn1w [ 0 ] ; localB -> lernmx4ihz [ 1 ] = lezo4vnn1w
+[ 2 ] ; muDoubleScalarSinCos ( akbgnuupjz . P_135 , & di4vinm4lt_p , &
+lezo4vnn1w [ 0 ] ) ; muDoubleScalarSinCos ( jb4mtkb30x + fyrdkrtnna_idx_1 , &
+di4vinm4lt_p , & lezo4vnn1w [ 1 ] ) ; muDoubleScalarSinCos ( akbgnuupjz .
+P_135 , & di4vinm4lt_p , & lezo4vnn1w [ 2 ] ) ; if ( rtmIsMajorTimeStep (
+a5ree4wwe5 ) && rtmIsSampleHit ( a5ree4wwe5 , 1 , 0 ) ) { localB ->
+gdoligonio = localDW -> mk2q5nw0z4 ; } if ( rtmIsMajorTimeStep ( a5ree4wwe5 )
+) { zcEvent = rt_ZCFcn ( RISING_ZERO_CROSSING , & localZCE -> f2oklvkjqk , (
+localB -> gdoligonio ) ) ; if ( ( zcEvent != NO_ZCEVENT ) || ( localDW ->
+f53xce00cm != 0 ) ) { localX -> cs3cbynlcj = localB -> pbgxyjcpso ;
 ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ; }
-} di4vinm4lt_p = localX -> cs3cbynlcj ; jb4mtkb30x = akbgnuupjz . P_45 *
-localX -> cs3cbynlcj + akbgnuupjz . P_73 * localX -> fxodvuf53f ; mgifohxfpu
-= - jb4mtkb30x ; * jnhw4b1r4n = localX -> lavyvivx1k ; localB -> anujqhyerh =
-( ( * a10dw5c4tm + mgifohxfpu ) + - akbgnuupjz . P_46 * * jnhw4b1r4n ) /
-localB -> chrfkmtxib ; fyrdkrtnna_idx_1 = localB -> kms3o3yk0z * localB ->
-kbmx45xxxk ; if ( ( fyrdkrtnna_idx_1 >= - akbgnuupjz . P_36 ) && (
-fyrdkrtnna_idx_1 <= akbgnuupjz . P_36 ) ) { fyrdkrtnna_idx_1 = 4.0 / ( 3.0 -
-muDoubleScalarPower ( fyrdkrtnna_idx_1 / 2.0 , 2.0 ) ) ; } else {
-fyrdkrtnna_idx_1 = muDoubleScalarAbs ( fyrdkrtnna_idx_1 ) ; } localB ->
-bf0aum3sso = ( ( localB -> f0qvxxi2xz . kxfugx0x5t / localB -> kbmx45xxxk +
-localB -> f0qvxxi2xz . c4zmcdhw0l ) - pehck35b41_p ) * ( fyrdkrtnna_idx_1 /
-akbgnuupjz . P_21 ) ; fyrdkrtnna_idx_1 = localB -> g3qrjs4pvm * localB ->
-pehck35b41 ; if ( ( fyrdkrtnna_idx_1 >= - akbgnuupjz . P_37 ) && (
-fyrdkrtnna_idx_1 <= akbgnuupjz . P_37 ) ) { fyrdkrtnna_idx_1 = 4.0 / ( 3.0 -
-muDoubleScalarPower ( fyrdkrtnna_idx_1 / 2.0 , 2.0 ) ) ; } else {
-fyrdkrtnna_idx_1 = muDoubleScalarAbs ( fyrdkrtnna_idx_1 ) ; } localB ->
-fttpr0urdz = ( ( localB -> cl0311alh3 . kxfugx0x5t / localB -> pehck35b41 +
-localB -> cl0311alh3 . c4zmcdhw0l ) - nh1w3novru ) * ( fyrdkrtnna_idx_1 /
-akbgnuupjz . P_22 ) ; if ( localDW -> pzaicq2iw5 != 0 ) { localX ->
-mjiky0nofi [ 0 ] = localB -> jdnr3dq1ui [ 0 ] ; localX -> mjiky0nofi [ 1 ] =
-localB -> jdnr3dq1ui [ 1 ] ; } if ( localX -> mjiky0nofi [ 0 ] >= akbgnuupjz
-. P_129 ) { if ( localX -> mjiky0nofi [ 0 ] != akbgnuupjz . P_129 ) { localX
--> mjiky0nofi [ 0 ] = akbgnuupjz . P_129 ;
+di4vinm4lt_p = localX -> cs3cbynlcj ; } else { di4vinm4lt_p = localX ->
+cs3cbynlcj ; } jb4mtkb30x = akbgnuupjz . P_45 * di4vinm4lt_p + akbgnuupjz .
+P_67 * localX -> fxodvuf53f ; mgifohxfpu = - jb4mtkb30x ; * jnhw4b1r4n =
+localX -> lavyvivx1k ; fyrdkrtnna_idx_1 = * a10dw5c4tm + mgifohxfpu ;
+fyrdkrtnna_idx_1 += - akbgnuupjz . P_46 * * jnhw4b1r4n ; localB -> anujqhyerh
+= fyrdkrtnna_idx_1 / localB -> chrfkmtxib ; { if ( localDW -> haavmmrpns .
+AQHandles && ssGetLogOutput ( a5ree4wwe5 -> _mdlRefSfcnS ) ) { sdiWriteSignal
+( localDW -> haavmmrpns . AQHandles , rtmGetTaskTime ( a5ree4wwe5 , 0 ) , (
+char * ) & localB -> cl0311alh3 . n0kmac1huv + 0 ) ; } } fyrdkrtnna_idx_1 =
+akbgnuupjz . P_137 - localB -> cl0311alh3 . n0kmac1huv ; localB -> lvjqfcnojx
+= ( akbgnuupjz . P_6 * fyrdkrtnna_idx_1 - localX -> durnydrbng ) * akbgnuupjz
+. P_27 ; localB -> j0xak0sif5 = ( akbgnuupjz . P_29 * fyrdkrtnna_idx_1 +
+localX -> jin1n3lghh ) + localB -> lvjqfcnojx ; * epu24awsw0 = * gd1s5pp2od /
+( akbgnuupjz . P_138 - localB -> j0xak0sif5 ) ; { if ( localDW -> aztcqpbxjo
+. AQHandles && ssGetLogOutput ( a5ree4wwe5 -> _mdlRefSfcnS ) ) {
+sdiWriteSignal ( localDW -> aztcqpbxjo . AQHandles , rtmGetTaskTime (
+a5ree4wwe5 , 0 ) , ( char * ) epu24awsw0 + 0 ) ; } } { if ( localDW ->
+crrfuulwci . AQHandles && ssGetLogOutput ( a5ree4wwe5 -> _mdlRefSfcnS ) ) {
+sdiWriteSignal ( localDW -> crrfuulwci . AQHandles , rtmGetTaskTime (
+a5ree4wwe5 , 0 ) , ( char * ) & localB -> j0xak0sif5 + 0 ) ; } } nvq24ipryj_p
+= * gd1s5pp2od * localB -> jtrwu1h3mg ; if ( ( nvq24ipryj_p >= - akbgnuupjz .
+P_40 ) && ( nvq24ipryj_p <= akbgnuupjz . P_40 ) ) { nvq24ipryj_p = 4.0 / (
+3.0 - muDoubleScalarPower ( nvq24ipryj_p / 2.0 , 2.0 ) ) ; } else {
+nvq24ipryj_p = muDoubleScalarAbs ( nvq24ipryj_p ) ; } localB -> lcv2rbkrjw =
+( ( localB -> f0qvxxi2xz . kxfugx0x5t / localB -> jtrwu1h3mg + localB ->
+f0qvxxi2xz . c4zmcdhw0l ) - pehck35b41_p ) * ( nvq24ipryj_p / akbgnuupjz .
+P_25 ) ; pehck35b41_p = localB -> g3qrjs4pvm * localB -> eopftl2pcu ; if ( (
+pehck35b41_p >= - akbgnuupjz . P_41 ) && ( pehck35b41_p <= akbgnuupjz . P_41
+) ) { pehck35b41_p = 4.0 / ( 3.0 - muDoubleScalarPower ( pehck35b41_p / 2.0 ,
+2.0 ) ) ; } else { pehck35b41_p = muDoubleScalarAbs ( pehck35b41_p ) ; }
+localB -> periluwvy2 = ( ( localB -> cl0311alh3 . kxfugx0x5t / localB ->
+eopftl2pcu + localB -> cl0311alh3 . c4zmcdhw0l ) - nh1w3novru ) * (
+pehck35b41_p / akbgnuupjz . P_26 ) ; localB -> c5l3i02s50 = akbgnuupjz . P_15
+* fyrdkrtnna_idx_1 ; if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) ) { if ( localDW
+-> pzaicq2iw5 != 0 ) { localX -> mjiky0nofi [ 0 ] = localB -> bkauqrexbi [ 0
+] ; localX -> mjiky0nofi [ 1 ] = localB -> bkauqrexbi [ 1 ] ; } if ( localX
+-> mjiky0nofi [ 0 ] >= akbgnuupjz . P_121 ) { if ( localX -> mjiky0nofi [ 0 ]
+!= akbgnuupjz . P_121 ) { localX -> mjiky0nofi [ 0 ] = akbgnuupjz . P_121 ;
 ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ; }
-} else { if ( ( localX -> mjiky0nofi [ 0 ] <= akbgnuupjz . P_130 ) && (
-localX -> mjiky0nofi [ 0 ] != akbgnuupjz . P_130 ) ) { localX -> mjiky0nofi [
-0 ] = akbgnuupjz . P_130 ; ssSetBlockStateForSolverChangedAtMajorStep (
+} else { if ( ( localX -> mjiky0nofi [ 0 ] <= akbgnuupjz . P_122 ) && (
+localX -> mjiky0nofi [ 0 ] != akbgnuupjz . P_122 ) ) { localX -> mjiky0nofi [
+0 ] = akbgnuupjz . P_122 ; ssSetBlockStateForSolverChangedAtMajorStep (
 a5ree4wwe5 -> _mdlRefSfcnS ) ; } } if ( localX -> mjiky0nofi [ 1 ] >=
-akbgnuupjz . P_129 ) { if ( localX -> mjiky0nofi [ 1 ] != akbgnuupjz . P_129
-) { localX -> mjiky0nofi [ 1 ] = akbgnuupjz . P_129 ;
+akbgnuupjz . P_121 ) { if ( localX -> mjiky0nofi [ 1 ] != akbgnuupjz . P_121
+) { localX -> mjiky0nofi [ 1 ] = akbgnuupjz . P_121 ;
 ssSetBlockStateForSolverChangedAtMajorStep ( a5ree4wwe5 -> _mdlRefSfcnS ) ; }
-} else { if ( ( localX -> mjiky0nofi [ 1 ] <= akbgnuupjz . P_130 ) && (
-localX -> mjiky0nofi [ 1 ] != akbgnuupjz . P_130 ) ) { localX -> mjiky0nofi [
-1 ] = akbgnuupjz . P_130 ; ssSetBlockStateForSolverChangedAtMajorStep (
-a5ree4wwe5 -> _mdlRefSfcnS ) ; } } jxt0ik3zwq_p = akbgnuupjz . P_23 / 2.0 ;
-fyrdkrtnna_idx_1 = localB -> bjmu31f5mk * localX -> mjiky0nofi [ 0 ] *
-jxt0ik3zwq_p + localB -> bjmu31f5mk * localX -> mjiky0nofi [ 1 ] *
-jxt0ik3zwq_p ; if ( akbgnuupjz . P_104 == 1.0 ) { if ( jb4mtkb30x *
-fyrdkrtnna_idx_1 > akbgnuupjz . P_132 ) { nh1w3novru = akbgnuupjz . P_68 ; }
-else { nh1w3novru = akbgnuupjz . P_245 ; } jes2d31iaz [ 0 ] = nh1w3novru *
-jb4mtkb30x ; if ( - localB -> gmj2qteurg * - localX -> mjiky0nofi [ 0 ] >
-akbgnuupjz . P_133 ) { ow4uoan4mg_idx_1 = akbgnuupjz . P_68 ; } else {
-ow4uoan4mg_idx_1 = akbgnuupjz . P_243 ; } jes2d31iaz [ 1 ] = ow4uoan4mg_idx_1
-* - localB -> gmj2qteurg ; if ( - localB -> gmj2qteurg * - localX ->
-mjiky0nofi [ 1 ] > akbgnuupjz . P_134 ) { ow4uoan4mg_idx_1 = akbgnuupjz .
-P_68 ; } else { ow4uoan4mg_idx_1 = akbgnuupjz . P_244 ; } jes2d31iaz [ 2 ] =
-ow4uoan4mg_idx_1 * - localB -> gmj2qteurg ; jes2d31iaz [ 3 ] = localX ->
-pvkalczr1c ; automldiffls_syVMxf7d ( jes2d31iaz , akbgnuupjz . P_55 ,
-akbgnuupjz . P_49 , akbgnuupjz . P_56 , akbgnuupjz . P_23 , 1.0 , akbgnuupjz
-. P_18 , akbgnuupjz . P_19 , akbgnuupjz . P_20 , localX -> mjiky0nofi ,
-lnwgoxkd41_p , localB -> jv2ysj32xt ) ; } else { if ( jb4mtkb30x *
-fyrdkrtnna_idx_1 > akbgnuupjz . P_132 ) { nh1w3novru = akbgnuupjz . P_68 ; }
-else { nh1w3novru = akbgnuupjz . P_245 ; } jes2d31iaz [ 0 ] = nh1w3novru *
-jb4mtkb30x ; if ( - localB -> gmj2qteurg * - localX -> mjiky0nofi [ 0 ] >
-akbgnuupjz . P_133 ) { ow4uoan4mg_idx_1 = akbgnuupjz . P_68 ; } else {
-ow4uoan4mg_idx_1 = akbgnuupjz . P_243 ; } jes2d31iaz [ 1 ] = ow4uoan4mg_idx_1
-* - localB -> gmj2qteurg ; if ( - localB -> gmj2qteurg * - localX ->
-mjiky0nofi [ 1 ] > akbgnuupjz . P_134 ) { ow4uoan4mg_idx_1 = akbgnuupjz .
-P_68 ; } else { ow4uoan4mg_idx_1 = akbgnuupjz . P_244 ; } jes2d31iaz [ 2 ] =
-ow4uoan4mg_idx_1 * - localB -> gmj2qteurg ; jes2d31iaz [ 3 ] = localX ->
-pvkalczr1c ; automldiffls_syVMxf7d ( jes2d31iaz , akbgnuupjz . P_55 ,
-akbgnuupjz . P_49 , akbgnuupjz . P_56 , akbgnuupjz . P_23 , 0.0 , akbgnuupjz
-. P_18 , akbgnuupjz . P_19 , akbgnuupjz . P_20 , localX -> mjiky0nofi ,
-lnwgoxkd41_p , localB -> jv2ysj32xt ) ; } localB -> kywtc3mkbd = (
-look1_binlcpw ( akbgnuupjz . P_131 * localX -> mjiky0nofi [ 0 ] - akbgnuupjz
-. P_131 * localX -> mjiky0nofi [ 1 ] , akbgnuupjz . P_63 , akbgnuupjz . P_33
-, 8U ) - localX -> pvkalczr1c ) * localB -> gcqueuvmms ; { if ( ( localDW ->
-fv3mchw1jn . AQHandles || localDW -> fv3mchw1jn . SlioLTF ) && ssGetLogOutput
-( a5ree4wwe5 -> _mdlRefSfcnS ) ) { sdiSlioSdiWriteSignal ( localDW ->
-fv3mchw1jn . AQHandles , localDW -> fv3mchw1jn . SlioLTF , 0 , rtmGetTaskTime
-( a5ree4wwe5 , 0 ) , ( char * ) & localB -> gmj2qteurg + 0 ) ; } } localB ->
-ebhmhgqfw5 = - localX -> mjiky0nofi [ 0 ] - localB -> g3qrjs4pvm ; if ( ! (
-localB -> gqgx10mle3 != 0.0 ) ) { gh1z5yz2rb_p = localB -> a2ouo0ho2h ; }
-localB -> gmqi0kfjh0 = ( localB -> ebhmhgqfw5 - gh1z5yz2rb_p ) * akbgnuupjz .
-P_85 ; localB -> dhgulqff0a = * jnhw4b1r4n - fyrdkrtnna_idx_1 ; if ( ! (
-localB -> gdoligonio != 0.0 ) ) { di4vinm4lt_p = localB -> m0jqa1b1km ; }
-localB -> cmjmgz3hqp = ( localB -> dhgulqff0a - di4vinm4lt_p ) * akbgnuupjz .
-P_86 ; } void DrivetrainEvTID2 ( pw4f2kjo3k * localB ) { int32_T ji4pzz2y51 ;
-localB -> kqttujkp5i [ 0 ] = akbgnuupjz . P_38 ; localB -> kqttujkp5i [ 1 ] =
-akbgnuupjz . P_26 ; localB -> kqttujkp5i [ 2 ] = akbgnuupjz . P_71 ; localB
--> a1lc0bzspv [ 0 ] = - akbgnuupjz . P_43 ; localB -> a1lc0bzspv [ 1 ] =
-akbgnuupjz . P_27 ; localB -> a1lc0bzspv [ 2 ] = akbgnuupjz . P_71 ; localB
--> cs2xhnaqym [ 0 ] = - akbgnuupjz . P_144 [ 0 ] ; localB -> cs2xhnaqym [ 1 ]
-= - akbgnuupjz . P_144 [ 1 ] ; localB -> cs2xhnaqym [ 2 ] = - akbgnuupjz .
-P_144 [ 2 ] ; localB -> iyfd34wurk [ 0 ] = 0.0 ; localB -> iyfd34wurk [ 1 ] =
-0.0 ; localB -> iyfd34wurk [ 2 ] = akbgnuupjz . P_78 * akbgnuupjz . P_70 ;
-for ( ji4pzz2y51 = 0 ; ji4pzz2y51 < 4 ; ji4pzz2y51 ++ ) { } if ( ( akbgnuupjz
-. P_17 >= - akbgnuupjz . P_100 ) && ( akbgnuupjz . P_17 <= akbgnuupjz . P_100
-) ) { localB -> chrfkmtxib = 2.0E-6 / ( 3.0 - muDoubleScalarPower (
-akbgnuupjz . P_17 / 1.0e-6 , 2.0 ) ) ; } else { localB -> chrfkmtxib =
-muDoubleScalarAbs ( akbgnuupjz . P_17 ) ; } localB -> kbmx45xxxk = akbgnuupjz
-. P_28 ; localB -> njqarujyaq = akbgnuupjz . P_191 * akbgnuupjz . P_59 ;
-fbnwpfi1efTID2 ( 1 , & localB -> mq5brxdy0l , & localB -> ehcwhnstlp , &
-localB -> mdbtlgl3mq , localB -> fbnwpfi1ef3 , & akbgnuupjz . fbnwpfi1ef3 ,
-akbgnuupjz . P_53 ) ; localB -> pehck35b41 = akbgnuupjz . P_29 ; localB ->
-p4biilgfgf = akbgnuupjz . P_238 * akbgnuupjz . P_60 ; fbnwpfi1efTID2 ( 1 , &
-localB -> mxxvqktr4f , & localB -> hcj35ee5xv , & localB -> djwjslokxk ,
-localB -> cg32ix3bhp , & akbgnuupjz . cg32ix3bhp , akbgnuupjz . P_54 ) ;
-localB -> gcqueuvmms = 1.0 / akbgnuupjz . P_96 * akbgnuupjz . P_239 ; localB
--> jdnr3dq1ui [ 0 ] = akbgnuupjz . P_90 ; localB -> jdnr3dq1ui [ 1 ] =
-akbgnuupjz . P_91 ; if ( akbgnuupjz . P_246 > akbgnuupjz . P_248 ) { localB
--> bjmu31f5mk = akbgnuupjz . P_247 ; } else { localB -> bjmu31f5mk = -
-akbgnuupjz . P_247 ; } localB -> a2ouo0ho2h = akbgnuupjz . P_61 ; localB ->
-m0jqa1b1km = akbgnuupjz . P_62 ; } void ekz3w3o33e ( hcopmldpph * const
-a5ree4wwe5 , lvsoqlxlcs * localDW ) { if ( rtmIsMajorTimeStep ( a5ree4wwe5 )
-) { if ( memcmp ( a5ree4wwe5 -> nonContDerivSignal [ 0 ] . pCurrVal ,
-a5ree4wwe5 -> nonContDerivSignal [ 0 ] . pPrevVal , a5ree4wwe5 ->
-nonContDerivSignal [ 0 ] . sizeInBytes ) != 0 ) { ( void ) memcpy (
-a5ree4wwe5 -> nonContDerivSignal [ 0 ] . pPrevVal , a5ree4wwe5 ->
-nonContDerivSignal [ 0 ] . pCurrVal , a5ree4wwe5 -> nonContDerivSignal [ 0 ]
-. sizeInBytes ) ; ssSetSolverNeedsReset ( a5ree4wwe5 -> _mdlRefSfcnS ) ; } if
-( memcmp ( a5ree4wwe5 -> nonContDerivSignal [ 1 ] . pCurrVal , a5ree4wwe5 ->
+} else { if ( ( localX -> mjiky0nofi [ 1 ] <= akbgnuupjz . P_122 ) && (
+localX -> mjiky0nofi [ 1 ] != akbgnuupjz . P_122 ) ) { localX -> mjiky0nofi [
+1 ] = akbgnuupjz . P_122 ; ssSetBlockStateForSolverChangedAtMajorStep (
+a5ree4wwe5 -> _mdlRefSfcnS ) ; } } g3arwv4dau_p [ 0 ] = localX -> mjiky0nofi
+[ 0 ] ; g3arwv4dau_p [ 1 ] = localX -> mjiky0nofi [ 1 ] ; } else { if (
+localX -> mjiky0nofi [ 0 ] >= akbgnuupjz . P_121 ) { g3arwv4dau_p [ 0 ] =
+akbgnuupjz . P_121 ; } else if ( localX -> mjiky0nofi [ 0 ] <= akbgnuupjz .
+P_122 ) { g3arwv4dau_p [ 0 ] = akbgnuupjz . P_122 ; } else { g3arwv4dau_p [ 0
+] = localX -> mjiky0nofi [ 0 ] ; } if ( localX -> mjiky0nofi [ 1 ] >=
+akbgnuupjz . P_121 ) { g3arwv4dau_p [ 1 ] = akbgnuupjz . P_121 ; } else if (
+localX -> mjiky0nofi [ 1 ] <= akbgnuupjz . P_122 ) { g3arwv4dau_p [ 1 ] =
+akbgnuupjz . P_122 ; } else { g3arwv4dau_p [ 1 ] = localX -> mjiky0nofi [ 1 ]
+; } } evdpmikvu1_idx_0 = akbgnuupjz . P_28 / 2.0 ; nh1w3novru = localB ->
+iwrj2cqzhf * g3arwv4dau_p [ 0 ] * evdpmikvu1_idx_0 + localB -> iwrj2cqzhf *
+g3arwv4dau_p [ 1 ] * evdpmikvu1_idx_0 ; if ( akbgnuupjz . P_96 == 1.0 ) { if
+( jb4mtkb30x * nh1w3novru > akbgnuupjz . P_124 ) { fyrdkrtnna_idx_1 =
+akbgnuupjz . P_62 ; } else { fyrdkrtnna_idx_1 = akbgnuupjz . P_255 ; }
+jes2d31iaz [ 0 ] = fyrdkrtnna_idx_1 * jb4mtkb30x ; if ( - localB ->
+gmj2qteurg * - g3arwv4dau_p [ 0 ] > akbgnuupjz . P_125 ) { jb4mtkb30x =
+akbgnuupjz . P_62 ; } else { jb4mtkb30x = akbgnuupjz . P_253 ; } jes2d31iaz [
+1 ] = jb4mtkb30x * - localB -> gmj2qteurg ; if ( - localB -> gmj2qteurg * -
+g3arwv4dau_p [ 1 ] > akbgnuupjz . P_126 ) { jb4mtkb30x = akbgnuupjz . P_62 ;
+} else { jb4mtkb30x = akbgnuupjz . P_254 ; } jes2d31iaz [ 2 ] = jb4mtkb30x *
+- localB -> gmj2qteurg ; jes2d31iaz [ 3 ] = localX -> pvkalczr1c ;
+automldiffls_dSTh3vGq ( jes2d31iaz , akbgnuupjz . P_51 , akbgnuupjz . P_47 ,
+akbgnuupjz . P_52 , akbgnuupjz . P_28 , 1.0 , akbgnuupjz . P_22 , akbgnuupjz
+. P_23 , akbgnuupjz . P_24 , g3arwv4dau_p , lnwgoxkd41_p , localB ->
+jv2ysj32xt ) ; } else { if ( jb4mtkb30x * nh1w3novru > akbgnuupjz . P_124 ) {
+fyrdkrtnna_idx_1 = akbgnuupjz . P_62 ; } else { fyrdkrtnna_idx_1 = akbgnuupjz
+. P_255 ; } jes2d31iaz [ 0 ] = fyrdkrtnna_idx_1 * jb4mtkb30x ; if ( - localB
+-> gmj2qteurg * - g3arwv4dau_p [ 0 ] > akbgnuupjz . P_125 ) { jb4mtkb30x =
+akbgnuupjz . P_62 ; } else { jb4mtkb30x = akbgnuupjz . P_253 ; } jes2d31iaz [
+1 ] = jb4mtkb30x * - localB -> gmj2qteurg ; if ( - localB -> gmj2qteurg * -
+g3arwv4dau_p [ 1 ] > akbgnuupjz . P_126 ) { jb4mtkb30x = akbgnuupjz . P_62 ;
+} else { jb4mtkb30x = akbgnuupjz . P_254 ; } jes2d31iaz [ 2 ] = jb4mtkb30x *
+- localB -> gmj2qteurg ; jes2d31iaz [ 3 ] = localX -> pvkalczr1c ;
+automldiffls_dSTh3vGq ( jes2d31iaz , akbgnuupjz . P_51 , akbgnuupjz . P_47 ,
+akbgnuupjz . P_52 , akbgnuupjz . P_28 , 0.0 , akbgnuupjz . P_22 , akbgnuupjz
+. P_23 , akbgnuupjz . P_24 , g3arwv4dau_p , lnwgoxkd41_p , localB ->
+jv2ysj32xt ) ; } localB -> gg21xnzmpd = ( look1_binlcpw ( akbgnuupjz . P_123
+* g3arwv4dau_p [ 0 ] - akbgnuupjz . P_123 * g3arwv4dau_p [ 1 ] , akbgnuupjz .
+P_57 , akbgnuupjz . P_39 , 8U ) - localX -> pvkalczr1c ) * localB ->
+gbcrpvfhc5 ; { if ( localDW -> fv3mchw1jn . AQHandles && ssGetLogOutput (
+a5ree4wwe5 -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> fv3mchw1jn .
+AQHandles , rtmGetTaskTime ( a5ree4wwe5 , 0 ) , ( char * ) & localB ->
+gmj2qteurg + 0 ) ; } } localB -> kbytenqj4y = - g3arwv4dau_p [ 0 ] - localB
+-> g3qrjs4pvm ; if ( ! ( localB -> gqgx10mle3 != 0.0 ) ) { gh1z5yz2rb_p =
+localB -> lernmx4ihz_mbvzarwird ; } localB -> ncno5bir1r = ( localB ->
+kbytenqj4y - gh1z5yz2rb_p ) * akbgnuupjz . P_79 ; localB -> ed1ugsrdmz = *
+jnhw4b1r4n - nh1w3novru ; if ( ! ( localB -> gdoligonio != 0.0 ) ) {
+di4vinm4lt_p = localB -> pbgxyjcpso ; } localB -> efeiqqng0j = ( localB ->
+ed1ugsrdmz - di4vinm4lt_p ) * akbgnuupjz . P_80 ; } void DrivetrainEvTID2 (
+pw4f2kjo3k * localB ) { int32_T ji4pzz2y51 ; localB -> kqttujkp5i [ 0 ] =
+akbgnuupjz . P_42 ; localB -> kqttujkp5i [ 1 ] = akbgnuupjz . P_32 ; localB
+-> kqttujkp5i [ 2 ] = akbgnuupjz . P_65 ; localB -> a1lc0bzspv [ 0 ] = -
+akbgnuupjz . P_43 ; localB -> a1lc0bzspv [ 1 ] = akbgnuupjz . P_33 ; localB
+-> a1lc0bzspv [ 2 ] = akbgnuupjz . P_65 ; localB -> cs2xhnaqym [ 0 ] = -
+akbgnuupjz . P_136 [ 0 ] ; localB -> cs2xhnaqym [ 1 ] = - akbgnuupjz . P_136
+[ 1 ] ; localB -> cs2xhnaqym [ 2 ] = - akbgnuupjz . P_136 [ 2 ] ; localB ->
+iyfd34wurk [ 0 ] = 0.0 ; localB -> iyfd34wurk [ 1 ] = 0.0 ; localB ->
+iyfd34wurk [ 2 ] = akbgnuupjz . P_72 * akbgnuupjz . P_64 ; for ( ji4pzz2y51 =
+0 ; ji4pzz2y51 < 4 ; ji4pzz2y51 ++ ) { } if ( ( akbgnuupjz . P_21 >= -
+akbgnuupjz . P_92 ) && ( akbgnuupjz . P_21 <= akbgnuupjz . P_92 ) ) { localB
+-> chrfkmtxib = 2.0E-6 / ( 3.0 - muDoubleScalarPower ( akbgnuupjz . P_21 /
+1.0e-6 , 2.0 ) ) ; } else { localB -> chrfkmtxib = muDoubleScalarAbs (
+akbgnuupjz . P_21 ) ; } localB -> jtrwu1h3mg = akbgnuupjz . P_34 ; localB ->
+b55pc2gukd = akbgnuupjz . P_193 * akbgnuupjz . P_53 ; fbnwpfi1efTID2 ( 1 , &
+localB -> mq5brxdy0l , & localB -> ehcwhnstlp , & localB -> mdbtlgl3mq ,
+localB -> fbnwpfi1ef3 , & akbgnuupjz . fbnwpfi1ef3 , akbgnuupjz . P_49 ) ;
+localB -> eopftl2pcu = akbgnuupjz . P_35 ; localB -> dwtcw2v0qq = akbgnuupjz
+. P_248 * akbgnuupjz . P_54 ; fbnwpfi1efTID2 ( 1 , & localB -> mxxvqktr4f , &
+localB -> hcj35ee5xv , & localB -> djwjslokxk , localB -> cg32ix3bhp , &
+akbgnuupjz . cg32ix3bhp , akbgnuupjz . P_50 ) ; localB -> gbcrpvfhc5 = 1.0 /
+akbgnuupjz . P_88 * akbgnuupjz . P_249 ; localB -> bkauqrexbi [ 0 ] =
+akbgnuupjz . P_84 ; localB -> bkauqrexbi [ 1 ] = akbgnuupjz . P_85 ; if (
+akbgnuupjz . P_256 > akbgnuupjz . P_258 ) { localB -> iwrj2cqzhf = akbgnuupjz
+. P_257 ; } else { localB -> iwrj2cqzhf = - akbgnuupjz . P_257 ; } localB ->
+lernmx4ihz_mbvzarwird = akbgnuupjz . P_55 ; localB -> pbgxyjcpso = akbgnuupjz
+. P_56 ; } void ekz3w3o33e ( hcopmldpph * const a5ree4wwe5 , lvsoqlxlcs *
+localDW ) { if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) ) { if ( memcmp (
+a5ree4wwe5 -> nonContDerivSignal [ 0 ] . pCurrVal , a5ree4wwe5 ->
+nonContDerivSignal [ 0 ] . pPrevVal , a5ree4wwe5 -> nonContDerivSignal [ 0 ]
+. sizeInBytes ) != 0 ) { ( void ) memcpy ( a5ree4wwe5 -> nonContDerivSignal [
+0 ] . pPrevVal , a5ree4wwe5 -> nonContDerivSignal [ 0 ] . pCurrVal ,
+a5ree4wwe5 -> nonContDerivSignal [ 0 ] . sizeInBytes ) ;
+ssSetSolverNeedsReset ( a5ree4wwe5 -> _mdlRefSfcnS ) ; } if ( memcmp (
+a5ree4wwe5 -> nonContDerivSignal [ 1 ] . pCurrVal , a5ree4wwe5 ->
 nonContDerivSignal [ 1 ] . pPrevVal , a5ree4wwe5 -> nonContDerivSignal [ 1 ]
 . sizeInBytes ) != 0 ) { ( void ) memcpy ( a5ree4wwe5 -> nonContDerivSignal [
 1 ] . pPrevVal , a5ree4wwe5 -> nonContDerivSignal [ 1 ] . pCurrVal ,
@@ -1177,63 +1283,68 @@ nonContDerivSignal [ 5 ] . pPrevVal , a5ree4wwe5 -> nonContDerivSignal [ 5 ]
 a5ree4wwe5 -> nonContDerivSignal [ 5 ] . sizeInBytes ) ;
 ssSetSolverNeedsReset ( a5ree4wwe5 -> _mdlRefSfcnS ) ; } } localDW ->
 jg0qnrcaox = 0 ; if ( rtmIsMajorTimeStep ( a5ree4wwe5 ) && rtmIsSampleHit (
-a5ree4wwe5 , 1 , 0 ) ) { localDW -> hdxujtbohd = akbgnuupjz . P_249 ; localDW
--> mk2q5nw0z4 = akbgnuupjz . P_250 ; } localDW -> avmrav1eka = 0 ; localDW ->
+a5ree4wwe5 , 1 , 0 ) ) { localDW -> hdxujtbohd = akbgnuupjz . P_259 ; localDW
+-> mk2q5nw0z4 = akbgnuupjz . P_260 ; } localDW -> avmrav1eka = 0 ; localDW ->
 f53xce00cm = 0 ; localDW -> pzaicq2iw5 = 0 ; } void ekz3w3o33eTID2 ( void ) {
 } void a2spfqi5as ( pw4f2kjo3k * localB , lvsoqlxlcs * localDW , edp3webv0p *
-localX , cspbap1de4 * localXdot ) { boolean_T lsat ; boolean_T usat ;
-localXdot -> ncmmxrrgvr [ 0 ] = localB -> aqx4je4mq1 [ 0 ] ; localXdot ->
-d5vyxqghh0 [ 0 ] = localB -> if3fq2sidt [ 0 ] ; localXdot -> noatsby3ej [ 0 ]
-= localB -> lernmx4ihz [ 0 ] ; localXdot -> ncmmxrrgvr [ 1 ] = localB ->
-aqx4je4mq1 [ 1 ] ; localXdot -> d5vyxqghh0 [ 1 ] = localB -> if3fq2sidt [ 1 ]
-; localXdot -> noatsby3ej [ 1 ] = localB -> lernmx4ihz [ 1 ] ; localXdot ->
-in4ouu3rj0 = localB -> b1gikpnzh3 ; localXdot -> fmsvpqigtm = localB ->
-prsdl3hoy3 ; localXdot -> neffdf1vy0 = localB -> bf0aum3sso ; cxtxb3yrrw ( 1
-, & localB -> mq5brxdy0l , & localB -> ehcwhnstlp , & localB -> mdbtlgl3mq ,
-localB -> fbnwpfi1ef3 , localDW -> fbnwpfi1ef3 , localXdot -> fbnwpfi1ef3 ) ;
-localXdot -> m5tmby1aqo = localB -> gmqi0kfjh0 ; localXdot -> dkpe1jeg2m =
-localB -> ebhmhgqfw5 ; localXdot -> exw1srp224 = localB -> fttpr0urdz ;
-cxtxb3yrrw ( 1 , & localB -> mxxvqktr4f , & localB -> hcj35ee5xv , & localB
--> djwjslokxk , localB -> cg32ix3bhp , localDW -> cg32ix3bhp , localXdot ->
-cg32ix3bhp ) ; localXdot -> lwzedupgn2 = localB -> kn3kq1dbud [ 0 ] ;
-localXdot -> cs3cbynlcj = localB -> cmjmgz3hqp ; localXdot -> fxodvuf53f =
-localB -> dhgulqff0a ; localXdot -> lavyvivx1k = localB -> anujqhyerh ; lsat
-= ( localX -> mjiky0nofi [ 0 ] <= akbgnuupjz . P_130 ) ; usat = ( localX ->
-mjiky0nofi [ 0 ] >= akbgnuupjz . P_129 ) ; if ( ( ( ! lsat ) && ( ! usat ) )
-|| ( lsat && ( localB -> jv2ysj32xt [ 0 ] > 0.0 ) ) || ( usat && ( localB ->
-jv2ysj32xt [ 0 ] < 0.0 ) ) ) { localXdot -> mjiky0nofi [ 0 ] = localB ->
-jv2ysj32xt [ 0 ] ; } else { localXdot -> mjiky0nofi [ 0 ] = 0.0 ; } lsat = (
-localX -> mjiky0nofi [ 1 ] <= akbgnuupjz . P_130 ) ; usat = ( localX ->
-mjiky0nofi [ 1 ] >= akbgnuupjz . P_129 ) ; if ( ( ( ! lsat ) && ( ! usat ) )
-|| ( lsat && ( localB -> jv2ysj32xt [ 1 ] > 0.0 ) ) || ( usat && ( localB ->
-jv2ysj32xt [ 1 ] < 0.0 ) ) ) { localXdot -> mjiky0nofi [ 1 ] = localB ->
+localX , cspbap1de4 * localXdot ) { localXdot -> ncmmxrrgvr [ 0 ] = localB ->
+aqx4je4mq1 [ 0 ] ; localXdot -> d5vyxqghh0 [ 0 ] = localB -> if3fq2sidt [ 0 ]
+; localXdot -> noatsby3ej [ 0 ] = localB -> lernmx4ihz [ 0 ] ; localXdot ->
+ncmmxrrgvr [ 1 ] = localB -> aqx4je4mq1 [ 1 ] ; localXdot -> d5vyxqghh0 [ 1 ]
+= localB -> if3fq2sidt [ 1 ] ; localXdot -> noatsby3ej [ 1 ] = localB ->
+lernmx4ihz [ 1 ] ; localXdot -> in4ouu3rj0 = localB -> b1gikpnzh3 ; localXdot
+-> fmsvpqigtm = localB -> prsdl3hoy3 ; localXdot -> neffdf1vy0 = localB ->
+lcv2rbkrjw ; cxtxb3yrrw ( 1 , & localB -> mq5brxdy0l , & localB -> ehcwhnstlp
+, & localB -> mdbtlgl3mq , localB -> fbnwpfi1ef3 , localDW -> fbnwpfi1ef3 ,
+localXdot -> fbnwpfi1ef3 ) ; localXdot -> m5tmby1aqo = localB -> ncno5bir1r ;
+localXdot -> dkpe1jeg2m = localB -> kbytenqj4y ; localXdot -> exw1srp224 =
+localB -> periluwvy2 ; cxtxb3yrrw ( 1 , & localB -> mxxvqktr4f , & localB ->
+hcj35ee5xv , & localB -> djwjslokxk , localB -> cg32ix3bhp , localDW ->
+cg32ix3bhp , localXdot -> cg32ix3bhp ) ; localXdot -> lwzedupgn2 = localB ->
+kn3kq1dbud [ 0 ] ; localXdot -> cs3cbynlcj = localB -> efeiqqng0j ; localXdot
+-> fxodvuf53f = localB -> ed1ugsrdmz ; localXdot -> lavyvivx1k = localB ->
+anujqhyerh ; localXdot -> jin1n3lghh = localB -> c5l3i02s50 ; localXdot ->
+durnydrbng = localB -> lvjqfcnojx ; if ( ( ( localX -> mjiky0nofi [ 0 ] >
+akbgnuupjz . P_122 ) && ( localX -> mjiky0nofi [ 0 ] < akbgnuupjz . P_121 ) )
+|| ( ( localX -> mjiky0nofi [ 0 ] <= akbgnuupjz . P_122 ) && ( localB ->
+jv2ysj32xt [ 0 ] > 0.0 ) ) || ( ( localX -> mjiky0nofi [ 0 ] >= akbgnuupjz .
+P_121 ) && ( localB -> jv2ysj32xt [ 0 ] < 0.0 ) ) ) { localXdot -> mjiky0nofi
+[ 0 ] = localB -> jv2ysj32xt [ 0 ] ; } else { localXdot -> mjiky0nofi [ 0 ] =
+0.0 ; } if ( ( ( localX -> mjiky0nofi [ 1 ] > akbgnuupjz . P_122 ) && (
+localX -> mjiky0nofi [ 1 ] < akbgnuupjz . P_121 ) ) || ( ( localX ->
+mjiky0nofi [ 1 ] <= akbgnuupjz . P_122 ) && ( localB -> jv2ysj32xt [ 1 ] >
+0.0 ) ) || ( ( localX -> mjiky0nofi [ 1 ] >= akbgnuupjz . P_121 ) && ( localB
+-> jv2ysj32xt [ 1 ] < 0.0 ) ) ) { localXdot -> mjiky0nofi [ 1 ] = localB ->
 jv2ysj32xt [ 1 ] ; } else { localXdot -> mjiky0nofi [ 1 ] = 0.0 ; } localXdot
--> pvkalczr1c = localB -> kywtc3mkbd ; } void ehifyxeeav ( hcopmldpph * const
-a5ree4wwe5 , pw4f2kjo3k * localB , lvsoqlxlcs * localDW , pmzuarg20b *
-localZCSV ) { gpz5hks1w1 ( 1 , a5ree4wwe5 , & localB -> mq5brxdy0l , & localB
--> ehcwhnstlp , & localB -> mdbtlgl3mq , localB -> fbnwpfi1ef3 , localDW ->
-fbnwpfi1ef3 , & akbgnuupjz . fbnwpfi1ef3 , localZCSV -> fbnwpfi1ef3 ,
-akbgnuupjz . P_36 , akbgnuupjz . P_28 ) ; gpz5hks1w1 ( 1 , a5ree4wwe5 , &
-localB -> mxxvqktr4f , & localB -> hcj35ee5xv , & localB -> djwjslokxk ,
-localB -> cg32ix3bhp , localDW -> cg32ix3bhp , & akbgnuupjz . cg32ix3bhp ,
-localZCSV -> cg32ix3bhp , akbgnuupjz . P_37 , akbgnuupjz . P_29 ) ; } void
-cmuw0kqmoe ( hcopmldpph * const a5ree4wwe5 , lvsoqlxlcs * localDW ) { if ( (
-ssGetSimMode ( a5ree4wwe5 -> _mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( (
-a5ree4wwe5 -> _mdlRefSfcnS ) -> mdlInfo -> rtwgenMode !=
-SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { if ( localDW -> fv3mchw1jn .
-AQHandles ) { sdiTerminateStreaming ( & localDW -> fv3mchw1jn . AQHandles ) ;
-} if ( localDW -> fv3mchw1jn . SlioLTF ) { rtwDestructAccessorPointer (
-localDW -> fv3mchw1jn . SlioLTF ) ; } } } void ekywbf3nku ( hcopmldpph *
-const a5ree4wwe5 ) { if ( ! slIsRapidAcceleratorSimulating ( ) ) {
+-> pvkalczr1c = localB -> gg21xnzmpd ; } void cmuw0kqmoe ( hcopmldpph * const
+a5ree4wwe5 , lvsoqlxlcs * localDW ) { if ( ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( ( a5ree4wwe5 -> _mdlRefSfcnS )
+-> mdlInfo -> rtwgenMode != SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { if (
+localDW -> haavmmrpns . AQHandles ) { sdiTerminateStreaming ( & localDW ->
+haavmmrpns . AQHandles ) ; } } if ( ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( ( a5ree4wwe5 -> _mdlRefSfcnS )
+-> mdlInfo -> rtwgenMode != SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { if (
+localDW -> aztcqpbxjo . AQHandles ) { sdiTerminateStreaming ( & localDW ->
+aztcqpbxjo . AQHandles ) ; } } if ( ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( ( a5ree4wwe5 -> _mdlRefSfcnS )
+-> mdlInfo -> rtwgenMode != SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { if (
+localDW -> crrfuulwci . AQHandles ) { sdiTerminateStreaming ( & localDW ->
+crrfuulwci . AQHandles ) ; } } if ( ( ssGetSimMode ( a5ree4wwe5 ->
+_mdlRefSfcnS ) != SS_SIMMODE_EXTERNAL ) && ( ( a5ree4wwe5 -> _mdlRefSfcnS )
+-> mdlInfo -> rtwgenMode != SS_RTWGEN_MODELREFERENCE_RTW_TARGET ) ) { if (
+localDW -> fv3mchw1jn . AQHandles ) { sdiTerminateStreaming ( & localDW ->
+fv3mchw1jn . AQHandles ) ; } } } void ekywbf3nku ( hcopmldpph * const
+a5ree4wwe5 ) { if ( ! slIsRapidAcceleratorSimulating ( ) ) {
 slmrRunPluginEvent ( a5ree4wwe5 -> _mdlRefSfcnS , "DrivetrainEv" ,
 "SIMSTATUS_TERMINATING_MODELREF_ACCEL_EVENT" ) ; } } void ktxb3gprz3 (
-SimStruct * _mdlRefSfcnS , int_T mdlref_TID0 , int_T mdlref_TID1 , int_T
+SimStruct * _mdlRefSfcnS , ssNonContDerivSigFeedingOutports * *
+mr_nonContOutputArray , int_T mdlref_TID0 , int_T mdlref_TID1 , int_T
 mdlref_TID2 , hcopmldpph * const a5ree4wwe5 , pw4f2kjo3k * localB ,
 lvsoqlxlcs * localDW , edp3webv0p * localX , at3vnbf5fi * localZCE , void *
 sysRanPtr , int contextTid , rtwCAPI_ModelMappingInfo * rt_ParentMMI , const
 char_T * rt_ChildPath , int_T rt_ChildMMIIdx , int_T rt_CSTATEIdx ) {
-rt_InitInfAndNaN ( sizeof ( real_T ) ) ; akbgnuupjz . P_113 = rtInf ;
-akbgnuupjz . P_120 = rtInf ; ( void ) memset ( ( void * ) a5ree4wwe5 , 0 ,
+rt_InitInfAndNaN ( sizeof ( real_T ) ) ; akbgnuupjz . P_105 = rtInf ;
+akbgnuupjz . P_112 = rtInf ; ( void ) memset ( ( void * ) a5ree4wwe5 , 0 ,
 sizeof ( hcopmldpph ) ) ; a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] =
 mdlref_TID0 ; a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 1 ] = mdlref_TID1 ;
 a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 2 ] = mdlref_TID2 ; a5ree4wwe5 ->
@@ -1257,27 +1368,30 @@ localB -> djwjslokxk = 0.0 ; localB -> hcj35ee5xv = 0.0 ; localB ->
 prsdl3hoy3 = 0.0 ; localB -> aqx4je4mq1 [ 0 ] = 0.0 ; localB -> aqx4je4mq1 [
 1 ] = 0.0 ; localB -> lernmx4ihz [ 0 ] = 0.0 ; localB -> lernmx4ihz [ 1 ] =
 0.0 ; localB -> gdoligonio = 0.0 ; localB -> anujqhyerh = 0.0 ; localB ->
-bf0aum3sso = 0.0 ; localB -> fttpr0urdz = 0.0 ; localB -> kywtc3mkbd = 0.0 ;
-localB -> ebhmhgqfw5 = 0.0 ; localB -> gmqi0kfjh0 = 0.0 ; localB ->
-dhgulqff0a = 0.0 ; localB -> cmjmgz3hqp = 0.0 ; localB -> kqttujkp5i [ 0 ] =
-0.0 ; localB -> kqttujkp5i [ 1 ] = 0.0 ; localB -> kqttujkp5i [ 2 ] = 0.0 ;
-localB -> a1lc0bzspv [ 0 ] = 0.0 ; localB -> a1lc0bzspv [ 1 ] = 0.0 ; localB
--> a1lc0bzspv [ 2 ] = 0.0 ; localB -> cs2xhnaqym [ 0 ] = 0.0 ; localB ->
-cs2xhnaqym [ 1 ] = 0.0 ; localB -> cs2xhnaqym [ 2 ] = 0.0 ; localB ->
-iyfd34wurk [ 0 ] = 0.0 ; localB -> iyfd34wurk [ 1 ] = 0.0 ; localB ->
-iyfd34wurk [ 2 ] = 0.0 ; localB -> chrfkmtxib = 0.0 ; localB -> kbmx45xxxk =
-0.0 ; localB -> njqarujyaq = 0.0 ; localB -> pehck35b41 = 0.0 ; localB ->
-p4biilgfgf = 0.0 ; localB -> gcqueuvmms = 0.0 ; localB -> jdnr3dq1ui [ 0 ] =
-0.0 ; localB -> jdnr3dq1ui [ 1 ] = 0.0 ; localB -> bjmu31f5mk = 0.0 ; localB
--> a2ouo0ho2h = 0.0 ; localB -> m0jqa1b1km = 0.0 ; localB -> g3qrjs4pvm = 0.0
-; localB -> kms3o3yk0z = 0.0 ; localB -> jv2ysj32xt [ 0 ] = 0.0 ; localB ->
-jv2ysj32xt [ 1 ] = 0.0 ; localB -> cl0311alh3 . c4zmcdhw0l = 0.0 ; localB ->
-cl0311alh3 . kxfugx0x5t = 0.0 ; localB -> f0qvxxi2xz . c4zmcdhw0l = 0.0 ;
-localB -> f0qvxxi2xz . kxfugx0x5t = 0.0 ; } ( void ) memset ( ( void * )
-localDW , 0 , sizeof ( lvsoqlxlcs ) ) ; localDW -> hdxujtbohd = 0.0 ; localDW
--> mk2q5nw0z4 = 0.0 ; DrivetrainEv_InitializeDataMapInfo ( a5ree4wwe5 ,
-localDW , localX , sysRanPtr , contextTid ) ; if ( ( rt_ParentMMI != ( NULL )
-) && ( rt_ChildPath != ( NULL ) ) ) { rtwCAPI_SetChildMMI ( * rt_ParentMMI ,
+lvjqfcnojx = 0.0 ; localB -> j0xak0sif5 = 0.0 ; localB -> lcv2rbkrjw = 0.0 ;
+localB -> periluwvy2 = 0.0 ; localB -> c5l3i02s50 = 0.0 ; localB ->
+gg21xnzmpd = 0.0 ; localB -> kbytenqj4y = 0.0 ; localB -> ncno5bir1r = 0.0 ;
+localB -> ed1ugsrdmz = 0.0 ; localB -> efeiqqng0j = 0.0 ; localB ->
+kqttujkp5i [ 0 ] = 0.0 ; localB -> kqttujkp5i [ 1 ] = 0.0 ; localB ->
+kqttujkp5i [ 2 ] = 0.0 ; localB -> a1lc0bzspv [ 0 ] = 0.0 ; localB ->
+a1lc0bzspv [ 1 ] = 0.0 ; localB -> a1lc0bzspv [ 2 ] = 0.0 ; localB ->
+cs2xhnaqym [ 0 ] = 0.0 ; localB -> cs2xhnaqym [ 1 ] = 0.0 ; localB ->
+cs2xhnaqym [ 2 ] = 0.0 ; localB -> iyfd34wurk [ 0 ] = 0.0 ; localB ->
+iyfd34wurk [ 1 ] = 0.0 ; localB -> iyfd34wurk [ 2 ] = 0.0 ; localB ->
+chrfkmtxib = 0.0 ; localB -> jtrwu1h3mg = 0.0 ; localB -> b55pc2gukd = 0.0 ;
+localB -> eopftl2pcu = 0.0 ; localB -> dwtcw2v0qq = 0.0 ; localB ->
+gbcrpvfhc5 = 0.0 ; localB -> bkauqrexbi [ 0 ] = 0.0 ; localB -> bkauqrexbi [
+1 ] = 0.0 ; localB -> iwrj2cqzhf = 0.0 ; localB -> lernmx4ihz_mbvzarwird =
+0.0 ; localB -> pbgxyjcpso = 0.0 ; localB -> g3qrjs4pvm = 0.0 ; localB ->
+jv2ysj32xt [ 0 ] = 0.0 ; localB -> jv2ysj32xt [ 1 ] = 0.0 ; localB ->
+cl0311alh3 . c4zmcdhw0l = 0.0 ; localB -> cl0311alh3 . kxfugx0x5t = 0.0 ;
+localB -> cl0311alh3 . n0kmac1huv = 0.0 ; localB -> f0qvxxi2xz . c4zmcdhw0l =
+0.0 ; localB -> f0qvxxi2xz . kxfugx0x5t = 0.0 ; localB -> f0qvxxi2xz .
+n0kmac1huv = 0.0 ; } ( void ) memset ( ( void * ) localDW , 0 , sizeof (
+lvsoqlxlcs ) ) ; localDW -> hdxujtbohd = 0.0 ; localDW -> mk2q5nw0z4 = 0.0 ;
+DrivetrainEv_InitializeDataMapInfo ( a5ree4wwe5 , localDW , localX ,
+sysRanPtr , contextTid ) ; if ( ( rt_ParentMMI != ( NULL ) ) && (
+rt_ChildPath != ( NULL ) ) ) { rtwCAPI_SetChildMMI ( * rt_ParentMMI ,
 rt_ChildMMIIdx , & ( a5ree4wwe5 -> DataMapInfo . mmi ) ) ; rtwCAPI_SetPath (
 a5ree4wwe5 -> DataMapInfo . mmi , rt_ChildPath ) ;
 rtwCAPI_MMISetContStateStartIndex ( a5ree4wwe5 -> DataMapInfo . mmi ,
@@ -1308,13 +1422,42 @@ nonContDerivSignal [ 5 ] . pPrevVal = ( char_T * ) a5ree4wwe5 ->
 NonContDerivMemory . mr_nonContSig5 ; a5ree4wwe5 -> nonContDerivSignal [ 5 ]
 . sizeInBytes = ( 1 * sizeof ( boolean_T ) ) ; a5ree4wwe5 ->
 nonContDerivSignal [ 5 ] . pCurrVal = ( char_T * ) ( & localB -> fbnwpfi1ef3
-[ 0 ] . nod5vp1cyy . fate2u2iog . jvxaiqibhb ) ; ; localZCE -> bgqk1jku3c =
-UNINITIALIZED_ZCSIG ; localZCE -> f2oklvkjqk = UNINITIALIZED_ZCSIG ; } void
-mr_DrivetrainEv_MdlInfoRegFcn ( SimStruct * mdlRefSfcnS , char_T * modelName
-, int_T * retVal ) { * retVal = 0 ; { boolean_T regSubmodelsMdlinfo = false ;
-ssGetRegSubmodelsMdlinfo ( mdlRefSfcnS , & regSubmodelsMdlinfo ) ; if (
-regSubmodelsMdlinfo ) { } } * retVal = 0 ; ssRegModelRefMdlInfo ( mdlRefSfcnS
-, modelName , rtMdlInfo_DrivetrainEv , 147 ) ; * retVal = 1 ; } static void
+[ 0 ] . nod5vp1cyy . fate2u2iog . jvxaiqibhb ) ; ; if ( mr_nonContOutputArray
+[ 2 ] != ( NULL ) ) { mr_nonContOutputArray [ 2 ] [ 0 ] . sizeInBytes = 1 *
+sizeof ( boolean_T ) ; mr_nonContOutputArray [ 2 ] [ 0 ] . currVal = ( char_T
+* ) & localB -> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog . kzk2m4ro0k ;
+mr_nonContOutputArray [ 2 ] [ 0 ] . next = & ( mr_nonContOutputArray [ 2 ] [
+1 ] ) ; } if ( mr_nonContOutputArray [ 2 ] != ( NULL ) ) {
+mr_nonContOutputArray [ 2 ] [ 1 ] . sizeInBytes = 1 * sizeof ( boolean_T ) ;
+mr_nonContOutputArray [ 2 ] [ 1 ] . currVal = ( char_T * ) & localB ->
+cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog . jvxaiqibhb ;
+mr_nonContOutputArray [ 2 ] [ 1 ] . next = & ( mr_nonContOutputArray [ 2 ] [
+2 ] ) ; } if ( mr_nonContOutputArray [ 2 ] != ( NULL ) ) {
+mr_nonContOutputArray [ 2 ] [ 2 ] . sizeInBytes = 1 * sizeof ( boolean_T ) ;
+mr_nonContOutputArray [ 2 ] [ 2 ] . currVal = ( char_T * ) & localB ->
+fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog . kzk2m4ro0k ;
+mr_nonContOutputArray [ 2 ] [ 2 ] . next = & ( mr_nonContOutputArray [ 2 ] [
+3 ] ) ; } if ( mr_nonContOutputArray [ 2 ] != ( NULL ) ) {
+mr_nonContOutputArray [ 2 ] [ 3 ] . sizeInBytes = 1 * sizeof ( boolean_T ) ;
+mr_nonContOutputArray [ 2 ] [ 3 ] . currVal = ( char_T * ) & localB ->
+fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog . jvxaiqibhb ;
+mr_nonContOutputArray [ 2 ] [ 3 ] . next = ( NULL ) ; } if (
+mr_nonContOutputArray [ 3 ] != ( NULL ) ) { mr_nonContOutputArray [ 3 ] [ 0 ]
+. sizeInBytes = 1 * sizeof ( boolean_T ) ; mr_nonContOutputArray [ 3 ] [ 0 ]
+. currVal = ( char_T * ) & localB -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy .
+fate2u2iog . kzk2m4ro0k ; mr_nonContOutputArray [ 3 ] [ 0 ] . next = & (
+mr_nonContOutputArray [ 3 ] [ 1 ] ) ; } if ( mr_nonContOutputArray [ 3 ] != (
+NULL ) ) { mr_nonContOutputArray [ 3 ] [ 1 ] . sizeInBytes = 1 * sizeof (
+boolean_T ) ; mr_nonContOutputArray [ 3 ] [ 1 ] . currVal = ( char_T * ) &
+localB -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog . jvxaiqibhb ;
+mr_nonContOutputArray [ 3 ] [ 1 ] . next = ( NULL ) ; } localZCE ->
+bgqk1jku3c = UNINITIALIZED_ZCSIG ; localZCE -> f2oklvkjqk =
+UNINITIALIZED_ZCSIG ; } void mr_DrivetrainEv_MdlInfoRegFcn ( SimStruct *
+mdlRefSfcnS , char_T * modelName , int_T * retVal ) { * retVal = 0 ; {
+boolean_T regSubmodelsMdlinfo = false ; ssGetRegSubmodelsMdlinfo (
+mdlRefSfcnS , & regSubmodelsMdlinfo ) ; if ( regSubmodelsMdlinfo ) { } } *
+retVal = 0 ; ssRegModelRefMdlInfo ( mdlRefSfcnS , modelName ,
+rtMdlInfo_DrivetrainEv , 144 ) ; * retVal = 1 ; } static void
 mr_DrivetrainEv_cacheDataAsMxArray ( mxArray * destArray , mwIndex i , int j
 , const void * srcData , size_t numBytes ) ; static void
 mr_DrivetrainEv_cacheDataAsMxArray ( mxArray * destArray , mwIndex i , int j
@@ -1647,7 +1790,7 @@ fbnwpfi1ef3 [ k0 ] . nod5vp1cyy . fate2u2iog . jp5trqmghp ) , rtdwData , 0 ,
 fate2u2iog . jp5trqmghp ) ) ; } } mr_DrivetrainEv_restoreDataFromMxArray ( &
 ( mdlrefDW -> rtzce ) , ssDW , 0 , 2 , sizeof ( mdlrefDW -> rtzce ) ) ; }
 void mr_DrivetrainEv_RegisterSimStateChecksum ( SimStruct * S ) { const
-uint32_T chksum [ 4 ] = { 3132201524U , 3475745550U , 4285954150U ,
-1599726082U , } ; slmrModelRefRegisterSimStateChecksum ( S , "DrivetrainEv" ,
+uint32_T chksum [ 4 ] = { 3252009384U , 2742790515U , 3466707832U ,
+3805548181U , } ; slmrModelRefRegisterSimStateChecksum ( S , "DrivetrainEv" ,
 & chksum [ 0 ] ) ; } mxArray * mr_DrivetrainEv_GetSimStateDisallowedBlocks (
 ) { return NULL ; }

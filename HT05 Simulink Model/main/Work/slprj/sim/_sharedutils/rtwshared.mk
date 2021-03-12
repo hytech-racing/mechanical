@@ -1,4 +1,4 @@
-# Copyright 1994-2019 The MathWorks, Inc.
+# Copyright 1994-2020 The MathWorks, Inc.
 #
 # File    : ert_lcc64.tmf   
 #
@@ -77,19 +77,18 @@ MAKEFILE_FILESEP = /
 #                            and do not build an executable
 
 MODEL                = rtwshared
-MODULES              = look1_binlcapw.c look2_binlcapw.c rtGetInf.c rtGetNaN.c rt_nonfinite.c automldiffopen_q9QYfP1b.c interp2_MfPDUf1L.c look1_binlcpw.c look1_binlxpw.c rt_zcfcn.c plook_u32d_evencka.c automldiffls_syVMxf7d.c PadeApproximantOfDegree_Whgw9LNw.c expm_fk22GNna.c look1_pbinlcapw.c mpower_TZKN3Egd.c pm_printf.c rt_backsubrr_dbl.c rt_forwardsubrr_dbl.c rt_lu_real.c rt_matrixlib_dbl.c
+MODULES              = look1_binlcapw.c look2_binlcapw.c rtGetInf.c rtGetNaN.c rt_nonfinite.c automldiffls_dSTh3vGq.c interp2_2bdLjAnv.c look1_binlcpw.c look1_binlxpw.c rt_zcfcn.c plook_u32d_evencka.c PadeApproximantOfDegree_5BLwCIn6.c expm_WM6qSMEO.c look1_pbinlcapw.c mpower_QcZsu7Dx.c rt_TDelayCreateBuf.c rt_TDelayFreeBuf.c rt_TDelayInterpolate.c rt_TDelayUpdateTailOrGrowBuf.c
 PRODUCT              = rtwshared.lib
 MAKEFILE             = 
-MATLAB_ROOT          = C:/Program Files/MATLAB/R2020a
-ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2020a
-MATLAB_BIN           = C:/Program Files/MATLAB/R2020a/bin
-ALT_MATLAB_BIN       = C:/PROGRA~1/MATLAB/R2020a/bin
-MASTER_ANCHOR_DIR    = 
-START_DIR            = C:/Users/xboxl/OneDrive/School/GEORGI~1/2020-2~1/Hytech/LAUNCH~1/HT05SI~1/main/Work
+MATLAB_ROOT          = C:/Program Files/MATLAB/R2020b
+ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2020b
+MATLAB_BIN           = C:/Program Files/MATLAB/R2020b/bin
+ALT_MATLAB_BIN       = C:/PROGRA~1/MATLAB/R2020b/bin
+START_DIR            = C:/Users/xboxl/OneDrive/DOCUME~1/Github/MECHAN~1/HT05SI~1/main/Work
 S_FUNCTIONS_LIB      = 
 NUMST                = 
 NCSTATES             = 0
-BUILDARGS            =  GENERATE_ASAP2=0 TMW_EXTMODE_TESTING=0 RSIM_SOLVER_SELECTION=2 PCMATLABROOT="C:\\Program Files\\MATLAB\\R2020a" RSIM_PARAMETER_LOADING=1 OPTS="-DNRT -DTGTCONN -DRSIM_PARAMETER_LOADING -DRSIM_WITH_SL_SOLVER -DENABLE_SLEXEC_SSBRIDGE=1 -DON_TARGET_WAIT_FOR_START=0"
+BUILDARGS            =  RSIM_SOLVER_SELECTION=2 PCMATLABROOT="C:\\Program Files\\MATLAB\\R2020b" RSIM_PARAMETER_LOADING=1 OPTS="-DNRT -DTGTCONN -DRSIM_PARAMETER_LOADING -DRSIM_WITH_SL_SOLVER -DENABLE_SLEXEC_SSBRIDGE=1 -DON_TARGET_WAIT_FOR_START=0"
 MULTITASKING         = 0
 INTEGER_CODE         = 0
 MAT_FILE             = 1
@@ -106,6 +105,8 @@ STANDALONE_SUPPRESS_EXE = 0
 OPTIMIZATION_FLAGS      = 
 ADDITIONAL_LDFLAGS      = 
 DEFINES_CUSTOM          = -DEXT_MODE -DIS_RAPID_ACCEL 
+DEFINES_OTHER           = 
+COMPILE_FLAGS_OTHER     = 
 SYSTEM_LIBS             = 
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 
 
@@ -118,9 +119,6 @@ FMT_RELATIVE_PATH_TO_ANCHOR   = $(subst /,\,$(RELATIVE_PATH_TO_ANCHOR))
 # NONE: standalone, SIM: modelref sim, RTW: modelref coder target
 MODELREF_TARGET_TYPE       = 
 MODELREF_SFCN_SUFFIX       = 
-ISPROTECTINGMODEL          = NOTPROTECTING
-PROT_CAPIC_SUFFIX          = _capi.c
-PROT_CAPIO_SUFFIX          = _capi_host.obj
 
 
 #-- In the case when directory name contains space ---
@@ -155,14 +153,6 @@ ADD_INCLUDES = \
 	-I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src \
 	-I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/rtiostreamtcpip \
 	-I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils \
-	-I$(MATLAB_ROOT)/toolbox/physmod/simscape/engine/sli/c/win64 \
-	-I$(MATLAB_ROOT)/toolbox/physmod/simscape/engine/core/c/win64 \
-	-I$(MATLAB_ROOT)/toolbox/physmod/simscape/compiler/core/c/win64 \
-	-I$(MATLAB_ROOT)/toolbox/physmod/network_engine/c/win64 \
-	-I$(MATLAB_ROOT)/toolbox/physmod/common/math/core/c/win64 \
-	-I$(MATLAB_ROOT)/toolbox/physmod/common/lang/core/c/win64 \
-	-I$(MATLAB_ROOT)/toolbox/physmod/common/external/library/c/win64 \
-	-I$(MATLAB_ROOT)/toolbox/physmod/common/foundation/core/c/win64 \
 
 
 # see COMPILER_INCLUDES from lcctool.mak
@@ -180,11 +170,12 @@ OPTS =
 
 # Compiler options, etc:
 ifneq ($(OPTIMIZATION_FLAGS),)
-CC_OPTS = $(OPTS) $(ANSI_OPTS)  $(OPTIMIZATION_FLAGS)
+CC_OPTS = $(OPTS) $(ANSI_OPTS) $(COMPILE_FLAGS_OTHER) $(OPTIMIZATION_FLAGS)
 else
-CC_OPTS = $(OPT_OPTS) $(OPTS) $(ANSI_OPTS) 
+CC_OPTS = $(OPTS) $(ANSI_OPTS) $(COMPILE_FLAGS_OTHER) $(OPT_OPTS) 
 endif
 
+# Defines
 CPP_REQ_DEFINES = -DMODEL=$(MODEL) -DNUMST=$(NUMST) -DNCSTATES=$(NCSTATES) \
 		  -DMAT_FILE=$(MAT_FILE) -DINTEGER_CODE=$(INTEGER_CODE) \
 		  -DONESTEPFCN=$(ONESTEPFCN) -DTERMFCN=$(TERMFCN) \
@@ -193,7 +184,6 @@ CPP_REQ_DEFINES = -DMODEL=$(MODEL) -DNUMST=$(NUMST) -DNCSTATES=$(NCSTATES) \
 		  -DALLOCATIONFCN=$(ALLOCATIONFCN)
 
 ifeq ($(MODELREF_TARGET_TYPE),SIM)
-CPP_REQ_DEFINES += -DMDL_REF_SIM_TGT=1 
 ifneq ($(ENABLE_SLEXEC_SSBRIDGE), 0)
 CPP_REQ_DEFINES += -DENABLE_SLEXEC_SSBRIDGE=$(ENABLE_SLEXEC_SSBRIDGE)
 endif
@@ -203,12 +193,12 @@ endif
 
 CPP_REQ_DEFINES += -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=$(MODEL_HAS_DYNAMICALLY_LOADED_SFCNS)
 
-CFLAGS = $(DEFAULT_CFLAGS) $(CC_OPTS) $(DEFINES_CUSTOM) $(CPP_REQ_DEFINES) $(INCLUDES) -w -noregistrylookup 
+DEFINES = $(DEFINES_CUSTOM) $(CPP_REQ_DEFINES) $(DEFINES_OTHER)
+
+CFLAGS = $(DEFAULT_CFLAGS) $(CC_OPTS) $(DEFINES) $(INCLUDES) -w -noregistrylookup
 
 # Additional flags required for SIM target
 CFLAGS += -dll -Zp8 -noregistrylookup -DLCC_WIN64
-
-CPP_REQ_DEFINES += -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=$(MODEL_HAS_DYNAMICALLY_LOADED_SFCNS)
 
 ifeq ($(OPT_OPTS),$(DEFAULT_OPT_OPTS))
 LDFLAGS = -s -L$(LIB)
@@ -234,8 +224,6 @@ USER_OBJS       = $(USER_SRCS:.c=.obj)
 LOCAL_USER_OBJS = $(notdir $(USER_OBJS))
 
 OBJS      = $(SRCS:.c=.obj) $(USER_OBJS)
-PROT_CAPIC  = $(addsuffix $(PROT_CAPIC_SUFFIX), $(MODEL))
-PROT_CAPIO  = $(addsuffix $(PROT_CAPIO_SUFFIX), $(MODEL))
 
 DEF_FILE = $(MODEL).def
 
@@ -266,18 +254,11 @@ ifeq ($(MODELREF_TARGET_TYPE),NONE)
     endif
   endif
 else
- ifeq ($(MODELREF_TARGET_TYPE),SIM)
-  ifeq ($(ISPROTECTINGMODEL),PROTECTING)
-  all : $(PRODUCT) $(PROT_CAPIO)
-  endif
+ ifeq ($(MODELREF_TARGET_TYPE),SIM)  
   $(PRODUCT) : $(OBJS) $(LIBS)
 	@if exist $(MODELLIB) del "$(MODELLIB)"
 	$(LIBCMD) /out:$(MODELLIB) @$(CMD_FILE) $(LOCAL_USER_OBJS)
-	@cmd /C "echo ### Created $(MODELLIB)"
-  ifeq ($(ISPROTECTINGMODEL),PROTECTING)
-  $(PROT_CAPIO) : $(PROT_CAPIC)
-	$(CC) -c $(CFLAGS) -DHOST_CAPI_BUILD $(PROT_CAPIC) /Fo$(PROT_CAPIO)
-  endif
+	@cmd /C "echo ### Created $(MODELLIB)"  
  else
   $(PRODUCT) : $(OBJS)
 	@if exist $(MODELLIB) del "$(MODELLIB)"

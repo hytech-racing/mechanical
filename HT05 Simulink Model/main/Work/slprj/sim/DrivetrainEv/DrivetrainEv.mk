@@ -1,4 +1,4 @@
-# Copyright 1994-2019 The MathWorks, Inc.
+# Copyright 1994-2020 The MathWorks, Inc.
 #
 # File    : ert_lcc64.tmf   
 #
@@ -80,15 +80,14 @@ MODEL                = DrivetrainEv
 MODULES              = DrivetrainEv.c DrivetrainEv_capi.c c_mexapi_version.c
 PRODUCT              = DrivetrainEvlib.lib
 MAKEFILE             = DrivetrainEv.mk
-MATLAB_ROOT          = C:/Program Files/MATLAB/R2020a
-ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2020a
-MATLAB_BIN           = C:/Program Files/MATLAB/R2020a/bin
-ALT_MATLAB_BIN       = C:/PROGRA~1/MATLAB/R2020a/bin
-MASTER_ANCHOR_DIR    = 
-START_DIR            = C:/Users/xboxl/DOCUME~1/GitHub/MECHAN~1/HT05SI~1/main/Work
+MATLAB_ROOT          = C:/Program Files/MATLAB/R2020b
+ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2020b
+MATLAB_BIN           = C:/Program Files/MATLAB/R2020b/bin
+ALT_MATLAB_BIN       = C:/PROGRA~1/MATLAB/R2020b/bin
+START_DIR            = C:/Users/xboxl/OneDrive/DOCUME~1/Github/MECHAN~1/HT05SI~1/main/Work
 S_FUNCTIONS_LIB      = 
 NUMST                = 2
-NCSTATES             = 21
+NCSTATES             = 23
 BUILDARGS            =  GENERATE_ERT_S_FUNCTION=0 GENERATE_ASAP2=0 EXTMODE_STATIC_ALLOC=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 TMW_EXTMODE_TESTING=0 OPTS="-DMATLAB_MEX_FILE -DTID01EQ=0"
 MULTITASKING         = 0
 INTEGER_CODE         = 0
@@ -106,7 +105,9 @@ STANDALONE_SUPPRESS_EXE = 0
 OPTIMIZATION_FLAGS      = 
 ADDITIONAL_LDFLAGS      = 
 DEFINES_CUSTOM          = 
-SYSTEM_LIBS             = -L"C:\Program Files\MATLAB\R2020a\extern\lib\win64\microsoft" libfixedpoint.lib libmwmathutil.lib libmwipp.lib libmwsl_AsyncioQueue.lib sf_runtime.lib libmwslexec_simlog.lib libmwcoder_ToAsyncQueueTgtAppSvc.lib libmwsl_simtarget_instrumentation.lib libmwsl_simtarget_core.lib libmwstringutil.lib libcovrt.lib
+DEFINES_OTHER           = -DHAVESTDIO -DMDL_REF_SIM_TGT=1
+COMPILE_FLAGS_OTHER     = 
+SYSTEM_LIBS             = -L"C:\Program Files\MATLAB\R2020b\extern\lib\win64\microsoft" libfixedpoint.lib libmwmathutil.lib libmwipp.lib libmwsl_AsyncioQueue.lib sf_runtime.lib libmwslexec_simlog.lib libmwcoder_ToAsyncQueueTgtAppSvc.lib libmwsl_simtarget_instrumentation.lib libmwsl_simtarget_core.lib libmwstringutil.lib libcovrt.lib
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
 
 #--------------------------- Model and reference models -----------------------
@@ -118,9 +119,6 @@ FMT_RELATIVE_PATH_TO_ANCHOR   = $(subst /,\,$(RELATIVE_PATH_TO_ANCHOR))
 # NONE: standalone, SIM: modelref sim, RTW: modelref coder target
 MODELREF_TARGET_TYPE       = SIM
 MODELREF_SFCN_SUFFIX       = _msf
-ISPROTECTINGMODEL          = NOTPROTECTING
-PROT_CAPIC_SUFFIX          = _capi.c
-PROT_CAPIO_SUFFIX          = _capi_host.obj
 
 
 #-- In the case when directory name contains space ---
@@ -168,11 +166,12 @@ OPTS =
 
 # Compiler options, etc:
 ifneq ($(OPTIMIZATION_FLAGS),)
-CC_OPTS = $(OPTS) $(ANSI_OPTS)  $(OPTIMIZATION_FLAGS)
+CC_OPTS = $(OPTS) $(ANSI_OPTS) $(COMPILE_FLAGS_OTHER) $(OPTIMIZATION_FLAGS)
 else
-CC_OPTS = $(OPT_OPTS) $(OPTS) $(ANSI_OPTS) 
+CC_OPTS = $(OPTS) $(ANSI_OPTS) $(COMPILE_FLAGS_OTHER) $(OPT_OPTS) 
 endif
 
+# Defines
 CPP_REQ_DEFINES = -DMODEL=$(MODEL) -DNUMST=$(NUMST) -DNCSTATES=$(NCSTATES) \
 		  -DMAT_FILE=$(MAT_FILE) -DINTEGER_CODE=$(INTEGER_CODE) \
 		  -DONESTEPFCN=$(ONESTEPFCN) -DTERMFCN=$(TERMFCN) \
@@ -181,7 +180,6 @@ CPP_REQ_DEFINES = -DMODEL=$(MODEL) -DNUMST=$(NUMST) -DNCSTATES=$(NCSTATES) \
 		  -DALLOCATIONFCN=$(ALLOCATIONFCN)
 
 ifeq ($(MODELREF_TARGET_TYPE),SIM)
-CPP_REQ_DEFINES += -DMDL_REF_SIM_TGT=1 
 ifneq ($(ENABLE_SLEXEC_SSBRIDGE), 0)
 CPP_REQ_DEFINES += -DENABLE_SLEXEC_SSBRIDGE=$(ENABLE_SLEXEC_SSBRIDGE)
 endif
@@ -191,12 +189,12 @@ endif
 
 CPP_REQ_DEFINES += -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=$(MODEL_HAS_DYNAMICALLY_LOADED_SFCNS)
 
-CFLAGS = $(DEFAULT_CFLAGS) $(CC_OPTS) $(DEFINES_CUSTOM) $(CPP_REQ_DEFINES) $(INCLUDES) -w -noregistrylookup 
+DEFINES = $(DEFINES_CUSTOM) $(CPP_REQ_DEFINES) $(DEFINES_OTHER)
+
+CFLAGS = $(DEFAULT_CFLAGS) $(CC_OPTS) $(DEFINES) $(INCLUDES) -w -noregistrylookup
 
 # Additional flags required for SIM target
 CFLAGS += -dll -Zp8 -noregistrylookup -DLCC_WIN64
-
-CPP_REQ_DEFINES += -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=$(MODEL_HAS_DYNAMICALLY_LOADED_SFCNS)
 
 ifeq ($(OPT_OPTS),$(DEFAULT_OPT_OPTS))
 LDFLAGS = -s -L$(LIB)
@@ -222,8 +220,6 @@ USER_OBJS       = $(USER_SRCS:.c=.obj)
 LOCAL_USER_OBJS = $(notdir $(USER_OBJS))
 
 OBJS      = $(SRCS:.c=.obj) $(USER_OBJS)
-PROT_CAPIC  = $(addsuffix $(PROT_CAPIC_SUFFIX), $(MODEL))
-PROT_CAPIO  = $(addsuffix $(PROT_CAPIO_SUFFIX), $(MODEL))
 
 DEF_FILE = $(MODEL).def
 
@@ -254,18 +250,11 @@ ifeq ($(MODELREF_TARGET_TYPE),NONE)
     endif
   endif
 else
- ifeq ($(MODELREF_TARGET_TYPE),SIM)
-  ifeq ($(ISPROTECTINGMODEL),PROTECTING)
-  all : $(PRODUCT) $(PROT_CAPIO)
-  endif
+ ifeq ($(MODELREF_TARGET_TYPE),SIM)  
   $(PRODUCT) : $(LIBS) $(OBJS) $(LIBS)
 	@if exist $(MODELLIB) del "$(MODELLIB)"
 	$(LIBCMD) /out:$(MODELLIB) @$(CMD_FILE) $(LOCAL_USER_OBJS)
-	@cmd /C "echo ### Created $(MODELLIB)"
-  ifeq ($(ISPROTECTINGMODEL),PROTECTING)
-  $(PROT_CAPIO) : $(PROT_CAPIC)
-	$(CC) -c $(CFLAGS) -DHOST_CAPI_BUILD $(PROT_CAPIC) /Fo$(PROT_CAPIO)
-  endif
+	@cmd /C "echo ### Created $(MODELLIB)"  
  else
   $(PRODUCT) : $(LIBS) $(OBJS)
 	@if exist $(MODELLIB) del "$(MODELLIB)"
@@ -302,8 +291,8 @@ endif
 %.obj : $(MATLAB_ROOT)/simulink/src/%.c
 	$(CC) -c -Fo$(@F) $(CFLAGS) $<
 
-c_mexapi_version.obj : $(MATLAB_ROOT)\extern\version/c_mexapi_version.c
-	$(CC) -c -Fo$(@F) $(CFLAGS) $(MATLAB_ROOT)\extern\version/c_mexapi_version.c
+c_mexapi_version.obj : $(MATLAB_ROOT)/extern/version/c_mexapi_version.c
+	$(CC) -c -Fo$(@F) $(CFLAGS) $(MATLAB_ROOT)/extern/version/c_mexapi_version.c
 
 
 

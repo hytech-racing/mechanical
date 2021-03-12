@@ -18,20 +18,18 @@ short port = 17726U ;
 #define MMI_EXTERN extern
 #endif
 #include "rtw_modelmap.h"
-MMI_EXTERN rtwCAPI_ModelMappingInfo * rt_modelMapInfoPtr ; MMI_EXTERN
-boolean_T gblExtModeEnabled ;
+MMI_EXTERN rtwCAPI_ModelMappingInfo * rt_modelMapInfoPtr ;
 #include "ParamTuningTgtAppSvc/ParamTuningTgtAppSvcCIntrf.h"
 EXTERN_C void TgtConnBackgroundTask ( ) { } EXTERN_C const char * TgtConnInit
-( int_T argc , char_T * argv [ ] ) { const char * result = NULL ; if ( !
-gblExtModeEnabled ) return ( result ) ; { int_T tvar ; for ( tvar = 1 ; tvar
-< argc ; tvar ++ ) { if ( argv [ tvar ] == NULL ) continue ; if ( strcmp (
-argv [ tvar ] , "-tgtconn_port" ) == 0 ) { char tmpstr [ 2 ] ; const char *
-portStr = ( char * ) argv [ tvar + 1 ] ; int itemsConverted = sscanf (
-portStr , "%hd%1s" , & port , tmpstr ) ; if ( itemsConverted != 1 || ( ( port
-!= 0 && port < 255 ) || port > 65535 ) ) { result =
-"Illegal port value for target connectivity comm service\n" ; return ( result
-) ; } argv [ tvar ++ ] = NULL ; argv [ tvar ] = NULL ; continue ; } if (
-strcmp ( argv [ tvar ] , "-tgtconn_server_info_file" ) == 0 ) {
+( int_T argc , char_T * argv [ ] ) { const char * result = NULL ; { int_T
+tvar ; for ( tvar = 1 ; tvar < argc ; tvar ++ ) { if ( argv [ tvar ] == NULL
+) continue ; if ( strcmp ( argv [ tvar ] , "-tgtconn_port" ) == 0 ) { char
+tmpstr [ 2 ] ; const char * portStr = ( char * ) argv [ tvar + 1 ] ; int
+itemsConverted = sscanf ( portStr , "%hd%1s" , & port , tmpstr ) ; if (
+itemsConverted != 1 || ( ( port != 0 && port < 255 ) || port > 65535 ) ) {
+result = "Illegal port value for target connectivity comm service\n" ; return
+( result ) ; } argv [ tvar ++ ] = NULL ; argv [ tvar ] = NULL ; continue ; }
+if ( strcmp ( argv [ tvar ] , "-tgtconn_server_info_file" ) == 0 ) {
 writePortNumToServerInfoFile = true ; sprintf ( serverInfoFileName , "%s" ,
 argv [ tvar + 1 ] ) ; argv [ tvar ++ ] = NULL ; argv [ tvar ] = NULL ;
 continue ; } } port = getCommServicePort ( ) ; if (

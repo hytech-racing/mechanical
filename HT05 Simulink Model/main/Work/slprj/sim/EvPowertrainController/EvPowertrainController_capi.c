@@ -41,8 +41,8 @@ mmiStaticInfoLogging = { 11 , rtContextSystems , loggingMetaInfo , 0 , NULL ,
 mmiStatic = { { rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL
 ) , 0 , ( NULL ) , 0 } , { rtBlockStates , 0 } , { rtDataTypeMap ,
 rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 3453810543U , 3120422280U , 2591501859U ,
-1887033232U } , & mmiStaticInfoLogging , 0 , 0 } ; const
+rtDimensionArray } , "float" , { 1623126022U , 2646893538U , 2493451590U ,
+1799287955U } , & mmiStaticInfoLogging , 0 , 0 } ; const
 rtwCAPI_ModelMappingStaticInfo * EvPowertrainController_GetCAPIStaticMap (
 void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD

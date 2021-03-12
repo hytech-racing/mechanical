@@ -5,12 +5,13 @@
 real_T look1_pbinlcapw(real_T u0, const real_T bp0[], const real_T table[],
   uint32_T prevIndex[], uint32_T maxIndex)
 {
-  real_T y;
   real_T frac;
-  uint32_T iRght;
-  uint32_T iLeft;
+  real_T y;
+  real_T yL_0d0;
   uint32_T bpIdx;
   uint32_T found;
+  uint32_T iLeft;
+  uint32_T iRght;
   if (u0 <= bp0[0U]) {
     bpIdx = 0U;
     frac = 0.0;
@@ -22,12 +23,12 @@ real_T look1_pbinlcapw(real_T u0, const real_T bp0[], const real_T table[],
     while (found == 0U) {
       if (u0 < bp0[bpIdx]) {
         iRght = bpIdx - 1U;
-        bpIdx = (iRght + iLeft) >> 1U;
+        bpIdx = ((bpIdx + iLeft) - 1U) >> 1U;
       } else if (u0 < bp0[bpIdx + 1U]) {
         found = 1U;
       } else {
         iLeft = bpIdx + 1U;
-        bpIdx = (iRght + iLeft) >> 1U;
+        bpIdx = ((bpIdx + iRght) + 1U) >> 1U;
       }
     }
 
@@ -41,7 +42,8 @@ real_T look1_pbinlcapw(real_T u0, const real_T bp0[], const real_T table[],
   if (bpIdx == maxIndex) {
     y = table[bpIdx];
   } else {
-    y = (table[bpIdx + 1U] - table[bpIdx]) * frac + table[bpIdx];
+    yL_0d0 = table[bpIdx];
+    y = (table[bpIdx + 1U] - yL_0d0) * frac + yL_0d0;
   }
 
   return y;

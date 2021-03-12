@@ -22,38 +22,39 @@ nargs , ... ) { void * voidPtrDiagnostic = NULL ; va_list args ; va_start (
 args , nargs ) ; slmrCreateDiagnostic ( id , nargs , args , &
 voidPtrDiagnostic ) ; va_end ( args ) ; return voidPtrDiagnostic ; } void
 rt_ssSet_slErrMsg ( SimStruct * S , void * diag ) { if ( !
-_ssIsErrorStatusAslErrMsg ( S ) ) { _ssSet_slErrMsg ( S , diag ) ; } else {
-_ssDiscardDiagnostic ( S , diag ) ; } } void rt_ssReportDiagnosticAsWarning (
-SimStruct * S , void * diag ) { _ssReportDiagnosticAsWarning ( S , diag ) ; }
-const char * rt_CreateFullPathToTop ( const char * toppath , const char *
-subpath ) { char * fullpath = NULL ; slmrCreateFullPathToTop ( toppath ,
-subpath , & fullpath ) ; return fullpath ; } boolean_T
-slIsRapidAcceleratorSimulating ( void ) { return false ; } void
-rt_RAccelReplaceFromFilename ( const char * blockpath , char * fileName ) { (
-void ) blockpath ; ( void ) fileName ; } void rt_RAccelReplaceToFilename (
-const char * blockpath , char * fileName ) { ( void ) blockpath ; ( void )
-fileName ; } static void mdlPeriodicOutputUpdate ( SimStruct * S , int_T tid
-) { pwecol01r52 * dw = ( pwecol01r52 * ) ssGetDWork ( S , 0 ) ; const real_T
-* i_gzv4rl4c4s = ( real_T * ) ssGetInputPortSignal ( S , 0 ) ; const real_T *
-i_gesp0uxzyi = ( real_T * ) ssGetInputPortSignal ( S , 1 ) ; const real_T *
-i_e5jkuf444z = ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; const real_T *
-i_gnxgto2bx5 = ( real_T * ) ssGetInputPortSignal ( S , 3 ) ; const real_T *
-i_lf2msp0d5q = ( real_T * ) ssGetInputPortSignal ( S , 6 ) ; real_T *
-o_B_10_1 = ( real_T * ) ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_10_2 =
-( real_T * ) ssGetOutputPortSignal ( S , 1 ) ; if ( tid == 0 ) {
-EvPowertrainController ( i_gzv4rl4c4s , i_gesp0uxzyi , i_e5jkuf444z ,
-i_gnxgto2bx5 , i_lf2msp0d5q , o_B_10_1 , o_B_10_2 , & ( dw -> rtb ) ) ; } }
-static void mdlInitializeSizes ( SimStruct * S ) { if ( ( S -> mdlInfo ->
-genericFcn != ( NULL ) ) && ( ! ( S -> mdlInfo -> genericFcn ) ( S ,
-GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK , - 1 , ( NULL ) ) ) ) { return ; }
-ssSetNumSFcnParams ( S , 0 ) ; ssFxpSetU32BitRegionCompliant ( S , 1 ) ;
-rt_InitInfAndNaN ( sizeof ( real_T ) ) ; if ( S -> mdlInfo -> genericFcn != (
-NULL ) ) { _GenericFcn fcn = S -> mdlInfo -> genericFcn ; }
-ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 0 ) ;
-ssSetNumDiscStates ( S , 0 ) ; ssSetSymbolicDimsSupport ( S , true ) ;
-slmrInitializeIOPortDataVectors ( S , 7 , 2 ) ; if ( ! ssSetNumInputPorts ( S
-, 7 ) ) return ; if ( ! ssSetInputPortVectorDimension ( S , 0 , 1 ) ) return
-; ssSetInputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
+_ssIsErrorStatusAslErrMsg ( S ) ) { _ssSet_slLocalErrMsg ( S , diag ) ; }
+else { _ssDiscardDiagnostic ( S , diag ) ; } } void
+rt_ssReportDiagnosticAsWarning ( SimStruct * S , void * diag ) {
+_ssReportDiagnosticAsWarning ( S , diag ) ; } const char *
+rt_CreateFullPathToTop ( const char * toppath , const char * subpath ) { char
+* fullpath = NULL ; slmrCreateFullPathToTop ( toppath , subpath , & fullpath
+) ; return fullpath ; } boolean_T slIsRapidAcceleratorSimulating ( void ) {
+return false ; } void rt_RAccelReplaceFromFilename ( const char * blockpath ,
+char * fileName ) { ( void ) blockpath ; ( void ) fileName ; } void
+rt_RAccelReplaceToFilename ( const char * blockpath , char * fileName ) { (
+void ) blockpath ; ( void ) fileName ; } static void mdlPeriodicOutputUpdate
+( SimStruct * S , int_T tid ) { pwecol01r52 * dw = ( pwecol01r52 * )
+ssGetDWork ( S , 0 ) ; const real_T * i_gzv4rl4c4s = ( real_T * )
+ssGetInputPortSignal ( S , 0 ) ; const real_T * i_gesp0uxzyi = ( real_T * )
+ssGetInputPortSignal ( S , 1 ) ; const real_T * i_e5jkuf444z = ( real_T * )
+ssGetInputPortSignal ( S , 2 ) ; const real_T * i_gnxgto2bx5 = ( real_T * )
+ssGetInputPortSignal ( S , 3 ) ; const real_T * i_lf2msp0d5q = ( real_T * )
+ssGetInputPortSignal ( S , 6 ) ; real_T * o_B_10_1 = ( real_T * )
+ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_10_2 = ( real_T * )
+ssGetOutputPortSignal ( S , 1 ) ; if ( tid == 0 ) { EvPowertrainController (
+i_gzv4rl4c4s , i_gesp0uxzyi , i_e5jkuf444z , i_gnxgto2bx5 , i_lf2msp0d5q ,
+o_B_10_1 , o_B_10_2 , & ( dw -> rtb ) ) ; } } static void mdlInitializeSizes
+( SimStruct * S ) { if ( ( S -> mdlInfo -> genericFcn != ( NULL ) ) && ( ! (
+S -> mdlInfo -> genericFcn ) ( S , GEN_FCN_CHK_MODELREF_SFUN_HAS_MODEL_BLOCK
+, - 1 , ( NULL ) ) ) ) { return ; } ssSetNumSFcnParams ( S , 0 ) ;
+ssFxpSetU32BitRegionCompliant ( S , 1 ) ; rt_InitInfAndNaN ( sizeof ( real_T
+) ) ; if ( S -> mdlInfo -> genericFcn != ( NULL ) ) { _GenericFcn fcn = S ->
+mdlInfo -> genericFcn ; } ssSetRTWGeneratedSFcn ( S , 2 ) ;
+ssSetNumContStates ( S , 0 ) ; ssSetNumDiscStates ( S , 0 ) ;
+ssSetSymbolicDimsSupport ( S , true ) ; slmrInitializeIOPortDataVectors ( S ,
+7 , 2 ) ; if ( ! ssSetNumInputPorts ( S , 7 ) ) return ; if ( !
+ssSetInputPortVectorDimension ( S , 0 , 1 ) ) return ;
+ssSetInputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetInputPortDataType ( S , 0 , SS_DOUBLE ) ;
 } if ( ssGetSimMode ( S ) != SS_SIMMODE_SIZES_CALL_ONLY ) {
@@ -225,7 +226,7 @@ return ; ssSetDWorkDataType ( S , 0 , mdlrefDWTypeId ) ; ssSetDWorkWidth ( S
 if ( ! ssSetNumDWork ( S , 1 ) ) { return ; }
 #endif
 slmrRegisterPeriodicOutputUpdateMethod ( S , mdlPeriodicOutputUpdate ) ;
-ssSetSimulinkVersionGeneratedIn ( S , "10.1" ) ; } static void
+ssSetSimulinkVersionGeneratedIn ( S , "10.2" ) ; } static void
 mdlInitializeSampleTimes ( SimStruct * S ) { ssSetSampleTime ( S , 0 , 0.01 )
 ; ssSetOffsetTime ( S , 0 , 0 ) ; ssSetSampleTime ( S , 1 , mxGetInf ( ) ) ;
 ssSetOffsetTime ( S , 1 , 0 ) ; return ; }

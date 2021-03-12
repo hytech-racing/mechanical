@@ -30,7 +30,7 @@ TARGET_STRING (
 , 0 } , { 2 , 14 , TARGET_STRING (
  "DrivetrainEv/Torsional Compliance/Torsional Compliance Linear 2way/Torsional Compliance Linear/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 3 , 16 , TARGET_STRING (
+, 0 } , { 3 , 18 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Limited Slip Differential/Limited Slip Differential/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
 , 0 } , { 4 , 13 , TARGET_STRING (
@@ -48,22 +48,28 @@ TARGET_STRING (
 , 0 } , { 8 , 7 , TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/3DOF (Body Axes)/q"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 9 , 18 , TARGET_STRING (
+, 0 } , { 9 , 17 , TARGET_STRING (
+"DrivetrainEv/Wheels and Brakes/PID Controller/Filter/Cont. Filter/Filter" )
+, TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1 ,
+0 } , { 10 , 16 , TARGET_STRING (
+"DrivetrainEv/Wheels and Brakes/PID Controller/Integrator/Continuous/Integrator"
+) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
+, 0 } , { 11 , 20 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Limited Slip Differential/Limited Slip Differential/Clutch Response/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 10 , 10 , TARGET_STRING (
+, 0 } , { 12 , 10 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Rear Axle Compliance 1/Torsional Compliance Linear 2way/Torsional Compliance Linear/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 11 , 8 , TARGET_STRING (
+, 0 } , { 13 , 8 , TARGET_STRING (
  "DrivetrainEv/Wheels and Brakes/Longitudinal Wheel - Front 1/Wheel Module/relaxation/Cont LPF Dyn/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 12 , 11 , TARGET_STRING (
+, 0 } , { 14 , 11 , TARGET_STRING (
  "DrivetrainEv/Wheels and Brakes/Longitudinal Wheel - Rear 1/Wheel Module/relaxation/Cont LPF Dyn/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 13 , 9 , TARGET_STRING (
+, 0 } , { 15 , 9 , TARGET_STRING (
  "DrivetrainEv/Differential and Compliance/Rear Wheel Drive/Rear Axle Compliance 1/Torsional Compliance Linear 2way/Torsional Compliance Linear/Cont LPF IC Dyn/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
-, 0 } , { 14 , 12 , TARGET_STRING (
+, 0 } , { 16 , 12 , TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/Bus Creation/Body Frame/Longitudinal 3DOF/Integrator3"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
@@ -78,11 +84,12 @@ dataAddr [ 3 ] = ( void * ) ( & localX -> mjiky0nofi [ 0 ] ) ; dataAddr [ 4 ]
 localX -> noatsby3ej [ 0 ] ) ; dataAddr [ 6 ] = ( void * ) ( & localX ->
 in4ouu3rj0 ) ; dataAddr [ 7 ] = ( void * ) ( & localX -> ncmmxrrgvr [ 0 ] ) ;
 dataAddr [ 8 ] = ( void * ) ( & localX -> fmsvpqigtm ) ; dataAddr [ 9 ] = (
-void * ) ( & localX -> pvkalczr1c ) ; dataAddr [ 10 ] = ( void * ) ( & localX
--> dkpe1jeg2m ) ; dataAddr [ 11 ] = ( void * ) ( & localX -> neffdf1vy0 ) ;
-dataAddr [ 12 ] = ( void * ) ( & localX -> exw1srp224 ) ; dataAddr [ 13 ] = (
-void * ) ( & localX -> m5tmby1aqo ) ; dataAddr [ 14 ] = ( void * ) ( & localX
--> lwzedupgn2 ) ; }
+void * ) ( & localX -> durnydrbng ) ; dataAddr [ 10 ] = ( void * ) ( & localX
+-> jin1n3lghh ) ; dataAddr [ 11 ] = ( void * ) ( & localX -> pvkalczr1c ) ;
+dataAddr [ 12 ] = ( void * ) ( & localX -> dkpe1jeg2m ) ; dataAddr [ 13 ] = (
+void * ) ( & localX -> neffdf1vy0 ) ; dataAddr [ 14 ] = ( void * ) ( & localX
+-> exw1srp224 ) ; dataAddr [ 15 ] = ( void * ) ( & localX -> m5tmby1aqo ) ;
+dataAddr [ 16 ] = ( void * ) ( & localX -> lwzedupgn2 ) ; }
 #endif
 #ifndef HOST_CAPI_BUILD
 static void DrivetrainEv_InitializeVarDimsAddr ( int32_T * vardimsAddr [ ] )
@@ -96,7 +103,8 @@ loggingPtrs [ ] ) { loggingPtrs [ 0 ] = ( NULL ) ; loggingPtrs [ 1 ] = ( NULL
 ) ; loggingPtrs [ 7 ] = ( NULL ) ; loggingPtrs [ 8 ] = ( NULL ) ; loggingPtrs
 [ 9 ] = ( NULL ) ; loggingPtrs [ 10 ] = ( NULL ) ; loggingPtrs [ 11 ] = (
 NULL ) ; loggingPtrs [ 12 ] = ( NULL ) ; loggingPtrs [ 13 ] = ( NULL ) ;
-loggingPtrs [ 14 ] = ( NULL ) ; }
+loggingPtrs [ 14 ] = ( NULL ) ; loggingPtrs [ 15 ] = ( NULL ) ; loggingPtrs [
+16 ] = ( NULL ) ; }
 #endif
 static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "double" ,
 "real_T" , 0 , 0 , sizeof ( real_T ) , SS_DOUBLE , 0 , 0 , 0 } } ;
@@ -117,9 +125,9 @@ rtwCAPI_ModelMapLoggingStaticInfo mmiStaticInfoLogging = { 25 ,
 rtContextSystems , loggingMetaInfo , 0 , NULL , { 0 , NULL , NULL } , 0 , (
 NULL ) } ; static rtwCAPI_ModelMappingStaticInfo mmiStatic = { {
 rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
-) , 0 } , { rtBlockStates , 15 } , { rtDataTypeMap , rtDimensionMap ,
+) , 0 } , { rtBlockStates , 17 } , { rtDataTypeMap , rtDimensionMap ,
 rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
-{ 2879836764U , 3023237175U , 1087458528U , 4123480202U } , &
+{ 163744015U , 2417593747U , 4190018933U , 399957330U } , &
 mmiStaticInfoLogging , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
 DrivetrainEv_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD

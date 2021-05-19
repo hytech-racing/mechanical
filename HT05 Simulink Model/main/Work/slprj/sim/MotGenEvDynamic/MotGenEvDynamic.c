@@ -277,67 +277,68 @@ break ; } localDW -> cmjt0zg4xt = - 1 ; localDW -> bfuoehqzsl = - 1 ; } void
 MotGenEvDynamic ( mv4ga5jwa1 * const oczxsqne0n , const real_T * emppsgntig ,
 const real_T * geawchg2qh , const real_T * cvcsdesmn4 , real_T * fnbywarnx2 ,
 real_T * cg1dw5wgio , real_T * pjvsscaswy , cx3bhokmct * localB , cloq5bin3y
-* localDW , fsi3zxjdsv * localX ) { real_T duyyqqd1zm ; real_T b1nxi21q0c_p ;
-real_T d0niepgk02_p ; real_T ejpw5agfwl ; real_T fcx3qihz0y_p ; real_T
-fexu2mpvzu ; real_T fuwbeu0mi2 ; real_T g1paxxagjp_p ; real_T gcfwi3ao2o ;
-real_T hytb3op1gy ; real_T jaabiiivdd ; real_T jedkbzvhbx ; real_T jzng23hn5g
-; real_T n3svixcllx_p ; real_T nx40kxmidk ; real_T odjtfn3yxu ; real_T
-oo0kzookhd_p ; int32_T tmp ; uint32_T bpIdx ; int8_T rtAction ; int8_T
-rtPrevAction ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit (
+* localDW , fsi3zxjdsv * localX ) { real_T d0niepgk02_p ; real_T ejpw5agfwl ;
+real_T fcx3qihz0y_p ; real_T fexu2mpvzu ; real_T fuwbeu0mi2 ; real_T
+g1paxxagjp_p ; real_T gcfwi3ao2o ; real_T hytb3op1gy ; real_T jaabiiivdd ;
+real_T jedkbzvhbx ; real_T jzng23hn5g ; real_T n3svixcllx_p ; real_T
+nx40kxmidk ; real_T odjtfn3yxu ; real_T ohyfjr4iy3 ; real_T oo0kzookhd_p ;
+int32_T tmp_p ; uint32_T bpIdx ; int8_T rtAction ; int8_T rtPrevAction ;
+boolean_T tmp ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit (
 oczxsqne0n , 2 , 0 ) ) { * pjvsscaswy = localDW -> pdv153zdu5 ; { if (
 localDW -> brnt2ej5x1 . AQHandles && ssGetLogOutput ( oczxsqne0n ->
 _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW -> brnt2ej5x1 . AQHandles ,
 rtmGetTaskTime ( oczxsqne0n , 2 ) , ( char * ) pjvsscaswy + 0 ) ; } }
-duyyqqd1zm = localDW -> lmqwggutck ; { if ( localDW -> jckcnytr4c . AQHandles
+ohyfjr4iy3 = localDW -> lmqwggutck ; { if ( localDW -> jckcnytr4c . AQHandles
 && ssGetLogOutput ( oczxsqne0n -> _mdlRefSfcnS ) ) { sdiWriteSignal ( localDW
 -> jckcnytr4c . AQHandles , rtmGetTaskTime ( oczxsqne0n , 2 ) , ( char * ) &
-duyyqqd1zm + 0 ) ; } } } if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { if (
-localDW -> lf2zfdimpe != 0 ) { localX -> jjrb01sfag = localB -> d4f2unf52i ;
-} if ( localX -> jjrb01sfag >= hp0wdh0z5x . P_70 ) { if ( localX ->
-jjrb01sfag != hp0wdh0z5x . P_70 ) { localX -> jjrb01sfag = hp0wdh0z5x . P_70
-; ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ;
-} localDW -> juyze14tin = 3 ; } else if ( localX -> jjrb01sfag <= hp0wdh0z5x
-. P_71 ) { if ( localX -> jjrb01sfag != hp0wdh0z5x . P_71 ) { localX ->
-jjrb01sfag = hp0wdh0z5x . P_71 ; ssSetBlockStateForSolverChangedAtMajorStep (
-oczxsqne0n -> _mdlRefSfcnS ) ; } localDW -> juyze14tin = 4 ; } else { if (
-localDW -> juyze14tin != 0 ) { ssSetBlockStateForSolverChangedAtMajorStep (
-oczxsqne0n -> _mdlRefSfcnS ) ; } localDW -> juyze14tin = 0 ; } oo0kzookhd_p =
-localX -> jjrb01sfag ; } else { oo0kzookhd_p = localX -> jjrb01sfag ; }
-g1paxxagjp_p = localX -> lsis3mvtl3 ; muDoubleScalarSinCos ( hp0wdh0z5x . P_6
-* localX -> lsis3mvtl3 , & gcfwi3ao2o , & nx40kxmidk ) ; if (
-rtmIsMajorTimeStep ( oczxsqne0n ) ) { if ( localDW -> hjhxitxtn4 != 0 ) {
-localX -> kqb0spkyga = localB -> lwpvkhuswg ; } if ( localX -> kqb0spkyga >=
-hp0wdh0z5x . P_74 ) { if ( localX -> kqb0spkyga != hp0wdh0z5x . P_74 ) {
-localX -> kqb0spkyga = hp0wdh0z5x . P_74 ;
+ohyfjr4iy3 + 0 ) ; } } } tmp = ssGetIsOkayToUpdateMode ( oczxsqne0n ->
+_mdlRefSfcnS ) ; if ( tmp ) { if ( localDW -> lf2zfdimpe != 0 ) { localX ->
+jjrb01sfag = localB -> d4f2unf52i ; } if ( localX -> jjrb01sfag >= hp0wdh0z5x
+. P_70 ) { if ( localX -> jjrb01sfag != hp0wdh0z5x . P_70 ) { localX ->
+jjrb01sfag = hp0wdh0z5x . P_70 ; ssSetBlockStateForSolverChangedAtMajorStep (
+oczxsqne0n -> _mdlRefSfcnS ) ; } localDW -> juyze14tin = 3 ; } else if (
+localX -> jjrb01sfag <= hp0wdh0z5x . P_71 ) { if ( localX -> jjrb01sfag !=
+hp0wdh0z5x . P_71 ) { localX -> jjrb01sfag = hp0wdh0z5x . P_71 ;
 ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ; }
-localDW -> f4evhke5td = 3 ; } else if ( localX -> kqb0spkyga <= hp0wdh0z5x .
-P_75 ) { if ( localX -> kqb0spkyga != hp0wdh0z5x . P_75 ) { localX ->
-kqb0spkyga = hp0wdh0z5x . P_75 ; ssSetBlockStateForSolverChangedAtMajorStep (
-oczxsqne0n -> _mdlRefSfcnS ) ; } localDW -> f4evhke5td = 4 ; } else { if (
-localDW -> f4evhke5td != 0 ) { ssSetBlockStateForSolverChangedAtMajorStep (
-oczxsqne0n -> _mdlRefSfcnS ) ; } localDW -> f4evhke5td = 0 ; } fcx3qihz0y_p =
-localX -> kqb0spkyga ; } else { fcx3qihz0y_p = localX -> kqb0spkyga ; }
-b1nxi21q0c_p = oo0kzookhd_p * nx40kxmidk - fcx3qihz0y_p * gcfwi3ao2o ;
-d0niepgk02_p = oo0kzookhd_p * gcfwi3ao2o + fcx3qihz0y_p * nx40kxmidk ;
-n3svixcllx_p = hp0wdh0z5x . P_76 * b1nxi21q0c_p + hp0wdh0z5x . P_77 *
-d0niepgk02_p ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit (
-oczxsqne0n , 2 , 0 ) ) { if ( rtmIsMajorTimeStep ( oczxsqne0n ) &&
-rtmIsSampleHit ( oczxsqne0n , 2 , 0 ) ) { fuwbeu0mi2 = ( b1nxi21q0c_p +
-n3svixcllx_p ) * hp0wdh0z5x . P_42 ; ejpw5agfwl = ( hp0wdh0z5x . P_40 *
-b1nxi21q0c_p + hp0wdh0z5x . P_41 * n3svixcllx_p ) + hp0wdh0z5x . P_43 *
-fuwbeu0mi2 ; fuwbeu0mi2 = hp0wdh0z5x . P_44 * n3svixcllx_p + hp0wdh0z5x .
-P_45 * fuwbeu0mi2 ; fexu2mpvzu = muDoubleScalarAbs ( * emppsgntig ) ;
-jzng23hn5g = muDoubleScalarAbs ( * geawchg2qh ) ; jedkbzvhbx = hp0wdh0z5x .
-P_46 * * cvcsdesmn4 ; hytb3op1gy = hp0wdh0z5x . P_7 * jzng23hn5g ; jzng23hn5g
-= hp0wdh0z5x . P_47 * * emppsgntig ; jaabiiivdd = look1_binlxpw ( fexu2mpvzu
-, hp0wdh0z5x . P_10 , hp0wdh0z5x . P_11 , 9U ) ; odjtfn3yxu = look1_binlxpw (
-fexu2mpvzu , hp0wdh0z5x . P_10 , hp0wdh0z5x . P_14 , 9U ) ; rtPrevAction =
-localDW -> bfuoehqzsl ; rtAction = ( int8_T ) ! ( hytb3op1gy <= jedkbzvhbx /
-localB -> l1joaocm0k ) ; localDW -> bfuoehqzsl = rtAction ; if ( rtPrevAction
-!= rtAction ) { switch ( rtPrevAction ) { case 0 :
+localDW -> juyze14tin = 4 ; } else { if ( localDW -> juyze14tin != 0 ) {
+ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ; }
+localDW -> juyze14tin = 0 ; } oo0kzookhd_p = localX -> jjrb01sfag ; } else {
+oo0kzookhd_p = localX -> jjrb01sfag ; } g1paxxagjp_p = localX -> lsis3mvtl3 ;
+muDoubleScalarSinCos ( hp0wdh0z5x . P_6 * localX -> lsis3mvtl3 , & gcfwi3ao2o
+, & nx40kxmidk ) ; tmp = ssGetIsOkayToUpdateMode ( oczxsqne0n -> _mdlRefSfcnS
+) ; if ( tmp ) { if ( localDW -> hjhxitxtn4 != 0 ) { localX -> kqb0spkyga =
+localB -> lwpvkhuswg ; } if ( localX -> kqb0spkyga >= hp0wdh0z5x . P_74 ) {
+if ( localX -> kqb0spkyga != hp0wdh0z5x . P_74 ) { localX -> kqb0spkyga =
+hp0wdh0z5x . P_74 ; ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n
+-> _mdlRefSfcnS ) ; } localDW -> f4evhke5td = 3 ; } else if ( localX ->
+kqb0spkyga <= hp0wdh0z5x . P_75 ) { if ( localX -> kqb0spkyga != hp0wdh0z5x .
+P_75 ) { localX -> kqb0spkyga = hp0wdh0z5x . P_75 ;
+ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ; }
+localDW -> f4evhke5td = 4 ; } else { if ( localDW -> f4evhke5td != 0 ) {
+ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ; }
+localDW -> f4evhke5td = 0 ; } fcx3qihz0y_p = localX -> kqb0spkyga ; } else {
+fcx3qihz0y_p = localX -> kqb0spkyga ; } ohyfjr4iy3 = oo0kzookhd_p *
+nx40kxmidk - fcx3qihz0y_p * gcfwi3ao2o ; d0niepgk02_p = oo0kzookhd_p *
+gcfwi3ao2o + fcx3qihz0y_p * nx40kxmidk ; n3svixcllx_p = hp0wdh0z5x . P_76 *
+ohyfjr4iy3 + hp0wdh0z5x . P_77 * d0niepgk02_p ; if ( rtmIsMajorTimeStep (
+oczxsqne0n ) && rtmIsSampleHit ( oczxsqne0n , 2 , 0 ) ) { if (
+rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit ( oczxsqne0n , 2 , 0 ) )
+{ fuwbeu0mi2 = ( ohyfjr4iy3 + n3svixcllx_p ) * hp0wdh0z5x . P_42 ; ejpw5agfwl
+= ( hp0wdh0z5x . P_40 * ohyfjr4iy3 + hp0wdh0z5x . P_41 * n3svixcllx_p ) +
+hp0wdh0z5x . P_43 * fuwbeu0mi2 ; fuwbeu0mi2 = hp0wdh0z5x . P_44 *
+n3svixcllx_p + hp0wdh0z5x . P_45 * fuwbeu0mi2 ; fexu2mpvzu =
+muDoubleScalarAbs ( * emppsgntig ) ; jzng23hn5g = muDoubleScalarAbs ( *
+geawchg2qh ) ; jedkbzvhbx = hp0wdh0z5x . P_46 * * cvcsdesmn4 ; hytb3op1gy =
+hp0wdh0z5x . P_7 * jzng23hn5g ; jzng23hn5g = hp0wdh0z5x . P_47 * * emppsgntig
+; jaabiiivdd = look1_binlxpw ( fexu2mpvzu , hp0wdh0z5x . P_10 , hp0wdh0z5x .
+P_11 , 9U ) ; odjtfn3yxu = look1_binlxpw ( fexu2mpvzu , hp0wdh0z5x . P_10 ,
+hp0wdh0z5x . P_14 , 9U ) ; rtPrevAction = localDW -> bfuoehqzsl ; rtAction =
+( int8_T ) ! ( hytb3op1gy <= jedkbzvhbx / localB -> l1joaocm0k ) ; localDW ->
+bfuoehqzsl = rtAction ; if ( rtPrevAction != rtAction ) { switch (
+rtPrevAction ) { case 0 : ssSetBlockStateForSolverChangedAtMajorStep (
+oczxsqne0n -> _mdlRefSfcnS ) ; break ; case 1 :
 ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ;
-break ; case 1 : ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n ->
-_mdlRefSfcnS ) ; switch ( localDW -> mekacwiae4 ) { case 0 :
+switch ( localDW -> mekacwiae4 ) { case 0 :
 ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ;
 break ; case 1 : ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n ->
 _mdlRefSfcnS ) ; break ; } localDW -> mekacwiae4 = - 1 ; switch ( localDW ->
@@ -374,26 +375,26 @@ ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ; }
 } if ( rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit ( oczxsqne0n , 2 ,
 0 ) ) { if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { localB -> bnhtuo4pzv = -
 hp0wdh0z5x . P_13 [ ( int32_T ) hp0wdh0z5x . P_23 - 1 ] ; } else { if ( (
-int32_T ) hp0wdh0z5x . P_23 > 3 ) { tmp = 3 ; } else if ( ( int32_T )
-hp0wdh0z5x . P_23 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
-P_23 ; } localB -> bnhtuo4pzv = - hp0wdh0z5x . P_13 [ tmp - 1 ] ; } localB ->
-ancya45mmo = hp0wdh0z5x . P_22 ; } srUpdateBC ( localDW -> djzzdpaje3 ) ; }
-else { if ( 1 != rtPrevAction ) { if ( rtmGetTaskTime ( oczxsqne0n , 2 ) !=
-rtmGetTStart ( oczxsqne0n ) ) { ssSetBlockStateForSolverChangedAtMajorStep (
-oczxsqne0n -> _mdlRefSfcnS ) ; } } if ( rtmIsMajorTimeStep ( oczxsqne0n ) &&
-rtmIsSampleHit ( oczxsqne0n , 2 , 0 ) ) { localB -> bnhtuo4pzv = jedkbzvhbx ;
-jedkbzvhbx = localB -> gnsidwdg2i - jedkbzvhbx * jedkbzvhbx ; if (
-rtmIsMajorTimeStep ( oczxsqne0n ) ) { if ( localDW -> nvnt5k5wtu != 0 ) {
-ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ;
-localDW -> nvnt5k5wtu = 0 ; } localB -> ancya45mmo = muDoubleScalarSqrt (
-jedkbzvhbx ) ; } else if ( jedkbzvhbx < 0.0 ) { localB -> ancya45mmo = -
-muDoubleScalarSqrt ( muDoubleScalarAbs ( jedkbzvhbx ) ) ; localDW ->
-nvnt5k5wtu = 1 ; } else { localB -> ancya45mmo = muDoubleScalarSqrt (
-jedkbzvhbx ) ; } } srUpdateBC ( localDW -> o22jbjlb32 ) ; } rtPrevAction =
-localDW -> cmjt0zg4xt ; rtAction = ( int8_T ) ! ( ( ( hp0wdh0z5x . P_3 -
-hp0wdh0z5x . P_5 ) * localB -> bnhtuo4pzv + hp0wdh0z5x . P_15 ) * localB ->
-ancya45mmo * ( 1.5 * hp0wdh0z5x . P_7 ) < fexu2mpvzu ) ; localDW ->
-cmjt0zg4xt = rtAction ; if ( rtPrevAction != rtAction ) { switch (
+int32_T ) hp0wdh0z5x . P_23 > 3 ) { tmp_p = 3 ; } else if ( ( int32_T )
+hp0wdh0z5x . P_23 < 1 ) { tmp_p = 1 ; } else { tmp_p = ( int32_T ) hp0wdh0z5x
+. P_23 ; } localB -> bnhtuo4pzv = - hp0wdh0z5x . P_13 [ tmp_p - 1 ] ; }
+localB -> ancya45mmo = hp0wdh0z5x . P_22 ; } srUpdateBC ( localDW ->
+djzzdpaje3 ) ; } else { if ( 1 != rtPrevAction ) { if ( rtmGetTaskTime (
+oczxsqne0n , 2 ) != rtmGetTStart ( oczxsqne0n ) ) {
+ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ; }
+} if ( rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit ( oczxsqne0n , 2 ,
+0 ) ) { localB -> bnhtuo4pzv = jedkbzvhbx ; jedkbzvhbx = localB -> gnsidwdg2i
+- jedkbzvhbx * jedkbzvhbx ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { if (
+localDW -> nvnt5k5wtu != 0 ) { ssSetBlockStateForSolverChangedAtMajorStep (
+oczxsqne0n -> _mdlRefSfcnS ) ; localDW -> nvnt5k5wtu = 0 ; } localB ->
+ancya45mmo = muDoubleScalarSqrt ( jedkbzvhbx ) ; } else if ( jedkbzvhbx < 0.0
+) { localB -> ancya45mmo = - muDoubleScalarSqrt ( muDoubleScalarAbs (
+jedkbzvhbx ) ) ; localDW -> nvnt5k5wtu = 1 ; } else { localB -> ancya45mmo =
+muDoubleScalarSqrt ( jedkbzvhbx ) ; } } srUpdateBC ( localDW -> o22jbjlb32 )
+; } rtPrevAction = localDW -> cmjt0zg4xt ; rtAction = ( int8_T ) ! ( ( (
+hp0wdh0z5x . P_3 - hp0wdh0z5x . P_5 ) * localB -> bnhtuo4pzv + hp0wdh0z5x .
+P_15 ) * localB -> ancya45mmo * ( 1.5 * hp0wdh0z5x . P_7 ) < fexu2mpvzu ) ;
+localDW -> cmjt0zg4xt = rtAction ; if ( rtPrevAction != rtAction ) { switch (
 rtPrevAction ) { case 0 : ssSetBlockStateForSolverChangedAtMajorStep (
 oczxsqne0n -> _mdlRefSfcnS ) ; break ; case 1 :
 ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ;
@@ -432,7 +433,7 @@ P_15 ) * hytb3op1gy + ( hp0wdh0z5x . P_2 * fuwbeu0mi2 + localDW -> n1xqcq4unv
 j00saob3ud = hp0wdh0z5x . P_59 * localB -> pdqqh31clo + hp0wdh0z5x . P_60 *
 fuwbeu0mi2 ; localB -> f5vescf5ru = hp0wdh0z5x . P_58 * localB -> pdqqh31clo
 + hp0wdh0z5x . P_61 * fuwbeu0mi2 ; localB -> hw3ausca5d = ( localB ->
-pdqqh31clo - localB -> f5vescf5ru ) * b1nxi21q0c_p + ( localB -> j00saob3ud -
+pdqqh31clo - localB -> f5vescf5ru ) * ohyfjr4iy3 + ( localB -> j00saob3ud -
 localB -> f5vescf5ru ) * n3svixcllx_p ; localB -> jnkn4uibnw = ( g1paxxagjp_p
 * ejpw5agfwl * localB -> psb2gwkboz + hp0wdh0z5x . P_15 * ejpw5agfwl ) * (
 1.5 * hp0wdh0z5x . P_7 ) ; localB -> fvvsnpnedq = look2_binlcapw ( localB ->
@@ -456,122 +457,123 @@ hp0wdh0z5x . P_8 / localB -> e5vi4snmv0 ; bpIdx = plook_u32d_evencka ( *
 geawchg2qh , hp0wdh0z5x . P_19 [ 0 ] , hp0wdh0z5x . P_19 [ 1 ] - hp0wdh0z5x .
 P_19 [ 0 ] , 4U ) ; oo0kzookhd_p = hp0wdh0z5x . P_17 [ plook_u32d_evencka ( *
 fnbywarnx2 , hp0wdh0z5x . P_9 [ 0 ] , hp0wdh0z5x . P_9 [ 1 ] - hp0wdh0z5x .
-P_9 [ 0 ] , 5U ) * 5U + bpIdx ] ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) &&
-rtmIsSampleHit ( oczxsqne0n , 1 , 0 ) ) { localB -> llnxhrzq2o = hp0wdh0z5x .
-P_85 ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { localDW -> j1mwihstyy = ( *
-cvcsdesmn4 >= localB -> llnxhrzq2o ) ; } localB -> o552djtg1l = localDW ->
-j1mwihstyy ; } if ( localB -> o552djtg1l ) { gcfwi3ao2o = * cvcsdesmn4 ; }
-else { gcfwi3ao2o = localB -> llnxhrzq2o ; } * cg1dw5wgio = ( ( ( (
-hp0wdh0z5x . P_83 * b1nxi21q0c_p + hp0wdh0z5x . P_84 * d0niepgk02_p ) *
-localB -> f5vescf5ru + ( b1nxi21q0c_p * localB -> pdqqh31clo + n3svixcllx_p *
-localB -> j00saob3ud ) ) + oo0kzookhd_p ) + oo0kzookhd_p ) / gcfwi3ao2o ; }
-void MotGenEvDynamicTID3 ( mv4ga5jwa1 * const oczxsqne0n , cx3bhokmct *
-localB , cloq5bin3y * localDW ) { real_T eemfsamcqt ; real_T fkhiabecn2 ;
-int32_T tmp ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { fkhiabecn2 =
-hp0wdh0z5x . P_13 [ ( int32_T ) hp0wdh0z5x . P_62 - 1 ] ; eemfsamcqt =
-hp0wdh0z5x . P_13 [ ( int32_T ) hp0wdh0z5x . P_63 - 1 ] ; } else { if ( (
-int32_T ) hp0wdh0z5x . P_62 > 3 ) { tmp = 3 ; } else if ( ( int32_T )
-hp0wdh0z5x . P_62 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
-P_62 ; } fkhiabecn2 = hp0wdh0z5x . P_13 [ tmp - 1 ] ; if ( ( int32_T )
-hp0wdh0z5x . P_63 > 3 ) { tmp = 3 ; } else if ( ( int32_T ) hp0wdh0z5x . P_63
-< 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_63 ; } eemfsamcqt
-= hp0wdh0z5x . P_13 [ tmp - 1 ] ; } fkhiabecn2 = hp0wdh0z5x . P_3 *
-fkhiabecn2 + hp0wdh0z5x . P_15 ; eemfsamcqt *= hp0wdh0z5x . P_5 ; fkhiabecn2
-= fkhiabecn2 * fkhiabecn2 + eemfsamcqt * eemfsamcqt ; if ( rtmIsMajorTimeStep
-( oczxsqne0n ) ) { if ( localDW -> i3e2kfzsoy != 0 ) {
-ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n -> _mdlRefSfcnS ) ;
-localDW -> i3e2kfzsoy = 0 ; } eemfsamcqt = muDoubleScalarSqrt ( fkhiabecn2 )
-; localB -> fvwphmszym = - hp0wdh0z5x . P_13 [ ( int32_T ) hp0wdh0z5x . P_36
-- 1 ] ; fkhiabecn2 = hp0wdh0z5x . P_13 [ ( int32_T ) hp0wdh0z5x . P_39 - 1 ]
-; } else { if ( fkhiabecn2 < 0.0 ) { eemfsamcqt = - muDoubleScalarSqrt (
-muDoubleScalarAbs ( fkhiabecn2 ) ) ; localDW -> i3e2kfzsoy = 1 ; } else {
-eemfsamcqt = muDoubleScalarSqrt ( fkhiabecn2 ) ; } if ( ( int32_T )
-hp0wdh0z5x . P_36 > 3 ) { tmp = 3 ; } else if ( ( int32_T ) hp0wdh0z5x . P_36
-< 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_36 ; } localB ->
-fvwphmszym = - hp0wdh0z5x . P_13 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x .
-P_39 > 3 ) { tmp = 3 ; } else if ( ( int32_T ) hp0wdh0z5x . P_39 < 1 ) { tmp
-= 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_39 ; } fkhiabecn2 =
-hp0wdh0z5x . P_13 [ tmp - 1 ] ; } localB -> l1joaocm0k = muDoubleScalarMax (
-eemfsamcqt , hp0wdh0z5x . P_64 ) ; eemfsamcqt = hp0wdh0z5x . P_5 * hp0wdh0z5x
-. P_5 ; localB -> hpq3zpwor5 = eemfsamcqt * ( fkhiabecn2 * fkhiabecn2 ) +
-hp0wdh0z5x . P_15 * hp0wdh0z5x . P_15 ; fkhiabecn2 = hp0wdh0z5x . P_15 *
-hp0wdh0z5x . P_3 ; localB -> emqermn25v = fkhiabecn2 * fkhiabecn2 ;
-fkhiabecn2 = hp0wdh0z5x . P_3 * hp0wdh0z5x . P_3 - eemfsamcqt ; localB ->
-cbuxsm4rne = fkhiabecn2 ; localB -> hddlzs2xkt = fkhiabecn2 ; if (
+P_9 [ 0 ] , 5U ) * 5U + bpIdx ] ; gcfwi3ao2o = ohyfjr4iy3 * localB ->
+pdqqh31clo ; n3svixcllx_p *= localB -> j00saob3ud ; ohyfjr4iy3 = ( hp0wdh0z5x
+. P_83 * ohyfjr4iy3 + hp0wdh0z5x . P_84 * d0niepgk02_p ) * localB ->
+f5vescf5ru ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit (
+oczxsqne0n , 1 , 0 ) ) { localB -> llnxhrzq2o = hp0wdh0z5x . P_85 ; if (
+ssGetIsOkayToUpdateMode ( oczxsqne0n -> _mdlRefSfcnS ) ) { localDW ->
+j1mwihstyy = ( * cvcsdesmn4 >= localB -> llnxhrzq2o ) ; } localB ->
+o552djtg1l = localDW -> j1mwihstyy ; } if ( localB -> o552djtg1l ) {
+d0niepgk02_p = * cvcsdesmn4 ; } else { d0niepgk02_p = localB -> llnxhrzq2o ;
+} * cg1dw5wgio = ( ( ( ( gcfwi3ao2o + n3svixcllx_p ) + ohyfjr4iy3 ) +
+oo0kzookhd_p ) + oo0kzookhd_p ) / d0niepgk02_p ; } void MotGenEvDynamicTID3 (
+mv4ga5jwa1 * const oczxsqne0n , cx3bhokmct * localB , cloq5bin3y * localDW )
+{ real_T eemfsamcqt ; real_T fkhiabecn2 ; int32_T tmp ; if (
 rtmIsMajorTimeStep ( oczxsqne0n ) ) { fkhiabecn2 = hp0wdh0z5x . P_13 [ (
-int32_T ) hp0wdh0z5x . P_26 - 1 ] ; } else { if ( ( int32_T ) hp0wdh0z5x .
-P_26 > 3 ) { tmp = 3 ; } else if ( ( int32_T ) hp0wdh0z5x . P_26 < 1 ) { tmp
-= 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_26 ; } fkhiabecn2 =
-hp0wdh0z5x . P_13 [ tmp - 1 ] ; } localB -> gnsidwdg2i = fkhiabecn2 *
-fkhiabecn2 ; localB -> psb2gwkboz = hp0wdh0z5x . P_3 - hp0wdh0z5x . P_5 ; if
-( rtmIsMajorTimeStep ( oczxsqne0n ) ) { fkhiabecn2 = hp0wdh0z5x . P_4 [ (
-int32_T ) hp0wdh0z5x . P_88 - 1 ] ; eemfsamcqt = hp0wdh0z5x . P_4 [ ( int32_T
-) hp0wdh0z5x . P_89 - 1 ] ; localB -> d4f2unf52i = hp0wdh0z5x . P_12 [ (
-int32_T ) hp0wdh0z5x . P_90 - 1 ] ; localB -> g2rrchs5nk = hp0wdh0z5x . P_4 [
-( int32_T ) hp0wdh0z5x . P_91 - 1 ] ; localB -> n3svixcllx = hp0wdh0z5x . P_4
-[ ( int32_T ) hp0wdh0z5x . P_92 - 1 ] ; localB -> pzram1ykgg = hp0wdh0z5x .
-P_4 [ ( int32_T ) hp0wdh0z5x . P_93 - 1 ] ; localB -> awrvzcwb52 = hp0wdh0z5x
-. P_4 [ ( int32_T ) hp0wdh0z5x . P_94 - 1 ] ; localB -> lwpvkhuswg =
-hp0wdh0z5x . P_12 [ ( int32_T ) hp0wdh0z5x . P_95 - 1 ] ; localB ->
-oxiq1p2ad5 = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_96 - 1 ] ; localB
--> hx1st4ql1x = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_97 - 1 ] ;
-localB -> dmcxxglupf = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_98 - 1 ]
-; localB -> dza0jh5oc0 = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_99 - 1
-] ; localB -> e5vi4snmv0 = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_100
-- 1 ] ; } else { if ( ( int32_T ) hp0wdh0z5x . P_88 > 2 ) { tmp = 2 ; } else
-if ( ( int32_T ) hp0wdh0z5x . P_88 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T
-) hp0wdh0z5x . P_88 ; } fkhiabecn2 = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( (
-int32_T ) hp0wdh0z5x . P_89 > 2 ) { tmp = 2 ; } else if ( ( int32_T )
-hp0wdh0z5x . P_89 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
-P_89 ; } eemfsamcqt = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T )
-hp0wdh0z5x . P_90 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_90
-< 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_90 ; } localB ->
-d4f2unf52i = hp0wdh0z5x . P_12 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x .
-P_91 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_91 < 1 ) { tmp
-= 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_91 ; } localB -> g2rrchs5nk =
-hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_92 > 2 ) { tmp
-= 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_92 < 1 ) { tmp = 1 ; } else {
-tmp = ( int32_T ) hp0wdh0z5x . P_92 ; } localB -> n3svixcllx = hp0wdh0z5x .
-P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_93 > 2 ) { tmp = 2 ; } else
-if ( ( int32_T ) hp0wdh0z5x . P_93 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T
-) hp0wdh0z5x . P_93 ; } localB -> pzram1ykgg = hp0wdh0z5x . P_4 [ tmp - 1 ] ;
-if ( ( int32_T ) hp0wdh0z5x . P_94 > 2 ) { tmp = 2 ; } else if ( ( int32_T )
-hp0wdh0z5x . P_94 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
-P_94 ; } localB -> awrvzcwb52 = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T
-) hp0wdh0z5x . P_95 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x .
-P_95 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_95 ; }
-localB -> lwpvkhuswg = hp0wdh0z5x . P_12 [ tmp - 1 ] ; if ( ( int32_T )
-hp0wdh0z5x . P_96 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_96
-< 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_96 ; } localB ->
-oxiq1p2ad5 = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x .
-P_97 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_97 < 1 ) { tmp
-= 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_97 ; } localB -> hx1st4ql1x =
-hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_98 > 2 ) { tmp
-= 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_98 < 1 ) { tmp = 1 ; } else {
-tmp = ( int32_T ) hp0wdh0z5x . P_98 ; } localB -> dmcxxglupf = hp0wdh0z5x .
-P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_99 > 2 ) { tmp = 2 ; } else
-if ( ( int32_T ) hp0wdh0z5x . P_99 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T
-) hp0wdh0z5x . P_99 ; } localB -> dza0jh5oc0 = hp0wdh0z5x . P_4 [ tmp - 1 ] ;
-if ( ( int32_T ) hp0wdh0z5x . P_100 > 2 ) { tmp = 2 ; } else if ( ( int32_T )
-hp0wdh0z5x . P_100 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
-P_100 ; } localB -> e5vi4snmv0 = hp0wdh0z5x . P_4 [ tmp - 1 ] ; } localB ->
-iy2vl43zru = fkhiabecn2 - eemfsamcqt ; } void lwglwij1vj ( mv4ga5jwa1 * const
-oczxsqne0n , cx3bhokmct * localB , cloq5bin3y * localDW , a2tgpeokha *
-localXdis ) { if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { if ( memcmp (
+int32_T ) hp0wdh0z5x . P_62 - 1 ] ; eemfsamcqt = hp0wdh0z5x . P_13 [ (
+int32_T ) hp0wdh0z5x . P_63 - 1 ] ; } else { if ( ( int32_T ) hp0wdh0z5x .
+P_62 > 3 ) { tmp = 3 ; } else if ( ( int32_T ) hp0wdh0z5x . P_62 < 1 ) { tmp
+= 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_62 ; } fkhiabecn2 =
+hp0wdh0z5x . P_13 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_63 > 3 ) {
+tmp = 3 ; } else if ( ( int32_T ) hp0wdh0z5x . P_63 < 1 ) { tmp = 1 ; } else
+{ tmp = ( int32_T ) hp0wdh0z5x . P_63 ; } eemfsamcqt = hp0wdh0z5x . P_13 [
+tmp - 1 ] ; } fkhiabecn2 = hp0wdh0z5x . P_3 * fkhiabecn2 + hp0wdh0z5x . P_15
+; eemfsamcqt *= hp0wdh0z5x . P_5 ; fkhiabecn2 = fkhiabecn2 * fkhiabecn2 +
+eemfsamcqt * eemfsamcqt ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { if (
+localDW -> i3e2kfzsoy != 0 ) { ssSetBlockStateForSolverChangedAtMajorStep (
+oczxsqne0n -> _mdlRefSfcnS ) ; localDW -> i3e2kfzsoy = 0 ; } eemfsamcqt =
+muDoubleScalarSqrt ( fkhiabecn2 ) ; localB -> fvwphmszym = - hp0wdh0z5x .
+P_13 [ ( int32_T ) hp0wdh0z5x . P_36 - 1 ] ; fkhiabecn2 = hp0wdh0z5x . P_13 [
+( int32_T ) hp0wdh0z5x . P_39 - 1 ] ; } else { if ( fkhiabecn2 < 0.0 ) {
+eemfsamcqt = - muDoubleScalarSqrt ( muDoubleScalarAbs ( fkhiabecn2 ) ) ;
+localDW -> i3e2kfzsoy = 1 ; } else { eemfsamcqt = muDoubleScalarSqrt (
+fkhiabecn2 ) ; } if ( ( int32_T ) hp0wdh0z5x . P_36 > 3 ) { tmp = 3 ; } else
+if ( ( int32_T ) hp0wdh0z5x . P_36 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T
+) hp0wdh0z5x . P_36 ; } localB -> fvwphmszym = - hp0wdh0z5x . P_13 [ tmp - 1
+] ; if ( ( int32_T ) hp0wdh0z5x . P_39 > 3 ) { tmp = 3 ; } else if ( (
+int32_T ) hp0wdh0z5x . P_39 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T )
+hp0wdh0z5x . P_39 ; } fkhiabecn2 = hp0wdh0z5x . P_13 [ tmp - 1 ] ; } localB
+-> l1joaocm0k = muDoubleScalarMax ( eemfsamcqt , hp0wdh0z5x . P_64 ) ;
+eemfsamcqt = hp0wdh0z5x . P_5 * hp0wdh0z5x . P_5 ; localB -> hpq3zpwor5 =
+eemfsamcqt * ( fkhiabecn2 * fkhiabecn2 ) + hp0wdh0z5x . P_15 * hp0wdh0z5x .
+P_15 ; fkhiabecn2 = hp0wdh0z5x . P_15 * hp0wdh0z5x . P_3 ; localB ->
+emqermn25v = fkhiabecn2 * fkhiabecn2 ; fkhiabecn2 = hp0wdh0z5x . P_3 *
+hp0wdh0z5x . P_3 - eemfsamcqt ; localB -> cbuxsm4rne = fkhiabecn2 ; localB ->
+hddlzs2xkt = fkhiabecn2 ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) {
+fkhiabecn2 = hp0wdh0z5x . P_13 [ ( int32_T ) hp0wdh0z5x . P_26 - 1 ] ; } else
+{ if ( ( int32_T ) hp0wdh0z5x . P_26 > 3 ) { tmp = 3 ; } else if ( ( int32_T
+) hp0wdh0z5x . P_26 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
+P_26 ; } fkhiabecn2 = hp0wdh0z5x . P_13 [ tmp - 1 ] ; } localB -> gnsidwdg2i
+= fkhiabecn2 * fkhiabecn2 ; localB -> psb2gwkboz = hp0wdh0z5x . P_3 -
+hp0wdh0z5x . P_5 ; if ( rtmIsMajorTimeStep ( oczxsqne0n ) ) { fkhiabecn2 =
+hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_88 - 1 ] ; eemfsamcqt =
+hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_89 - 1 ] ; localB -> d4f2unf52i
+= hp0wdh0z5x . P_12 [ ( int32_T ) hp0wdh0z5x . P_90 - 1 ] ; localB ->
+g2rrchs5nk = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_91 - 1 ] ; localB
+-> n3svixcllx = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_92 - 1 ] ;
+localB -> pzram1ykgg = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_93 - 1 ]
+; localB -> awrvzcwb52 = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x . P_94 - 1
+] ; localB -> lwpvkhuswg = hp0wdh0z5x . P_12 [ ( int32_T ) hp0wdh0z5x . P_95
+- 1 ] ; localB -> oxiq1p2ad5 = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x .
+P_96 - 1 ] ; localB -> hx1st4ql1x = hp0wdh0z5x . P_4 [ ( int32_T ) hp0wdh0z5x
+. P_97 - 1 ] ; localB -> dmcxxglupf = hp0wdh0z5x . P_4 [ ( int32_T )
+hp0wdh0z5x . P_98 - 1 ] ; localB -> dza0jh5oc0 = hp0wdh0z5x . P_4 [ ( int32_T
+) hp0wdh0z5x . P_99 - 1 ] ; localB -> e5vi4snmv0 = hp0wdh0z5x . P_4 [ (
+int32_T ) hp0wdh0z5x . P_100 - 1 ] ; } else { if ( ( int32_T ) hp0wdh0z5x .
+P_88 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_88 < 1 ) { tmp
+= 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_88 ; } fkhiabecn2 =
+hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_89 > 2 ) { tmp
+= 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_89 < 1 ) { tmp = 1 ; } else {
+tmp = ( int32_T ) hp0wdh0z5x . P_89 ; } eemfsamcqt = hp0wdh0z5x . P_4 [ tmp -
+1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_90 > 2 ) { tmp = 2 ; } else if ( (
+int32_T ) hp0wdh0z5x . P_90 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T )
+hp0wdh0z5x . P_90 ; } localB -> d4f2unf52i = hp0wdh0z5x . P_12 [ tmp - 1 ] ;
+if ( ( int32_T ) hp0wdh0z5x . P_91 > 2 ) { tmp = 2 ; } else if ( ( int32_T )
+hp0wdh0z5x . P_91 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
+P_91 ; } localB -> g2rrchs5nk = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T
+) hp0wdh0z5x . P_92 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x .
+P_92 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_92 ; }
+localB -> n3svixcllx = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T )
+hp0wdh0z5x . P_93 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_93
+< 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_93 ; } localB ->
+pzram1ykgg = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x .
+P_94 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_94 < 1 ) { tmp
+= 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_94 ; } localB -> awrvzcwb52 =
+hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_95 > 2 ) { tmp
+= 2 ; } else if ( ( int32_T ) hp0wdh0z5x . P_95 < 1 ) { tmp = 1 ; } else {
+tmp = ( int32_T ) hp0wdh0z5x . P_95 ; } localB -> lwpvkhuswg = hp0wdh0z5x .
+P_12 [ tmp - 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_96 > 2 ) { tmp = 2 ; }
+else if ( ( int32_T ) hp0wdh0z5x . P_96 < 1 ) { tmp = 1 ; } else { tmp = (
+int32_T ) hp0wdh0z5x . P_96 ; } localB -> oxiq1p2ad5 = hp0wdh0z5x . P_4 [ tmp
+- 1 ] ; if ( ( int32_T ) hp0wdh0z5x . P_97 > 2 ) { tmp = 2 ; } else if ( (
+int32_T ) hp0wdh0z5x . P_97 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T )
+hp0wdh0z5x . P_97 ; } localB -> hx1st4ql1x = hp0wdh0z5x . P_4 [ tmp - 1 ] ;
+if ( ( int32_T ) hp0wdh0z5x . P_98 > 2 ) { tmp = 2 ; } else if ( ( int32_T )
+hp0wdh0z5x . P_98 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x .
+P_98 ; } localB -> dmcxxglupf = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T
+) hp0wdh0z5x . P_99 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x .
+P_99 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_99 ; }
+localB -> dza0jh5oc0 = hp0wdh0z5x . P_4 [ tmp - 1 ] ; if ( ( int32_T )
+hp0wdh0z5x . P_100 > 2 ) { tmp = 2 ; } else if ( ( int32_T ) hp0wdh0z5x .
+P_100 < 1 ) { tmp = 1 ; } else { tmp = ( int32_T ) hp0wdh0z5x . P_100 ; }
+localB -> e5vi4snmv0 = hp0wdh0z5x . P_4 [ tmp - 1 ] ; } localB -> iy2vl43zru
+= fkhiabecn2 - eemfsamcqt ; } void lwglwij1vj ( mv4ga5jwa1 * const oczxsqne0n
+, cx3bhokmct * localB , cloq5bin3y * localDW , a2tgpeokha * localXdis ) { if
+( rtmIsMajorTimeStep ( oczxsqne0n ) ) { if ( memcmp ( oczxsqne0n ->
+nonContDerivSignal [ 0 ] . pCurrVal , oczxsqne0n -> nonContDerivSignal [ 0 ]
+. pPrevVal , oczxsqne0n -> nonContDerivSignal [ 0 ] . sizeInBytes ) != 0 ) {
+( void ) memcpy ( oczxsqne0n -> nonContDerivSignal [ 0 ] . pPrevVal ,
 oczxsqne0n -> nonContDerivSignal [ 0 ] . pCurrVal , oczxsqne0n ->
-nonContDerivSignal [ 0 ] . pPrevVal , oczxsqne0n -> nonContDerivSignal [ 0 ]
-. sizeInBytes ) != 0 ) { ( void ) memcpy ( oczxsqne0n -> nonContDerivSignal [
-0 ] . pPrevVal , oczxsqne0n -> nonContDerivSignal [ 0 ] . pCurrVal ,
-oczxsqne0n -> nonContDerivSignal [ 0 ] . sizeInBytes ) ;
-ssSetSolverNeedsReset ( oczxsqne0n -> _mdlRefSfcnS ) ; } if ( memcmp (
-oczxsqne0n -> nonContDerivSignal [ 1 ] . pCurrVal , oczxsqne0n ->
-nonContDerivSignal [ 1 ] . pPrevVal , oczxsqne0n -> nonContDerivSignal [ 1 ]
-. sizeInBytes ) != 0 ) { ( void ) memcpy ( oczxsqne0n -> nonContDerivSignal [
-1 ] . pPrevVal , oczxsqne0n -> nonContDerivSignal [ 1 ] . pCurrVal ,
-oczxsqne0n -> nonContDerivSignal [ 1 ] . sizeInBytes ) ;
-ssSetSolverNeedsReset ( oczxsqne0n -> _mdlRefSfcnS ) ; } } if (
-rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit ( oczxsqne0n , 2 , 0 ) )
-{ localDW -> pdv153zdu5 = localB -> hw3ausca5d ; localDW -> lmqwggutck =
+nonContDerivSignal [ 0 ] . sizeInBytes ) ; ssSetSolverNeedsReset ( oczxsqne0n
+-> _mdlRefSfcnS ) ; } if ( memcmp ( oczxsqne0n -> nonContDerivSignal [ 1 ] .
+pCurrVal , oczxsqne0n -> nonContDerivSignal [ 1 ] . pPrevVal , oczxsqne0n ->
+nonContDerivSignal [ 1 ] . sizeInBytes ) != 0 ) { ( void ) memcpy (
+oczxsqne0n -> nonContDerivSignal [ 1 ] . pPrevVal , oczxsqne0n ->
+nonContDerivSignal [ 1 ] . pCurrVal , oczxsqne0n -> nonContDerivSignal [ 1 ]
+. sizeInBytes ) ; ssSetSolverNeedsReset ( oczxsqne0n -> _mdlRefSfcnS ) ; } }
+if ( rtmIsMajorTimeStep ( oczxsqne0n ) && rtmIsSampleHit ( oczxsqne0n , 2 , 0
+) ) { localDW -> pdv153zdu5 = localB -> hw3ausca5d ; localDW -> lmqwggutck =
 localB -> pnor5dxd5h ; } localDW -> lf2zfdimpe = 0 ; switch ( localDW ->
 juyze14tin ) { case 3 : if ( localB -> anzxqmfotw < 0.0 ) { localDW ->
 juyze14tin = 1 ; ssSetBlockStateForSolverChangedAtMajorStep ( oczxsqne0n ->
@@ -750,9 +752,9 @@ mxGetFieldByNumber ( srcArray , i , j ) , offset ) ) ; return fieldVal & ( (
 l0vfpqnnodc * mdlrefDW ) { static const char * ssDWFieldNames [ 3 ] = { "rtb"
 , "rtdw" , "NULL->rtzce" , } ; mxArray * ssDW = mxCreateStructMatrix ( 1 , 1
 , 3 , ssDWFieldNames ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( ssDW , 0 , 0
-, & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; { static const char
-* rtdwDataFieldNames [ 23 ] = { "mdlrefDW->rtdw.pdv153zdu5" ,
-"mdlrefDW->rtdw.lmqwggutck" , "mdlrefDW->rtdw.omrrdh0nvo" ,
+, ( const void * ) & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; {
+static const char * rtdwDataFieldNames [ 23 ] = { "mdlrefDW->rtdw.pdv153zdu5"
+, "mdlrefDW->rtdw.lmqwggutck" , "mdlrefDW->rtdw.omrrdh0nvo" ,
 "mdlrefDW->rtdw.gxkwygbb4g" , "mdlrefDW->rtdw.hh4vgn0tkn" ,
 "mdlrefDW->rtdw.n1xqcq4unv" , "mdlrefDW->rtdw.lf2zfdimpe" ,
 "mdlrefDW->rtdw.hjhxitxtn4" , "mdlrefDW->rtdw.juyze14tin" ,
@@ -764,106 +766,116 @@ l0vfpqnnodc * mdlrefDW ) { static const char * ssDWFieldNames [ 3 ] = { "rtb"
 "mdlrefDW->rtdw.nvnt5k5wtu" , "mdlrefDW->rtdw.djzzdpaje3" ,
 "mdlrefDW->rtdw.feypm5vhbq" , "mdlrefDW->rtdw.j1mwihstyy" , } ; mxArray *
 rtdwData = mxCreateStructMatrix ( 1 , 1 , 23 , rtdwDataFieldNames ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 0 , & ( mdlrefDW ->
-rtdw . pdv153zdu5 ) , sizeof ( mdlrefDW -> rtdw . pdv153zdu5 ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 1 , & ( mdlrefDW ->
-rtdw . lmqwggutck ) , sizeof ( mdlrefDW -> rtdw . lmqwggutck ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 2 , & ( mdlrefDW ->
-rtdw . omrrdh0nvo ) , sizeof ( mdlrefDW -> rtdw . omrrdh0nvo ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 3 , & ( mdlrefDW ->
-rtdw . gxkwygbb4g ) , sizeof ( mdlrefDW -> rtdw . gxkwygbb4g ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 4 , & ( mdlrefDW ->
-rtdw . hh4vgn0tkn ) , sizeof ( mdlrefDW -> rtdw . hh4vgn0tkn ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 5 , & ( mdlrefDW ->
-rtdw . n1xqcq4unv ) , sizeof ( mdlrefDW -> rtdw . n1xqcq4unv ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 6 , & ( mdlrefDW ->
-rtdw . lf2zfdimpe ) , sizeof ( mdlrefDW -> rtdw . lf2zfdimpe ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 7 , & ( mdlrefDW ->
-rtdw . hjhxitxtn4 ) , sizeof ( mdlrefDW -> rtdw . hjhxitxtn4 ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 8 , & ( mdlrefDW ->
-rtdw . juyze14tin ) , sizeof ( mdlrefDW -> rtdw . juyze14tin ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 9 , & ( mdlrefDW ->
-rtdw . f4evhke5td ) , sizeof ( mdlrefDW -> rtdw . f4evhke5td ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 10 , & ( mdlrefDW ->
-rtdw . bfuoehqzsl ) , sizeof ( mdlrefDW -> rtdw . bfuoehqzsl ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 11 , & ( mdlrefDW ->
-rtdw . i3e2kfzsoy ) , sizeof ( mdlrefDW -> rtdw . i3e2kfzsoy ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 12 , & ( mdlrefDW ->
-rtdw . kk4n2up2w1 ) , sizeof ( mdlrefDW -> rtdw . kk4n2up2w1 ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 13 , & ( mdlrefDW ->
-rtdw . bsszatmvjl ) , sizeof ( mdlrefDW -> rtdw . bsszatmvjl ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 14 , & ( mdlrefDW ->
-rtdw . mekacwiae4 ) , sizeof ( mdlrefDW -> rtdw . mekacwiae4 ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 15 , & ( mdlrefDW ->
-rtdw . cmjt0zg4xt ) , sizeof ( mdlrefDW -> rtdw . cmjt0zg4xt ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 16 , & ( mdlrefDW ->
-rtdw . n0wi1kglhh ) , sizeof ( mdlrefDW -> rtdw . n0wi1kglhh ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 17 , & ( mdlrefDW ->
-rtdw . ooikcgayh1 ) , sizeof ( mdlrefDW -> rtdw . ooikcgayh1 ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 18 , & ( mdlrefDW ->
-rtdw . o22jbjlb32 ) , sizeof ( mdlrefDW -> rtdw . o22jbjlb32 ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 19 , & ( mdlrefDW ->
-rtdw . nvnt5k5wtu ) , sizeof ( mdlrefDW -> rtdw . nvnt5k5wtu ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 20 , & ( mdlrefDW ->
-rtdw . djzzdpaje3 ) , sizeof ( mdlrefDW -> rtdw . djzzdpaje3 ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 21 , & ( mdlrefDW ->
-rtdw . feypm5vhbq ) , sizeof ( mdlrefDW -> rtdw . feypm5vhbq ) ) ;
-mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 22 , & ( mdlrefDW ->
-rtdw . j1mwihstyy ) , sizeof ( mdlrefDW -> rtdw . j1mwihstyy ) ) ;
-mxSetFieldByNumber ( ssDW , 0 , 1 , rtdwData ) ; } ( void ) mdlrefDW ; return
-ssDW ; } void mr_MotGenEvDynamic_SetDWork ( l0vfpqnnodc * mdlrefDW , const
-mxArray * ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtb ) , ssDW , 0
-, 0 , sizeof ( mdlrefDW -> rtb ) ) ; { const mxArray * rtdwData =
-mxGetFieldByNumber ( ssDW , 0 , 1 ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . pdv153zdu5
-) , rtdwData , 0 , 0 , sizeof ( mdlrefDW -> rtdw . pdv153zdu5 ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . lmqwggutck
-) , rtdwData , 0 , 1 , sizeof ( mdlrefDW -> rtdw . lmqwggutck ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . omrrdh0nvo
-) , rtdwData , 0 , 2 , sizeof ( mdlrefDW -> rtdw . omrrdh0nvo ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . gxkwygbb4g
-) , rtdwData , 0 , 3 , sizeof ( mdlrefDW -> rtdw . gxkwygbb4g ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . hh4vgn0tkn
-) , rtdwData , 0 , 4 , sizeof ( mdlrefDW -> rtdw . hh4vgn0tkn ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . n1xqcq4unv
-) , rtdwData , 0 , 5 , sizeof ( mdlrefDW -> rtdw . n1xqcq4unv ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . lf2zfdimpe
-) , rtdwData , 0 , 6 , sizeof ( mdlrefDW -> rtdw . lf2zfdimpe ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . hjhxitxtn4
-) , rtdwData , 0 , 7 , sizeof ( mdlrefDW -> rtdw . hjhxitxtn4 ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . juyze14tin
-) , rtdwData , 0 , 8 , sizeof ( mdlrefDW -> rtdw . juyze14tin ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . f4evhke5td
-) , rtdwData , 0 , 9 , sizeof ( mdlrefDW -> rtdw . f4evhke5td ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . bfuoehqzsl
-) , rtdwData , 0 , 10 , sizeof ( mdlrefDW -> rtdw . bfuoehqzsl ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . i3e2kfzsoy
-) , rtdwData , 0 , 11 , sizeof ( mdlrefDW -> rtdw . i3e2kfzsoy ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . kk4n2up2w1
-) , rtdwData , 0 , 12 , sizeof ( mdlrefDW -> rtdw . kk4n2up2w1 ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . bsszatmvjl
-) , rtdwData , 0 , 13 , sizeof ( mdlrefDW -> rtdw . bsszatmvjl ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . mekacwiae4
-) , rtdwData , 0 , 14 , sizeof ( mdlrefDW -> rtdw . mekacwiae4 ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . cmjt0zg4xt
-) , rtdwData , 0 , 15 , sizeof ( mdlrefDW -> rtdw . cmjt0zg4xt ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . n0wi1kglhh
-) , rtdwData , 0 , 16 , sizeof ( mdlrefDW -> rtdw . n0wi1kglhh ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . ooikcgayh1
-) , rtdwData , 0 , 17 , sizeof ( mdlrefDW -> rtdw . ooikcgayh1 ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . o22jbjlb32
-) , rtdwData , 0 , 18 , sizeof ( mdlrefDW -> rtdw . o22jbjlb32 ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . nvnt5k5wtu
-) , rtdwData , 0 , 19 , sizeof ( mdlrefDW -> rtdw . nvnt5k5wtu ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . djzzdpaje3
-) , rtdwData , 0 , 20 , sizeof ( mdlrefDW -> rtdw . djzzdpaje3 ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . feypm5vhbq
-) , rtdwData , 0 , 21 , sizeof ( mdlrefDW -> rtdw . feypm5vhbq ) ) ;
-mr_MotGenEvDynamic_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . j1mwihstyy
-) , rtdwData , 0 , 22 , sizeof ( mdlrefDW -> rtdw . j1mwihstyy ) ) ; } } void
-mr_MotGenEvDynamic_RegisterSimStateChecksum ( SimStruct * S ) { const
-uint32_T chksum [ 4 ] = { 919103021U , 910968865U , 2225123687U , 1941559239U
-, } ; slmrModelRefRegisterSimStateChecksum ( S , "MotGenEvDynamic" , & chksum
-[ 0 ] ) ; } mxArray * mr_MotGenEvDynamic_GetSimStateDisallowedBlocks ( ) {
-return NULL ; }
+mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 0 , ( const void * ) &
+( mdlrefDW -> rtdw . pdv153zdu5 ) , sizeof ( mdlrefDW -> rtdw . pdv153zdu5 )
+) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 1 , ( const void *
+) & ( mdlrefDW -> rtdw . lmqwggutck ) , sizeof ( mdlrefDW -> rtdw .
+lmqwggutck ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 2 , (
+const void * ) & ( mdlrefDW -> rtdw . omrrdh0nvo ) , sizeof ( mdlrefDW ->
+rtdw . omrrdh0nvo ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0
+, 3 , ( const void * ) & ( mdlrefDW -> rtdw . gxkwygbb4g ) , sizeof (
+mdlrefDW -> rtdw . gxkwygbb4g ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray (
+rtdwData , 0 , 4 , ( const void * ) & ( mdlrefDW -> rtdw . hh4vgn0tkn ) ,
+sizeof ( mdlrefDW -> rtdw . hh4vgn0tkn ) ) ;
+mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 5 , ( const void * ) &
+( mdlrefDW -> rtdw . n1xqcq4unv ) , sizeof ( mdlrefDW -> rtdw . n1xqcq4unv )
+) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 6 , ( const void *
+) & ( mdlrefDW -> rtdw . lf2zfdimpe ) , sizeof ( mdlrefDW -> rtdw .
+lf2zfdimpe ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 7 , (
+const void * ) & ( mdlrefDW -> rtdw . hjhxitxtn4 ) , sizeof ( mdlrefDW ->
+rtdw . hjhxitxtn4 ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0
+, 8 , ( const void * ) & ( mdlrefDW -> rtdw . juyze14tin ) , sizeof (
+mdlrefDW -> rtdw . juyze14tin ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray (
+rtdwData , 0 , 9 , ( const void * ) & ( mdlrefDW -> rtdw . f4evhke5td ) ,
+sizeof ( mdlrefDW -> rtdw . f4evhke5td ) ) ;
+mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 10 , ( const void * )
+& ( mdlrefDW -> rtdw . bfuoehqzsl ) , sizeof ( mdlrefDW -> rtdw . bfuoehqzsl
+) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 11 , ( const
+void * ) & ( mdlrefDW -> rtdw . i3e2kfzsoy ) , sizeof ( mdlrefDW -> rtdw .
+i3e2kfzsoy ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 12 ,
+( const void * ) & ( mdlrefDW -> rtdw . kk4n2up2w1 ) , sizeof ( mdlrefDW ->
+rtdw . kk4n2up2w1 ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0
+, 13 , ( const void * ) & ( mdlrefDW -> rtdw . bsszatmvjl ) , sizeof (
+mdlrefDW -> rtdw . bsszatmvjl ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray (
+rtdwData , 0 , 14 , ( const void * ) & ( mdlrefDW -> rtdw . mekacwiae4 ) ,
+sizeof ( mdlrefDW -> rtdw . mekacwiae4 ) ) ;
+mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 15 , ( const void * )
+& ( mdlrefDW -> rtdw . cmjt0zg4xt ) , sizeof ( mdlrefDW -> rtdw . cmjt0zg4xt
+) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 16 , ( const
+void * ) & ( mdlrefDW -> rtdw . n0wi1kglhh ) , sizeof ( mdlrefDW -> rtdw .
+n0wi1kglhh ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 17 ,
+( const void * ) & ( mdlrefDW -> rtdw . ooikcgayh1 ) , sizeof ( mdlrefDW ->
+rtdw . ooikcgayh1 ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0
+, 18 , ( const void * ) & ( mdlrefDW -> rtdw . o22jbjlb32 ) , sizeof (
+mdlrefDW -> rtdw . o22jbjlb32 ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray (
+rtdwData , 0 , 19 , ( const void * ) & ( mdlrefDW -> rtdw . nvnt5k5wtu ) ,
+sizeof ( mdlrefDW -> rtdw . nvnt5k5wtu ) ) ;
+mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 20 , ( const void * )
+& ( mdlrefDW -> rtdw . djzzdpaje3 ) , sizeof ( mdlrefDW -> rtdw . djzzdpaje3
+) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 21 , ( const
+void * ) & ( mdlrefDW -> rtdw . feypm5vhbq ) , sizeof ( mdlrefDW -> rtdw .
+feypm5vhbq ) ) ; mr_MotGenEvDynamic_cacheDataAsMxArray ( rtdwData , 0 , 22 ,
+( const void * ) & ( mdlrefDW -> rtdw . j1mwihstyy ) , sizeof ( mdlrefDW ->
+rtdw . j1mwihstyy ) ) ; mxSetFieldByNumber ( ssDW , 0 , 1 , rtdwData ) ; } (
+void ) mdlrefDW ; return ssDW ; } void mr_MotGenEvDynamic_SetDWork (
+l0vfpqnnodc * mdlrefDW , const mxArray * ssDW ) { ( void ) ssDW ; ( void )
+mdlrefDW ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & (
+mdlrefDW -> rtb ) , ssDW , 0 , 0 , sizeof ( mdlrefDW -> rtb ) ) ; { const
+mxArray * rtdwData = mxGetFieldByNumber ( ssDW , 0 , 1 ) ;
+mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
+pdv153zdu5 ) , rtdwData , 0 , 0 , sizeof ( mdlrefDW -> rtdw . pdv153zdu5 ) )
+; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
+. lmqwggutck ) , rtdwData , 0 , 1 , sizeof ( mdlrefDW -> rtdw . lmqwggutck )
+) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
+rtdw . omrrdh0nvo ) , rtdwData , 0 , 2 , sizeof ( mdlrefDW -> rtdw .
+omrrdh0nvo ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & (
+mdlrefDW -> rtdw . gxkwygbb4g ) , rtdwData , 0 , 3 , sizeof ( mdlrefDW ->
+rtdw . gxkwygbb4g ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void *
+) & ( mdlrefDW -> rtdw . hh4vgn0tkn ) , rtdwData , 0 , 4 , sizeof ( mdlrefDW
+-> rtdw . hh4vgn0tkn ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void
+* ) & ( mdlrefDW -> rtdw . n1xqcq4unv ) , rtdwData , 0 , 5 , sizeof (
+mdlrefDW -> rtdw . n1xqcq4unv ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray
+( ( void * ) & ( mdlrefDW -> rtdw . lf2zfdimpe ) , rtdwData , 0 , 6 , sizeof
+( mdlrefDW -> rtdw . lf2zfdimpe ) ) ;
+mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
+hjhxitxtn4 ) , rtdwData , 0 , 7 , sizeof ( mdlrefDW -> rtdw . hjhxitxtn4 ) )
+; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
+. juyze14tin ) , rtdwData , 0 , 8 , sizeof ( mdlrefDW -> rtdw . juyze14tin )
+) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
+rtdw . f4evhke5td ) , rtdwData , 0 , 9 , sizeof ( mdlrefDW -> rtdw .
+f4evhke5td ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & (
+mdlrefDW -> rtdw . bfuoehqzsl ) , rtdwData , 0 , 10 , sizeof ( mdlrefDW ->
+rtdw . bfuoehqzsl ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void *
+) & ( mdlrefDW -> rtdw . i3e2kfzsoy ) , rtdwData , 0 , 11 , sizeof ( mdlrefDW
+-> rtdw . i3e2kfzsoy ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void
+* ) & ( mdlrefDW -> rtdw . kk4n2up2w1 ) , rtdwData , 0 , 12 , sizeof (
+mdlrefDW -> rtdw . kk4n2up2w1 ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray
+( ( void * ) & ( mdlrefDW -> rtdw . bsszatmvjl ) , rtdwData , 0 , 13 , sizeof
+( mdlrefDW -> rtdw . bsszatmvjl ) ) ;
+mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
+mekacwiae4 ) , rtdwData , 0 , 14 , sizeof ( mdlrefDW -> rtdw . mekacwiae4 ) )
+; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
+. cmjt0zg4xt ) , rtdwData , 0 , 15 , sizeof ( mdlrefDW -> rtdw . cmjt0zg4xt )
+) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
+rtdw . n0wi1kglhh ) , rtdwData , 0 , 16 , sizeof ( mdlrefDW -> rtdw .
+n0wi1kglhh ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & (
+mdlrefDW -> rtdw . ooikcgayh1 ) , rtdwData , 0 , 17 , sizeof ( mdlrefDW ->
+rtdw . ooikcgayh1 ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void *
+) & ( mdlrefDW -> rtdw . o22jbjlb32 ) , rtdwData , 0 , 18 , sizeof ( mdlrefDW
+-> rtdw . o22jbjlb32 ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void
+* ) & ( mdlrefDW -> rtdw . nvnt5k5wtu ) , rtdwData , 0 , 19 , sizeof (
+mdlrefDW -> rtdw . nvnt5k5wtu ) ) ; mr_MotGenEvDynamic_restoreDataFromMxArray
+( ( void * ) & ( mdlrefDW -> rtdw . djzzdpaje3 ) , rtdwData , 0 , 20 , sizeof
+( mdlrefDW -> rtdw . djzzdpaje3 ) ) ;
+mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw .
+feypm5vhbq ) , rtdwData , 0 , 21 , sizeof ( mdlrefDW -> rtdw . feypm5vhbq ) )
+; mr_MotGenEvDynamic_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtdw
+. j1mwihstyy ) , rtdwData , 0 , 22 , sizeof ( mdlrefDW -> rtdw . j1mwihstyy )
+) ; } } void mr_MotGenEvDynamic_RegisterSimStateChecksum ( SimStruct * S ) {
+const uint32_T chksum [ 4 ] = { 4128840572U , 2426720182U , 2050746262U ,
+3918148289U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+"MotGenEvDynamic" , & chksum [ 0 ] ) ; } mxArray *
+mr_MotGenEvDynamic_GetSimStateDisallowedBlocks ( ) { return NULL ; }
+#if defined(_MSC_VER)
+#pragma warning(disable: 4505) //unreferenced local function has been removed
+#endif

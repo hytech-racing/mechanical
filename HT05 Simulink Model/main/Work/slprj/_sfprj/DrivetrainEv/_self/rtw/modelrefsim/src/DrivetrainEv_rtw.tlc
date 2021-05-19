@@ -27,10 +27,6 @@
     %generatefile "machineSource" "autolibshareddrivetraincommon_rtw.tlc"
     %<GENERATE_TYPE(block,"DumpMachineInitializer","machineSource")>\
   %endif
-  %if FILE_EXISTS("ctrlSharedLib_rtw.tlc")
-    %generatefile "machineSource" "ctrlSharedLib_rtw.tlc"
-    %<GENERATE_TYPE(block,"DumpMachineInitializer","machineSource")>\
-  %endif
   %closefile tmpFcnBuf
   %return tmpFcnBuf              
 %endfunction %% GlobalMachineInitializer
@@ -51,8 +47,6 @@
   %generatefile "machineSource" "autolibshared_rtw.tlc"
   %<GENERATE_TYPE(block,"DumpMachineTerminator","machineSource")>\
   %generatefile "machineSource" "autolibshareddrivetraincommon_rtw.tlc"
-  %<GENERATE_TYPE(block,"DumpMachineTerminator","machineSource")>\
-  %generatefile "machineSource" "ctrlSharedLib_rtw.tlc"
   %<GENERATE_TYPE(block,"DumpMachineTerminator","machineSource")>\
   %closefile tmpFcnBuf
   %return tmpFcnBuf              

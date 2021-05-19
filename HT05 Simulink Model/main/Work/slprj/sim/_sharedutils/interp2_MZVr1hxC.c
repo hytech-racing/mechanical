@@ -1,8 +1,8 @@
 #include "rtwtypes.h"
 #include "multiword_types.h"
-#include "interp2_2bdLjAnv.h"
+#include "interp2_MZVr1hxC.h"
 
-real_T interp2_2bdLjAnv(const real_T varargin_1[3], const real_T varargin_2[3],
+real_T interp2_MZVr1hxC(const real_T varargin_1[3], const real_T varargin_2[3],
   const real_T varargin_3[9], real_T varargin_4, real_T varargin_5)
 {
   real_T Vq;

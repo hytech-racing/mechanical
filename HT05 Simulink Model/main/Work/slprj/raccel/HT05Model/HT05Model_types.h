@@ -4,5 +4,6 @@
 #include "model_reference_types.h"
 #include "builtin_typeid_types.h"
 #include "multiword_types.h"
+#include "zero_crossing_types.h"
 typedef struct ihnh5ag1lpc_ ihnh5ag1lpc ;
 #endif

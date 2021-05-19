@@ -49,7 +49,8 @@ rtBlockSignals [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 } }
  "MotGenEvDynamic/Interior PMSM/PMSM Speed Input Continuous/PMSM Speed Input Core/PMSM Electromagnetic/PMSM Equivalent Circuit/D Axis Stator Voltage1/Integrator"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
-- 1 , 0 } } ;
+- 1 , 0 } } ; static int_T rt_LoggedStateIdxList [ ] = { 1 , 0 , 2 , 3 , 1 ,
+4 , 5 , 0 , 2 } ;
 #ifndef HOST_CAPI_BUILD
 static void MotGenEvDynamic_InitializeDataAddr ( void * dataAddr [ ] ,
 cloq5bin3y * localDW , fsi3zxjdsv * localX ) { dataAddr [ 0 ] = ( void * ) (
@@ -94,10 +95,10 @@ rtSigHierLoggingChildIdxs } , 0 , ( NULL ) } ; static
 rtwCAPI_ModelMappingStaticInfo mmiStatic = { { rtBlockSignals , 0 , ( NULL )
 , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL ) , 0 } , { rtBlockStates , 9
 } , { rtDataTypeMap , rtDimensionMap , rtFixPtMap , rtElementMap ,
-rtSampleTimeMap , rtDimensionArray } , "float" , { 3703348903U , 643259519U ,
-934699292U , 929775685U } , & mmiStaticInfoLogging , 0 , 0 } ; const
-rtwCAPI_ModelMappingStaticInfo * MotGenEvDynamic_GetCAPIStaticMap ( void ) {
-return & mmiStatic ; }
+rtSampleTimeMap , rtDimensionArray } , "float" , { 3136958849U , 1714710493U
+, 3549375801U , 2743457771U } , & mmiStaticInfoLogging , 0 , 0 ,
+rt_LoggedStateIdxList } ; const rtwCAPI_ModelMappingStaticInfo *
+MotGenEvDynamic_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 static void MotGenEvDynamic_InitializeSystemRan ( mv4ga5jwa1 * const
 oczxsqne0n , sysRanDType * systemRan [ ] , cloq5bin3y * localDW , int_T

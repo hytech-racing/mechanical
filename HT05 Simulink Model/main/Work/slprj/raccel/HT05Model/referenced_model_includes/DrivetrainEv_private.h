@@ -8,19 +8,28 @@
 #include "simtarget/slMdlrefSimTargetCoreHeaders.h"
 #include "simtarget/slMdlrefSimTargetInstrumentationHeaders.h"
 #include "messages/slMessagesSfcnBridge.h"
+#include "dynamic_matrix/dynamicMatrixSFcnAPI.h"
 #include "sl_fileio_rtw.h"
 extern const char * rt_GetMatSignalLoggingFileName ( void ) ; extern const
 char * rt_GetMatSigLogSelectorFileName ( void ) ; extern void *
 rt_GetOSigstreamManager ( void ) ; extern void * *
 rt_GetOSigstreamManagerAddr ( void ) ; extern void * rt_slioCatalogue ( void
 ) ; extern void * * rt_slioCatalogueAddr ( void ) ; extern void
-rt_ssSet_slErrMsg ( SimStruct * S , void * diag ) ; extern void
-rt_ssReportDiagnosticAsWarning ( SimStruct * S , void * diag ) ; extern const
-char * rt_CreateFullPathToTop ( const char * toppath , const char * subpath )
-; extern boolean_T slIsRapidAcceleratorSimulating ( void ) ; extern void
+rt_ssSet_slErrMsg ( void * S , void * diag ) ; extern void
+rt_ssReportDiagnosticAsWarning ( void * S , void * diag ) ; extern void
+rt_ssReportDiagnosticAsInfo ( void * S , void * diag ) ; extern const char *
+rt_CreateFullPathToTop ( const char * toppath , const char * subpath ) ;
+extern boolean_T slIsRapidAcceleratorSimulating ( void ) ; extern void
 rt_RAccelReplaceFromFilename ( const char * blockpath , char * fileNam ) ;
 extern void rt_RAccelReplaceToFilename ( const char * blockpath , char *
-fileNam ) ; extern void * gblLoggingInterval ;
+fileNam ) ; extern void slsaCacheDWorkPointerForSimTargetOP ( void * ss ,
+void * * ptr ) ; extern void slsaCacheDWorkDataForSimTargetOP ( void * ss ,
+void * ptr , unsigned int sizeInBytes ) ; extern void
+slsaSaveRawMemoryForSimTargetOP ( void * ss , const char * key , void * ptr ,
+unsigned int sizeInBytes , void * ( * customOPSaveFcn ) ( void * dworkPtr ,
+unsigned int * sizeInBytes ) , void ( * customOPRestoreFcn ) ( void *
+dworkPtr , const void * data , unsigned int sizeInBytes ) ) ; extern void *
+gblLoggingInterval ;
 #ifndef rtmDisableTaskUsingRateIndex
 #define rtmDisableTaskUsingRateIndex(rtm, sti) simTgtDisableTaskUsingRateIndex(ssGetRootSS((rtm)->_mdlRefSfcnS), (rtm)->Timing.mdlref_GlobalTID[sti])
 #endif

@@ -2,7 +2,7 @@
 #define RTW_HEADER_MotGenEvDynamic_cap_host_h_
 #ifdef HOST_CAPI_BUILD
 #include "rtw_capi.h"
-#include "rtw_modelmap.h"
+#include "rtw_modelmap_simtarget.h"
 typedef struct { rtwCAPI_ModelMappingInfo mmi ; }
 MotGenEvDynamic_host_DataMapInfo_T ;
 #ifdef __cplusplus

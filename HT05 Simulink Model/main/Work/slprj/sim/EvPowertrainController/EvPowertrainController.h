@@ -2,7 +2,7 @@
 #define RTW_HEADER_EvPowertrainController_h_
 #include <string.h>
 #include <stddef.h>
-#include "rtw_modelmap.h"
+#include "rtw_modelmap_simtarget.h"
 #ifndef EvPowertrainController_COMMON_INCLUDES_
 #define EvPowertrainController_COMMON_INCLUDES_
 #include "rtwtypes.h"

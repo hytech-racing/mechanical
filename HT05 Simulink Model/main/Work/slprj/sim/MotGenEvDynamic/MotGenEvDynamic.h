@@ -2,7 +2,7 @@
 #define RTW_HEADER_MotGenEvDynamic_h_
 #include <stddef.h>
 #include <string.h>
-#include "rtw_modelmap.h"
+#include "rtw_modelmap_simtarget.h"
 #ifndef MotGenEvDynamic_COMMON_INCLUDES_
 #define MotGenEvDynamic_COMMON_INCLUDES_
 #include "sl_AsyncioQueue/AsyncioQueueCAPI.h"

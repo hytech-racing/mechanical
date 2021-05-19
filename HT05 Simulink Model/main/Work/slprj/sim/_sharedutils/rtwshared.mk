@@ -59,7 +59,6 @@ MAKEFILE_FILESEP = /
 #  MODEL_MODULES       - Any additional generated source modules
 #  MAKEFILE_NAME       - Name of makefile created from template makefile <model>.mk
 #  MATLAB_ROOT         - Path to where MATLAB is installed.
-#  MATLAB_BIN          - Path to MATLAB executable.
 #  S_FUNCTIONS_LIB     - List of S-functions libraries to link. 
 #  NUMST               - Number of sample times
 #  NCSTATES            - Number of continuous states
@@ -77,18 +76,16 @@ MAKEFILE_FILESEP = /
 #                            and do not build an executable
 
 MODEL                = rtwshared
-MODULES              = look1_binlcapw.c look2_binlcapw.c rtGetInf.c rtGetNaN.c rt_nonfinite.c automldiffls_dSTh3vGq.c interp2_2bdLjAnv.c look1_binlcpw.c look1_binlxpw.c rt_zcfcn.c plook_u32d_evencka.c PadeApproximantOfDegree_5BLwCIn6.c expm_WM6qSMEO.c look1_pbinlcapw.c mpower_QcZsu7Dx.c rt_TDelayCreateBuf.c rt_TDelayFreeBuf.c rt_TDelayInterpolate.c rt_TDelayUpdateTailOrGrowBuf.c
+MODULES              = look1_binlcapw.c look2_binlcapw.c rtGetInf.c rtGetNaN.c rt_nonfinite.c automldiffls_3YCEblnO.c interp2_MZVr1hxC.c look1_binlcpw.c look1_binlxpw.c rt_zcfcn.c plook_u32d_evencka.c PadeApproximantOfDegree_TSqIYAo3.c expm_9DBYDrz1.c look1_pbinlcapw.c mpower_DSHl6Msh.c rt_TDelayCreateBuf.c rt_TDelayFreeBuf.c rt_TDelayInterpolate.c rt_TDelayUpdateTailOrGrowBuf.c
 PRODUCT              = rtwshared.lib
 MAKEFILE             = 
-MATLAB_ROOT          = C:/Program Files/MATLAB/R2020b
-ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2020b
-MATLAB_BIN           = C:/Program Files/MATLAB/R2020b/bin
-ALT_MATLAB_BIN       = C:/PROGRA~1/MATLAB/R2020b/bin
+MATLAB_ROOT          = C:/Program Files/MATLAB/R2021a
+ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2021a
 START_DIR            = C:/Users/xboxl/OneDrive/DOCUME~1/Github/MECHAN~1/HT05SI~1/main/Work
 S_FUNCTIONS_LIB      = 
 NUMST                = 
 NCSTATES             = 0
-BUILDARGS            =  RSIM_SOLVER_SELECTION=2 PCMATLABROOT="C:\\Program Files\\MATLAB\\R2020b" RSIM_PARAMETER_LOADING=1 OPTS="-DNRT -DTGTCONN -DRSIM_PARAMETER_LOADING -DRSIM_WITH_SL_SOLVER -DENABLE_SLEXEC_SSBRIDGE=1 -DON_TARGET_WAIT_FOR_START=0"
+BUILDARGS            =  RSIM_SOLVER_SELECTION=2 PCMATLABROOT="C:\\Program Files\\MATLAB\\R2021a" RSIM_PARAMETER_LOADING=1 OPTS="-DNRT -DIS_SIM_TARGET -DTGTCONN -DRSIM_PARAMETER_LOADING -DRSIM_WITH_SL_SOLVER -DENABLE_SLEXEC_SSBRIDGE=1 -DON_TARGET_WAIT_FOR_START=0"
 MULTITASKING         = 0
 INTEGER_CODE         = 0
 MAT_FILE             = 1
@@ -124,9 +121,6 @@ MODELREF_SFCN_SUFFIX       =
 #-- In the case when directory name contains space ---
 ifneq ($(MATLAB_ROOT),$(ALT_MATLAB_ROOT))
 MATLAB_ROOT := $(ALT_MATLAB_ROOT)
-endif
-ifneq ($(MATLAB_BIN),$(ALT_MATLAB_BIN))
-MATLAB_BIN := $(ALT_MATLAB_BIN)
 endif
 
 #--------------------------- Tool Specifications -------------------------------

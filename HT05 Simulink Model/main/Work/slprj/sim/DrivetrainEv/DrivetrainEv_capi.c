@@ -73,7 +73,8 @@ TARGET_STRING (
  "DrivetrainEv/Vehicle/Vehicle Body 3 DOF Longitudinal/Vehicle Body 3dof/Bus Creation/Body Frame/Longitudinal 3DOF/Integrator3"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 1 , 0 , 0 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
-- 1 , 0 } } ;
+- 1 , 0 } } ; static int_T rt_LoggedStateIdxList [ ] = { 1 , 12 , 11 , 15 ,
+10 , 2 , 3 , 0 , 4 , 14 , 13 , 16 , 7 , 5 , 8 , 6 , 9 } ;
 #ifndef HOST_CAPI_BUILD
 static void DrivetrainEv_InitializeDataAddr ( void * dataAddr [ ] ,
 lvsoqlxlcs * localDW , edp3webv0p * localX ) { dataAddr [ 0 ] = ( void * ) (
@@ -127,9 +128,10 @@ NULL ) } ; static rtwCAPI_ModelMappingStaticInfo mmiStatic = { {
 rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL ) , 0 , ( NULL
 ) , 0 } , { rtBlockStates , 17 } , { rtDataTypeMap , rtDimensionMap ,
 rtFixPtMap , rtElementMap , rtSampleTimeMap , rtDimensionArray } , "float" ,
-{ 163744015U , 2417593747U , 4190018933U , 399957330U } , &
-mmiStaticInfoLogging , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
-DrivetrainEv_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
+{ 404174847U , 211637096U , 3170550235U , 4251630237U } , &
+mmiStaticInfoLogging , 0 , 0 , rt_LoggedStateIdxList } ; const
+rtwCAPI_ModelMappingStaticInfo * DrivetrainEv_GetCAPIStaticMap ( void ) {
+return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 static void DrivetrainEv_InitializeSystemRan ( hcopmldpph * const a5ree4wwe5
 , sysRanDType * systemRan [ ] , lvsoqlxlcs * localDW , int_T systemTid [ ] ,
@@ -137,27 +139,27 @@ void * rootSysRanPtr , int rootTid ) { UNUSED_PARAMETER ( a5ree4wwe5 ) ;
 UNUSED_PARAMETER ( localDW ) ; systemRan [ 0 ] = ( sysRanDType * )
 rootSysRanPtr ; systemRan [ 1 ] = ( NULL ) ; systemRan [ 2 ] = ( NULL ) ;
 systemRan [ 3 ] = ( NULL ) ; systemRan [ 4 ] = ( NULL ) ; systemRan [ 5 ] = (
-sysRanDType * ) & localDW -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog .
-lim0ml1jqw ; systemRan [ 6 ] = ( sysRanDType * ) & localDW -> fbnwpfi1ef3 [ 0
-] . nod5vp1cyy . fate2u2iog . iojd2jlc3k ; systemRan [ 7 ] = ( sysRanDType *
-) & localDW -> fbnwpfi1ef3 [ 0 ] . nod5vp1cyy . fate2u2iog . d3vznomj0x ;
-systemRan [ 8 ] = ( sysRanDType * ) & localDW -> fbnwpfi1ef3 [ 0 ] .
-nod5vp1cyy . fate2u2iog . k3j1amkab5 ; systemRan [ 9 ] = ( NULL ) ; systemRan
-[ 10 ] = ( NULL ) ; systemRan [ 11 ] = ( NULL ) ; systemRan [ 12 ] = ( NULL )
-; systemRan [ 13 ] = ( NULL ) ; systemRan [ 14 ] = ( NULL ) ; systemRan [ 15
-] = ( sysRanDType * ) & localDW -> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog
-. lim0ml1jqw ; systemRan [ 16 ] = ( sysRanDType * ) & localDW -> cg32ix3bhp [
-0 ] . nod5vp1cyy . fate2u2iog . iojd2jlc3k ; systemRan [ 17 ] = ( sysRanDType
-* ) & localDW -> cg32ix3bhp [ 0 ] . nod5vp1cyy . fate2u2iog . d3vznomj0x ;
-systemRan [ 18 ] = ( sysRanDType * ) & localDW -> cg32ix3bhp [ 0 ] .
-nod5vp1cyy . fate2u2iog . k3j1amkab5 ; systemRan [ 19 ] = ( NULL ) ;
-systemRan [ 20 ] = ( NULL ) ; systemRan [ 21 ] = ( NULL ) ; systemRan [ 22 ]
-= ( NULL ) ; systemRan [ 23 ] = ( NULL ) ; systemRan [ 24 ] = ( NULL ) ;
-systemTid [ 1 ] = a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [
-2 ] = a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 3 ] =
-a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 4 ] = a5ree4wwe5
--> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 14 ] = a5ree4wwe5 -> Timing
-. mdlref_GlobalTID [ 0 ] ; systemTid [ 8 ] = a5ree4wwe5 -> Timing .
+sysRanDType * ) & localDW -> fbnwpfi1ef3 . nod5vp1cyy [ 0 ] . fate2u2iog .
+lim0ml1jqw ; systemRan [ 6 ] = ( sysRanDType * ) & localDW -> fbnwpfi1ef3 .
+nod5vp1cyy [ 0 ] . fate2u2iog . iojd2jlc3k ; systemRan [ 7 ] = ( sysRanDType
+* ) & localDW -> fbnwpfi1ef3 . nod5vp1cyy [ 0 ] . fate2u2iog . d3vznomj0x ;
+systemRan [ 8 ] = ( sysRanDType * ) & localDW -> fbnwpfi1ef3 . nod5vp1cyy [ 0
+] . fate2u2iog . k3j1amkab5 ; systemRan [ 9 ] = ( NULL ) ; systemRan [ 10 ] =
+( NULL ) ; systemRan [ 11 ] = ( NULL ) ; systemRan [ 12 ] = ( NULL ) ;
+systemRan [ 13 ] = ( NULL ) ; systemRan [ 14 ] = ( NULL ) ; systemRan [ 15 ]
+= ( sysRanDType * ) & localDW -> cg32ix3bhp . nod5vp1cyy [ 0 ] . fate2u2iog .
+lim0ml1jqw ; systemRan [ 16 ] = ( sysRanDType * ) & localDW -> cg32ix3bhp .
+nod5vp1cyy [ 0 ] . fate2u2iog . iojd2jlc3k ; systemRan [ 17 ] = ( sysRanDType
+* ) & localDW -> cg32ix3bhp . nod5vp1cyy [ 0 ] . fate2u2iog . d3vznomj0x ;
+systemRan [ 18 ] = ( sysRanDType * ) & localDW -> cg32ix3bhp . nod5vp1cyy [ 0
+] . fate2u2iog . k3j1amkab5 ; systemRan [ 19 ] = ( NULL ) ; systemRan [ 20 ]
+= ( NULL ) ; systemRan [ 21 ] = ( NULL ) ; systemRan [ 22 ] = ( NULL ) ;
+systemRan [ 23 ] = ( NULL ) ; systemRan [ 24 ] = ( NULL ) ; systemTid [ 1 ] =
+a5ree4wwe5 -> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 2 ] = a5ree4wwe5
+-> Timing . mdlref_GlobalTID [ 0 ] ; systemTid [ 3 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 4 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 14 ] = a5ree4wwe5 -> Timing .
+mdlref_GlobalTID [ 0 ] ; systemTid [ 8 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 1 ] ; systemTid [ 18 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 1 ] ; systemTid [ 7 ] = a5ree4wwe5 -> Timing .
 mdlref_GlobalTID [ 1 ] ; systemTid [ 17 ] = a5ree4wwe5 -> Timing .

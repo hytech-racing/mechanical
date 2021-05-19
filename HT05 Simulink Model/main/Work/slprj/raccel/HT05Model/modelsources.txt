@@ -1,4 +1,4 @@
   HT05Model.c
-rt_logging_mmi.c
-rtw_modelmap_utils.c
+rt_logging_mmi_simtarget.c
+rtw_modelmap_utils_simtarget.c
 

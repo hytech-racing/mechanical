@@ -1,9 +1,9 @@
 #include "rtwtypes.h"
 #include "multiword_types.h"
 #include "mwmathutil.h"
-#include "PadeApproximantOfDegree_5BLwCIn6.h"
+#include "PadeApproximantOfDegree_TSqIYAo3.h"
 
-void PadeApproximantOfDegree_5BLwCIn6(const real_T A[4], uint8_T m, real_T F[4])
+void PadeApproximantOfDegree_TSqIYAo3(const real_T A[4], uint8_T m, real_T F[4])
 {
   real_T A2[4];
   real_T A3[4];

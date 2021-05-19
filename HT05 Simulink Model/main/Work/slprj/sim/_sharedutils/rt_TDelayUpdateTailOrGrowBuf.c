@@ -15,9 +15,7 @@ boolean_T rt_TDelayUpdateTailOrGrowBuf(
   int_T *headPtr,
   int_T *lastPtr,
   real_T tMinusDelay,
-  real_T **tBufPtr,
   real_T **uBufPtr,
-  real_T **xBufPtr,
   boolean_T isfixedbuf,
   boolean_T istransportdelay,
   int_T *maxNewBufSzPtr)
@@ -25,12 +23,12 @@ boolean_T rt_TDelayUpdateTailOrGrowBuf(
   int_T testIdx;
   int_T tail = *tailPtr;
   int_T bufSz = *bufSzPtr;
-  real_T *tBuf = *tBufPtr;
+  real_T *tBuf = *uBufPtr + bufSz;
   real_T *xBuf = (NULL);
   int_T numBuffer = 2;
   if (istransportdelay) {
     numBuffer = 3 ;
-    xBuf= *xBufPtr;
+    xBuf= *uBufPtr + 2 * bufSz;
   }
 
   testIdx = (tail < (bufSz - 1)) ? (tail + 1) : 0;
@@ -77,10 +75,7 @@ boolean_T rt_TDelayUpdateTailOrGrowBuf(
     *headPtr = bufSz;
     utFree(uBuf);
     *bufSzPtr = newBufSz;
-    *tBufPtr = tempT;
     *uBufPtr = tempU;
-    if (istransportdelay)
-      *xBufPtr = tempX;
   } else {
     *tailPtr = testIdx;
   }

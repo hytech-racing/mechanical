@@ -321,7 +321,7 @@
       section.nData     = 67;
       section.data(67)  = dumData; %prealloc
       
-	  ;% hfe00hbwscw.dn2ipr3mo1
+	  ;% hfe00hbwscw.etwgbqvkif
 	  section.data(1).logicalSrcIdx = 0;
 	  section.data(1).dtTransOffset = 0;
 	
@@ -505,11 +505,11 @@
 	  section.data(46).logicalSrcIdx = 45;
 	  section.data(46).dtTransOffset = 49;
 	
-	  ;% hfe00hbwscw.fkmxmxweyx
+	  ;% hfe00hbwscw.kftazr0hxl
 	  section.data(47).logicalSrcIdx = 46;
 	  section.data(47).dtTransOffset = 50;
 	
-	  ;% hfe00hbwscw.j3cdx1rby1
+	  ;% hfe00hbwscw.ciswg50jx3
 	  section.data(48).logicalSrcIdx = 47;
 	  section.data(48).dtTransOffset = 51;
 	
@@ -800,7 +800,7 @@
       section.nData     = 1;
       section.data(1)  = dumData; %prealloc
       
-	  ;% bcuvylxhefc.hrypfmrlkd
+	  ;% bcuvylxhefc.odmqgoxpmf
 	  section.data(1).logicalSrcIdx = 26;
 	  section.data(1).dtTransOffset = 0;
 	
@@ -1027,8 +1027,8 @@
   ;%
 
 
-  targMap.checksum0 = 2016671697;
-  targMap.checksum1 = 1193092159;
-  targMap.checksum2 = 4221439711;
-  targMap.checksum3 = 1036386930;
+  targMap.checksum0 = 1396022481;
+  targMap.checksum1 = 3832595604;
+  targMap.checksum2 = 78727595;
+  targMap.checksum3 = 786872218;
 

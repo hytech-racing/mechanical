@@ -1,4 +1,5 @@
 #include "rtwtypes.h"
+#include "rt_defines.h"
 #define EXTERN_C
 #include <stdio.h>
 #include <string.h>

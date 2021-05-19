@@ -1,8 +1,8 @@
 #include "rtwtypes.h"
 #include "multiword_types.h"
-#include "automldiffls_dSTh3vGq.h"
+#include "automldiffls_3YCEblnO.h"
 
-void automldiffls_dSTh3vGq(const real_T u[4], real_T bw1, real_T bd, real_T bw2,
+void automldiffls_3YCEblnO(const real_T u[4], real_T bw1, real_T bd, real_T bw2,
   real_T Ndiff, real_T shaftSwitch, real_T Jd, real_T Jw1, real_T Jw2, const
   real_T x[2], real_T y[4], real_T xdot[2])
 {
@@ -81,8 +81,7 @@ void automldiffls_dSTh3vGq(const real_T u[4], real_T bw1, real_T bd, real_T bw2,
   }
 
   for (diffDir = 0; diffDir < 4; diffDir++) {
-    NbdTerm = 0.0 * u[3] + (0.0 * u[2] + (0.0 * u[1] + 0.0 * u[0]));
     y[diffDir] = (diffDir_e[diffDir + 4] * x[1] + diffDir_e[diffDir] * x[0]) +
-      NbdTerm;
+      (0.0 * u[3] + (0.0 * u[2] + (0.0 * u[1] + 0.0 * u[0])));
   }
 }

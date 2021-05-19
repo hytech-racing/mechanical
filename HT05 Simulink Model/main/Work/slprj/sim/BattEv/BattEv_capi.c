@@ -26,7 +26,7 @@ TARGET_STRING (
  "BattEv/Lithium Ion Battery Pack/Datasheet Battery Internal/Datasheet Battery/Charge Model/Integrator\nLimited"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 0 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
-- 1 , 0 } } ;
+- 1 , 0 } } ; static int_T rt_LoggedStateIdxList [ ] = { 0 } ;
 #ifndef HOST_CAPI_BUILD
 static void BattEv_InitializeDataAddr ( void * dataAddr [ ] , dmy10bqvs5 *
 localDW , hkgv0zhr3w * localX ) { dataAddr [ 0 ] = ( void * ) ( & localX ->
@@ -60,10 +60,10 @@ mmiStaticInfoLogging = { 2 , rtContextSystems , loggingMetaInfo , 0 , NULL ,
 mmiStatic = { { rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL
 ) , 0 , ( NULL ) , 0 } , { rtBlockStates , 1 } , { rtDataTypeMap ,
 rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 3009111158U , 3412542136U , 679538173U ,
-7752279U } , & mmiStaticInfoLogging , 0 , 0 } ; const
-rtwCAPI_ModelMappingStaticInfo * BattEv_GetCAPIStaticMap ( void ) { return &
-mmiStatic ; }
+rtDimensionArray } , "float" , { 3837734775U , 3847323787U , 26448682U ,
+3742740356U } , & mmiStaticInfoLogging , 0 , 0 , rt_LoggedStateIdxList } ;
+const rtwCAPI_ModelMappingStaticInfo * BattEv_GetCAPIStaticMap ( void ) {
+return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 static void BattEv_InitializeSystemRan ( euywnbmp33 * const n4jdqa0poy ,
 sysRanDType * systemRan [ ] , dmy10bqvs5 * localDW , int_T systemTid [ ] ,

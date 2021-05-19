@@ -4,9 +4,6 @@
 #include "HT05Model.h"
 #include "HT05Model_private.h"
 #include "HT05Model_dt.h"
-#include "simstruc.h"
-#include "fixedpoint.h"
-#include "slsa_sim_engine.h"
 extern void * CreateDiagnosticAsVoidPtr_wrapper ( const char * id , int nargs
 , ... ) ; RTWExtModeInfo * gblRTWExtModeInfo = NULL ; void
 raccelForceExtModeShutdown ( boolean_T extModeStartPktReceived ) { if ( !
@@ -14,6 +11,7 @@ extModeStartPktReceived ) { boolean_T stopRequested = false ;
 rtExtModeWaitForStartPkt ( gblRTWExtModeInfo , 6 , & stopRequested ) ; }
 rtExtModeShutdown ( 6 ) ; }
 #include "slsv_diagnostic_codegen_c_api.h"
+#include "slsa_sim_engine.h"
 const int_T gblNumToFiles = 0 ; const int_T gblNumFrFiles = 0 ; const int_T
 gblNumFrWksBlocks = 0 ;
 #ifdef RSIM_WITH_SOLVER_MULTITASKING
@@ -22,7 +20,7 @@ boolean_T gbl_raccel_isMultitasking = 1 ;
 boolean_T gbl_raccel_isMultitasking = 0 ;
 #endif
 boolean_T gbl_raccel_tid01eq = 0 ; int_T gbl_raccel_NumST = 7 ; const char_T
-* gbl_raccel_Version = "10.2 (R2020b) 29-Jul-2020" ; void
+* gbl_raccel_Version = "10.3 (R2021a) 14-Nov-2020" ; void
 raccel_setup_MMIStateLog ( SimStruct * S ) {
 #ifdef UseMMIDataLogging
 rt_FillStateSigInfoFromMMI ( ssGetRTWLogInfo ( S ) , & ssGetErrorStatus ( S )
@@ -42,30 +40,49 @@ gblInportComplex [ ] = { - 1 } ; const int_T gblInportInterpoFlag [ ] = { - 1
 raccelLoadInputsAndAperiodicHitTimes ( SimStruct * S , const char *
 inportFileName , int * matFileFormat ) { return rt_RAccelReadInportsMatFile (
 S , inportFileName , matFileFormat ) ; }
+#include "simstruc.h"
+#include "fixedpoint.h"
+#include "slsa_sim_engine.h"
+#include "simtarget/slSimTgtSLExecSimBridge.h"
 #include "rt_TDelayCreateBuf.h"
 #include "rt_TDelayUpdateTailOrGrowBuf.h"
 #include "rt_TDelayInterpolate.h"
 #include "rt_TDelayFreeBuf.h"
-#include "expm_WM6qSMEO.h"
+#include "expm_9DBYDrz1.h"
 #include "look1_pbinlcapw.h"
-#include "mpower_QcZsu7Dx.h"
+#include "mpower_DSHl6Msh.h"
 const real_T HT05Model_RGND = 0.0 ; hfe00hbwsc hfe00hbwscw ; nltnw1e5gk
 nltnw1e5gkl ; bcuvylxhef bcuvylxhefc ; ngqsle4aqn ngqsle4aqnz ; hpzwhjywix
 hpzwhjywixq ; static SimStruct model_S ; SimStruct * const rtS = & model_S ;
-void fusci251cj ( pijou5z0ta * localB , real_T rtp_IC ) { localB ->
-l152uhfy44 = rtp_IC ; } void mtsjnxvi2x ( bzcsocffru * localDW ) { localDW ->
-kc02azdlcj = false ; } void ofnwunlxyp ( SimStruct * rtS_p , bzcsocffru *
-localDW ) { localDW -> kc02azdlcj = false ;
+static void iajmbnc45g ( const real_T a_data [ ] , const int32_T a_size [ 2 ]
+, real_T y_data [ ] , int32_T y_size [ 2 ] ) ; static void dh5qgiweyz (
+real_T u , real_T * y , real_T * yabs ) ; void fusci251cj ( real_T rtp_IC ,
+pijou5z0ta * localB ) { localB -> l152uhfy44 = rtp_IC ; } void mtsjnxvi2x (
+bzcsocffru * localDW ) { localDW -> kc02azdlcj = false ; } void ofnwunlxyp (
+SimStruct * rtS_p , bzcsocffru * localDW ) { localDW -> kc02azdlcj = false ;
 ssSetBlockStateForSolverChangedAtMajorStep ( rtS_p ) ; } void e2ib0nh2tk (
 SimStruct * rtS_i , boolean_T bdrw0lzm3k , real_T epyamcb43r , pijou5z0ta *
 localB , bzcsocffru * localDW ) { if ( ssIsSampleHit ( rtS_i , 1 , 0 ) &&
 ssIsMajorTimeStep ( rtS_i ) ) { if ( bdrw0lzm3k ) { if ( ! localDW ->
 kc02azdlcj ) { if ( ssGetTaskTime ( rtS_i , 1 ) != ssGetTStart ( rtS_i ) ) {
 ssSetBlockStateForSolverChangedAtMajorStep ( rtS_i ) ; } localDW ->
-kc02azdlcj = true ; } } else { if ( localDW -> kc02azdlcj ) {
+kc02azdlcj = true ; } } else if ( localDW -> kc02azdlcj ) {
 ssSetBlockStateForSolverChangedAtMajorStep ( rtS_i ) ; mtsjnxvi2x ( localDW )
-; } } } if ( localDW -> kc02azdlcj ) { localB -> l152uhfy44 = epyamcb43r ; if
-( ssIsMajorTimeStep ( rtS_i ) ) { srUpdateBC ( localDW -> gwhutwksvk ) ; } }
+; } } if ( localDW -> kc02azdlcj ) { localB -> l152uhfy44 = epyamcb43r ; if (
+ssIsMajorTimeStep ( rtS_i ) ) { srUpdateBC ( localDW -> gwhutwksvk ) ; } } }
+static void iajmbnc45g ( const real_T a_data [ ] , const int32_T a_size [ 2 ]
+, real_T y_data [ ] , int32_T y_size [ 2 ] ) { y_size [ 0 ] = 1 ; y_size [ 1
+] = a_size [ 1 ] ; if ( 0 <= ( int8_T ) a_size [ 1 ] - 1 ) { y_data [ 0 ] =
+a_data [ 0 ] * a_data [ 0 ] ; } } static void dh5qgiweyz ( real_T u , real_T
+* y , real_T * yabs ) { real_T tmp_data ; real_T yabs_data ; int32_T tmp_size
+[ 2 ] ; int32_T yabs_size [ 2 ] ; int32_T trueCount ; * yabs =
+muDoubleScalarAbs ( u ) ; trueCount = 0 ; if ( * yabs < 0.001 ) { trueCount =
+1 ; } yabs_size [ 0 ] = 1 ; yabs_size [ 1 ] = trueCount ; if ( 0 <= trueCount
+- 1 ) { yabs_data = * yabs / 0.001 ; } if ( 0 <= trueCount - 1 ) { iajmbnc45g
+( & yabs_data , yabs_size , & tmp_data , tmp_size ) ; yabs_data = 0.002 / (
+3.0 - tmp_data ) ; } if ( * yabs < 0.001 ) { * yabs = yabs_data ; } trueCount
+= 0 ; if ( u < 0.0 ) { trueCount = 1 ; } if ( 0 <= trueCount - 1 ) {
+yabs_data = - * yabs ; } * y = * yabs ; if ( u < 0.0 ) { * y = yabs_data ; }
 } void MdlInitialize ( void ) { nltnw1e5gkl . i4qubohzc1 = 0.0 ; nltnw1e5gkl
 . nxcnpybje3 = 0.0 ; bcuvylxhefc . klgv0izvyu [ 0 ] = ihnh5ag1lp .
 RateTransition5_InitialCondition ; nltnw1e5gkl . a1yytga2i4 = ihnh5ag1lp .
@@ -82,9 +99,9 @@ iajxel3ezk . rtb ) , & ( bcuvylxhefc . iajxel3ezk . rtdw ) , & ( nltnw1e5gkl
 bcuvylxhefc . ondfxuidp3 . rtdw ) , & ( nltnw1e5gkl . fqvhaqjss0 ) ) ;
 dwpuxjpomb ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) , & ( bcuvylxhefc .
 enbv0wioc4 . rtb ) , & ( bcuvylxhefc . enbv0wioc4 . rtdw ) , & ( nltnw1e5gkl
-. b04e30byfs ) ) ; fusci251cj ( & hfe00hbwscw . e2ib0nh2tkx , ihnh5ag1lp .
-SignalHold_IC ) ; fusci251cj ( & hfe00hbwscw . hysyewwydg , ihnh5ag1lp .
-SignalHold_IC_k5etbcnmrh ) ; { int_T rootPeriodicContStateIndices [ 2 ] = { 7
+. b04e30byfs ) ) ; fusci251cj ( ihnh5ag1lp . SignalHold_IC , & hfe00hbwscw .
+e2ib0nh2tkx ) ; fusci251cj ( ihnh5ag1lp . SignalHold_IC_k5etbcnmrh , &
+hfe00hbwscw . hysyewwydg ) ; { int_T rootPeriodicContStateIndices [ 2 ] = { 7
 , 27 } ; real_T rootPeriodicContStateRanges [ 4 ] = { - 3.1415926535897931 ,
 3.1415926535897931 , - 3.1415926535897931 , 3.1415926535897931 } ; ( void )
 memcpy ( ( void * ) ngqsle4aqnz , rootPeriodicContStateIndices , 2 * sizeof (
@@ -94,14 +111,19 @@ void ) { { bool externalInputIsInDatasetFormat = false ; void *
 pISigstreamManager = rt_GetISigstreamManager ( rtS ) ;
 rtwISigstreamManagerGetInputIsInDatasetFormat ( pISigstreamManager , &
 externalInputIsInDatasetFormat ) ; if ( externalInputIsInDatasetFormat ) { }
-} fzkpqsvdo4 ( & ( bcuvylxhefc . iajxel3ezk . rtm ) , & ( bcuvylxhefc .
-iajxel3ezk . rtdw ) ) ; pv4vhh3fcm ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) , &
-( bcuvylxhefc . enbv0wioc4 . rtdw ) ) ; { { { { sdiSignalSourceInfoU srcInfo
-; sdiLabelU loggedName = sdiGetLabelFromChars ( "Adjusted Torque" ) ;
-sdiLabelU origSigName = sdiGetLabelFromChars ( "Adjusted Torque" ) ;
-sdiLabelU propName = sdiGetLabelFromChars ( "" ) ; sdiLabelU blockPath =
-sdiGetLabelFromChars ( "HT05Model/Passenger Car/Divide" ) ; sdiLabelU
-blockSID = sdiGetLabelFromChars ( "" ) ; sdiLabelU subPath =
+} simTgtPushModelBlockPath ( rtS , "HT05Model/Passenger Car/Drivetrain" ) ;
+fzkpqsvdo4 ( & ( bcuvylxhefc . iajxel3ezk . rtm ) , & ( bcuvylxhefc .
+iajxel3ezk . rtdw ) ) ; simTgtPopModelBlockPath ( rtS ,
+"HT05Model/Passenger Car/Drivetrain" ) ; simTgtPushModelBlockPath ( rtS ,
+"HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" ) ; pv4vhh3fcm
+( & ( bcuvylxhefc . enbv0wioc4 . rtm ) , & ( bcuvylxhefc . enbv0wioc4 . rtdw
+) ) ; simTgtPopModelBlockPath ( rtS ,
+"HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" ) ; { { { {
+sdiSignalSourceInfoU srcInfo ; sdiLabelU loggedName = sdiGetLabelFromChars (
+"Adjusted Torque" ) ; sdiLabelU origSigName = sdiGetLabelFromChars (
+"Adjusted Torque" ) ; sdiLabelU propName = sdiGetLabelFromChars ( "" ) ;
+sdiLabelU blockPath = sdiGetLabelFromChars ( "HT05Model/Passenger Car/Divide"
+) ; sdiLabelU blockSID = sdiGetLabelFromChars ( "" ) ; sdiLabelU subPath =
 sdiGetLabelFromChars ( "" ) ; sdiDims sigDims ; sdiLabelU sigName =
 sdiGetLabelFromChars ( "Adjusted Torque" ) ; sdiAsyncRepoDataTypeHandle hDT =
 sdiAsyncRepoGetBuiltInDataTypeHandle ( DATA_TYPE_DOUBLE ) ; { sdiComplexity
@@ -115,10 +137,9 @@ portIndex = 0 + 1 ; srcInfo . signalName = sigName ; srcInfo . sigSourceUUID
 hDT , & srcInfo , rt_dataMapInfo . mmi . InstanceMap . fullPath ,
 "e27908ce-7718-46fe-b185-4fd50dbe902d" , sigComplexity , & sigDims ,
 DIMENSIONS_MODE_FIXED , stCont , "" ) ; if ( bcuvylxhefc . cbpif1banu .
-AQHandles ) { ssCachePointer ( rtS , & ( bcuvylxhefc . cbpif1banu . AQHandles
-) ) ; sdiSetSignalSampleTimeString ( bcuvylxhefc . cbpif1banu . AQHandles ,
-"Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime ( bcuvylxhefc
-. cbpif1banu . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
+AQHandles ) { sdiSetSignalSampleTimeString ( bcuvylxhefc . cbpif1banu .
+AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime (
+bcuvylxhefc . cbpif1banu . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
 sdiAsyncRepoSetSignalExportSettings ( bcuvylxhefc . cbpif1banu . AQHandles ,
 1 , 0 ) ; sdiAsyncRepoSetSignalExportName ( bcuvylxhefc . cbpif1banu .
 AQHandles , loggedName , origSigName , propName ) ; } sdiFreeLabel ( sigName
@@ -143,10 +164,9 @@ bcuvylxhefc . dbduharpby . AQHandles = sdiAsyncRepoCreateAsyncioQueue ( hDT ,
 & srcInfo , rt_dataMapInfo . mmi . InstanceMap . fullPath ,
 "d677208b-7244-46db-b94c-ed92729c37c1" , sigComplexity , & sigDims ,
 DIMENSIONS_MODE_FIXED , stCont , "rad/s" ) ; if ( bcuvylxhefc . dbduharpby .
-AQHandles ) { ssCachePointer ( rtS , & ( bcuvylxhefc . dbduharpby . AQHandles
-) ) ; sdiSetSignalSampleTimeString ( bcuvylxhefc . dbduharpby . AQHandles ,
-"Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime ( bcuvylxhefc
-. dbduharpby . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
+AQHandles ) { sdiSetSignalSampleTimeString ( bcuvylxhefc . dbduharpby .
+AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime (
+bcuvylxhefc . dbduharpby . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
 sdiAsyncRepoSetSignalExportSettings ( bcuvylxhefc . dbduharpby . AQHandles ,
 1 , 0 ) ; sdiAsyncRepoSetSignalExportName ( bcuvylxhefc . dbduharpby .
 AQHandles , loggedName , origSigName , propName ) ; } sdiFreeLabel ( sigName
@@ -170,8 +190,7 @@ sigName ; srcInfo . sigSourceUUID = 0 ; bcuvylxhefc . dkmsy4vtjq . AQHandles
 = sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
 InstanceMap . fullPath , "cd1b15c0-d7dd-4a6e-abee-d1163e5d1eb0" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if (
-bcuvylxhefc . dkmsy4vtjq . AQHandles ) { ssCachePointer ( rtS , & (
-bcuvylxhefc . dkmsy4vtjq . AQHandles ) ) ; sdiSetSignalSampleTimeString (
+bcuvylxhefc . dkmsy4vtjq . AQHandles ) { sdiSetSignalSampleTimeString (
 bcuvylxhefc . dkmsy4vtjq . AQHandles , "5e-05" , 5.0E-5 , ssGetTFinal ( rtS )
 ) ; sdiSetRunStartTime ( bcuvylxhefc . dkmsy4vtjq . AQHandles , ssGetTaskTime
 ( rtS , 2 ) ) ; sdiAsyncRepoSetSignalExportSettings ( bcuvylxhefc .
@@ -198,10 +217,9 @@ portIndex = 0 + 1 ; srcInfo . signalName = sigName ; srcInfo . sigSourceUUID
 hDT , & srcInfo , rt_dataMapInfo . mmi . InstanceMap . fullPath ,
 "ded84c21-1d6c-49d7-a0a9-ab0774d78487" , sigComplexity , & sigDims ,
 DIMENSIONS_MODE_FIXED , stCont , "" ) ; if ( bcuvylxhefc . m3edf11hk1 .
-AQHandles ) { ssCachePointer ( rtS , & ( bcuvylxhefc . m3edf11hk1 . AQHandles
-) ) ; sdiSetSignalSampleTimeString ( bcuvylxhefc . m3edf11hk1 . AQHandles ,
-"Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime ( bcuvylxhefc
-. m3edf11hk1 . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
+AQHandles ) { sdiSetSignalSampleTimeString ( bcuvylxhefc . m3edf11hk1 .
+AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS ) ) ; sdiSetRunStartTime (
+bcuvylxhefc . m3edf11hk1 . AQHandles , ssGetTaskTime ( rtS , 1 ) ) ;
 sdiAsyncRepoSetSignalExportSettings ( bcuvylxhefc . m3edf11hk1 . AQHandles ,
 1 , 0 ) ; sdiAsyncRepoSetSignalExportName ( bcuvylxhefc . m3edf11hk1 .
 AQHandles , loggedName , origSigName , propName ) ; } sdiFreeLabel ( sigName
@@ -225,8 +243,7 @@ sigName ; srcInfo . sigSourceUUID = 0 ; bcuvylxhefc . o142ktwdad . AQHandles
 = sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
 InstanceMap . fullPath , "572d87f8-0506-43c2-84bc-502ac3096101" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "m/s" ) ; if (
-bcuvylxhefc . o142ktwdad . AQHandles ) { ssCachePointer ( rtS , & (
-bcuvylxhefc . o142ktwdad . AQHandles ) ) ; sdiSetSignalSampleTimeString (
+bcuvylxhefc . o142ktwdad . AQHandles ) { sdiSetSignalSampleTimeString (
 bcuvylxhefc . o142ktwdad . AQHandles , "Continuous" , 0.0 , ssGetTFinal ( rtS
 ) ) ; sdiSetRunStartTime ( bcuvylxhefc . o142ktwdad . AQHandles ,
 ssGetTaskTime ( rtS , 1 ) ) ; sdiAsyncRepoSetSignalExportSettings (
@@ -253,8 +270,7 @@ sigName ; srcInfo . sigSourceUUID = 0 ; bcuvylxhefc . cbpif1banuf . AQHandles
 = sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
 InstanceMap . fullPath , "cf138497-ce45-4a5e-9c3d-3e1f3898cd56" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "" ) ; if (
-bcuvylxhefc . cbpif1banuf . AQHandles ) { ssCachePointer ( rtS , & (
-bcuvylxhefc . cbpif1banuf . AQHandles ) ) ; sdiSetSignalSampleTimeString (
+bcuvylxhefc . cbpif1banuf . AQHandles ) { sdiSetSignalSampleTimeString (
 bcuvylxhefc . cbpif1banuf . AQHandles , "Continuous" , 0.0 , ssGetTFinal (
 rtS ) ) ; sdiSetRunStartTime ( bcuvylxhefc . cbpif1banuf . AQHandles ,
 ssGetTaskTime ( rtS , 1 ) ) ; sdiAsyncRepoSetSignalExportSettings (
@@ -281,8 +297,7 @@ sigName ; srcInfo . sigSourceUUID = 0 ; bcuvylxhefc . ks1fvl1d0d . AQHandles
 = sdiAsyncRepoCreateAsyncioQueue ( hDT , & srcInfo , rt_dataMapInfo . mmi .
 InstanceMap . fullPath , "05987ebd-0124-4aac-93fe-e67b1f4cbc6b" ,
 sigComplexity , & sigDims , DIMENSIONS_MODE_FIXED , stCont , "N*m" ) ; if (
-bcuvylxhefc . ks1fvl1d0d . AQHandles ) { ssCachePointer ( rtS , & (
-bcuvylxhefc . ks1fvl1d0d . AQHandles ) ) ; sdiSetSignalSampleTimeString (
+bcuvylxhefc . ks1fvl1d0d . AQHandles ) { sdiSetSignalSampleTimeString (
 bcuvylxhefc . ks1fvl1d0d . AQHandles , "5e-05" , 5.0E-5 , ssGetTFinal ( rtS )
 ) ; sdiSetRunStartTime ( bcuvylxhefc . ks1fvl1d0d . AQHandles , ssGetTaskTime
 ( rtS , 2 ) ) ; sdiAsyncRepoSetSignalExportSettings ( bcuvylxhefc .
@@ -295,25 +310,25 @@ sdiFreeLabel ( blockSID ) ; sdiFreeLabel ( subPath ) ; } } } } } ka5dospcnh (
 ) ; n5k0o3qutm ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) , & ( bcuvylxhefc .
 enbv0wioc4 . rtdw ) ) ; bcuvylxhefc . llz0iknlo0 = 0 ; ofnwunlxyp ( rtS , &
 bcuvylxhefc . e2ib0nh2tkx ) ; ofnwunlxyp ( rtS , & bcuvylxhefc . hysyewwydg )
-; { { real_T * pBuffer = ( real_T * ) rt_TDelayCreateBuf ( 2 , 1024 , sizeof
-( real_T ) ) ; if ( pBuffer == ( NULL ) ) { ssSetErrorStatus ( rtS ,
-"tdelay memory allocation error" ) ; return ; } bcuvylxhefc . ndxxvlk3ok .
-Tail = 0 ; bcuvylxhefc . ndxxvlk3ok . Head = 0 ; bcuvylxhefc . ndxxvlk3ok .
-Last = 0 ; bcuvylxhefc . ndxxvlk3ok . CircularBufSize = 1024 ; pBuffer [ 0 ]
-= ihnh5ag1lp . TransportDelay_InitOutput ; pBuffer [ 1024 ] = ssGetT ( rtS )
-; bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 0 ] = ( void * ) & pBuffer [ 0 ]
-; bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 1 ] = ( void * ) & pBuffer [ 1024
-] ; ssCachePointer ( rtS , & ( bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 0 ]
-) ) ; ssCachePointer ( rtS , & ( bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 1
-] ) ) ; const char * pUbufkey = "HT05Model/Passenger Car/Transport\nDelay_U"
-; ssSaveRawMemory ( rtS , pUbufkey , bcuvylxhefc . ohevlrvd4o . TUbufferPtrs
-[ 0 ] , 1024 * sizeof ( real_T ) ) ; const char * pTbufkey =
-"HT05Model/Passenger Car/Transport\nDelay_T" ; ssSaveRawMemory ( rtS ,
-pTbufkey , bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 1 ] , 1024 * sizeof (
-real_T ) ) ; } } MdlInitialize ( ) ; } void MdlOutputs ( int_T tid ) { real_T
-jnfihtxxde ; real_T oqwc15a2xf ; static const real_T e_p [ 170 ] = { 1.0 ,
-2.0 , 6.0 , 24.0 , 120.0 , 720.0 , 5040.0 , 40320.0 , 362880.0 , 3.6288E+6 ,
-3.99168E+7 , 4.790016E+8 , 6.2270208E+9 , 8.71782912E+10 , 1.307674368E+12 ,
+; { char ptrKey [ 1024 ] ; { real_T * pBuffer = ( real_T * )
+rt_TDelayCreateBuf ( 2 , 1024 , sizeof ( real_T ) ) ; if ( pBuffer == ( NULL
+) ) { ssSetErrorStatus ( rtS , "tdelay memory allocation error" ) ; return ;
+} bcuvylxhefc . ndxxvlk3ok . Tail = 0 ; bcuvylxhefc . ndxxvlk3ok . Head = 0 ;
+bcuvylxhefc . ndxxvlk3ok . Last = 0 ; bcuvylxhefc . ndxxvlk3ok .
+CircularBufSize = 1024 ; pBuffer [ 0 ] = ihnh5ag1lp .
+TransportDelay_InitOutput ; pBuffer [ 1024 ] = ssGetT ( rtS ) ; bcuvylxhefc .
+ohevlrvd4o . TUbufferPtrs [ 0 ] = ( void * ) & pBuffer [ 0 ] ; sprintf (
+ptrKey , "HT05Model/Passenger Car/Transport\nDelay_TUbuffer%d" , 0 ) ;
+slsaSaveRawMemoryForSimTargetOP ( rtS , ptrKey , ( void * * ) ( & bcuvylxhefc
+. ohevlrvd4o . TUbufferPtrs [ 0 ] ) , 2 * 1024 * sizeof ( real_T ) , NULL ,
+NULL ) ; } } MdlInitialize ( ) ; } void MdlOutputs ( int_T tid ) { real_T
+jnfihtxxde ; real_T oqwc15a2xf ; real_T a [ 4 ] ; real_T dxbnvj4sno [ 4 ] ;
+real_T nrauzgzuwg [ 4 ] ; real_T sigmaA [ 4 ] ; real_T bcl1b5rt4n ; real_T c
+; real_T jnb1m1brfj ; real_T jvd5kozvur_idx_1 ; real_T pgifr0yxtl ; real_T
+sigmaB_idx_0 ; real_T sigmaB_idx_1 ; real_T sigmaB_idx_2 ; real_T
+sigmaB_idx_3 ; int_T iy ; static const real_T c_p [ 170 ] = { 1.0 , 2.0 , 6.0
+, 24.0 , 120.0 , 720.0 , 5040.0 , 40320.0 , 362880.0 , 3.6288E+6 , 3.99168E+7
+, 4.790016E+8 , 6.2270208E+9 , 8.71782912E+10 , 1.307674368E+12 ,
 2.0922789888E+13 , 3.55687428096E+14 , 6.402373705728E+15 ,
 1.21645100408832E+17 , 2.43290200817664E+18 , 5.109094217170944E+19 ,
 1.1240007277776077E+21 , 2.5852016738884978E+22 , 6.2044840173323941E+23 ,
@@ -365,50 +380,45 @@ jnfihtxxde ; real_T oqwc15a2xf ; static const real_T e_p [ 170 ] = { 1.0 ,
 4.714723635992059E+284 , 7.5907050539472148E+286 , 1.2296942187394488E+289 ,
 2.0044015765453015E+291 , 3.2872185855342945E+293 , 5.423910666131586E+295 ,
 9.0036917057784329E+297 , 1.5036165148649983E+300 , 2.5260757449731969E+302 ,
-4.2690680090047027E+304 , 7.257415615307994E+306 } ; real_T b_I [ 4 ] ;
-real_T dxbnvj4sno [ 4 ] ; real_T nrauzgzuwg [ 4 ] ; real_T sigmaA [ 4 ] ;
-real_T bcl1b5rt4n ; real_T cbv1b3vtl5 ; real_T e ; real_T jvd5kozvur_idx_1 ;
-real_T otdvdul0vu ; real_T sigmaB_idx_0 ; real_T sigmaB_idx_1 ; real_T
-sigmaB_idx_2 ; real_T sigmaB_idx_3 ; real_T z1_data ; real_T z_data ; int32_T
-i ; int_T iy ; srClearBC ( bcuvylxhefc . e2ib0nh2tkx . gwhutwksvk ) ;
-cbv1b3vtl5 = ssGetT ( rtS ) ; if ( ihnh5ag1lp . repeat_Value > ihnh5ag1lp .
-Switch_Threshold ) { hfe00hbwscw . dn2ipr3mo1 = muDoubleScalarMod (
-cbv1b3vtl5 , ihnh5ag1lp . tFinal_Value ) ; } else { hfe00hbwscw . dn2ipr3mo1
-= cbv1b3vtl5 ; } otdvdul0vu = look1_pbinlcapw ( hfe00hbwscw . dn2ipr3mo1 ,
-ihnh5ag1lp . uDLookupTable_bp01Data , ihnh5ag1lp . uDLookupTable_tableData ,
-& bcuvylxhefc . hrypfmrlkd , 400U ) ; hfe00hbwscw . kwter11yih = 0.0 ;
-hfe00hbwscw . kwter11yih += ihnh5ag1lp . MotorCouplingDynamics_C *
-nltnw1e5gkl . i4qubohzc1 ; DrivetrainEv ( & ( bcuvylxhefc . iajxel3ezk . rtm
-) , & hfe00hbwscw . kwter11yih , ( ( const real_T * ) & HT05Model_RGND ) , &
-ihnh5ag1lp . Constant2_Value , & ihnh5ag1lp . Constant3_Value , & hfe00hbwscw
-. k2nvq1dfvz , & hfe00hbwscw . krfdbjpt0e , & hfe00hbwscw . hnqecwtek3 , &
-hfe00hbwscw . gz5o4hus3a , & ( bcuvylxhefc . iajxel3ezk . rtb ) , & (
-bcuvylxhefc . iajxel3ezk . rtdw ) , & ( nltnw1e5gkl . hcwjqlhqcy ) , & (
-bcuvylxhefc . iajxel3ezk . rtzce ) ) ; hfe00hbwscw . nou3xfrkex [ 0 ] =
-otdvdul0vu ; hfe00hbwscw . nou3xfrkex [ 1 ] = hfe00hbwscw . k2nvq1dfvz ;
-hfe00hbwscw . bejosqgptz [ 0 ] = ihnh5ag1lp . mstomph_Gain * hfe00hbwscw .
-nou3xfrkex [ 0 ] ; hfe00hbwscw . bejosqgptz [ 1 ] = ihnh5ag1lp . mstomph_Gain
-* hfe00hbwscw . nou3xfrkex [ 1 ] ; if ( ssIsSampleHit ( rtS , 1 , 0 ) && (
-bcuvylxhefc . piumrtffmp == 0 ) ) { bcuvylxhefc . ngtzwyl1pu [ 0 ] =
-hfe00hbwscw . bejosqgptz [ 0 ] ; bcuvylxhefc . ngtzwyl1pu [ 1 ] = hfe00hbwscw
-. bejosqgptz [ 1 ] ; } if ( ssIsSampleHit ( rtS , 5 , 0 ) ) { bcuvylxhefc .
-piumrtffmp = 1 ; hfe00hbwscw . k0jcwtesdh [ 0 ] = bcuvylxhefc . ngtzwyl1pu [
-0 ] ; hfe00hbwscw . k0jcwtesdh [ 1 ] = bcuvylxhefc . ngtzwyl1pu [ 1 ] ;
-bcuvylxhefc . piumrtffmp = 0 ; } hfe00hbwscw . hawg1v30vs = ihnh5ag1lp .
-radstoRPM_Gain * hfe00hbwscw . krfdbjpt0e ; if ( ssIsSampleHit ( rtS , 1 , 0
-) ) { if ( bcuvylxhefc . oijmj1tdxd == 0 ) { bcuvylxhefc . e4gjlzj1lq =
-hfe00hbwscw . hawg1v30vs ; } if ( bcuvylxhefc . anfmogqnpx == 0 ) {
-bcuvylxhefc . i5uql30i2j = hfe00hbwscw . kwter11yih ; } } if ( ssIsSampleHit
-( rtS , 5 , 0 ) ) { bcuvylxhefc . oijmj1tdxd = 1 ; hfe00hbwscw . awbv4lz2br =
-bcuvylxhefc . e4gjlzj1lq ; bcuvylxhefc . oijmj1tdxd = 0 ; bcuvylxhefc .
-anfmogqnpx = 1 ; hfe00hbwscw . cawpxxfynl = bcuvylxhefc . i5uql30i2j ;
-bcuvylxhefc . anfmogqnpx = 0 ; } hfe00hbwscw . op2bbilkhu = 0.0 ; hfe00hbwscw
-. op2bbilkhu += ihnh5ag1lp . BatteryDischargeDynamics_C * nltnw1e5gkl .
-nxcnpybje3 ; BattEv ( & ( bcuvylxhefc . ondfxuidp3 . rtm ) , & hfe00hbwscw .
-op2bbilkhu , & ihnh5ag1lp . Constant6_Value , & hfe00hbwscw . i4av10pedr , &
-hfe00hbwscw . k5wjbiecdv , & ( bcuvylxhefc . ondfxuidp3 . rtb ) , & (
-bcuvylxhefc . ondfxuidp3 . rtdw ) , & ( nltnw1e5gkl . fqvhaqjss0 ) ) ; if (
-ssIsSampleHit ( rtS , 1 , 0 ) && ( bcuvylxhefc . jse5bdwgjj == 0 ) ) {
+4.2690680090047027E+304 , 7.257415615307994E+306 } ; srClearBC ( bcuvylxhefc
+. e2ib0nh2tkx . gwhutwksvk ) ; jnb1m1brfj = ssGetT ( rtS ) ; if ( ihnh5ag1lp
+. repeat_Value > ihnh5ag1lp . Switch_Threshold ) { hfe00hbwscw . etwgbqvkif =
+muDoubleScalarMod ( jnb1m1brfj , ihnh5ag1lp . tFinal_Value ) ; } else {
+hfe00hbwscw . etwgbqvkif = jnb1m1brfj ; } pgifr0yxtl = look1_pbinlcapw (
+hfe00hbwscw . etwgbqvkif , ihnh5ag1lp . uDLookupTable_bp01Data , ihnh5ag1lp .
+uDLookupTable_tableData , & bcuvylxhefc . odmqgoxpmf , 400U ) ; hfe00hbwscw .
+kwter11yih = 0.0 ; hfe00hbwscw . kwter11yih += ihnh5ag1lp .
+MotorCouplingDynamics_C * nltnw1e5gkl . i4qubohzc1 ; DrivetrainEv ( & (
+bcuvylxhefc . iajxel3ezk . rtm ) , & hfe00hbwscw . kwter11yih , ( ( const
+real_T * ) & HT05Model_RGND ) , & ihnh5ag1lp . Constant2_Value , & ihnh5ag1lp
+. Constant3_Value , & hfe00hbwscw . k2nvq1dfvz , & hfe00hbwscw . krfdbjpt0e ,
+& hfe00hbwscw . hnqecwtek3 , & hfe00hbwscw . gz5o4hus3a , & ( bcuvylxhefc .
+iajxel3ezk . rtb ) , & ( bcuvylxhefc . iajxel3ezk . rtdw ) , & ( nltnw1e5gkl
+. hcwjqlhqcy ) , & ( bcuvylxhefc . iajxel3ezk . rtzce ) ) ; hfe00hbwscw .
+nou3xfrkex [ 0 ] = pgifr0yxtl ; hfe00hbwscw . nou3xfrkex [ 1 ] = hfe00hbwscw
+. k2nvq1dfvz ; hfe00hbwscw . bejosqgptz [ 0 ] = ihnh5ag1lp . mstomph_Gain *
+hfe00hbwscw . nou3xfrkex [ 0 ] ; hfe00hbwscw . bejosqgptz [ 1 ] = ihnh5ag1lp
+. mstomph_Gain * hfe00hbwscw . nou3xfrkex [ 1 ] ; if ( ssIsSampleHit ( rtS ,
+1 , 0 ) && ( bcuvylxhefc . piumrtffmp == 0 ) ) { bcuvylxhefc . ngtzwyl1pu [ 0
+] = hfe00hbwscw . bejosqgptz [ 0 ] ; bcuvylxhefc . ngtzwyl1pu [ 1 ] =
+hfe00hbwscw . bejosqgptz [ 1 ] ; } if ( ssIsSampleHit ( rtS , 5 , 0 ) ) {
+bcuvylxhefc . piumrtffmp = 1 ; hfe00hbwscw . k0jcwtesdh [ 0 ] = bcuvylxhefc .
+ngtzwyl1pu [ 0 ] ; hfe00hbwscw . k0jcwtesdh [ 1 ] = bcuvylxhefc . ngtzwyl1pu
+[ 1 ] ; bcuvylxhefc . piumrtffmp = 0 ; } hfe00hbwscw . hawg1v30vs =
+ihnh5ag1lp . radstoRPM_Gain * hfe00hbwscw . krfdbjpt0e ; if ( ssIsSampleHit (
+rtS , 1 , 0 ) ) { if ( bcuvylxhefc . oijmj1tdxd == 0 ) { bcuvylxhefc .
+e4gjlzj1lq = hfe00hbwscw . hawg1v30vs ; } if ( bcuvylxhefc . anfmogqnpx == 0
+) { bcuvylxhefc . i5uql30i2j = hfe00hbwscw . kwter11yih ; } } if (
+ssIsSampleHit ( rtS , 5 , 0 ) ) { bcuvylxhefc . oijmj1tdxd = 1 ; hfe00hbwscw
+. awbv4lz2br = bcuvylxhefc . e4gjlzj1lq ; bcuvylxhefc . oijmj1tdxd = 0 ;
+bcuvylxhefc . anfmogqnpx = 1 ; hfe00hbwscw . cawpxxfynl = bcuvylxhefc .
+i5uql30i2j ; bcuvylxhefc . anfmogqnpx = 0 ; } hfe00hbwscw . op2bbilkhu = 0.0
+; hfe00hbwscw . op2bbilkhu += ihnh5ag1lp . BatteryDischargeDynamics_C *
+nltnw1e5gkl . nxcnpybje3 ; BattEv ( & ( bcuvylxhefc . ondfxuidp3 . rtm ) , &
+hfe00hbwscw . op2bbilkhu , & ihnh5ag1lp . Constant6_Value , & hfe00hbwscw .
+i4av10pedr , & hfe00hbwscw . k5wjbiecdv , & ( bcuvylxhefc . ondfxuidp3 . rtb
+) , & ( bcuvylxhefc . ondfxuidp3 . rtdw ) , & ( nltnw1e5gkl . fqvhaqjss0 ) )
+; if ( ssIsSampleHit ( rtS , 1 , 0 ) && ( bcuvylxhefc . jse5bdwgjj == 0 ) ) {
 bcuvylxhefc . kap0odr3kj = hfe00hbwscw . i4av10pedr ; } if ( ssIsSampleHit (
 rtS , 5 , 0 ) ) { bcuvylxhefc . jse5bdwgjj = 1 ; hfe00hbwscw . jcnijfpmie =
 bcuvylxhefc . kap0odr3kj ; bcuvylxhefc . jse5bdwgjj = 0 ; } if (
@@ -509,19 +519,12 @@ EvPowertrainController ( & hfe00hbwscw . lfrzqxjyja , & hfe00hbwscw .
 o5n5eexjon , & hfe00hbwscw . e51yutiqek , & hfe00hbwscw . fbfzjqwa5a , &
 hfe00hbwscw . ldaenjp42v , & hfe00hbwscw . f53jjpuuxm , & hfe00hbwscw .
 hhj0p0jony , & ( bcuvylxhefc . alzb1lqr5t . rtb ) ) ; } if ( ssIsSampleHit (
-rtS , 4 , 0 ) ) { hfe00hbwscw . fkmxmxweyx = ssGetTaskTime ( rtS , 4 ) ; }
-hfe00hbwscw . j3cdx1rby1 = cbv1b3vtl5 - hfe00hbwscw . fkmxmxweyx ; cbv1b3vtl5
-= muDoubleScalarAbs ( hfe00hbwscw . k2nvq1dfvz ) ; iy = 0 ; if ( cbv1b3vtl5 <
-0.001 ) { iy = 1 ; } if ( 0 <= iy - 1 ) { z_data = cbv1b3vtl5 / 0.001 ; } if
-( 0 <= iy - 1 ) { z1_data = z_data ; } if ( 0 <= iy - 1 ) { z1_data = z_data
-* z_data ; } iy -- ; for ( i = 0 ; i <= iy ; i ++ ) { z1_data = 0.002 / ( 3.0
-- z1_data ) ; } if ( cbv1b3vtl5 < 0.001 ) { cbv1b3vtl5 = z1_data ; } iy = 0 ;
-if ( hfe00hbwscw . k2nvq1dfvz < 0.0 ) { iy = 1 ; } if ( 0 <= iy - 1 ) {
-z_data = - cbv1b3vtl5 ; } bcl1b5rt4n = cbv1b3vtl5 ; if ( hfe00hbwscw .
-k2nvq1dfvz < 0.0 ) { bcl1b5rt4n = z_data ; } if ( cbv1b3vtl5 > 5.0 ) {
-cbv1b3vtl5 = muDoubleScalarMax ( muDoubleScalarMin ( ihnh5ag1lp .
+rtS , 4 , 0 ) ) { hfe00hbwscw . kftazr0hxl = ssGetTaskTime ( rtS , 4 ) ; }
+hfe00hbwscw . ciswg50jx3 = jnb1m1brfj - hfe00hbwscw . kftazr0hxl ; dh5qgiweyz
+( hfe00hbwscw . k2nvq1dfvz , & bcl1b5rt4n , & jnb1m1brfj ) ; if ( jnb1m1brfj
+> 5.0 ) { jnb1m1brfj = muDoubleScalarMax ( muDoubleScalarMin ( ihnh5ag1lp .
 LongitudinalDriverModel_tau , ihnh5ag1lp . LongitudinalDriverModel_L /
-cbv1b3vtl5 ) , 0.001 ) ; } else { cbv1b3vtl5 = ihnh5ag1lp .
+jnb1m1brfj ) , 0.001 ) ; } else { jnb1m1brfj = ihnh5ag1lp .
 LongitudinalDriverModel_tau ; } dxbnvj4sno [ 0 ] = 0.0 ; dxbnvj4sno [ 2 ] =
 1.0 ; dxbnvj4sno [ 1 ] = - ( ( ihnh5ag1lp . LongitudinalDriverModel_aR /
 bcl1b5rt4n + ihnh5ag1lp . LongitudinalDriverModel_cR * hfe00hbwscw .
@@ -531,45 +534,44 @@ jvd5kozvur_idx_1 = ihnh5ag1lp . LongitudinalDriverModel_Kpt / rtP_m ; sigmaA
 [ 0 ] = 0.0 ; sigmaB_idx_0 = 0.0 ; sigmaA [ 1 ] = 0.0 ; sigmaB_idx_1 = 0.0 ;
 sigmaA [ 2 ] = 0.0 ; sigmaB_idx_2 = 0.0 ; sigmaA [ 3 ] = 0.0 ; sigmaB_idx_3 =
 0.0 ; for ( iy = 0 ; iy < 15 ; iy ++ ) { bcl1b5rt4n = muDoubleScalarPower (
-cbv1b3vtl5 , ( real_T ) iy + 1.0 ) ; mpower_QcZsu7Dx ( dxbnvj4sno , ( real_T
-) iy + 1.0 , b_I ) ; e = e_p [ iy + 1 ] ; sigmaA [ 0 ] += b_I [ 0 ] *
-bcl1b5rt4n / e ; sigmaA [ 1 ] += b_I [ 1 ] * bcl1b5rt4n / e ; sigmaA [ 2 ] +=
-b_I [ 2 ] * bcl1b5rt4n / e ; sigmaA [ 3 ] += b_I [ 3 ] * bcl1b5rt4n / e ;
-bcl1b5rt4n = muDoubleScalarPower ( cbv1b3vtl5 , ( real_T ) iy + 1.0 ) ;
-mpower_QcZsu7Dx ( dxbnvj4sno , ( real_T ) iy + 1.0 , b_I ) ; e = e_p [ iy ] ;
-sigmaB_idx_0 += b_I [ 0 ] * bcl1b5rt4n / e ; sigmaB_idx_1 += b_I [ 1 ] *
-bcl1b5rt4n / e ; sigmaB_idx_2 += b_I [ 2 ] * bcl1b5rt4n / e ; sigmaB_idx_3 +=
-b_I [ 3 ] * bcl1b5rt4n / e ; } cbv1b3vtl5 = ( ( sigmaA [ 0 ] + 1.0 ) *
-cbv1b3vtl5 + cbv1b3vtl5 * sigmaA [ 1 ] ) * 0.0 + ( ( sigmaA [ 3 ] + 1.0 ) *
-cbv1b3vtl5 + cbv1b3vtl5 * sigmaA [ 2 ] ) * jvd5kozvur_idx_1 ; nrauzgzuwg [ 0
-] = 0.0 ; nrauzgzuwg [ 1 ] = dxbnvj4sno [ 1 ] * 0.001 ; nrauzgzuwg [ 2 ] =
-0.001 ; nrauzgzuwg [ 3 ] = 0.0 ; expm_WM6qSMEO ( nrauzgzuwg , sigmaA ) ;
-nrauzgzuwg [ 0 ] = 0.0 ; nrauzgzuwg [ 1 ] = dxbnvj4sno [ 1 ] * 0.0 ;
-nrauzgzuwg [ 2 ] = 0.0 ; nrauzgzuwg [ 3 ] = 0.0 ; expm_WM6qSMEO ( nrauzgzuwg
-, b_I ) ; nrauzgzuwg [ 0 ] = 0.0 ; nrauzgzuwg [ 1 ] = dxbnvj4sno [ 1 ] *
-0.001 ; nrauzgzuwg [ 2 ] = 0.001 ; nrauzgzuwg [ 3 ] = 0.0 ; expm_WM6qSMEO (
-nrauzgzuwg , dxbnvj4sno ) ; hfe00hbwscw . hfrndgtdvk = ( ( ( b_I [ 0 ] * 0.0
-+ b_I [ 2 ] * jvd5kozvur_idx_1 ) + ( dxbnvj4sno [ 0 ] * 0.0 + dxbnvj4sno [ 2
-] * jvd5kozvur_idx_1 ) ) / 2.0 * 0.001 * hfe00hbwscw . ewcpkcxybh + ( sigmaA
-[ 0 ] * hfe00hbwscw . k2nvq1dfvz + sigmaA [ 2 ] * 0.0 ) ) * ( ( sigmaB_idx_0
-+ 1.0 ) + sigmaB_idx_1 ) + ( ( ( b_I [ 1 ] * 0.0 + b_I [ 3 ] *
-jvd5kozvur_idx_1 ) + ( dxbnvj4sno [ 1 ] * 0.0 + dxbnvj4sno [ 3 ] *
-jvd5kozvur_idx_1 ) ) / 2.0 * 0.001 * hfe00hbwscw . ewcpkcxybh + ( sigmaA [ 1
-] * hfe00hbwscw . k2nvq1dfvz + sigmaA [ 3 ] * 0.0 ) ) * ( ( sigmaB_idx_3 +
-1.0 ) + sigmaB_idx_2 ) ; hfe00hbwscw . bekklopwz5 = hfe00hbwscw . ewcpkcxybh
-* cbv1b3vtl5 ; hfe00hbwscw . gdkws0vsws = hfe00hbwscw . hfrndgtdvk +
-hfe00hbwscw . bekklopwz5 ; hfe00hbwscw . dkyaehby1j = otdvdul0vu -
-hfe00hbwscw . gdkws0vsws ; hfe00hbwscw . p50dphabzy = hfe00hbwscw .
-dkyaehby1j / cbv1b3vtl5 ; hfe00hbwscw . feadjgjni4 = hfe00hbwscw . p50dphabzy
-+ hfe00hbwscw . hd0j3gmmyn ; hfe00hbwscw . adqo2rpmqv = hfe00hbwscw .
-feadjgjni4 - hfe00hbwscw . hd0j3gmmyn ; hfe00hbwscw . gb4x2xlbw3 = 1.0 /
-ihnh5ag1lp . LongitudinalDriverModel_tau * 3.1415926535897931 * 2.0 *
-hfe00hbwscw . adqo2rpmqv ; hfe00hbwscw . l511ehwbyg = otdvdul0vu -
-hfe00hbwscw . k2nvq1dfvz ; hfe00hbwscw . d01a5ocxx2 = hfe00hbwscw .
-l511ehwbyg * hfe00hbwscw . l511ehwbyg ; if ( ssIsSampleHit ( rtS , 2 , 0 ) )
-{ hfe00hbwscw . asokvlgnxe [ 0 ] = bcuvylxhefc . cnrnbvpn5m [ 0 ] ;
-hfe00hbwscw . asokvlgnxe [ 1 ] = bcuvylxhefc . cnrnbvpn5m [ 1 ] ; } if (
-hfe00hbwscw . l511ehwbyg > hfe00hbwscw . asokvlgnxe [ 0 ] ) { hfe00hbwscw .
+jnb1m1brfj , ( real_T ) iy + 1.0 ) ; mpower_DSHl6Msh ( dxbnvj4sno , ( real_T
+) iy + 1.0 , a ) ; c = c_p [ iy + 1 ] ; sigmaA [ 0 ] += a [ 0 ] * bcl1b5rt4n
+/ c ; sigmaA [ 1 ] += a [ 1 ] * bcl1b5rt4n / c ; sigmaA [ 2 ] += a [ 2 ] *
+bcl1b5rt4n / c ; sigmaA [ 3 ] += a [ 3 ] * bcl1b5rt4n / c ; bcl1b5rt4n =
+muDoubleScalarPower ( jnb1m1brfj , ( real_T ) iy + 1.0 ) ; mpower_DSHl6Msh (
+dxbnvj4sno , ( real_T ) iy + 1.0 , a ) ; c = c_p [ iy ] ; sigmaB_idx_0 += a [
+0 ] * bcl1b5rt4n / c ; sigmaB_idx_1 += a [ 1 ] * bcl1b5rt4n / c ;
+sigmaB_idx_2 += a [ 2 ] * bcl1b5rt4n / c ; sigmaB_idx_3 += a [ 3 ] *
+bcl1b5rt4n / c ; } jnb1m1brfj = ( ( sigmaA [ 0 ] + 1.0 ) * jnb1m1brfj +
+jnb1m1brfj * sigmaA [ 1 ] ) * 0.0 + ( ( sigmaA [ 3 ] + 1.0 ) * jnb1m1brfj +
+jnb1m1brfj * sigmaA [ 2 ] ) * jvd5kozvur_idx_1 ; nrauzgzuwg [ 0 ] = 0.0 ;
+nrauzgzuwg [ 1 ] = dxbnvj4sno [ 1 ] * 0.001 ; nrauzgzuwg [ 2 ] = 0.001 ;
+nrauzgzuwg [ 3 ] = 0.0 ; expm_9DBYDrz1 ( nrauzgzuwg , sigmaA ) ; nrauzgzuwg [
+0 ] = 0.0 ; nrauzgzuwg [ 1 ] = dxbnvj4sno [ 1 ] * 0.0 ; nrauzgzuwg [ 2 ] =
+0.0 ; nrauzgzuwg [ 3 ] = 0.0 ; expm_9DBYDrz1 ( nrauzgzuwg , a ) ; nrauzgzuwg
+[ 0 ] = 0.0 ; nrauzgzuwg [ 1 ] = dxbnvj4sno [ 1 ] * 0.001 ; nrauzgzuwg [ 2 ]
+= 0.001 ; nrauzgzuwg [ 3 ] = 0.0 ; expm_9DBYDrz1 ( nrauzgzuwg , dxbnvj4sno )
+; hfe00hbwscw . hfrndgtdvk = ( ( ( a [ 0 ] * 0.0 + a [ 2 ] * jvd5kozvur_idx_1
+) + ( dxbnvj4sno [ 0 ] * 0.0 + dxbnvj4sno [ 2 ] * jvd5kozvur_idx_1 ) ) / 2.0
+* 0.001 * hfe00hbwscw . ewcpkcxybh + ( sigmaA [ 0 ] * hfe00hbwscw .
+k2nvq1dfvz + sigmaA [ 2 ] * 0.0 ) ) * ( ( sigmaB_idx_0 + 1.0 ) + sigmaB_idx_1
+) + ( ( ( a [ 1 ] * 0.0 + a [ 3 ] * jvd5kozvur_idx_1 ) + ( dxbnvj4sno [ 1 ] *
+0.0 + dxbnvj4sno [ 3 ] * jvd5kozvur_idx_1 ) ) / 2.0 * 0.001 * hfe00hbwscw .
+ewcpkcxybh + ( sigmaA [ 1 ] * hfe00hbwscw . k2nvq1dfvz + sigmaA [ 3 ] * 0.0 )
+) * ( ( sigmaB_idx_3 + 1.0 ) + sigmaB_idx_2 ) ; hfe00hbwscw . bekklopwz5 =
+hfe00hbwscw . ewcpkcxybh * jnb1m1brfj ; hfe00hbwscw . gdkws0vsws =
+hfe00hbwscw . hfrndgtdvk + hfe00hbwscw . bekklopwz5 ; hfe00hbwscw .
+dkyaehby1j = pgifr0yxtl - hfe00hbwscw . gdkws0vsws ; hfe00hbwscw . p50dphabzy
+= hfe00hbwscw . dkyaehby1j / jnb1m1brfj ; hfe00hbwscw . feadjgjni4 =
+hfe00hbwscw . p50dphabzy + hfe00hbwscw . hd0j3gmmyn ; hfe00hbwscw .
+adqo2rpmqv = hfe00hbwscw . feadjgjni4 - hfe00hbwscw . hd0j3gmmyn ;
+hfe00hbwscw . gb4x2xlbw3 = 1.0 / ihnh5ag1lp . LongitudinalDriverModel_tau *
+3.1415926535897931 * 2.0 * hfe00hbwscw . adqo2rpmqv ; hfe00hbwscw .
+l511ehwbyg = pgifr0yxtl - hfe00hbwscw . k2nvq1dfvz ; hfe00hbwscw . d01a5ocxx2
+= hfe00hbwscw . l511ehwbyg * hfe00hbwscw . l511ehwbyg ; if ( ssIsSampleHit (
+rtS , 2 , 0 ) ) { hfe00hbwscw . asokvlgnxe [ 0 ] = bcuvylxhefc . cnrnbvpn5m [
+0 ] ; hfe00hbwscw . asokvlgnxe [ 1 ] = bcuvylxhefc . cnrnbvpn5m [ 1 ] ; } if
+( hfe00hbwscw . l511ehwbyg > hfe00hbwscw . asokvlgnxe [ 0 ] ) { hfe00hbwscw .
 kmgjdorlmx [ 0 ] = hfe00hbwscw . l511ehwbyg ; } else { hfe00hbwscw .
 kmgjdorlmx [ 0 ] = hfe00hbwscw . asokvlgnxe [ 0 ] ; } if ( hfe00hbwscw .
 l511ehwbyg < hfe00hbwscw . asokvlgnxe [ 1 ] ) { hfe00hbwscw . kmgjdorlmx [ 1
@@ -586,18 +588,16 @@ bcuvylxhefc . dbduharpby . AQHandles , ssGetTaskTime ( rtS , 1 ) , ( char * )
 sdiWriteSignal ( bcuvylxhefc . dkmsy4vtjq . AQHandles , ssGetTaskTime ( rtS ,
 2 ) , ( char * ) & hfe00hbwscw . gxpwwcihxi + 0 ) ; } } } { real_T * *
 uBuffer = ( real_T * * ) & bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 0 ] ;
-real_T * * tBuffer = ( real_T * * ) & bcuvylxhefc . ohevlrvd4o . TUbufferPtrs
-[ 1 ] ; real_T simTime = ssGetT ( rtS ) ; real_T tMinusDelay = simTime -
-ihnh5ag1lp . TransportDelay_Delay ; hfe00hbwscw . lsa24czkrm =
-rt_TDelayInterpolate ( tMinusDelay , 0.0 , * tBuffer , * uBuffer ,
-bcuvylxhefc . ndxxvlk3ok . CircularBufSize , & bcuvylxhefc . ndxxvlk3ok .
-Last , bcuvylxhefc . ndxxvlk3ok . Tail , bcuvylxhefc . ndxxvlk3ok . Head ,
-ihnh5ag1lp . TransportDelay_InitOutput , 0 , ( boolean_T ) (
-ssIsMinorTimeStep ( rtS ) && ( ssGetTimeOfLastOutput ( rtS ) == ssGetT ( rtS
-) ) ) ) ; } if ( ssIsMajorTimeStep ( rtS ) ) { bcuvylxhefc . ppkl0jcesq = (
-hfe00hbwscw . lsa24czkrm > ihnh5ag1lp . Switch2_Threshold ) ; } if (
-bcuvylxhefc . ppkl0jcesq ) { hfe00hbwscw . gr3bzbxgoo = hfe00hbwscw .
-lsa24czkrm ; } else { hfe00hbwscw . gr3bzbxgoo = ihnh5ag1lp .
+real_T simTime = ssGetT ( rtS ) ; real_T tMinusDelay = simTime - ihnh5ag1lp .
+TransportDelay_Delay ; hfe00hbwscw . lsa24czkrm = rt_TDelayInterpolate (
+tMinusDelay , 0.0 , * uBuffer , bcuvylxhefc . ndxxvlk3ok . CircularBufSize ,
+& bcuvylxhefc . ndxxvlk3ok . Last , bcuvylxhefc . ndxxvlk3ok . Tail ,
+bcuvylxhefc . ndxxvlk3ok . Head , ihnh5ag1lp . TransportDelay_InitOutput , 0
+, ( boolean_T ) ( ssIsMinorTimeStep ( rtS ) && ( ssGetTimeOfLastOutput ( rtS
+) == ssGetT ( rtS ) ) ) ) ; } if ( ssIsMajorTimeStep ( rtS ) ) { bcuvylxhefc
+. ppkl0jcesq = ( hfe00hbwscw . lsa24czkrm > ihnh5ag1lp . Switch2_Threshold )
+; } if ( bcuvylxhefc . ppkl0jcesq ) { hfe00hbwscw . gr3bzbxgoo = hfe00hbwscw
+. lsa24czkrm ; } else { hfe00hbwscw . gr3bzbxgoo = ihnh5ag1lp .
 Constant_Value_jdsn1qewzr ; } if ( ssIsMajorTimeStep ( rtS ) ) { bcuvylxhefc
 . k4thfbnaxo = ( hfe00hbwscw . gr3bzbxgoo > ihnh5ag1lp . Switch1_Threshold )
 ; bcuvylxhefc . pnkzswknvx = ( hfe00hbwscw . gz5o4hus3a > ihnh5ag1lp .
@@ -631,100 +631,399 @@ MotGenEvDynamicTID3 ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) , & ( bcuvylxhefc
 . enbv0wioc4 . rtb ) , & ( bcuvylxhefc . enbv0wioc4 . rtdw ) ) ;
 UNUSED_PARAMETER ( tid ) ; } void MdlUpdate ( int_T tid ) { ekz3w3o33e ( & (
 bcuvylxhefc . iajxel3ezk . rtm ) , & ( bcuvylxhefc . iajxel3ezk . rtdw ) ) ;
-c0hgp3wnut ( & ( bcuvylxhefc . ondfxuidp3 . rtm ) , & ( bcuvylxhefc .
-ondfxuidp3 . rtb ) , & ( bcuvylxhefc . ondfxuidp3 . rtdw ) , & ( ( (
-nokraiiwbv * ) ssGetContStateDisabled ( rtS ) ) -> fqvhaqjss0 ) ) ; if (
-ssIsSampleHit ( rtS , 3 , 0 ) ) { bcuvylxhefc . klgv0izvyu [ bcuvylxhefc .
-fqundvylsh == 0 ] = hfe00hbwscw . f53jjpuuxm ; bcuvylxhefc . fqundvylsh = (
-int8_T ) ( bcuvylxhefc . fqundvylsh == 0 ) ; } lwglwij1vj ( & ( bcuvylxhefc .
-enbv0wioc4 . rtm ) , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & ( bcuvylxhefc .
-enbv0wioc4 . rtdw ) , & ( ( ( nokraiiwbv * ) ssGetContStateDisabled ( rtS ) )
--> b04e30byfs ) ) ; if ( ssIsSampleHit ( rtS , 2 , 0 ) ) { bcuvylxhefc .
+c0hgp3wnut ( & ( bcuvylxhefc . ondfxuidp3 . rtdw ) ) ; if ( ssIsSampleHit (
+rtS , 3 , 0 ) ) { bcuvylxhefc . klgv0izvyu [ bcuvylxhefc . fqundvylsh == 0 ]
+= hfe00hbwscw . f53jjpuuxm ; bcuvylxhefc . fqundvylsh = ( int8_T ) (
+bcuvylxhefc . fqundvylsh == 0 ) ; } lwglwij1vj ( & ( bcuvylxhefc . enbv0wioc4
+. rtm ) , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & ( bcuvylxhefc . enbv0wioc4
+. rtdw ) , & ( ( ( nokraiiwbv * ) ssGetContStateDisabled ( rtS ) ) ->
+b04e30byfs ) ) ; if ( ssIsSampleHit ( rtS , 2 , 0 ) ) { bcuvylxhefc .
 cnrnbvpn5m [ 0 ] = hfe00hbwscw . kmgjdorlmx [ 0 ] ; bcuvylxhefc . cnrnbvpn5m
 [ 1 ] = hfe00hbwscw . kmgjdorlmx [ 1 ] ; } { real_T * * uBuffer = ( real_T *
-* ) & bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 0 ] ; real_T * * tBuffer = (
-real_T * * ) & bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 1 ] ; real_T simTime
-= ssGetT ( rtS ) ; bcuvylxhefc . ndxxvlk3ok . Head = ( ( bcuvylxhefc .
-ndxxvlk3ok . Head < ( bcuvylxhefc . ndxxvlk3ok . CircularBufSize - 1 ) ) ? (
-bcuvylxhefc . ndxxvlk3ok . Head + 1 ) : 0 ) ; if ( bcuvylxhefc . ndxxvlk3ok .
-Head == bcuvylxhefc . ndxxvlk3ok . Tail ) { if ( !
-rt_TDelayUpdateTailOrGrowBuf ( & bcuvylxhefc . ndxxvlk3ok . CircularBufSize ,
-& bcuvylxhefc . ndxxvlk3ok . Tail , & bcuvylxhefc . ndxxvlk3ok . Head , &
-bcuvylxhefc . ndxxvlk3ok . Last , simTime - ihnh5ag1lp . TransportDelay_Delay
-, tBuffer , uBuffer , ( NULL ) , ( boolean_T ) 0 , false , & bcuvylxhefc .
-ndxxvlk3ok . MaxNewBufSize ) ) { ssSetErrorStatus ( rtS ,
-"tdelay memory allocation error" ) ; return ; } } ( * tBuffer ) [ bcuvylxhefc
-. ndxxvlk3ok . Head ] = simTime ; ( * uBuffer ) [ bcuvylxhefc . ndxxvlk3ok .
-Head ] = hfe00hbwscw . l2hqlcf2hl ; } UNUSED_PARAMETER ( tid ) ; } void
-MdlUpdateTID6 ( int_T tid ) { UNUSED_PARAMETER ( tid ) ; } void
-MdlDerivatives ( void ) { lqmi0mm3ub * _rtXdot ; _rtXdot = ( ( lqmi0mm3ub * )
-ssGetdX ( rtS ) ) ; _rtXdot -> i4qubohzc1 = 0.0 ; _rtXdot -> i4qubohzc1 +=
-ihnh5ag1lp . MotorCouplingDynamics_A * nltnw1e5gkl . i4qubohzc1 ; _rtXdot ->
-i4qubohzc1 += hfe00hbwscw . kpv1qapnbc ; a2spfqi5as ( & ( bcuvylxhefc .
-iajxel3ezk . rtb ) , & ( bcuvylxhefc . iajxel3ezk . rtdw ) , & ( nltnw1e5gkl
-. hcwjqlhqcy ) , & ( ( ( lqmi0mm3ub * ) ssGetdX ( rtS ) ) -> hcwjqlhqcy ) ) ;
-_rtXdot -> nxcnpybje3 = 0.0 ; _rtXdot -> nxcnpybje3 += ihnh5ag1lp .
+* ) & bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 0 ] ; real_T simTime = ssGetT
+( rtS ) ; bcuvylxhefc . ndxxvlk3ok . Head = ( ( bcuvylxhefc . ndxxvlk3ok .
+Head < ( bcuvylxhefc . ndxxvlk3ok . CircularBufSize - 1 ) ) ? ( bcuvylxhefc .
+ndxxvlk3ok . Head + 1 ) : 0 ) ; if ( bcuvylxhefc . ndxxvlk3ok . Head ==
+bcuvylxhefc . ndxxvlk3ok . Tail ) { if ( ! rt_TDelayUpdateTailOrGrowBuf ( &
+bcuvylxhefc . ndxxvlk3ok . CircularBufSize , & bcuvylxhefc . ndxxvlk3ok .
+Tail , & bcuvylxhefc . ndxxvlk3ok . Head , & bcuvylxhefc . ndxxvlk3ok . Last
+, simTime - ihnh5ag1lp . TransportDelay_Delay , uBuffer , ( boolean_T ) 0 ,
+false , & bcuvylxhefc . ndxxvlk3ok . MaxNewBufSize ) ) { ssSetErrorStatus (
+rtS , "tdelay memory allocation error" ) ; return ; }
+slsaSaveRawMemoryForSimTargetOP ( rtS ,
+"HT05Model/Passenger Car/Transport\nDelay_TUbuffer0" , ( void * * ) ( &
+uBuffer [ 0 ] ) , 2 * bcuvylxhefc . ndxxvlk3ok . CircularBufSize * sizeof (
+real_T ) , NULL , NULL ) ; } ( * uBuffer + bcuvylxhefc . ndxxvlk3ok .
+CircularBufSize ) [ bcuvylxhefc . ndxxvlk3ok . Head ] = simTime ; ( * uBuffer
+) [ bcuvylxhefc . ndxxvlk3ok . Head ] = hfe00hbwscw . l2hqlcf2hl ; }
+UNUSED_PARAMETER ( tid ) ; } void MdlUpdateTID6 ( int_T tid ) {
+UNUSED_PARAMETER ( tid ) ; } void MdlDerivatives ( void ) { lqmi0mm3ub *
+_rtXdot ; _rtXdot = ( ( lqmi0mm3ub * ) ssGetdX ( rtS ) ) ; _rtXdot ->
+i4qubohzc1 = 0.0 ; _rtXdot -> i4qubohzc1 += ihnh5ag1lp .
+MotorCouplingDynamics_A * nltnw1e5gkl . i4qubohzc1 ; _rtXdot -> i4qubohzc1 +=
+hfe00hbwscw . kpv1qapnbc ; a2spfqi5as ( & ( bcuvylxhefc . iajxel3ezk . rtb )
+, & ( bcuvylxhefc . iajxel3ezk . rtdw ) , & ( nltnw1e5gkl . hcwjqlhqcy ) , &
+( ( ( lqmi0mm3ub * ) ssGetdX ( rtS ) ) -> hcwjqlhqcy ) ) ; _rtXdot ->
+nxcnpybje3 = 0.0 ; _rtXdot -> nxcnpybje3 += ihnh5ag1lp .
 BatteryDischargeDynamics_A * nltnw1e5gkl . nxcnpybje3 ; _rtXdot -> nxcnpybje3
 += hfe00hbwscw . pb4y5y3noy ; pexk2pi1gg ( & ( bcuvylxhefc . ondfxuidp3 . rtb
-) , & ( ( ( nokraiiwbv * ) ssGetContStateDisabled ( rtS ) ) -> fqvhaqjss0 ) ,
-& ( ( ( lqmi0mm3ub * ) ssGetdX ( rtS ) ) -> fqvhaqjss0 ) ) ; mfy1r3luh1 ( &
-hfe00hbwscw . krfdbjpt0e , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & ( ( (
-nokraiiwbv * ) ssGetContStateDisabled ( rtS ) ) -> b04e30byfs ) , & ( ( (
-lqmi0mm3ub * ) ssGetdX ( rtS ) ) -> b04e30byfs ) ) ; _rtXdot -> a1yytga2i4 =
-hfe00hbwscw . juedzmwz13 ; _rtXdot -> d2vzwae4a0 = hfe00hbwscw . kpjtu3yzip ;
-_rtXdot -> fwf05bzu3h [ 0 ] = hfe00hbwscw . nou3xfrkex [ 0 ] ; _rtXdot ->
-fwf05bzu3h [ 1 ] = hfe00hbwscw . nou3xfrkex [ 1 ] ; _rtXdot -> fulynuhbhe =
-hfe00hbwscw . gb4x2xlbw3 ; _rtXdot -> hiwowua33s = hfe00hbwscw . d01a5ocxx2 ;
-} void MdlProjection ( void ) { } void MdlZeroCrossings ( void ) { lm4x2ar2jt
-* _rtZCSV ; _rtZCSV = ( ( lm4x2ar2jt * ) ssGetSolverZcSignalVector ( rtS ) )
-; d3sayc4aih ( & ( bcuvylxhefc . ondfxuidp3 . rtb ) , & ( bcuvylxhefc .
-ondfxuidp3 . rtdw ) , & ( nltnw1e5gkl . fqvhaqjss0 ) , & ( ( ( lm4x2ar2jt * )
-ssGetSolverZcSignalVector ( rtS ) ) -> g5hi1yixh2 ) ) ; cmnf4xtkyp ( &
-hfe00hbwscw . k5wjbiecdv , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & (
-bcuvylxhefc . enbv0wioc4 . rtdw ) , & ( nltnw1e5gkl . b04e30byfs ) , & ( ( (
-lm4x2ar2jt * ) ssGetSolverZcSignalVector ( rtS ) ) -> hev2tqxdbw ) ) ;
-_rtZCSV -> gppqg3jeps = hfe00hbwscw . bki5dqleao - ihnh5ag1lp .
-Saturation1_UpperSat ; _rtZCSV -> ncwkbjsqae = hfe00hbwscw . bki5dqleao -
-ihnh5ag1lp . Saturation1_LowerSat ; _rtZCSV -> duf13ep545 = hfe00hbwscw .
-jaqygtbwrp - ihnh5ag1lp . Saturation_UpperSat ; _rtZCSV -> ewzov3eiem =
-hfe00hbwscw . jaqygtbwrp - ihnh5ag1lp . Saturation_LowerSat ; _rtZCSV ->
-o4s3wza3yv = hfe00hbwscw . j3cdx1rby1 - ihnh5ag1lp . HitCrossing_Offset ;
-_rtZCSV -> a5s3n240xe = hfe00hbwscw . lsa24czkrm - ihnh5ag1lp .
-Switch2_Threshold ; _rtZCSV -> gvq0aim5lc = hfe00hbwscw . gr3bzbxgoo -
-ihnh5ag1lp . Switch1_Threshold ; _rtZCSV -> m0z2gatijm = hfe00hbwscw .
-gz5o4hus3a - ihnh5ag1lp . Switch_Threshold_pzy0px5xaq ; } void MdlTerminate (
-void ) { lktaxgo5iz ( & ( bcuvylxhefc . alzb1lqr5t . rtm ) ) ; ekywbf3nku ( &
-( bcuvylxhefc . iajxel3ezk . rtm ) ) ; m5uwyjpoin ( & ( bcuvylxhefc .
-ondfxuidp3 . rtm ) ) ; kh5ykjtmv0 ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) ) ;
-rt_TDelayFreeBuf ( bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 0 ] ) ;
-cmuw0kqmoe ( & ( bcuvylxhefc . iajxel3ezk . rtm ) , & ( bcuvylxhefc .
-iajxel3ezk . rtdw ) ) ; dk15ta1msh ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) , &
-( bcuvylxhefc . enbv0wioc4 . rtdw ) ) ; { if ( bcuvylxhefc . cbpif1banu .
-AQHandles ) { sdiTerminateStreaming ( & bcuvylxhefc . cbpif1banu . AQHandles
-) ; } } { if ( bcuvylxhefc . dbduharpby . AQHandles ) { sdiTerminateStreaming
-( & bcuvylxhefc . dbduharpby . AQHandles ) ; } } { if ( bcuvylxhefc .
-dkmsy4vtjq . AQHandles ) { sdiTerminateStreaming ( & bcuvylxhefc . dkmsy4vtjq
-. AQHandles ) ; } } { if ( bcuvylxhefc . m3edf11hk1 . AQHandles ) {
+) , & ( nltnw1e5gkl . fqvhaqjss0 ) , & ( ( ( lqmi0mm3ub * ) ssGetdX ( rtS ) )
+-> fqvhaqjss0 ) ) ; mfy1r3luh1 ( & hfe00hbwscw . krfdbjpt0e , & ( bcuvylxhefc
+. enbv0wioc4 . rtb ) , & ( ( ( nokraiiwbv * ) ssGetContStateDisabled ( rtS )
+) -> b04e30byfs ) , & ( ( ( lqmi0mm3ub * ) ssGetdX ( rtS ) ) -> b04e30byfs )
+) ; _rtXdot -> a1yytga2i4 = hfe00hbwscw . juedzmwz13 ; _rtXdot -> d2vzwae4a0
+= hfe00hbwscw . kpjtu3yzip ; _rtXdot -> fwf05bzu3h [ 0 ] = hfe00hbwscw .
+nou3xfrkex [ 0 ] ; _rtXdot -> fwf05bzu3h [ 1 ] = hfe00hbwscw . nou3xfrkex [ 1
+] ; _rtXdot -> fulynuhbhe = hfe00hbwscw . gb4x2xlbw3 ; _rtXdot -> hiwowua33s
+= hfe00hbwscw . d01a5ocxx2 ; } void MdlProjection ( void ) { } void
+MdlZeroCrossings ( void ) { lm4x2ar2jt * _rtZCSV ; _rtZCSV = ( ( lm4x2ar2jt *
+) ssGetSolverZcSignalVector ( rtS ) ) ; cmnf4xtkyp ( & hfe00hbwscw .
+k5wjbiecdv , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & ( bcuvylxhefc .
+enbv0wioc4 . rtdw ) , & ( nltnw1e5gkl . b04e30byfs ) , & ( ( ( lm4x2ar2jt * )
+ssGetSolverZcSignalVector ( rtS ) ) -> hev2tqxdbw ) ) ; _rtZCSV -> gppqg3jeps
+= hfe00hbwscw . bki5dqleao - ihnh5ag1lp . Saturation1_UpperSat ; _rtZCSV ->
+ncwkbjsqae = hfe00hbwscw . bki5dqleao - ihnh5ag1lp . Saturation1_LowerSat ;
+_rtZCSV -> duf13ep545 = hfe00hbwscw . jaqygtbwrp - ihnh5ag1lp .
+Saturation_UpperSat ; _rtZCSV -> ewzov3eiem = hfe00hbwscw . jaqygtbwrp -
+ihnh5ag1lp . Saturation_LowerSat ; _rtZCSV -> pkdl1bjwj0 = hfe00hbwscw .
+ciswg50jx3 - ihnh5ag1lp . HitCrossing_Offset ; _rtZCSV -> a5s3n240xe =
+hfe00hbwscw . lsa24czkrm - ihnh5ag1lp . Switch2_Threshold ; _rtZCSV ->
+gvq0aim5lc = hfe00hbwscw . gr3bzbxgoo - ihnh5ag1lp . Switch1_Threshold ;
+_rtZCSV -> m0z2gatijm = hfe00hbwscw . gz5o4hus3a - ihnh5ag1lp .
+Switch_Threshold_pzy0px5xaq ; } void MdlTerminate ( void ) { lktaxgo5iz ( & (
+bcuvylxhefc . alzb1lqr5t . rtm ) ) ; ekywbf3nku ( & ( bcuvylxhefc .
+iajxel3ezk . rtm ) ) ; m5uwyjpoin ( & ( bcuvylxhefc . ondfxuidp3 . rtm ) ) ;
+kh5ykjtmv0 ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) ) ; rt_TDelayFreeBuf (
+bcuvylxhefc . ohevlrvd4o . TUbufferPtrs [ 0 ] ) ; cmuw0kqmoe ( & (
+bcuvylxhefc . iajxel3ezk . rtm ) , & ( bcuvylxhefc . iajxel3ezk . rtdw ) ) ;
+dk15ta1msh ( & ( bcuvylxhefc . enbv0wioc4 . rtm ) , & ( bcuvylxhefc .
+enbv0wioc4 . rtdw ) ) ; { if ( bcuvylxhefc . cbpif1banu . AQHandles ) {
+sdiTerminateStreaming ( & bcuvylxhefc . cbpif1banu . AQHandles ) ; } } { if (
+bcuvylxhefc . dbduharpby . AQHandles ) { sdiTerminateStreaming ( &
+bcuvylxhefc . dbduharpby . AQHandles ) ; } } { if ( bcuvylxhefc . dkmsy4vtjq
+. AQHandles ) { sdiTerminateStreaming ( & bcuvylxhefc . dkmsy4vtjq .
+AQHandles ) ; } } { if ( bcuvylxhefc . m3edf11hk1 . AQHandles ) {
 sdiTerminateStreaming ( & bcuvylxhefc . m3edf11hk1 . AQHandles ) ; } } { if (
 bcuvylxhefc . o142ktwdad . AQHandles ) { sdiTerminateStreaming ( &
 bcuvylxhefc . o142ktwdad . AQHandles ) ; } } { if ( bcuvylxhefc . cbpif1banuf
 . AQHandles ) { sdiTerminateStreaming ( & bcuvylxhefc . cbpif1banuf .
 AQHandles ) ; } } { if ( bcuvylxhefc . ks1fvl1d0d . AQHandles ) {
-sdiTerminateStreaming ( & bcuvylxhefc . ks1fvl1d0d . AQHandles ) ; } } } void
-MdlInitializeSizes ( void ) { ssSetNumContStates ( rtS , 35 ) ;
-ssSetNumPeriodicContStates ( rtS , 2 ) ; ssSetNumY ( rtS , 0 ) ; ssSetNumU (
-rtS , 0 ) ; ssSetDirectFeedThrough ( rtS , 0 ) ; ssSetNumSampleTimes ( rtS ,
-6 ) ; ssSetNumBlocks ( rtS , 127 ) ; ssSetNumBlockIO ( rtS , 73 ) ;
-ssSetNumBlockParams ( rtS , 859 ) ; } void MdlInitializeSampleTimes ( void )
-{ ssSetSampleTime ( rtS , 0 , 0.0 ) ; ssSetSampleTime ( rtS , 1 , 0.0 ) ;
-ssSetSampleTime ( rtS , 2 , 5.0E-5 ) ; ssSetSampleTime ( rtS , 3 , 0.01 ) ;
-ssSetSampleTime ( rtS , 4 , 0.05 ) ; ssSetSampleTime ( rtS , 5 , 0.1 ) ;
-ssSetOffsetTime ( rtS , 0 , 0.0 ) ; ssSetOffsetTime ( rtS , 1 , 1.0 ) ;
-ssSetOffsetTime ( rtS , 2 , 0.0 ) ; ssSetOffsetTime ( rtS , 3 , 0.0 ) ;
-ssSetOffsetTime ( rtS , 4 , 0.0 ) ; ssSetOffsetTime ( rtS , 5 , 0.0 ) ; }
-void raccel_set_checksum ( ) { ssSetChecksumVal ( rtS , 0 , 2016671697U ) ;
-ssSetChecksumVal ( rtS , 1 , 1193092159U ) ; ssSetChecksumVal ( rtS , 2 ,
-4221439711U ) ; ssSetChecksumVal ( rtS , 3 , 1036386930U ) ; }
+sdiTerminateStreaming ( & bcuvylxhefc . ks1fvl1d0d . AQHandles ) ; } } }
+static void mr_HT05Model_cacheDataAsMxArray ( mxArray * destArray , mwIndex i
+, int j , const void * srcData , size_t numBytes ) ; static void
+mr_HT05Model_cacheDataAsMxArray ( mxArray * destArray , mwIndex i , int j ,
+const void * srcData , size_t numBytes ) { mxArray * newArray =
+mxCreateUninitNumericMatrix ( ( size_t ) 1 , numBytes , mxUINT8_CLASS ,
+mxREAL ) ; memcpy ( ( uint8_T * ) mxGetData ( newArray ) , ( const uint8_T *
+) srcData , numBytes ) ; mxSetFieldByNumber ( destArray , i , j , newArray )
+; } static void mr_HT05Model_restoreDataFromMxArray ( void * destData , const
+mxArray * srcArray , mwIndex i , int j , size_t numBytes ) ; static void
+mr_HT05Model_restoreDataFromMxArray ( void * destData , const mxArray *
+srcArray , mwIndex i , int j , size_t numBytes ) { memcpy ( ( uint8_T * )
+destData , ( const uint8_T * ) mxGetData ( mxGetFieldByNumber ( srcArray , i
+, j ) ) , numBytes ) ; } static void mr_HT05Model_cacheBitFieldToMxArray (
+mxArray * destArray , mwIndex i , int j , uint_T bitVal ) ; static void
+mr_HT05Model_cacheBitFieldToMxArray ( mxArray * destArray , mwIndex i , int j
+, uint_T bitVal ) { mxSetFieldByNumber ( destArray , i , j ,
+mxCreateDoubleScalar ( ( double ) bitVal ) ) ; } static uint_T
+mr_HT05Model_extractBitFieldFromMxArray ( const mxArray * srcArray , mwIndex
+i , int j , uint_T numBits ) ; static uint_T
+mr_HT05Model_extractBitFieldFromMxArray ( const mxArray * srcArray , mwIndex
+i , int j , uint_T numBits ) { const uint_T varVal = ( uint_T ) mxGetScalar (
+mxGetFieldByNumber ( srcArray , i , j ) ) ; return varVal & ( ( 1u << numBits
+) - 1u ) ; } static void mr_HT05Model_cacheDataToMxArrayWithOffset ( mxArray
+* destArray , mwIndex i , int j , mwIndex offset , const void * srcData ,
+size_t numBytes ) ; static void mr_HT05Model_cacheDataToMxArrayWithOffset (
+mxArray * destArray , mwIndex i , int j , mwIndex offset , const void *
+srcData , size_t numBytes ) { uint8_T * varData = ( uint8_T * ) mxGetData (
+mxGetFieldByNumber ( destArray , i , j ) ) ; memcpy ( ( uint8_T * ) & varData
+[ offset * numBytes ] , ( const uint8_T * ) srcData , numBytes ) ; } static
+void mr_HT05Model_restoreDataFromMxArrayWithOffset ( void * destData , const
+mxArray * srcArray , mwIndex i , int j , mwIndex offset , size_t numBytes ) ;
+static void mr_HT05Model_restoreDataFromMxArrayWithOffset ( void * destData ,
+const mxArray * srcArray , mwIndex i , int j , mwIndex offset , size_t
+numBytes ) { const uint8_T * varData = ( const uint8_T * ) mxGetData (
+mxGetFieldByNumber ( srcArray , i , j ) ) ; memcpy ( ( uint8_T * ) destData ,
+( const uint8_T * ) & varData [ offset * numBytes ] , numBytes ) ; } static
+void mr_HT05Model_cacheBitFieldToCellArrayWithOffset ( mxArray * destArray ,
+mwIndex i , int j , mwIndex offset , uint_T fieldVal ) ; static void
+mr_HT05Model_cacheBitFieldToCellArrayWithOffset ( mxArray * destArray ,
+mwIndex i , int j , mwIndex offset , uint_T fieldVal ) { mxSetCell (
+mxGetFieldByNumber ( destArray , i , j ) , offset , mxCreateDoubleScalar ( (
+double ) fieldVal ) ) ; } static uint_T
+mr_HT05Model_extractBitFieldFromCellArrayWithOffset ( const mxArray *
+srcArray , mwIndex i , int j , mwIndex offset , uint_T numBits ) ; static
+uint_T mr_HT05Model_extractBitFieldFromCellArrayWithOffset ( const mxArray *
+srcArray , mwIndex i , int j , mwIndex offset , uint_T numBits ) { const
+uint_T fieldVal = ( uint_T ) mxGetScalar ( mxGetCell ( mxGetFieldByNumber (
+srcArray , i , j ) , offset ) ) ; return fieldVal & ( ( 1u << numBits ) - 1u
+) ; } mxArray * mr_HT05Model_GetDWork ( ) { static const char *
+ssDWFieldNames [ 3 ] = { "hfe00hbwscw" , "bcuvylxhefc" , "NULL_PrevZCX" , } ;
+mxArray * ssDW = mxCreateStructMatrix ( 1 , 1 , 3 , ssDWFieldNames ) ;
+mr_HT05Model_cacheDataAsMxArray ( ssDW , 0 , 0 , ( const void * ) & (
+hfe00hbwscw ) , sizeof ( hfe00hbwscw ) ) ; { static const char *
+rtdwDataFieldNames [ 46 ] = { "bcuvylxhefc.iajxel3ezk" ,
+"bcuvylxhefc.ondfxuidp3" , "bcuvylxhefc.enbv0wioc4" ,
+"bcuvylxhefc.alzb1lqr5t" , "bcuvylxhefc.cnrnbvpn5m" ,
+"bcuvylxhefc.ngtzwyl1pu" , "bcuvylxhefc.e4gjlzj1lq" ,
+"bcuvylxhefc.i5uql30i2j" , "bcuvylxhefc.kap0odr3kj" ,
+"bcuvylxhefc.klgv0izvyu" , "bcuvylxhefc.hp5pufrajm" ,
+"bcuvylxhefc.j1c3q5x2i4" , "bcuvylxhefc.cptmanfsa1" ,
+"bcuvylxhefc.j5bb1yym0w" , "bcuvylxhefc.nos2ft3sic" ,
+"bcuvylxhefc.n3mkw34cn5" , "bcuvylxhefc.h1tau0ecpq" ,
+"bcuvylxhefc.kmrimj41ij" , "bcuvylxhefc.kebrerroqx" ,
+"bcuvylxhefc.ozks055do0" , "bcuvylxhefc.odmqgoxpmf" ,
+"bcuvylxhefc.ndxxvlk3ok" , "bcuvylxhefc.hn5nuy0lbc" ,
+"bcuvylxhefc.nxsdzjpe5i" , "bcuvylxhefc.piumrtffmp" ,
+"bcuvylxhefc.oijmj1tdxd" , "bcuvylxhefc.anfmogqnpx" ,
+"bcuvylxhefc.jse5bdwgjj" , "bcuvylxhefc.fqundvylsh" ,
+"bcuvylxhefc.egwjbtmbyq" , "bcuvylxhefc.bsjrzyb4mr" ,
+"bcuvylxhefc.llz0iknlo0" , "bcuvylxhefc.a5czhakwii" ,
+"bcuvylxhefc.l1ffn0wiag" , "bcuvylxhefc.fiqovchppi" ,
+"bcuvylxhefc.oxgd34m1rt" , "bcuvylxhefc.i51uahy2gc" ,
+"bcuvylxhefc.jtthydvh1h" , "bcuvylxhefc.kgr2bmvhtp" ,
+"bcuvylxhefc.ppkl0jcesq" , "bcuvylxhefc.k4thfbnaxo" ,
+"bcuvylxhefc.pnkzswknvx" , "bcuvylxhefc.hysyewwydg.gwhutwksvk" ,
+"bcuvylxhefc.hysyewwydg.kc02azdlcj" , "bcuvylxhefc.e2ib0nh2tkx.gwhutwksvk" ,
+"bcuvylxhefc.e2ib0nh2tkx.kc02azdlcj" , } ; mxArray * rtdwData =
+mxCreateStructMatrix ( 1 , 1 , 46 , rtdwDataFieldNames ) ; { mxArray *
+varData = mr_DrivetrainEv_GetDWork ( & ( bcuvylxhefc . iajxel3ezk ) ) ;
+mxSetFieldByNumber ( rtdwData , 0 , 0 , varData ) ; } { mxArray * varData =
+mr_BattEv_GetDWork ( & ( bcuvylxhefc . ondfxuidp3 ) ) ; mxSetFieldByNumber (
+rtdwData , 0 , 1 , varData ) ; } { mxArray * varData =
+mr_MotGenEvDynamic_GetDWork ( & ( bcuvylxhefc . enbv0wioc4 ) ) ;
+mxSetFieldByNumber ( rtdwData , 0 , 2 , varData ) ; } { mxArray * varData =
+mr_EvPowertrainController_GetDWork ( & ( bcuvylxhefc . alzb1lqr5t ) ) ;
+mxSetFieldByNumber ( rtdwData , 0 , 3 , varData ) ; }
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 4 , ( const void * ) & (
+bcuvylxhefc . cnrnbvpn5m ) , sizeof ( bcuvylxhefc . cnrnbvpn5m ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 5 , ( const void * ) & (
+bcuvylxhefc . ngtzwyl1pu ) , sizeof ( bcuvylxhefc . ngtzwyl1pu ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 6 , ( const void * ) & (
+bcuvylxhefc . e4gjlzj1lq ) , sizeof ( bcuvylxhefc . e4gjlzj1lq ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 7 , ( const void * ) & (
+bcuvylxhefc . i5uql30i2j ) , sizeof ( bcuvylxhefc . i5uql30i2j ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 8 , ( const void * ) & (
+bcuvylxhefc . kap0odr3kj ) , sizeof ( bcuvylxhefc . kap0odr3kj ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 9 , ( const void * ) & (
+bcuvylxhefc . klgv0izvyu ) , sizeof ( bcuvylxhefc . klgv0izvyu ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 10 , ( const void * ) & (
+bcuvylxhefc . hp5pufrajm ) , sizeof ( bcuvylxhefc . hp5pufrajm ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 11 , ( const void * ) & (
+bcuvylxhefc . j1c3q5x2i4 ) , sizeof ( bcuvylxhefc . j1c3q5x2i4 ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 12 , ( const void * ) & (
+bcuvylxhefc . cptmanfsa1 ) , sizeof ( bcuvylxhefc . cptmanfsa1 ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 13 , ( const void * ) & (
+bcuvylxhefc . j5bb1yym0w ) , sizeof ( bcuvylxhefc . j5bb1yym0w ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 14 , ( const void * ) & (
+bcuvylxhefc . nos2ft3sic ) , sizeof ( bcuvylxhefc . nos2ft3sic ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 15 , ( const void * ) & (
+bcuvylxhefc . n3mkw34cn5 ) , sizeof ( bcuvylxhefc . n3mkw34cn5 ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 16 , ( const void * ) & (
+bcuvylxhefc . h1tau0ecpq ) , sizeof ( bcuvylxhefc . h1tau0ecpq ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 17 , ( const void * ) & (
+bcuvylxhefc . kmrimj41ij ) , sizeof ( bcuvylxhefc . kmrimj41ij ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 18 , ( const void * ) & (
+bcuvylxhefc . kebrerroqx ) , sizeof ( bcuvylxhefc . kebrerroqx ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 19 , ( const void * ) & (
+bcuvylxhefc . ozks055do0 ) , sizeof ( bcuvylxhefc . ozks055do0 ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 20 , ( const void * ) & (
+bcuvylxhefc . odmqgoxpmf ) , sizeof ( bcuvylxhefc . odmqgoxpmf ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 21 , ( const void * ) & (
+bcuvylxhefc . ndxxvlk3ok ) , sizeof ( bcuvylxhefc . ndxxvlk3ok ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 22 , ( const void * ) & (
+bcuvylxhefc . hn5nuy0lbc ) , sizeof ( bcuvylxhefc . hn5nuy0lbc ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 23 , ( const void * ) & (
+bcuvylxhefc . nxsdzjpe5i ) , sizeof ( bcuvylxhefc . nxsdzjpe5i ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 24 , ( const void * ) & (
+bcuvylxhefc . piumrtffmp ) , sizeof ( bcuvylxhefc . piumrtffmp ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 25 , ( const void * ) & (
+bcuvylxhefc . oijmj1tdxd ) , sizeof ( bcuvylxhefc . oijmj1tdxd ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 26 , ( const void * ) & (
+bcuvylxhefc . anfmogqnpx ) , sizeof ( bcuvylxhefc . anfmogqnpx ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 27 , ( const void * ) & (
+bcuvylxhefc . jse5bdwgjj ) , sizeof ( bcuvylxhefc . jse5bdwgjj ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 28 , ( const void * ) & (
+bcuvylxhefc . fqundvylsh ) , sizeof ( bcuvylxhefc . fqundvylsh ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 29 , ( const void * ) & (
+bcuvylxhefc . egwjbtmbyq ) , sizeof ( bcuvylxhefc . egwjbtmbyq ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 30 , ( const void * ) & (
+bcuvylxhefc . bsjrzyb4mr ) , sizeof ( bcuvylxhefc . bsjrzyb4mr ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 31 , ( const void * ) & (
+bcuvylxhefc . llz0iknlo0 ) , sizeof ( bcuvylxhefc . llz0iknlo0 ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 32 , ( const void * ) & (
+bcuvylxhefc . a5czhakwii ) , sizeof ( bcuvylxhefc . a5czhakwii ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 33 , ( const void * ) & (
+bcuvylxhefc . l1ffn0wiag ) , sizeof ( bcuvylxhefc . l1ffn0wiag ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 34 , ( const void * ) & (
+bcuvylxhefc . fiqovchppi ) , sizeof ( bcuvylxhefc . fiqovchppi ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 35 , ( const void * ) & (
+bcuvylxhefc . oxgd34m1rt ) , sizeof ( bcuvylxhefc . oxgd34m1rt ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 36 , ( const void * ) & (
+bcuvylxhefc . i51uahy2gc ) , sizeof ( bcuvylxhefc . i51uahy2gc ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 37 , ( const void * ) & (
+bcuvylxhefc . jtthydvh1h ) , sizeof ( bcuvylxhefc . jtthydvh1h ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 38 , ( const void * ) & (
+bcuvylxhefc . kgr2bmvhtp ) , sizeof ( bcuvylxhefc . kgr2bmvhtp ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 39 , ( const void * ) & (
+bcuvylxhefc . ppkl0jcesq ) , sizeof ( bcuvylxhefc . ppkl0jcesq ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 40 , ( const void * ) & (
+bcuvylxhefc . k4thfbnaxo ) , sizeof ( bcuvylxhefc . k4thfbnaxo ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 41 , ( const void * ) & (
+bcuvylxhefc . pnkzswknvx ) , sizeof ( bcuvylxhefc . pnkzswknvx ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 42 , ( const void * ) & (
+bcuvylxhefc . hysyewwydg . gwhutwksvk ) , sizeof ( bcuvylxhefc . hysyewwydg .
+gwhutwksvk ) ) ; mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 43 , (
+const void * ) & ( bcuvylxhefc . hysyewwydg . kc02azdlcj ) , sizeof (
+bcuvylxhefc . hysyewwydg . kc02azdlcj ) ) ; mr_HT05Model_cacheDataAsMxArray (
+rtdwData , 0 , 44 , ( const void * ) & ( bcuvylxhefc . e2ib0nh2tkx .
+gwhutwksvk ) , sizeof ( bcuvylxhefc . e2ib0nh2tkx . gwhutwksvk ) ) ;
+mr_HT05Model_cacheDataAsMxArray ( rtdwData , 0 , 45 , ( const void * ) & (
+bcuvylxhefc . e2ib0nh2tkx . kc02azdlcj ) , sizeof ( bcuvylxhefc . e2ib0nh2tkx
+. kc02azdlcj ) ) ; mxSetFieldByNumber ( ssDW , 0 , 1 , rtdwData ) ; } return
+ssDW ; } void mr_HT05Model_SetDWork ( const mxArray * ssDW ) { ( void ) ssDW
+; mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( hfe00hbwscw ) , ssDW ,
+0 , 0 , sizeof ( hfe00hbwscw ) ) ; { const mxArray * rtdwData =
+mxGetFieldByNumber ( ssDW , 0 , 1 ) ; mr_DrivetrainEv_SetDWork ( & (
+bcuvylxhefc . iajxel3ezk ) , mxGetFieldByNumber ( rtdwData , 0 , 0 ) ) ;
+mr_BattEv_SetDWork ( & ( bcuvylxhefc . ondfxuidp3 ) , mxGetFieldByNumber (
+rtdwData , 0 , 1 ) ) ; mr_MotGenEvDynamic_SetDWork ( & ( bcuvylxhefc .
+enbv0wioc4 ) , mxGetFieldByNumber ( rtdwData , 0 , 2 ) ) ;
+mr_EvPowertrainController_SetDWork ( & ( bcuvylxhefc . alzb1lqr5t ) ,
+mxGetFieldByNumber ( rtdwData , 0 , 3 ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . cnrnbvpn5m
+) , rtdwData , 0 , 4 , sizeof ( bcuvylxhefc . cnrnbvpn5m ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . ngtzwyl1pu
+) , rtdwData , 0 , 5 , sizeof ( bcuvylxhefc . ngtzwyl1pu ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . e4gjlzj1lq
+) , rtdwData , 0 , 6 , sizeof ( bcuvylxhefc . e4gjlzj1lq ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . i5uql30i2j
+) , rtdwData , 0 , 7 , sizeof ( bcuvylxhefc . i5uql30i2j ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . kap0odr3kj
+) , rtdwData , 0 , 8 , sizeof ( bcuvylxhefc . kap0odr3kj ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . klgv0izvyu
+) , rtdwData , 0 , 9 , sizeof ( bcuvylxhefc . klgv0izvyu ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . hp5pufrajm
+) , rtdwData , 0 , 10 , sizeof ( bcuvylxhefc . hp5pufrajm ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . j1c3q5x2i4
+) , rtdwData , 0 , 11 , sizeof ( bcuvylxhefc . j1c3q5x2i4 ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . cptmanfsa1
+) , rtdwData , 0 , 12 , sizeof ( bcuvylxhefc . cptmanfsa1 ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . j5bb1yym0w
+) , rtdwData , 0 , 13 , sizeof ( bcuvylxhefc . j5bb1yym0w ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . nos2ft3sic
+) , rtdwData , 0 , 14 , sizeof ( bcuvylxhefc . nos2ft3sic ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . n3mkw34cn5
+) , rtdwData , 0 , 15 , sizeof ( bcuvylxhefc . n3mkw34cn5 ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . h1tau0ecpq
+) , rtdwData , 0 , 16 , sizeof ( bcuvylxhefc . h1tau0ecpq ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . kmrimj41ij
+) , rtdwData , 0 , 17 , sizeof ( bcuvylxhefc . kmrimj41ij ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . kebrerroqx
+) , rtdwData , 0 , 18 , sizeof ( bcuvylxhefc . kebrerroqx ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . ozks055do0
+) , rtdwData , 0 , 19 , sizeof ( bcuvylxhefc . ozks055do0 ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . odmqgoxpmf
+) , rtdwData , 0 , 20 , sizeof ( bcuvylxhefc . odmqgoxpmf ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . ndxxvlk3ok
+) , rtdwData , 0 , 21 , sizeof ( bcuvylxhefc . ndxxvlk3ok ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . hn5nuy0lbc
+) , rtdwData , 0 , 22 , sizeof ( bcuvylxhefc . hn5nuy0lbc ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . nxsdzjpe5i
+) , rtdwData , 0 , 23 , sizeof ( bcuvylxhefc . nxsdzjpe5i ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . piumrtffmp
+) , rtdwData , 0 , 24 , sizeof ( bcuvylxhefc . piumrtffmp ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . oijmj1tdxd
+) , rtdwData , 0 , 25 , sizeof ( bcuvylxhefc . oijmj1tdxd ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . anfmogqnpx
+) , rtdwData , 0 , 26 , sizeof ( bcuvylxhefc . anfmogqnpx ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . jse5bdwgjj
+) , rtdwData , 0 , 27 , sizeof ( bcuvylxhefc . jse5bdwgjj ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . fqundvylsh
+) , rtdwData , 0 , 28 , sizeof ( bcuvylxhefc . fqundvylsh ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . egwjbtmbyq
+) , rtdwData , 0 , 29 , sizeof ( bcuvylxhefc . egwjbtmbyq ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . bsjrzyb4mr
+) , rtdwData , 0 , 30 , sizeof ( bcuvylxhefc . bsjrzyb4mr ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . llz0iknlo0
+) , rtdwData , 0 , 31 , sizeof ( bcuvylxhefc . llz0iknlo0 ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . a5czhakwii
+) , rtdwData , 0 , 32 , sizeof ( bcuvylxhefc . a5czhakwii ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . l1ffn0wiag
+) , rtdwData , 0 , 33 , sizeof ( bcuvylxhefc . l1ffn0wiag ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . fiqovchppi
+) , rtdwData , 0 , 34 , sizeof ( bcuvylxhefc . fiqovchppi ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . oxgd34m1rt
+) , rtdwData , 0 , 35 , sizeof ( bcuvylxhefc . oxgd34m1rt ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . i51uahy2gc
+) , rtdwData , 0 , 36 , sizeof ( bcuvylxhefc . i51uahy2gc ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . jtthydvh1h
+) , rtdwData , 0 , 37 , sizeof ( bcuvylxhefc . jtthydvh1h ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . kgr2bmvhtp
+) , rtdwData , 0 , 38 , sizeof ( bcuvylxhefc . kgr2bmvhtp ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . ppkl0jcesq
+) , rtdwData , 0 , 39 , sizeof ( bcuvylxhefc . ppkl0jcesq ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . k4thfbnaxo
+) , rtdwData , 0 , 40 , sizeof ( bcuvylxhefc . k4thfbnaxo ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . pnkzswknvx
+) , rtdwData , 0 , 41 , sizeof ( bcuvylxhefc . pnkzswknvx ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc . hysyewwydg
+. gwhutwksvk ) , rtdwData , 0 , 42 , sizeof ( bcuvylxhefc . hysyewwydg .
+gwhutwksvk ) ) ; mr_HT05Model_restoreDataFromMxArray ( ( void * ) & (
+bcuvylxhefc . hysyewwydg . kc02azdlcj ) , rtdwData , 0 , 43 , sizeof (
+bcuvylxhefc . hysyewwydg . kc02azdlcj ) ) ;
+mr_HT05Model_restoreDataFromMxArray ( ( void * ) & ( bcuvylxhefc .
+e2ib0nh2tkx . gwhutwksvk ) , rtdwData , 0 , 44 , sizeof ( bcuvylxhefc .
+e2ib0nh2tkx . gwhutwksvk ) ) ; mr_HT05Model_restoreDataFromMxArray ( ( void *
+) & ( bcuvylxhefc . e2ib0nh2tkx . kc02azdlcj ) , rtdwData , 0 , 45 , sizeof (
+bcuvylxhefc . e2ib0nh2tkx . kc02azdlcj ) ) ; } } mxArray *
+mr_HT05Model_GetSimStateDisallowedBlocks ( ) { mxArray * data = NULL ;
+mwIndex subs [ 2 ] , offset ; size_t numChildrenWithDisallowedBlocks = 0 ;
+size_t numBlocks = 0 ; mxArray * disallowedBlocksInChild [ 4 ] ;
+disallowedBlocksInChild [ 0 ] = mr_BattEv_GetSimStateDisallowedBlocks ( ) ;
+disallowedBlocksInChild [ 1 ] = mr_DrivetrainEv_GetSimStateDisallowedBlocks (
+) ; disallowedBlocksInChild [ 2 ] =
+mr_EvPowertrainController_GetSimStateDisallowedBlocks ( ) ;
+disallowedBlocksInChild [ 3 ] =
+mr_MotGenEvDynamic_GetSimStateDisallowedBlocks ( ) ; { size_t i ; for ( i = 0
+; i < 4 ; ++ i ) { mxArray * data_i = disallowedBlocksInChild [ i ] ; if (
+NULL != data_i ) { if ( 0 == numChildrenWithDisallowedBlocks ++ ) { data =
+data_i ; } numBlocks += mxGetM ( data_i ) ; } } } data = mxCreateCellMatrix (
+numBlocks + 2 , 3 ) ; { static const char * blockType [ 2 ] = { "Scope" ,
+"Scope" , } ; static const char * blockPath [ 2 ] = {
+"HT05Model/Visualization/Performance and FE Scope" ,
+"HT05Model/Visualization/Scope" , } ; static const int reason [ 2 ] = { 0 , 0
+, } ; for ( subs [ 0 ] = 0 ; subs [ 0 ] < 2 ; ++ ( subs [ 0 ] ) ) { subs [ 1
+] = 0 ; offset = mxCalcSingleSubscript ( data , 2 , subs ) ; mxSetCell ( data
+, offset , mxCreateString ( blockType [ subs [ 0 ] ] ) ) ; subs [ 1 ] = 1 ;
+offset = mxCalcSingleSubscript ( data , 2 , subs ) ; mxSetCell ( data ,
+offset , mxCreateString ( blockPath [ subs [ 0 ] ] ) ) ; subs [ 1 ] = 2 ;
+offset = mxCalcSingleSubscript ( data , 2 , subs ) ; mxSetCell ( data ,
+offset , mxCreateDoubleScalar ( ( double ) reason [ subs [ 0 ] ] ) ) ; } } {
+size_t i ; for ( i = 0 ; i < 4 ; ++ i ) { mxArray * data_i =
+disallowedBlocksInChild [ i ] ; if ( NULL != data_i ) { mwIndex subs_i [ 2 ]
+, offset_i ; const mwIndex numRows_i = ( mwIndex ) mxGetM ( data_i ) ; for (
+subs_i [ 0 ] = 0 ; subs_i [ 0 ] < numRows_i ; ++ ( subs_i [ 0 ] ) ) { mwIndex
+j ; for ( j = 0 ; j < 3 ; ++ j ) { mxArray * data_ij ; subs_i [ 1 ] = j ;
+offset_i = mxCalcSingleSubscript ( data_i , 2 , subs_i ) ; data_ij =
+mxGetCell ( data_i , offset_i ) ; data_ij = mxDuplicateArray ( data_ij ) ;
+subs [ 1 ] = j ; offset = mxCalcSingleSubscript ( data , 2 , subs ) ;
+mxSetCell ( data , offset , data_ij ) ; } ++ ( subs [ 0 ] ) ; }
+mxDestroyArray ( data_i ) ; } } } return data ; } void MdlInitializeSizes (
+void ) { ssSetNumContStates ( rtS , 35 ) ; ssSetNumPeriodicContStates ( rtS ,
+2 ) ; ssSetNumY ( rtS , 0 ) ; ssSetNumU ( rtS , 0 ) ; ssSetDirectFeedThrough
+( rtS , 0 ) ; ssSetNumSampleTimes ( rtS , 6 ) ; ssSetNumBlocks ( rtS , 127 )
+; ssSetNumBlockIO ( rtS , 73 ) ; ssSetNumBlockParams ( rtS , 859 ) ; } void
+MdlInitializeSampleTimes ( void ) { ssSetSampleTime ( rtS , 0 , 0.0 ) ;
+ssSetSampleTime ( rtS , 1 , 0.0 ) ; ssSetSampleTime ( rtS , 2 , 5.0E-5 ) ;
+ssSetSampleTime ( rtS , 3 , 0.01 ) ; ssSetSampleTime ( rtS , 4 , 0.05 ) ;
+ssSetSampleTime ( rtS , 5 , 0.1 ) ; ssSetOffsetTime ( rtS , 0 , 0.0 ) ;
+ssSetOffsetTime ( rtS , 1 , 1.0 ) ; ssSetOffsetTime ( rtS , 2 , 0.0 ) ;
+ssSetOffsetTime ( rtS , 3 , 0.0 ) ; ssSetOffsetTime ( rtS , 4 , 0.0 ) ;
+ssSetOffsetTime ( rtS , 5 , 0.0 ) ; } void raccel_set_checksum ( ) {
+ssSetChecksumVal ( rtS , 0 , 1396022481U ) ; ssSetChecksumVal ( rtS , 1 ,
+3832595604U ) ; ssSetChecksumVal ( rtS , 2 , 78727595U ) ; ssSetChecksumVal (
+rtS , 3 , 786872218U ) ; }
 #if defined(_MSC_VER)
 #pragma optimize( "", off )
 #endif
@@ -762,13 +1061,11 @@ ssSetTNextWasAdjustedPtr ( rtS , & mdlTNextWasAdjustedPtr [ 0 ] ) ;
 ssSetPerTaskSampleHitsPtr ( rtS , & mdlPerTaskSampleHits [ 0 ] ) ;
 ssSetTimeOfNextSampleHitPtr ( rtS , & mdlTimeOfNextSampleHit [ 0 ] ) ; }
 ssSetSolverMode ( rtS , SOLVER_MODE_SINGLETASKING ) ; { ssSetBlockIO ( rtS ,
-( ( void * ) & hfe00hbwscw ) ) ; ssSetWorkSizeInBytes ( rtS , sizeof (
-hfe00hbwscw ) , "BlockIO" ) ; ( void ) memset ( ( ( void * ) & hfe00hbwscw )
-, 0 , sizeof ( hfe00hbwsc ) ) ; } { real_T * x = ( real_T * ) & nltnw1e5gkl ;
-ssSetContStates ( rtS , x ) ; ( void ) memset ( ( void * ) x , 0 , sizeof (
+( ( void * ) & hfe00hbwscw ) ) ; ( void ) memset ( ( ( void * ) & hfe00hbwscw
+) , 0 , sizeof ( hfe00hbwsc ) ) ; } { real_T * x = ( real_T * ) & nltnw1e5gkl
+; ssSetContStates ( rtS , x ) ; ( void ) memset ( ( void * ) x , 0 , sizeof (
 nltnw1e5gk ) ) ; } { void * dwork = ( void * ) & bcuvylxhefc ; ssSetRootDWork
-( rtS , dwork ) ; ssSetWorkSizeInBytes ( rtS , sizeof ( bcuvylxhefc ) ,
-"DWork" ) ; ( void ) memset ( dwork , 0 , sizeof ( bcuvylxhef ) ) ; } {
+( rtS , dwork ) ; ( void ) memset ( dwork , 0 , sizeof ( bcuvylxhef ) ) ; } {
 static DataTypeTransInfo dtInfo ; ( void ) memset ( ( char_T * ) & dtInfo , 0
 , sizeof ( dtInfo ) ) ; ssSetModelMappingInfo ( rtS , & dtInfo ) ; dtInfo .
 numDataTypes = 18 ; dtInfo . dataTypeSizes = & rtDataTypeSizes [ 0 ] ; dtInfo
@@ -781,37 +1078,43 @@ dataTypeInfoTable = rtDataTypeInfoTable ; } HT05Model_InitializeDataMapInfo (
 ssSetTFinal ( rtS , 20.0 ) ; io04qbfqhk ( rtS , 3 , 0 , & ( bcuvylxhefc .
 alzb1lqr5t . rtm ) , & ( bcuvylxhefc . alzb1lqr5t . rtb ) , NULL , 0 , & (
 rt_dataMapInfoPtr -> mmi ) ,
-"HT05Model/Controllers/Powertrain Control Module (PCM)" , 0 , - 1 ) ; {
-char_T * tempStr = rtwCAPI_EncodePath (
-"HT05Model/Controllers/Powertrain Control Module (PCM)" ) ;
-rtwCAPI_UpdateFullPaths ( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr ->
-mmi ) , 0 ) ) , tempStr , 1 ) ; utFree ( tempStr ) ; } ktxb3gprz3 ( rtS ,
+"HT05Model/Controllers/Powertrain Control Module (PCM)" , 0 , - 1 ) ;
+slsaCacheDWorkDataForSimTargetOP ( rtS , & ( bcuvylxhefc . alzb1lqr5t . rtm )
+, sizeof ( bcuvylxhefc . alzb1lqr5t . rtm ) ) ; { char_T * tempStr =
+rtwCAPI_EncodePath ( "HT05Model/Controllers/Powertrain Control Module (PCM)"
+) ; rtwCAPI_UpdateFullPaths ( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr
+-> mmi ) , 0 ) ) , tempStr , 1 ) ; utFree ( tempStr ) ; } ktxb3gprz3 ( rtS ,
 mr_DrivetrainEv_8_1_0nonContOutputArray , 0 , 1 , 0 , & ( bcuvylxhefc .
 iajxel3ezk . rtm ) , & ( bcuvylxhefc . iajxel3ezk . rtb ) , & ( bcuvylxhefc .
 iajxel3ezk . rtdw ) , & ( nltnw1e5gkl . hcwjqlhqcy ) , & ( bcuvylxhefc .
 iajxel3ezk . rtzce ) , NULL , 0 , & ( rt_dataMapInfoPtr -> mmi ) ,
-"HT05Model/Passenger Car/Drivetrain" , 1 , 1 ) ; { char_T * tempStr =
+"HT05Model/Passenger Car/Drivetrain" , 1 , 1 ) ;
+slsaCacheDWorkDataForSimTargetOP ( rtS , & ( bcuvylxhefc . iajxel3ezk . rtm )
+, sizeof ( bcuvylxhefc . iajxel3ezk . rtm ) ) ; { char_T * tempStr =
 rtwCAPI_EncodePath ( "HT05Model/Passenger Car/Drivetrain" ) ;
 rtwCAPI_UpdateFullPaths ( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr ->
 mmi ) , 1 ) ) , tempStr , 1 ) ; utFree ( tempStr ) ; } lst5ppimoh ( rtS , 0 ,
 0 , & ( bcuvylxhefc . ondfxuidp3 . rtm ) , & ( bcuvylxhefc . ondfxuidp3 . rtb
 ) , & ( bcuvylxhefc . ondfxuidp3 . rtdw ) , & ( nltnw1e5gkl . fqvhaqjss0 ) ,
 NULL , 0 , & ( rt_dataMapInfoPtr -> mmi ) ,
-"HT05Model/Passenger Car/Electric Plant/Battery" , 2 , 25 ) ; { char_T *
-tempStr = rtwCAPI_EncodePath (
-"HT05Model/Passenger Car/Electric Plant/Battery" ) ; rtwCAPI_UpdateFullPaths
-( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr -> mmi ) , 2 ) ) , tempStr ,
-1 ) ; utFree ( tempStr ) ; } cwmdpnrf2r ( rtS ,
+"HT05Model/Passenger Car/Electric Plant/Battery" , 2 , 25 ) ;
+slsaCacheDWorkDataForSimTargetOP ( rtS , & ( bcuvylxhefc . ondfxuidp3 . rtm )
+, sizeof ( bcuvylxhefc . ondfxuidp3 . rtm ) ) ; { char_T * tempStr =
+rtwCAPI_EncodePath ( "HT05Model/Passenger Car/Electric Plant/Battery" ) ;
+rtwCAPI_UpdateFullPaths ( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr ->
+mmi ) , 2 ) ) , tempStr , 1 ) ; utFree ( tempStr ) ; } cwmdpnrf2r ( rtS ,
 mr_MotGenEvDynamic_8_3_0nonContOutputArray , 0 , 1 , 2 , 0 , & ( bcuvylxhefc
 . enbv0wioc4 . rtm ) , & ( bcuvylxhefc . enbv0wioc4 . rtb ) , & ( bcuvylxhefc
 . enbv0wioc4 . rtdw ) , & ( nltnw1e5gkl . b04e30byfs ) , NULL , 0 , & (
 rt_dataMapInfoPtr -> mmi ) ,
-"HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" , 3 , 26 ) ; {
-char_T * tempStr = rtwCAPI_EncodePath (
+"HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" , 3 , 26 ) ;
+slsaCacheDWorkDataForSimTargetOP ( rtS , & ( bcuvylxhefc . enbv0wioc4 . rtm )
+, sizeof ( bcuvylxhefc . enbv0wioc4 . rtm ) ) ; { char_T * tempStr =
+rtwCAPI_EncodePath (
 "HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" ) ;
 rtwCAPI_UpdateFullPaths ( ( rtwCAPI_GetChildMMI ( & ( rt_dataMapInfoPtr ->
 mmi ) , 3 ) ) , tempStr , 1 ) ; utFree ( tempStr ) ; } { static RTWLogInfo
-rt_DataLoggingInfo ; rt_DataLoggingInfo . loggingInterval = NULL ;
+rt_DataLoggingInfo ; rt_DataLoggingInfo . loggingInterval = ( NULL ) ;
 ssSetRTWLogInfo ( rtS , & rt_DataLoggingInfo ) ; } { rtliSetLogT (
 ssGetRTWLogInfo ( rtS ) , "tout" ) ; rtliSetLogX ( ssGetRTWLogInfo ( rtS ) ,
 "" ) ; rtliSetLogXFinal ( ssGetRTWLogInfo ( rtS ) , "" ) ;
@@ -840,21 +1143,19 @@ absTolControl [ 35 ] = { 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U
 , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U ,
 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U , 0U } ; static real_T
 contStateJacPerturbBoundMinVec [ 35 ] ; static real_T
-contStateJacPerturbBoundMaxVec [ 35 ] ; static uint8_T zcAttributes [ 20 ] =
+contStateJacPerturbBoundMaxVec [ 35 ] ; static uint8_T zcAttributes [ 17 ] =
 { ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( ZC_EVENT_ALL_UP
 ) , ( ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_UP ) , (
-ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_UP ) , (
 ZC_EVENT_ALL_DN ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) ,
 ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL_DN )
 , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) , ( ZC_EVENT_ALL ) } ; static uint8_T
-zcEvents [ 20 ] = { ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_UP ) ,
+zcEvents [ 17 ] = { ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_UP ) ,
 ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_DN ) , ( 0x40 |
 ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_DN ) , (
-0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL_UP ) , ( 0x40 | ZC_EVENT_ALL_DN
-) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL
-) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL
-) , ( 0x40 | ZC_EVENT_ALL_DN ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 |
-ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) } ; static ssNonContDerivSigInfo
+0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , (
+0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL ) , (
+0x40 | ZC_EVENT_ALL_DN ) , ( 0x40 | ZC_EVENT_ALL ) , ( 0x40 | ZC_EVENT_ALL )
+, ( 0x40 | ZC_EVENT_ALL ) } ; static ssNonContDerivSigInfo
 nonContDerivSigInfo [ 4 ] = { { 0 , ( NULL ) , ( NULL ) } , { 0 , ( NULL ) ,
 ( NULL ) } , { 0 , ( NULL ) , ( NULL ) } , { 0 , ( NULL ) , ( NULL ) } } ;
 nonContDerivSigInfo [ 0 ] . sizeInBytes =
@@ -900,7 +1201,7 @@ ssSetModelLogDataIfInInterval ( rtS , rt_UpdateTXXFYLogVars ) ;
 ssSetModelUpdate ( rtS , MdlUpdate ) ; ssSetModelDerivatives ( rtS ,
 MdlDerivatives ) ; ssSetSolverZcSignalAttrib ( rtS , zcAttributes ) ;
 ssSetSolverZcEventsVector ( rtS , zcEvents ) ; ssSetSolverNumZcSignals ( rtS
-, 20 ) ; ssSetModelZeroCrossings ( rtS , MdlZeroCrossings ) ;
+, 17 ) ; ssSetModelZeroCrossings ( rtS , MdlZeroCrossings ) ;
 ssSetSolverConsecutiveZCsStepRelTol ( rtS , 2.8421709430404007E-13 ) ;
 ssSetSolverMaxConsecutiveZCs ( rtS , 1000 ) ; ssSetSolverConsecutiveZCsError
 ( rtS , 2 ) ; ssSetSolverMaskedZcDiagnostic ( rtS , 1 ) ;
@@ -908,11 +1209,11 @@ ssSetSolverIgnoredZcDiagnostic ( rtS , 0 ) ; ssSetSolverZcThreshold ( rtS ,
 0.001 ) ; ssSetSolverMaxConsecutiveMinStep ( rtS , 1 ) ;
 ssSetSolverShapePreserveControl ( rtS , 2 ) ; ssSetTNextTid ( rtS , INT_MIN )
 ; ssSetTNext ( rtS , rtMinusInf ) ; ssSetSolverNeedsReset ( rtS ) ;
-ssSetNumNonsampledZCs ( rtS , 18 ) ; ssSetContStateDisabled ( rtS ,
+ssSetNumNonsampledZCs ( rtS , 15 ) ; ssSetContStateDisabled ( rtS ,
 contStatesDisabled ) ; ssSetSolverMaxConsecutiveMinStep ( rtS , 1 ) ; }
-ssSetChecksumVal ( rtS , 0 , 2016671697U ) ; ssSetChecksumVal ( rtS , 1 ,
-1193092159U ) ; ssSetChecksumVal ( rtS , 2 , 4221439711U ) ; ssSetChecksumVal
-( rtS , 3 , 1036386930U ) ; { static const sysRanDType rtAlwaysEnabled =
+ssSetChecksumVal ( rtS , 0 , 1396022481U ) ; ssSetChecksumVal ( rtS , 1 ,
+3832595604U ) ; ssSetChecksumVal ( rtS , 2 , 78727595U ) ; ssSetChecksumVal (
+rtS , 3 , 786872218U ) ; { static const sysRanDType rtAlwaysEnabled =
 SUBSYS_RAN_BC_ENABLE ; static RTWExtModeInfo rt_ExtModeInfo ; static const
 sysRanDType * systemRan [ 10 ] ; gblRTWExtModeInfo = & rt_ExtModeInfo ;
 ssSetRTWExtModeInfo ( rtS , & rt_ExtModeInfo ) ;
@@ -926,8 +1227,12 @@ systemRan [ 8 ] = & rtAlwaysEnabled ; systemRan [ 9 ] = & rtAlwaysEnabled ;
 rteiSetModelMappingInfoPtr ( ssGetRTWExtModeInfo ( rtS ) , &
 ssGetModelMappingInfo ( rtS ) ) ; rteiSetChecksumsPtr ( ssGetRTWExtModeInfo (
 rtS ) , ssGetChecksums ( rtS ) ) ; rteiSetTPtr ( ssGetRTWExtModeInfo ( rtS )
-, ssGetTPtr ( rtS ) ) ; } ihnh5ag1lp . Saturation1_UpperSat = rtInf ;
-ihnh5ag1lp . Saturation_UpperSat = rtInf ; return rtS ; }
+, ssGetTPtr ( rtS ) ) ; } slsaDisallowedBlocksForSimTargetOP ( rtS ,
+mr_HT05Model_GetSimStateDisallowedBlocks ) ; slsaGetWorkFcnForSimTargetOP (
+rtS , mr_HT05Model_GetDWork ) ; slsaSetWorkFcnForSimTargetOP ( rtS ,
+mr_HT05Model_SetDWork ) ; ihnh5ag1lp . Saturation1_UpperSat = rtInf ;
+ihnh5ag1lp . Saturation_UpperSat = rtInf ; rt_RapidReadMatFileAndUpdateParams
+( rtS ) ; if ( ssGetErrorStatus ( rtS ) ) { return rtS ; } return rtS ; }
 #if defined(_MSC_VER)
 #pragma optimize( "", on )
 #endif

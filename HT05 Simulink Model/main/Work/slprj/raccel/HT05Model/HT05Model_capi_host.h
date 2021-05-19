@@ -2,7 +2,7 @@
 #define RTW_HEADER_HT05Model_cap_host_h_
 #ifdef HOST_CAPI_BUILD
 #include "rtw_capi.h"
-#include "rtw_modelmap.h"
+#include "rtw_modelmap_simtarget.h"
 #include "EvPowertrainController_capi_host.h"
 #include "DrivetrainEv_capi_host.h"
 #include "BattEv_capi_host.h"

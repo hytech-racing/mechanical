@@ -21,18 +21,29 @@ void ) { return NULL ; } void * rtwGetPointerFromUniquePtr ( void * uniquePtr
 nargs , ... ) { void * voidPtrDiagnostic = NULL ; va_list args ; va_start (
 args , nargs ) ; slmrCreateDiagnostic ( id , nargs , args , &
 voidPtrDiagnostic ) ; va_end ( args ) ; return voidPtrDiagnostic ; } void
-rt_ssSet_slErrMsg ( SimStruct * S , void * diag ) { if ( !
-_ssIsErrorStatusAslErrMsg ( S ) ) { _ssSet_slLocalErrMsg ( S , diag ) ; }
-else { _ssDiscardDiagnostic ( S , diag ) ; } } void
-rt_ssReportDiagnosticAsWarning ( SimStruct * S , void * diag ) {
-_ssReportDiagnosticAsWarning ( S , diag ) ; } const char *
+rt_ssSet_slErrMsg ( void * S , void * diag ) { SimStruct * simStrcut = (
+SimStruct * ) S ; if ( ! _ssIsErrorStatusAslErrMsg ( simStrcut ) ) {
+_ssSet_slLocalErrMsg ( simStrcut , diag ) ; } else { _ssDiscardDiagnostic (
+simStrcut , diag ) ; } } void rt_ssReportDiagnosticAsWarning ( void * S ,
+void * diag ) { _ssReportDiagnosticAsWarning ( ( SimStruct * ) S , diag ) ; }
+void rt_ssReportDiagnosticAsInfo ( void * S , void * diag ) {
+_ssReportDiagnosticAsInfo ( ( SimStruct * ) S , diag ) ; } const char *
 rt_CreateFullPathToTop ( const char * toppath , const char * subpath ) { char
 * fullpath = NULL ; slmrCreateFullPathToTop ( toppath , subpath , & fullpath
 ) ; return fullpath ; } boolean_T slIsRapidAcceleratorSimulating ( void ) {
 return false ; } void rt_RAccelReplaceFromFilename ( const char * blockpath ,
 char * fileName ) { ( void ) blockpath ; ( void ) fileName ; } void
 rt_RAccelReplaceToFilename ( const char * blockpath , char * fileName ) { (
-void ) blockpath ; ( void ) fileName ; }
+void ) blockpath ; ( void ) fileName ; } void
+slsaCacheDWorkPointerForSimTargetOP ( void * ss , void * * ptr ) { ( void )
+ss ; ( void ) ptr ; } void slsaCacheDWorkDataForSimTargetOP ( void * ss ,
+void * ptr , unsigned int sizeInBytes ) { ( void ) ss ; ( void ) ptr ; ( void
+) sizeInBytes ; } void slsaSaveRawMemoryForSimTargetOP ( void * ss , const
+char * key , void * ptr , unsigned int sizeInBytes , void * ( *
+customOPSaveFcn ) ( void * dworkPtr , unsigned int * sizeInBytes ) , void ( *
+customOPRestoreFcn ) ( void * dworkPtr , const void * data , unsigned int
+sizeInBytes ) ) { ( void ) ss ; ( void ) key ; ( void ) ptr ; ( void )
+sizeInBytes ; ( void ) customOPSaveFcn ; ( void ) customOPRestoreFcn ; }
 #define MDL_PROCESS_PARAMETERS
 #if defined(MATLAB_MEX_FILE)
 static void mdlProcessParameters ( SimStruct * S ) { fsi3zxjdsv * localX = (
@@ -47,9 +58,9 @@ SimStruct * S ) { l0vfpqnnodc * dw = ( l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ;
 fsi3zxjdsv * localX = ( fsi3zxjdsv * ) ssGetContStates ( S ) ; fb4yyrugqd ( &
 ( dw -> rtm ) , & ( dw -> rtdw ) , localX ) ; } static void
 mdlPeriodicOutputUpdate ( SimStruct * S , int_T tid ) { l0vfpqnnodc * dw = (
-l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; const real_T * i_prufec2qzu = ( real_T
-* ) ssGetInputPortSignal ( S , 0 ) ; const real_T * i_i_j3lgen1ovj = ( real_T
-* ) ssGetInputPortSignal ( S , 1 ) ; const real_T * i_i_cyrwognsi4 = ( real_T
+l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; real_T const * i_prufec2qzu = ( real_T
+* ) ssGetInputPortSignal ( S , 0 ) ; real_T const * i_i_j3lgen1ovj = ( real_T
+* ) ssGetInputPortSignal ( S , 1 ) ; real_T const * i_i_cyrwognsi4 = ( real_T
 * ) ssGetInputPortSignal ( S , 2 ) ; real_T * o_B_9_1 = ( real_T * )
 ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_9_2 = ( real_T * )
 ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_9_3 = ( real_T * )
@@ -225,7 +236,7 @@ if ( ! ssSetNumDWork ( S , 1 ) ) { return ; }
 slmrRegisterSystemInitializeMethod ( S , mdlInitializeConditions ) ;
 slmrRegisterSystemResetMethod ( S , mdlReset ) ;
 slmrRegisterPeriodicOutputUpdateMethod ( S , mdlPeriodicOutputUpdate ) ;
-ssSetSimulinkVersionGeneratedIn ( S , "10.2" ) ; ssSetNeedAbsoluteTime ( S ,
+ssSetSimulinkVersionGeneratedIn ( S , "10.3" ) ; ssSetNeedAbsoluteTime ( S ,
 1 ) ; } static void mdlInitializeSampleTimes ( SimStruct * S ) {
 ssSetSampleTime ( S , 0 , 0 ) ; ssSetOffsetTime ( S , 0 , 0 ) ;
 ssSetSampleTime ( S , 1 , 0 ) ; ssSetOffsetTime ( S , 1 , 1 ) ;
@@ -267,9 +278,9 @@ ssGetDWork ( S , 0 ) ; n5k0o3qutm ( & ( dw -> rtm ) , & ( dw -> rtdw ) ) ; }
 static void mdlDisable ( SimStruct * S ) { l0vfpqnnodc * dw = ( l0vfpqnnodc *
 ) ssGetDWork ( S , 0 ) ; byych5oy3s ( & ( dw -> rtm ) , & ( dw -> rtdw ) ) ;
 return ; } static void mdlOutputs ( SimStruct * S , int_T tid ) { l0vfpqnnodc
-* dw = ( l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; const real_T * i_prufec2qzu =
-( real_T * ) ssGetInputPortSignal ( S , 0 ) ; const real_T * i_i_j3lgen1ovj =
-( real_T * ) ssGetInputPortSignal ( S , 1 ) ; const real_T * i_i_cyrwognsi4 =
+* dw = ( l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; real_T const * i_prufec2qzu =
+( real_T * ) ssGetInputPortSignal ( S , 0 ) ; real_T const * i_i_j3lgen1ovj =
+( real_T * ) ssGetInputPortSignal ( S , 1 ) ; real_T const * i_i_cyrwognsi4 =
 ( real_T * ) ssGetInputPortSignal ( S , 2 ) ; real_T * o_B_9_1 = ( real_T * )
 ssGetOutputPortSignal ( S , 0 ) ; real_T * o_B_9_2 = ( real_T * )
 ssGetOutputPortSignal ( S , 1 ) ; real_T * o_B_9_3 = ( real_T * )
@@ -288,14 +299,14 @@ lwglwij1vj ( & ( dw -> rtm ) , & ( dw -> rtb ) , & ( dw -> rtdw ) , localXdis
 ) ; } return ; }
 #define MDL_ZERO_CROSSINGS
 static void mdlZeroCrossings ( SimStruct * S ) { l0vfpqnnodc * dw = (
-l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; const real_T * i_i_cyrwognsi4 = (
+l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_cyrwognsi4 = (
 real_T * ) ssGetInputPortSignal ( S , 2 ) ; fsi3zxjdsv * localX = (
 fsi3zxjdsv * ) ssGetContStates ( S ) ; f0can1sh3a * localZCSV = ( f0can1sh3a
 * ) ssGetNonsampledZCs ( S ) ; cmnf4xtkyp ( i_i_cyrwognsi4 , & ( dw -> rtb )
 , & ( dw -> rtdw ) , localX , localZCSV ) ; }
 #define MDL_DERIVATIVES
 static void mdlDerivatives ( SimStruct * S ) { l0vfpqnnodc * dw = (
-l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; const real_T * i_i_j3lgen1ovj = (
+l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; real_T const * i_i_j3lgen1ovj = (
 real_T * ) ssGetInputPortSignal ( S , 1 ) ; a2tgpeokha * localXdis = (
 a2tgpeokha * ) ssGetContStateDisabled ( S ) ; evfyajgoqu * localXdot = (
 evfyajgoqu * ) ssGetdX ( S ) ; mfy1r3luh1 ( i_i_j3lgen1ovj , & ( dw -> rtb )
@@ -310,20 +321,28 @@ dw -> rtdw ) ) ; }
 #define MDL_SIM_STATE
 #endif
 static mxArray * mdlGetSimState ( SimStruct * S ) { static const char *
-simStateFieldNames [ 5 ] = { "localX" , "mdlrefDW" , "disallowedStateData" ,
-"tNext" , "tNextTid" , } ; mxArray * ss = mxCreateStructMatrix ( 1 , 1 , 5 ,
-simStateFieldNames ) ; { const fsi3zxjdsv * localX = ( const fsi3zxjdsv * )
-ssGetContStates ( S ) ; const size_t numBytes = sizeof ( fsi3zxjdsv ) ;
-mxArray * storedX = mxCreateNumericMatrix ( 1 , numBytes , mxUINT8_CLASS ,
-mxREAL ) ; UINT8_T * rawData = ( UINT8_T * ) mxGetData ( storedX ) ; memcpy (
-& rawData [ 0 ] , localX , numBytes ) ; mxSetFieldByNumber ( ss , 0 , 0 ,
-storedX ) ; } { mxArray * mdlrefDW = mr_MotGenEvDynamic_GetDWork ( ssGetDWork
-( S , 0 ) ) ; mxSetFieldByNumber ( ss , 0 , 1 , mdlrefDW ) ; } { mxArray *
-data = mr_MotGenEvDynamic_GetSimStateDisallowedBlocks ( ) ;
-mxSetFieldByNumber ( ss , 0 , 2 , data ) ; } ; mxSetFieldByNumber ( ss , 0 ,
-3 , mxCreateDoubleScalar ( ( double ) ssGetTNext ( S ) ) ) ;
-mxSetFieldByNumber ( ss , 0 , 4 , mxCreateDoubleScalar ( ( double )
-ssGetTNextTid ( S ) ) ) ; return ss ; }
+simStateFieldNames [ 6 ] = { "localX" , "mdlrefDW" , "disallowedStateData" ,
+"tNext" , "tNextTid" , "nonContDerivSigInfoPrevVal" , } ; mxArray * ss =
+mxCreateStructMatrix ( 1 , 1 , 6 , simStateFieldNames ) ; { const fsi3zxjdsv
+* localX = ( const fsi3zxjdsv * ) ssGetContStates ( S ) ; const size_t
+numBytes = sizeof ( fsi3zxjdsv ) ; mxArray * storedX = mxCreateNumericMatrix
+( 1 , numBytes , mxUINT8_CLASS , mxREAL ) ; UINT8_T * rawData = ( UINT8_T * )
+mxGetData ( storedX ) ; memcpy ( & rawData [ 0 ] , localX , numBytes ) ;
+mxSetFieldByNumber ( ss , 0 , 0 , storedX ) ; } { mxArray * mdlrefDW =
+mr_MotGenEvDynamic_GetDWork ( ssGetDWork ( S , 0 ) ) ; mxSetFieldByNumber (
+ss , 0 , 1 , mdlrefDW ) ; } { mxArray * data =
+mr_MotGenEvDynamic_GetSimStateDisallowedBlocks ( ) ; mxSetFieldByNumber ( ss
+, 0 , 2 , data ) ; } ; mxSetFieldByNumber ( ss , 0 , 3 , mxCreateDoubleScalar
+( ( double ) ssGetTNext ( S ) ) ) ; mxSetFieldByNumber ( ss , 0 , 4 ,
+mxCreateDoubleScalar ( ( double ) ssGetTNextTid ( S ) ) ) ; { l0vfpqnnodc *
+dw = ( l0vfpqnnodc * ) ssGetDWork ( S , 0 ) ; mv4ga5jwa1 * rtm = & ( dw ->
+rtm ) ; mxArray * nonContDerivSigInfo = mxCreateCellMatrix ( 2 , 1 ) ; for (
+int i = 0 ; i < 2 ; ++ i ) { mxArray * prevValmxArray = mxCreateNumericMatrix
+( 1 , rtm -> nonContDerivSignal [ i ] . sizeInBytes , mxUINT8_CLASS , mxREAL
+) ; memcpy ( ( uint8_T * ) mxGetData ( prevValmxArray ) , ( const uint8_T * )
+rtm -> nonContDerivSignal [ i ] . pPrevVal , rtm -> nonContDerivSignal [ i ]
+. sizeInBytes ) ; mxSetCell ( nonContDerivSigInfo , i , prevValmxArray ) ; }
+mxSetFieldByNumber ( ss , 0 , 5 , nonContDerivSigInfo ) ; } return ss ; }
 #if !defined(MDL_SIM_STATE)
 #define MDL_SIM_STATE
 #endif
@@ -335,7 +354,13 @@ mxGetFieldByNumber ( ss , 0 , 0 ) ; const UINT8_T * rawData = ( const UINT8_T
 } mr_MotGenEvDynamic_SetDWork ( ssGetDWork ( S , 0 ) , mxGetFieldByNumber (
 ss , 0 , 1 ) ) ; ssSetTNext ( S , ( time_T ) mxGetScalar ( mxGetFieldByNumber
 ( ss , 0 , 3 ) ) ) ; ssSetTNextTid ( S , ( int_T ) mxGetScalar (
-mxGetFieldByNumber ( ss , 0 , 4 ) ) ) ; }
+mxGetFieldByNumber ( ss , 0 , 4 ) ) ) ; { mxArray * nonContDerivSigInfo =
+mxGetFieldByNumber ( ss , 0 , 5 ) ; l0vfpqnnodc * dw = ( l0vfpqnnodc * )
+ssGetDWork ( S , 0 ) ; mv4ga5jwa1 * rtm = & ( dw -> rtm ) ; for ( int i = 0 ;
+i < 2 ; ++ i ) { mxArray * prevValmxArray = mxGetCell ( nonContDerivSigInfo ,
+i ) ; ( void ) memcpy ( rtm -> nonContDerivSignal [ i ] . pPrevVal , ( char *
+) mxGetData ( prevValmxArray ) , rtm -> nonContDerivSignal [ i ] .
+sizeInBytes ) ; } } }
 #ifdef MATLAB_MEX_FILE 
 #include "simulink.c"
 #include "fixedpoint.c"

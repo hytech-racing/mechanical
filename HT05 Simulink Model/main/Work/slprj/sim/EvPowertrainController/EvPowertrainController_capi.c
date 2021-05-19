@@ -23,8 +23,9 @@
 static rtwCAPI_Signals rtBlockSignals [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) ,
 0 , 0 , 0 , 0 , 0 } } ; static rtwCAPI_States rtBlockStates [ ] = { { 0 , - 1
 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 , - 1 , 0 } } ;
-static TARGET_CONST rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "" , "" , 0 ,
-0 , 0 , 0 , 0 , 0 , 0 } } ;
+static int_T rt_LoggedStateIdxList [ ] = { - 1 } ; static TARGET_CONST
+rtwCAPI_DataTypeMap rtDataTypeMap [ ] = { { "" , "" , 0 , 0 , 0 , 0 , 0 , 0 ,
+0 } } ;
 #ifdef HOST_CAPI_BUILD
 #undef sizeof
 #endif
@@ -41,10 +42,10 @@ mmiStaticInfoLogging = { 11 , rtContextSystems , loggingMetaInfo , 0 , NULL ,
 mmiStatic = { { rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL
 ) , 0 , ( NULL ) , 0 } , { rtBlockStates , 0 } , { rtDataTypeMap ,
 rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 1623126022U , 2646893538U , 2493451590U ,
-1799287955U } , & mmiStaticInfoLogging , 0 , 0 } ; const
-rtwCAPI_ModelMappingStaticInfo * EvPowertrainController_GetCAPIStaticMap (
-void ) { return & mmiStatic ; }
+rtDimensionArray } , "float" , { 492190953U , 1699252172U , 1758425444U ,
+55476980U } , & mmiStaticInfoLogging , 0 , 0 , rt_LoggedStateIdxList } ;
+const rtwCAPI_ModelMappingStaticInfo *
+EvPowertrainController_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 static void EvPowertrainController_InitializeSystemRan ( h5efmxf3a3 * const
 e4f4oaoqet , sysRanDType * systemRan [ ] , int_T systemTid [ ] , void *

@@ -7,7 +7,6 @@
 real_T rt_TDelayInterpolate(
   real_T tMinusDelay,
   real_T tStart,
-  real_T *tBuf,
   real_T *uBuf,
   int_T bufSz,
   int_T *lastIdx,
@@ -19,6 +18,7 @@ real_T rt_TDelayInterpolate(
 {
   int_T i;
   real_T yout, t1, t2, u1, u2;
+  real_T* tBuf = uBuf + bufSz;
   if ((newIdx == 0) && (oldestIdx ==0 ) && (tMinusDelay > tStart))
     return initOutput;
   if (tMinusDelay <= tStart)

@@ -9,9 +9,7 @@ boolean_T rt_TDelayUpdateTailOrGrowBuf(
   int_T *headPtr,
   int_T *lastPtr,
   real_T tMinusDelay,
-  real_T **tBufPtr,
   real_T **uBufPtr,
-  real_T **xBufPtr,
   boolean_T isfixedbuf,
   boolean_T istransportdelay,
   int_T *maxNewBufSzPtr);

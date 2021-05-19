@@ -1,11 +1,9 @@
 #include "rtwtypes.h"
 #include "multiword_types.h"
-#include "rtGetNaN.h"
-#include "rt_nonfinite.h"
 #include "mwmathutil.h"
-#include "mpower_QcZsu7Dx.h"
+#include "mpower_DSHl6Msh.h"
 
-void mpower_QcZsu7Dx(const real_T a[4], real_T b, real_T c[4])
+void mpower_DSHl6Msh(const real_T a[4], real_T b, real_T c[4])
 {
   real_T aBuffer[4];
   real_T b_a[4];
@@ -199,10 +197,5 @@ void mpower_QcZsu7Dx(const real_T a[4], real_T b, real_T c[4])
         c[3] = cBuffer_e[3];
       }
     }
-  } else {
-    c[0] = (rtNaN);
-    c[1] = (rtNaN);
-    c[2] = (rtNaN);
-    c[3] = (rtNaN);
   }
 }

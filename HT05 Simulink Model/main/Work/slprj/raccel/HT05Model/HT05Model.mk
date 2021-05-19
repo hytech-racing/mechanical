@@ -59,7 +59,6 @@ MAKEFILE_FILESEP = /
 #  MODEL_MODULES       - Any additional generated source modules
 #  MAKEFILE_NAME       - Name of makefile created from template makefile <model>.mk
 #  MATLAB_ROOT         - Path to where MATLAB is installed.
-#  MATLAB_BIN          - Path to MATLAB executable.
 #  S_FUNCTIONS_LIB     - List of S-functions libraries to link. 
 #  NUMST               - Number of sample times
 #  NCSTATES            - Number of continuous states
@@ -77,18 +76,16 @@ MAKEFILE_FILESEP = /
 #                            and do not build an executable
 
 MODEL                = HT05Model
-MODULES              = rt_logging.c HT05Model.c HT05Model_capi.c HT05Model_data.c HT05Model_tgtconn.c rt_logging_mmi.c rtw_modelmap_utils.c raccel_main_new.c raccel_sup.c raccel_mat.c simulink_solver_api.c raccel_utils.c common_utils.c ext_svr.c updown.c ext_work.c rtiostream_interface.c rtiostream_tcpip.c rtiostream_utils.c
+MODULES              = rt_logging_simtarget.c HT05Model.c HT05Model_capi.c HT05Model_data.c HT05Model_tgtconn.c rt_logging_mmi_simtarget.c rtw_modelmap_utils_simtarget.c raccel_main_new.c raccel_sup.c raccel_mat.c simulink_solver_api.c raccel_utils.c common_utils.c ext_svr.c updown.c ext_work.c rtiostream_interface.c rtiostream_tcpip.c rtiostream_utils.c
 PRODUCT              = HT05Model.exe
 MAKEFILE             = HT05Model.mk
-MATLAB_ROOT          = C:/Program Files/MATLAB/R2020b
-ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2020b
-MATLAB_BIN           = C:/Program Files/MATLAB/R2020b/bin
-ALT_MATLAB_BIN       = C:/PROGRA~1/MATLAB/R2020b/bin
+MATLAB_ROOT          = C:/Program Files/MATLAB/R2021a
+ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2021a
 START_DIR            = C:/Users/xboxl/OneDrive/DOCUME~1/Github/MECHAN~1/HT05SI~1/main/Work
 S_FUNCTIONS_LIB      = $(MATLAB_ROOT)\sys\lcc64\lcc64\lib64\wsock32.lib $(START_DIR)\slprj\sim\_sharedutils\rtwshared.lib
 NUMST                = 6
 NCSTATES             = 35
-BUILDARGS            =  RSIM_SOLVER_SELECTION=2 PCMATLABROOT="C:\\Program Files\\MATLAB\\R2020b" EXTMODE_STATIC_ALLOC=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 TMW_EXTMODE_TESTING=0 RSIM_PARAMETER_LOADING=1 OPTS="-DTGTCONN -DNRT -DRSIM_PARAMETER_LOADING -DRSIM_WITH_SL_SOLVER -DENABLE_SLEXEC_SSBRIDGE=1 -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DON_TARGET_WAIT_FOR_START=0 -DTID01EQ=0"
+BUILDARGS            =  RSIM_SOLVER_SELECTION=2 PCMATLABROOT="C:\\Program Files\\MATLAB\\R2021a" EXTMODE_STATIC_ALLOC=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 TMW_EXTMODE_TESTING=0 RSIM_PARAMETER_LOADING=1 OPTS="-DTGTCONN -DIS_SIM_TARGET -DNRT -DRSIM_PARAMETER_LOADING -DRSIM_WITH_SL_SOLVER -DENABLE_SLEXEC_SSBRIDGE=1 -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DON_TARGET_WAIT_FOR_START=0 -DTID01EQ=0"
 MULTITASKING         = 0
 INTEGER_CODE         = 0
 MAT_FILE             = 1
@@ -107,7 +104,7 @@ ADDITIONAL_LDFLAGS      =
 DEFINES_CUSTOM          = -DEXT_MODE -DIS_RAPID_ACCEL 
 DEFINES_OTHER           = -DHAVESTDIO
 COMPILE_FLAGS_OTHER     = 
-SYSTEM_LIBS             = -L"C:\Program Files\MATLAB\R2020b\extern\lib\win64\microsoft" libmwipp.lib libut.lib libmx.lib libmex.lib libmat.lib libmwmathutil.lib libmwslsa_sim.lib libmwslexec_simbridge.lib libmwsl_fileio.lib libmwsigstream.lib libmwsl_AsyncioQueue.lib libmwsl_services.lib libmwsdi_raccel.lib libmwi18n.lib libmwcoder_target_services.lib libmwcoder_ParamTuningTgtAppSvc.lib libmwsl_simtarget_instrumentation.lib libfixedpoint.lib libmwslexec_simlog.lib libmwstringutil.lib
+SYSTEM_LIBS             = -L"C:\Program Files\MATLAB\R2021a\extern\lib\win64\microsoft" libmwipp.lib libut.lib libmx.lib libmex.lib libmat.lib libmwmathutil.lib libmwslsa_sim.lib libmwslexec_simbridge.lib libmwsl_fileio.lib libmwsigstream.lib libmwsl_AsyncioQueue.lib libmwsl_services.lib libmwsdi_raccel.lib libmwi18n.lib libmwcoder_target_services.lib libmwcoder_ParamTuningTgtAppSvc.lib libmwsl_simtarget_instrumentation.lib libfixedpoint.lib libmwslexec_simlog.lib libmwstringutil.lib
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
 
 #--------------------------- Model and reference models -----------------------
@@ -124,9 +121,6 @@ MODELREF_SFCN_SUFFIX       = _msf
 #-- In the case when directory name contains space ---
 ifneq ($(MATLAB_ROOT),$(ALT_MATLAB_ROOT))
 MATLAB_ROOT := $(ALT_MATLAB_ROOT)
-endif
-ifneq ($(MATLAB_BIN),$(ALT_MATLAB_BIN))
-MATLAB_BIN := $(ALT_MATLAB_BIN)
 endif
 
 #--------------------------- Tool Specifications -------------------------------
@@ -305,8 +299,8 @@ endif
 %.obj : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.c
 	$(CC) -c -Fo$(@F) $(CFLAGS) $<
 
-rt_logging.obj : $(MATLAB_ROOT)/rtw/c/src/rt_logging.c
-	$(CC) -c -Fo$(@F) $(CFLAGS) $(MATLAB_ROOT)/rtw/c/src/rt_logging.c
+rt_logging_simtarget.obj : $(MATLAB_ROOT)/rtw/c/src/rt_logging_simtarget.c
+	$(CC) -c -Fo$(@F) $(CFLAGS) $(MATLAB_ROOT)/rtw/c/src/rt_logging_simtarget.c
 
 raccel_main_new.obj : $(MATLAB_ROOT)/rtw/c/raccel/raccel_main_new.c
 	$(CC) -c -Fo$(@F) $(CFLAGS) $(MATLAB_ROOT)/rtw/c/raccel/raccel_main_new.c

@@ -245,14 +245,17 @@ mxGetFieldByNumber ( srcArray , i , j ) , offset ) ) ; return fieldVal & ( (
 const pwecol01r52 * mdlrefDW ) { static const char * ssDWFieldNames [ 3 ] = {
 "rtb" , "NULL->rtdw" , "NULL->rtzce" , } ; mxArray * ssDW =
 mxCreateStructMatrix ( 1 , 1 , 3 , ssDWFieldNames ) ;
-mr_EvPowertrainController_cacheDataAsMxArray ( ssDW , 0 , 0 , & ( mdlrefDW ->
-rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; ( void ) mdlrefDW ; return ssDW ; }
-void mr_EvPowertrainController_SetDWork ( pwecol01r52 * mdlrefDW , const
-mxArray * ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ;
-mr_EvPowertrainController_restoreDataFromMxArray ( & ( mdlrefDW -> rtb ) ,
-ssDW , 0 , 0 , sizeof ( mdlrefDW -> rtb ) ) ; } void
+mr_EvPowertrainController_cacheDataAsMxArray ( ssDW , 0 , 0 , ( const void *
+) & ( mdlrefDW -> rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; ( void ) mdlrefDW ;
+return ssDW ; } void mr_EvPowertrainController_SetDWork ( pwecol01r52 *
+mdlrefDW , const mxArray * ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ;
+mr_EvPowertrainController_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW ->
+rtb ) , ssDW , 0 , 0 , sizeof ( mdlrefDW -> rtb ) ) ; } void
 mr_EvPowertrainController_RegisterSimStateChecksum ( SimStruct * S ) { const
-uint32_T chksum [ 4 ] = { 1079966431U , 1184420326U , 415264547U ,
-2394566327U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+uint32_T chksum [ 4 ] = { 2114129523U , 1487669537U , 2203009551U ,
+4159331578U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
 "EvPowertrainController" , & chksum [ 0 ] ) ; } mxArray *
 mr_EvPowertrainController_GetSimStateDisallowedBlocks ( ) { return NULL ; }
+#if defined(_MSC_VER)
+#pragma warning(disable: 4505) //unreferenced local function has been removed
+#endif

@@ -105,11 +105,11 @@ TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 } , { 43 , 0 , TARGET_STRING (
 TARGET_STRING ( "US MPG" ) , 0 , 0 , 0 , 0 , 2 } , { 44 , 0 , TARGET_STRING (
 "HT05Model/Visualization/Performance Calculations/Sqrt" ) , TARGET_STRING (
 "" ) , 0 , 0 , 0 , 0 , 1 } , { 45 , 0 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/Digital Clock" ) ,
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/Digital Clock" ) ,
 TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 4 } , { 46 , 0 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/Add1" ) , TARGET_STRING
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/Add1" ) , TARGET_STRING
 ( "" ) , 0 , 0 , 0 , 0 , 1 } , { 47 , 0 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/Switch" ) ,
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/Switch" ) ,
 TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 } , { 48 , 0 , TARGET_STRING (
 "HT05Model/Passenger Car/Electric Plant/Motor/MotGenEvDynamic" ) ,
 TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 } , { 49 , 0 , TARGET_STRING (
@@ -237,17 +237,17 @@ TARGET_STRING ( "LowerLimit" ) , 0 , 0 , 0 } , { 109 , TARGET_STRING (
 TARGET_STRING ( "UpperLimit" ) , 0 , 0 , 0 } , { 110 , TARGET_STRING (
 "HT05Model/Visualization/Performance Calculations/Saturation1" ) ,
 TARGET_STRING ( "LowerLimit" ) , 0 , 0 , 0 } , { 111 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/repeat" ) ,
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/repeat" ) ,
 TARGET_STRING ( "Value" ) , 0 , 0 , 0 } , { 112 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/tFinal" ) ,
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/tFinal" ) ,
 TARGET_STRING ( "Value" ) , 0 , 0 , 0 } , { 113 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/Hit  Crossing" ) ,
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/Hit  Crossing" ) ,
 TARGET_STRING ( "HitCrossingOffset" ) , 0 , 0 , 0 } , { 114 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/1-D Lookup Table" ) ,
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/1-D Lookup Table" ) ,
 TARGET_STRING ( "Table" ) , 0 , 2 , 0 } , { 115 , TARGET_STRING (
-"HT05Model/Drive Cycle Source/timing mode/Continuous/1-D Lookup Table" ) ,
+"HT05Model/Drive Cycle Source/Timing Mode/Continuous/1-D Lookup Table" ) ,
 TARGET_STRING ( "BreakpointsForDimension1" ) , 0 , 2 , 0 } , { 116 ,
-TARGET_STRING ( "HT05Model/Drive Cycle Source/timing mode/Continuous/Switch"
+TARGET_STRING ( "HT05Model/Drive Cycle Source/Timing Mode/Continuous/Switch"
 ) , TARGET_STRING ( "Threshold" ) , 0 , 0 , 0 } , { 117 , TARGET_STRING (
  "HT05Model/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Routing/Error Metrics/Integrator2"
 ) , TARGET_STRING ( "InitialCondition" ) , 0 , 0 , 0 } , { 118 ,
@@ -307,7 +307,8 @@ TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1 , 0
  "HT05Model/Longitudinal Driver/Longitudinal Driver/Longitudinal Driver Model/Longitudinal Driver/Control/Predictive/Cont LPF/Integrator1"
 ) , TARGET_STRING ( "" ) , TARGET_STRING ( "" ) , 0 , 0 , 0 , 0 , 1 , 1 , - 1
 , 0 } , { 0 , - 1 , ( NULL ) , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 , 0 ,
-- 1 , 0 } } ; static const rtwCAPI_Signals rtRootInputs [ ] = { { 0 , 0 , (
+- 1 , 0 } } ; static int_T rt_LoggedStateIdxList [ ] = { 7 , 2 , 0 , 5 , 6 ,
+9 , 0 , 8 } ; static const rtwCAPI_Signals rtRootInputs [ ] = { { 0 , 0 , (
 NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 } } ; static const rtwCAPI_Signals
 rtRootOutputs [ ] = { { 0 , 0 , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0 , 0 } } ;
 static const rtwCAPI_ModelParameters rtModelParameters [ ] = { { 140 ,
@@ -331,8 +332,8 @@ jaqygtbwrp , & hfe00hbwscw . kpjtu3yzip , & hfe00hbwscw . bki5dqleao , &
 hfe00hbwscw . egwqx4bk1t , & hfe00hbwscw . jglg55uozd , & hfe00hbwscw .
 pue040sedo , & hfe00hbwscw . fssj4vhwqd , & hfe00hbwscw . egun0lxqwh , &
 hfe00hbwscw . fqgurvz30p , & hfe00hbwscw . jtp5gfufnu , & hfe00hbwscw .
-ajoldyqnvn , & hfe00hbwscw . juedzmwz13 , & hfe00hbwscw . fkmxmxweyx , &
-hfe00hbwscw . j3cdx1rby1 , & hfe00hbwscw . dn2ipr3mo1 , & hfe00hbwscw .
+ajoldyqnvn , & hfe00hbwscw . juedzmwz13 , & hfe00hbwscw . kftazr0hxl , &
+hfe00hbwscw . ciswg50jx3 , & hfe00hbwscw . etwgbqvkif , & hfe00hbwscw .
 kpv1qapnbc , & hfe00hbwscw . pb4y5y3noy , & hfe00hbwscw . gxpwwcihxi , &
 hfe00hbwscw . l511ehwbyg , & hfe00hbwscw . lldsxsxwpp , & hfe00hbwscw .
 p50dphabzy , & hfe00hbwscw . bekklopwz5 , & hfe00hbwscw . hfrndgtdvk , &
@@ -408,9 +409,10 @@ void * ) & rtcapiStoredFloats [ 3 ] , ( const void * ) & rtcapiStoredFloats [
 rtRootInputs , 0 , rtRootOutputs , 0 } , { rtBlockParameters , 58 ,
 rtModelParameters , 1 } , { rtBlockStates , 8 } , { rtDataTypeMap ,
 rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 2016671697U , 1193092159U , 4221439711U ,
-1036386930U } , ( NULL ) , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
-HT05Model_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
+rtDimensionArray } , "float" , { 1396022481U , 3832595604U , 78727595U ,
+786872218U } , ( NULL ) , 0 , 0 , rt_LoggedStateIdxList } ; const
+rtwCAPI_ModelMappingStaticInfo * HT05Model_GetCAPIStaticMap ( void ) { return
+& mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 void HT05Model_InitializeDataMapInfo ( void ) { rtwCAPI_SetVersion ( ( *
 rt_dataMapInfoPtr ) . mmi , 1 ) ; rtwCAPI_SetStaticMap ( ( *

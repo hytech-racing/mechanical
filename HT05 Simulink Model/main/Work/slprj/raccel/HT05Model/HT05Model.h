@@ -2,12 +2,14 @@
 #define RTW_HEADER_HT05Model_h_
 #include <string.h>
 #include <stddef.h>
-#include "rtw_modelmap.h"
+#include "rtw_modelmap_simtarget.h"
 #ifndef HT05Model_COMMON_INCLUDES_
 #define HT05Model_COMMON_INCLUDES_
+#include <stdio.h>
 #include <stdlib.h>
 #include "sl_AsyncioQueue/AsyncioQueueCAPI.h"
 #include "rtwtypes.h"
+#include "zero_crossing_types.h"
 #include "sigstream_rtw.h"
 #include "simtarget/slSimTgtSigstreamRTW.h"
 #include "simtarget/slSimTgtSlioCoreRTW.h"
@@ -17,7 +19,7 @@
 #include "fixedpoint.h"
 #include "raccel.h"
 #include "slsv_diagnostic_codegen_c_api.h"
-#include "rt_logging.h"
+#include "rt_logging_simtarget.h"
 #include "dt_info.h"
 #include "ext_work.h"
 #endif
@@ -54,7 +56,7 @@
 #endif
 typedef struct { real_T l152uhfy44 ; } pijou5z0ta ; typedef struct { int8_T
 gwhutwksvk ; boolean_T kc02azdlcj ; } bzcsocffru ; typedef struct { real_T
-dn2ipr3mo1 ; real_T kwter11yih ; real_T k2nvq1dfvz ; real_T krfdbjpt0e ;
+etwgbqvkif ; real_T kwter11yih ; real_T k2nvq1dfvz ; real_T krfdbjpt0e ;
 real_T hnqecwtek3 ; real_T gz5o4hus3a ; real_T nou3xfrkex [ 2 ] ; real_T
 bejosqgptz [ 2 ] ; real_T k0jcwtesdh [ 2 ] ; real_T hawg1v30vs ; real_T
 awbv4lz2br ; real_T cawpxxfynl ; real_T op2bbilkhu ; real_T i4av10pedr ;
@@ -66,8 +68,8 @@ pue040sedo ; real_T egun0lxqwh ; real_T fssj4vhwqd ; real_T fqgurvz30p ;
 real_T jaqygtbwrp ; real_T juedzmwz13 ; real_T kpjtu3yzip ; real_T hd0j3gmmyn
 ; real_T ewcpkcxybh ; real_T lfrzqxjyja ; real_T o5n5eexjon ; real_T
 e51yutiqek ; real_T fbfzjqwa5a ; real_T mkqparta3r ; real_T a2zj1koo4k ;
-real_T ldaenjp42v ; real_T f53jjpuuxm ; real_T hhj0p0jony ; real_T fkmxmxweyx
-; real_T j3cdx1rby1 ; real_T hfrndgtdvk ; real_T bekklopwz5 ; real_T
+real_T ldaenjp42v ; real_T f53jjpuuxm ; real_T hhj0p0jony ; real_T kftazr0hxl
+; real_T ciswg50jx3 ; real_T hfrndgtdvk ; real_T bekklopwz5 ; real_T
 gdkws0vsws ; real_T dkyaehby1j ; real_T p50dphabzy ; real_T feadjgjni4 ;
 real_T adqo2rpmqv ; real_T gb4x2xlbw3 ; real_T l511ehwbyg ; real_T d01a5ocxx2
 ; real_T asokvlgnxe [ 2 ] ; real_T kmgjdorlmx [ 2 ] ; real_T l2hqlcf2hl ;
@@ -87,7 +89,7 @@ AQHandles ; } cbpif1banu ; struct { void * AQHandles ; } dbduharpby ; struct
 { void * AQHandles ; } dkmsy4vtjq ; struct { void * TUbufferPtrs [ 2 ] ; }
 ohevlrvd4o ; struct { void * AQHandles ; } m3edf11hk1 ; struct { void *
 AQHandles ; } o142ktwdad ; struct { void * AQHandles ; } cbpif1banuf ; struct
-{ void * AQHandles ; } ks1fvl1d0d ; uint32_T hrypfmrlkd ; struct { int_T Tail
+{ void * AQHandles ; } ks1fvl1d0d ; uint32_T odmqgoxpmf ; struct { int_T Tail
 ; int_T Head ; int_T Last ; int_T CircularBufSize ; int_T MaxNewBufSize ; }
 ndxxvlk3ok ; int_T hn5nuy0lbc ; int_T nxsdzjpe5i ; volatile int8_T piumrtffmp
 ; volatile int8_T oijmj1tdxd ; volatile int8_T anfmogqnpx ; volatile int8_T
@@ -121,12 +123,12 @@ typedef struct { real_T i4qubohzc1 ; cphoervchx hcwjqlhqcy ; real_T
 nxcnpybje3 ; op3keyawy1 fqvhaqjss0 ; p1rrq1ih3i b04e30byfs ; real_T
 a1yytga2i4 ; real_T d2vzwae4a0 ; real_T fwf05bzu3h [ 2 ] ; real_T fulynuhbhe
 ; real_T hiwowua33s ; } d4h3rhbasw ; typedef struct { pmzuarg20b oexwb0vxno ;
-o3ciyyrlrx g5hi1yixh2 ; f0can1sh3a hev2tqxdbw ; real_T gppqg3jeps ; real_T
-ncwkbjsqae ; real_T duf13ep545 ; real_T ewzov3eiem ; real_T o4s3wza3yv ;
-real_T a5s3n240xe ; real_T gvq0aim5lc ; real_T m0z2gatijm ; } lm4x2ar2jt ;
-typedef struct { rtwCAPI_ModelMappingInfo mmi ; rtwCAPI_ModelMappingInfo *
-childMMI [ 4 ] ; } DataMapInfo ; struct ihnh5ag1lpc_ { real_T SignalHold_IC ;
-real_T SignalHold_IC_k5etbcnmrh ; real_T LongitudinalDriverModel_Kpt ; real_T
+f0can1sh3a hev2tqxdbw ; real_T gppqg3jeps ; real_T ncwkbjsqae ; real_T
+duf13ep545 ; real_T ewzov3eiem ; real_T pkdl1bjwj0 ; real_T a5s3n240xe ;
+real_T gvq0aim5lc ; real_T m0z2gatijm ; } lm4x2ar2jt ; typedef struct {
+rtwCAPI_ModelMappingInfo mmi ; rtwCAPI_ModelMappingInfo * childMMI [ 4 ] ; }
+DataMapInfo ; struct ihnh5ag1lpc_ { real_T SignalHold_IC ; real_T
+SignalHold_IC_k5etbcnmrh ; real_T LongitudinalDriverModel_Kpt ; real_T
 LongitudinalDriverModel_L ; real_T LongitudinalDriverModel_aR ; real_T
 LongitudinalDriverModel_bR ; real_T LongitudinalDriverModel_cR ; real_T
 LongitudinalDriverModel_g ; real_T LongitudinalDriverModel_tau ; real_T
@@ -153,19 +155,22 @@ real_T Constant_Value ; real_T Constant_Value_lfd1si2n0l ; real_T
 Constant_Value_jdsn1qewzr ; } ; extern const real_T HT05Model_RGND ; extern
 const char * RT_MEMORY_ALLOCATION_ERROR ; extern hfe00hbwsc hfe00hbwscw ;
 extern nltnw1e5gk nltnw1e5gkl ; extern bcuvylxhef bcuvylxhefc ; extern
-ihnh5ag1lpc ihnh5ag1lp ; extern real_T rtP_m ; extern const
-rtwCAPI_ModelMappingStaticInfo * HT05Model_GetCAPIStaticMap ( void ) ; extern
-SimStruct * const rtS ; extern const int_T gblNumToFiles ; extern const int_T
-gblNumFrFiles ; extern const int_T gblNumFrWksBlocks ; extern rtInportTUtable
-* gblInportTUtables ; extern const char * gblInportFileName ; extern const
-int_T gblNumRootInportBlks ; extern const int_T gblNumModelInputs ; extern
-const int_T gblInportDataTypeIdx [ ] ; extern const int_T gblInportDims [ ] ;
-extern const int_T gblInportComplex [ ] ; extern const int_T
-gblInportInterpoFlag [ ] ; extern const int_T gblInportContinuous [ ] ;
-extern const int_T gblParameterTuningTid ; extern DataMapInfo *
-rt_dataMapInfoPtr ; extern rtwCAPI_ModelMappingInfo * rt_modelMapInfoPtr ;
-void MdlOutputs ( int_T tid ) ; void MdlOutputsParameterSampleTime ( int_T
-tid ) ; void MdlUpdate ( int_T tid ) ; void MdlTerminate ( void ) ; void
-MdlInitializeSizes ( void ) ; void MdlInitializeSampleTimes ( void ) ;
-SimStruct * raccel_register_model ( ssExecutionInfo * executionInfo ) ;
+ihnh5ag1lpc ihnh5ag1lp ; extern real_T rtP_m ; extern mxArray *
+mr_HT05Model_GetDWork ( ) ; extern void mr_HT05Model_SetDWork ( const mxArray
+* ssDW ) ; extern mxArray * mr_HT05Model_GetSimStateDisallowedBlocks ( ) ;
+extern const rtwCAPI_ModelMappingStaticInfo * HT05Model_GetCAPIStaticMap (
+void ) ; extern SimStruct * const rtS ; extern const int_T gblNumToFiles ;
+extern const int_T gblNumFrFiles ; extern const int_T gblNumFrWksBlocks ;
+extern rtInportTUtable * gblInportTUtables ; extern const char *
+gblInportFileName ; extern const int_T gblNumRootInportBlks ; extern const
+int_T gblNumModelInputs ; extern const int_T gblInportDataTypeIdx [ ] ;
+extern const int_T gblInportDims [ ] ; extern const int_T gblInportComplex [
+] ; extern const int_T gblInportInterpoFlag [ ] ; extern const int_T
+gblInportContinuous [ ] ; extern const int_T gblParameterTuningTid ; extern
+DataMapInfo * rt_dataMapInfoPtr ; extern rtwCAPI_ModelMappingInfo *
+rt_modelMapInfoPtr ; void MdlOutputs ( int_T tid ) ; void
+MdlOutputsParameterSampleTime ( int_T tid ) ; void MdlUpdate ( int_T tid ) ;
+void MdlTerminate ( void ) ; void MdlInitializeSizes ( void ) ; void
+MdlInitializeSampleTimes ( void ) ; SimStruct * raccel_register_model (
+ssExecutionInfo * executionInfo ) ;
 #endif

@@ -1,3 +1,4 @@
+IS_SIM_TARGET
 MODEL=EvPowertrainController
 NUMST=1
 NCSTATES=0

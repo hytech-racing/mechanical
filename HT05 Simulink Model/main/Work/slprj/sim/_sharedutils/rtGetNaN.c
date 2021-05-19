@@ -23,7 +23,7 @@ real_T rtGetNaN(void)
 
 real32_T rtGetNaNF(void)
 {
-  IEEESingle nanF = { { 0 } };
+  IEEESingle nanF = { { 0.0F } };
 
   nanF.wordL.wordLuint = 0xFFC00000U;
   return nanF.wordL.wordLreal;

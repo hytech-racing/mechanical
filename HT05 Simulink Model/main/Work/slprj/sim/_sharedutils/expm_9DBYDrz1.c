@@ -1,23 +1,24 @@
 #include "rtwtypes.h"
 #include "multiword_types.h"
+#include "rtGetNaN.h"
 #include "rt_nonfinite.h"
 #include <math.h>
-#include "PadeApproximantOfDegree_5BLwCIn6.h"
+#include "PadeApproximantOfDegree_TSqIYAo3.h"
 #include "mwmathutil.h"
-#include "expm_WM6qSMEO.h"
+#include "expm_9DBYDrz1.h"
 
-void expm_WM6qSMEO(real_T A[4], real_T F[4])
+void expm_9DBYDrz1(real_T A[4], real_T F[4])
 {
-  static const real_T theta[5] = { 0.01495585217958292, 0.253939833006323,
-    0.95041789961629319, 2.097847961257068, 5.3719203511481517 };
-
-  static const uint8_T b[5] = { 3U, 5U, 7U, 9U, 13U };
-
   real_T F_p[4];
   real_T b_s;
   real_T normA;
   int32_T b_j;
   int32_T e;
+  static const real_T theta[5] = { 0.01495585217958292, 0.253939833006323,
+    0.95041789961629319, 2.097847961257068, 5.3719203511481517 };
+
+  static const uint8_T b[5] = { 3U, 5U, 7U, 9U, 13U };
+
   boolean_T exitg1;
   normA = 0.0;
   b_j = 0;
@@ -41,7 +42,7 @@ void expm_WM6qSMEO(real_T A[4], real_T F[4])
     exitg1 = false;
     while ((!exitg1) && (b_j < 5)) {
       if (normA <= theta[b_j]) {
-        PadeApproximantOfDegree_5BLwCIn6(A, b[b_j], F);
+        PadeApproximantOfDegree_TSqIYAo3(A, b[b_j], F);
         exitg1 = true;
       } else {
         b_j++;
@@ -65,7 +66,7 @@ void expm_WM6qSMEO(real_T A[4], real_T F[4])
     A[1] /= b_s;
     A[2] /= b_s;
     A[3] /= b_s;
-    PadeApproximantOfDegree_5BLwCIn6(A, 13, F);
+    PadeApproximantOfDegree_TSqIYAo3(A, 13, F);
     for (b_j = 0; b_j < (int32_T)normA; b_j++) {
       for (e = 0; e < 2; e++) {
         F_p[e] = 0.0;

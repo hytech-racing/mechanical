@@ -3,7 +3,7 @@
 #include "BattEv_private.h"
 #include "look1_binlcapw.h"
 #include "look2_binlcapw.h"
-static RegMdlInfo rtMdlInfo_BattEv [ 43 ] = { { "lobjb0lvrdo" ,
+static RegMdlInfo rtMdlInfo_BattEv [ 42 ] = { { "lobjb0lvrdo" ,
 MDL_INFO_NAME_MDLREF_DWORK , 0 , - 1 , ( void * ) "BattEv" } , { "o3ciyyrlrx"
 , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "BattEv" } , {
 "op3keyawy1" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
@@ -24,23 +24,22 @@ MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "BattEv" } , {
 "hsugof10pg" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
 "BattEv" } , { "m5uwyjpoin" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , (
 void * ) "BattEv" } , { "dwrwbkg3u5" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 ,
-- 1 , ( void * ) "BattEv" } , { "d3sayc4aih" ,
+- 1 , ( void * ) "BattEv" } , { "pexk2pi1gg" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "BattEv" } , {
-"pexk2pi1gg" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"BattEv" } , { "c0hgp3wnut" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , (
-void * ) "BattEv" } , { "havtbmuleg" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 ,
-- 1 , ( void * ) "BattEv" } , { "poo3kmg0ob" ,
+"c0hgp3wnut" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"BattEv" } , { "havtbmuleg" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , (
+void * ) "BattEv" } , { "poo3kmg0ob" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 ,
+- 1 , ( void * ) "BattEv" } , { "lst5ppimoh" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "BattEv" } , {
-"lst5ppimoh" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"BattEv" } , { "h2icdxptjx" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , (
-void * ) "BattEv" } , { "e4onitgc0b" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 ,
-- 1 , ( void * ) "BattEv" } , { "BattEv" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT ,
-0 , 0 , ( NULL ) } , { "ajlvomnaiz" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 ,
-- 1 , ( void * ) "BattEv" } , { "bjbjtykkxm" ,
+"h2icdxptjx" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
+"BattEv" } , { "e4onitgc0b" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , (
+void * ) "BattEv" } , { "BattEv" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , 0 ,
+( NULL ) } , { "ajlvomnaiz" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , (
+void * ) "BattEv" } , { "bjbjtykkxm" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 ,
+- 1 , ( void * ) "BattEv" } , { "euywnbmp33" ,
 MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * ) "BattEv" } , {
-"euywnbmp33" , MDL_INFO_ID_GLOBAL_RTW_CONSTRUCT , 0 , - 1 , ( void * )
-"BattEv" } , { "mr_BattEv_GetSimStateDisallowedBlocks" ,
-MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * ) "BattEv" } , {
+"mr_BattEv_GetSimStateDisallowedBlocks" , MDL_INFO_ID_MODEL_FCN_NAME , 0 , -
+1 , ( void * ) "BattEv" } , {
 "mr_BattEv_extractBitFieldFromCellArrayWithOffset" ,
 MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * ) "BattEv" } , {
 "mr_BattEv_cacheBitFieldToCellArrayWithOffset" , MDL_INFO_ID_MODEL_FCN_NAME ,
@@ -89,33 +88,33 @@ a2kiykjvrx = { 18.0 , 18.0 , { 243.1 , 253.1 , 263.1 , 273.1 , 283.1 , 298.1
 0.002716 , 0.001924 , 0.0007355 , 0.001546 , 0.01314 , 0.007805 , 0.004517 ,
 0.003047 , 0.002234 , 0.001014 , 0.002789 } , 0.0 , 100.0 , { 6U , 5U } } ;
 void poo3kmg0ob ( euywnbmp33 * const n4jdqa0poy , dmy10bqvs5 * localDW ,
-hkgv0zhr3w * localX ) { boolean_T tmp ; localDW -> c0lxguzdmo = 1 ; if (
+hkgv0zhr3w * localX ) { boolean_T tmp ; localDW -> ix1vpir2az = 1 ; if (
 rtmIsFirstInitCond ( n4jdqa0poy ) ) { localX -> hflmlajctv = 0.0 ; tmp =
 slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp =
 ssGetGlobalInitialStatesAvailable ( n4jdqa0poy -> _mdlRefSfcnS ) ; localDW ->
-c0lxguzdmo = ! tmp ; } else { localDW -> c0lxguzdmo = 1 ; } } } void
+ix1vpir2az = ! tmp ; } else { localDW -> ix1vpir2az = 1 ; } } } void
 havtbmuleg ( euywnbmp33 * const n4jdqa0poy , dmy10bqvs5 * localDW ,
-hkgv0zhr3w * localX ) { boolean_T tmp ; localDW -> c0lxguzdmo = 1 ; if (
+hkgv0zhr3w * localX ) { boolean_T tmp ; localDW -> ix1vpir2az = 1 ; if (
 rtmIsFirstInitCond ( n4jdqa0poy ) ) { localX -> hflmlajctv = 0.0 ; tmp =
 slIsRapidAcceleratorSimulating ( ) ; if ( tmp ) { tmp =
 ssGetGlobalInitialStatesAvailable ( n4jdqa0poy -> _mdlRefSfcnS ) ; localDW ->
-c0lxguzdmo = ! tmp ; } else { localDW -> c0lxguzdmo = 1 ; } } } void BattEv (
+ix1vpir2az = ! tmp ; } else { localDW -> ix1vpir2az = 1 ; } } } void BattEv (
 euywnbmp33 * const n4jdqa0poy , const real_T * bgau4kdtsz , const real_T *
 nend3jcwem , real_T * icwqjgxcm3 , real_T * jovjkqw4dc , nw51lwywlm * localB
 , dmy10bqvs5 * localDW , hkgv0zhr3w * localX ) { real_T ax24xfmgjs_p ; real_T
-bonvrr20bz ; real_T f02u25iae3_p ; localB -> cxft4ixm0k = - 1.0 / (
-a2kiykjvrx . P_6 * 3600.0 ) * * bgau4kdtsz ; if ( rtmIsMajorTimeStep (
-n4jdqa0poy ) ) { if ( localDW -> c0lxguzdmo != 0 ) { localX -> hflmlajctv =
-localB -> awwyaae3xe ; } if ( localX -> hflmlajctv >= a2kiykjvrx . P_1 ) { if
-( localX -> hflmlajctv != a2kiykjvrx . P_1 ) { localX -> hflmlajctv =
-a2kiykjvrx . P_1 ; ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy ->
-_mdlRefSfcnS ) ; } localDW -> aq4rfpgnmi = 3 ; } else if ( localX ->
-hflmlajctv <= a2kiykjvrx . P_9 ) { if ( localX -> hflmlajctv != a2kiykjvrx .
-P_9 ) { localX -> hflmlajctv = a2kiykjvrx . P_9 ;
+bonvrr20bz ; real_T f02u25iae3_p ; boolean_T tmp ; localB -> cxft4ixm0k = -
+1.0 / ( a2kiykjvrx . P_6 * 3600.0 ) * * bgau4kdtsz ; tmp =
+ssGetIsOkayToUpdateMode ( n4jdqa0poy -> _mdlRefSfcnS ) ; if ( tmp ) { if (
+localDW -> ix1vpir2az != 0 ) { localX -> hflmlajctv = localB -> awwyaae3xe ;
+} if ( localX -> hflmlajctv >= a2kiykjvrx . P_1 ) { if ( localX -> hflmlajctv
+!= a2kiykjvrx . P_1 ) { localX -> hflmlajctv = a2kiykjvrx . P_1 ;
 ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ; }
-localDW -> aq4rfpgnmi = 4 ; } else { if ( localDW -> aq4rfpgnmi != 0 ) {
-ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ; }
-localDW -> aq4rfpgnmi = 0 ; } f02u25iae3_p = localX -> hflmlajctv ; } else {
+} else if ( ( localX -> hflmlajctv <= a2kiykjvrx . P_9 ) && ( localX ->
+hflmlajctv != a2kiykjvrx . P_9 ) ) { localX -> hflmlajctv = a2kiykjvrx . P_9
+; ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy -> _mdlRefSfcnS ) ;
+} f02u25iae3_p = localX -> hflmlajctv ; } else if ( localX -> hflmlajctv >=
+a2kiykjvrx . P_1 ) { f02u25iae3_p = a2kiykjvrx . P_1 ; } else if ( localX ->
+hflmlajctv <= a2kiykjvrx . P_9 ) { f02u25iae3_p = a2kiykjvrx . P_9 ; } else {
 f02u25iae3_p = localX -> hflmlajctv ; } f02u25iae3_p /= a2kiykjvrx . P_1 ;
 bonvrr20bz = look2_binlcapw ( * nend3jcwem , f02u25iae3_p , a2kiykjvrx . P_2
 , a2kiykjvrx . P_4 , a2kiykjvrx . P_8 , a2kiykjvrx . P_11 , 7U ) ;
@@ -125,55 +124,42 @@ look1_binlcapw ( f02u25iae3_p , a2kiykjvrx . P_3 , a2kiykjvrx . P_5 , 100U )
 . P_10 * f02u25iae3_p ; } void BattEvTID1 ( nw51lwywlm * localB ) { if (
 a2kiykjvrx . P_0 > a2kiykjvrx . P_1 ) { localB -> awwyaae3xe = a2kiykjvrx .
 P_1 ; } else { localB -> awwyaae3xe = a2kiykjvrx . P_0 ; } } void c0hgp3wnut
-( euywnbmp33 * const n4jdqa0poy , nw51lwywlm * localB , dmy10bqvs5 * localDW
-, khjrgybdwv * localXdis ) { localDW -> c0lxguzdmo = 0 ; switch ( localDW ->
-aq4rfpgnmi ) { case 3 : if ( localB -> cxft4ixm0k < 0.0 ) { localDW ->
-aq4rfpgnmi = 1 ; ssSetBlockStateForSolverChangedAtMajorStep ( n4jdqa0poy ->
-_mdlRefSfcnS ) ; } break ; case 4 : if ( localB -> cxft4ixm0k > 0.0 ) {
-localDW -> aq4rfpgnmi = 2 ; ssSetBlockStateForSolverChangedAtMajorStep (
-n4jdqa0poy -> _mdlRefSfcnS ) ; } break ; } localXdis -> hflmlajctv = ( (
-localDW -> aq4rfpgnmi == 3 ) || ( localDW -> aq4rfpgnmi == 4 ) ) ; } void
-c0hgp3wnutTID1 ( void ) { } void pexk2pi1gg ( nw51lwywlm * localB ,
-khjrgybdwv * localXdis , nvyvwtjtwa * localXdot ) { if ( localXdis ->
-hflmlajctv ) { localXdot -> hflmlajctv = 0.0 ; } else { localXdot ->
-hflmlajctv = localB -> cxft4ixm0k ; } } void d3sayc4aih ( nw51lwywlm * localB
-, dmy10bqvs5 * localDW , hkgv0zhr3w * localX , o3ciyyrlrx * localZCSV ) {
-switch ( localDW -> aq4rfpgnmi ) { case 1 : localZCSV -> jlvu1k5feu = 0.0 ;
-localZCSV -> dghrbykmv0 = a2kiykjvrx . P_1 - a2kiykjvrx . P_9 ; break ; case
-2 : localZCSV -> jlvu1k5feu = a2kiykjvrx . P_9 - a2kiykjvrx . P_1 ; localZCSV
--> dghrbykmv0 = 0.0 ; break ; default : localZCSV -> jlvu1k5feu = localX ->
-hflmlajctv - a2kiykjvrx . P_1 ; localZCSV -> dghrbykmv0 = localX ->
-hflmlajctv - a2kiykjvrx . P_9 ; break ; } if ( ( localDW -> aq4rfpgnmi == 3 )
-|| ( localDW -> aq4rfpgnmi == 4 ) ) { localZCSV -> mknsjhdkfa = localB ->
-cxft4ixm0k ; } else { localZCSV -> mknsjhdkfa = 0.0 ; } } void m5uwyjpoin (
-euywnbmp33 * const n4jdqa0poy ) { if ( ! slIsRapidAcceleratorSimulating ( ) )
-{ slmrRunPluginEvent ( n4jdqa0poy -> _mdlRefSfcnS , "BattEv" ,
-"SIMSTATUS_TERMINATING_MODELREF_ACCEL_EVENT" ) ; } } void lst5ppimoh (
-SimStruct * _mdlRefSfcnS , int_T mdlref_TID0 , int_T mdlref_TID1 , euywnbmp33
-* const n4jdqa0poy , nw51lwywlm * localB , dmy10bqvs5 * localDW , hkgv0zhr3w
-* localX , void * sysRanPtr , int contextTid , rtwCAPI_ModelMappingInfo *
-rt_ParentMMI , const char_T * rt_ChildPath , int_T rt_ChildMMIIdx , int_T
-rt_CSTATEIdx ) { rt_InitInfAndNaN ( sizeof ( real_T ) ) ; ( void ) memset ( (
-void * ) n4jdqa0poy , 0 , sizeof ( euywnbmp33 ) ) ; n4jdqa0poy -> Timing .
-mdlref_GlobalTID [ 0 ] = mdlref_TID0 ; n4jdqa0poy -> Timing .
-mdlref_GlobalTID [ 1 ] = mdlref_TID1 ; n4jdqa0poy -> _mdlRefSfcnS = (
-_mdlRefSfcnS ) ; if ( ! slIsRapidAcceleratorSimulating ( ) ) {
-slmrRunPluginEvent ( n4jdqa0poy -> _mdlRefSfcnS , "BattEv" ,
-"START_OF_SIM_MODEL_MODELREF_ACCEL_EVENT" ) ; } { localB -> cxft4ixm0k = 0.0
-; localB -> awwyaae3xe = 0.0 ; } ( void ) memset ( ( void * ) localDW , 0 ,
-sizeof ( dmy10bqvs5 ) ) ; BattEv_InitializeDataMapInfo ( n4jdqa0poy , localDW
-, localX , sysRanPtr , contextTid ) ; if ( ( rt_ParentMMI != ( NULL ) ) && (
-rt_ChildPath != ( NULL ) ) ) { rtwCAPI_SetChildMMI ( * rt_ParentMMI ,
-rt_ChildMMIIdx , & ( n4jdqa0poy -> DataMapInfo . mmi ) ) ; rtwCAPI_SetPath (
-n4jdqa0poy -> DataMapInfo . mmi , rt_ChildPath ) ;
-rtwCAPI_MMISetContStateStartIndex ( n4jdqa0poy -> DataMapInfo . mmi ,
-rt_CSTATEIdx ) ; } } void mr_BattEv_MdlInfoRegFcn ( SimStruct * mdlRefSfcnS ,
-char_T * modelName , int_T * retVal ) { * retVal = 0 ; { boolean_T
-regSubmodelsMdlinfo = false ; ssGetRegSubmodelsMdlinfo ( mdlRefSfcnS , &
-regSubmodelsMdlinfo ) ; if ( regSubmodelsMdlinfo ) { } } * retVal = 0 ;
-ssRegModelRefMdlInfo ( mdlRefSfcnS , modelName , rtMdlInfo_BattEv , 43 ) ; *
-retVal = 1 ; } static void mr_BattEv_cacheDataAsMxArray ( mxArray * destArray
-, mwIndex i , int j , const void * srcData , size_t numBytes ) ; static void
+( dmy10bqvs5 * localDW ) { localDW -> ix1vpir2az = 0 ; } void c0hgp3wnutTID1
+( void ) { } void pexk2pi1gg ( nw51lwywlm * localB , hkgv0zhr3w * localX ,
+nvyvwtjtwa * localXdot ) { if ( ( ( localX -> hflmlajctv > a2kiykjvrx . P_9 )
+&& ( localX -> hflmlajctv < a2kiykjvrx . P_1 ) ) || ( ( localX -> hflmlajctv
+<= a2kiykjvrx . P_9 ) && ( localB -> cxft4ixm0k > 0.0 ) ) || ( ( localX ->
+hflmlajctv >= a2kiykjvrx . P_1 ) && ( localB -> cxft4ixm0k < 0.0 ) ) ) {
+localXdot -> hflmlajctv = localB -> cxft4ixm0k ; } else { localXdot ->
+hflmlajctv = 0.0 ; } } void m5uwyjpoin ( euywnbmp33 * const n4jdqa0poy ) { if
+( ! slIsRapidAcceleratorSimulating ( ) ) { slmrRunPluginEvent ( n4jdqa0poy ->
+_mdlRefSfcnS , "BattEv" , "SIMSTATUS_TERMINATING_MODELREF_ACCEL_EVENT" ) ; }
+} void lst5ppimoh ( SimStruct * _mdlRefSfcnS , int_T mdlref_TID0 , int_T
+mdlref_TID1 , euywnbmp33 * const n4jdqa0poy , nw51lwywlm * localB ,
+dmy10bqvs5 * localDW , hkgv0zhr3w * localX , void * sysRanPtr , int
+contextTid , rtwCAPI_ModelMappingInfo * rt_ParentMMI , const char_T *
+rt_ChildPath , int_T rt_ChildMMIIdx , int_T rt_CSTATEIdx ) { rt_InitInfAndNaN
+( sizeof ( real_T ) ) ; ( void ) memset ( ( void * ) n4jdqa0poy , 0 , sizeof
+( euywnbmp33 ) ) ; n4jdqa0poy -> Timing . mdlref_GlobalTID [ 0 ] =
+mdlref_TID0 ; n4jdqa0poy -> Timing . mdlref_GlobalTID [ 1 ] = mdlref_TID1 ;
+n4jdqa0poy -> _mdlRefSfcnS = ( _mdlRefSfcnS ) ; if ( !
+slIsRapidAcceleratorSimulating ( ) ) { slmrRunPluginEvent ( n4jdqa0poy ->
+_mdlRefSfcnS , "BattEv" , "START_OF_SIM_MODEL_MODELREF_ACCEL_EVENT" ) ; } {
+localB -> cxft4ixm0k = 0.0 ; localB -> awwyaae3xe = 0.0 ; } ( void ) memset (
+( void * ) localDW , 0 , sizeof ( dmy10bqvs5 ) ) ;
+BattEv_InitializeDataMapInfo ( n4jdqa0poy , localDW , localX , sysRanPtr ,
+contextTid ) ; if ( ( rt_ParentMMI != ( NULL ) ) && ( rt_ChildPath != ( NULL
+) ) ) { rtwCAPI_SetChildMMI ( * rt_ParentMMI , rt_ChildMMIIdx , & (
+n4jdqa0poy -> DataMapInfo . mmi ) ) ; rtwCAPI_SetPath ( n4jdqa0poy ->
+DataMapInfo . mmi , rt_ChildPath ) ; rtwCAPI_MMISetContStateStartIndex (
+n4jdqa0poy -> DataMapInfo . mmi , rt_CSTATEIdx ) ; } } void
+mr_BattEv_MdlInfoRegFcn ( SimStruct * mdlRefSfcnS , char_T * modelName ,
+int_T * retVal ) { * retVal = 0 ; { boolean_T regSubmodelsMdlinfo = false ;
+ssGetRegSubmodelsMdlinfo ( mdlRefSfcnS , & regSubmodelsMdlinfo ) ; if (
+regSubmodelsMdlinfo ) { } } * retVal = 0 ; ssRegModelRefMdlInfo ( mdlRefSfcnS
+, modelName , rtMdlInfo_BattEv , 42 ) ; * retVal = 1 ; } static void
+mr_BattEv_cacheDataAsMxArray ( mxArray * destArray , mwIndex i , int j ,
+const void * srcData , size_t numBytes ) ; static void
 mr_BattEv_cacheDataAsMxArray ( mxArray * destArray , mwIndex i , int j ,
 const void * srcData , size_t numBytes ) { mxArray * newArray =
 mxCreateUninitNumericMatrix ( ( size_t ) 1 , numBytes , mxUINT8_CLASS ,
@@ -223,24 +209,24 @@ mwIndex i , int j , mwIndex offset , uint_T numBits ) { const uint_T fieldVal
 mr_BattEv_GetDWork ( const lobjb0lvrdo * mdlrefDW ) { static const char *
 ssDWFieldNames [ 3 ] = { "rtb" , "rtdw" , "NULL->rtzce" , } ; mxArray * ssDW
 = mxCreateStructMatrix ( 1 , 1 , 3 , ssDWFieldNames ) ;
-mr_BattEv_cacheDataAsMxArray ( ssDW , 0 , 0 , & ( mdlrefDW -> rtb ) , sizeof
-( mdlrefDW -> rtb ) ) ; { static const char * rtdwDataFieldNames [ 2 ] = {
-"mdlrefDW->rtdw.c0lxguzdmo" , "mdlrefDW->rtdw.aq4rfpgnmi" , } ; mxArray *
-rtdwData = mxCreateStructMatrix ( 1 , 1 , 2 , rtdwDataFieldNames ) ;
-mr_BattEv_cacheDataAsMxArray ( rtdwData , 0 , 0 , & ( mdlrefDW -> rtdw .
-c0lxguzdmo ) , sizeof ( mdlrefDW -> rtdw . c0lxguzdmo ) ) ;
-mr_BattEv_cacheDataAsMxArray ( rtdwData , 0 , 1 , & ( mdlrefDW -> rtdw .
-aq4rfpgnmi ) , sizeof ( mdlrefDW -> rtdw . aq4rfpgnmi ) ) ;
-mxSetFieldByNumber ( ssDW , 0 , 1 , rtdwData ) ; } ( void ) mdlrefDW ; return
-ssDW ; } void mr_BattEv_SetDWork ( lobjb0lvrdo * mdlrefDW , const mxArray *
-ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ; mr_BattEv_restoreDataFromMxArray
-( & ( mdlrefDW -> rtb ) , ssDW , 0 , 0 , sizeof ( mdlrefDW -> rtb ) ) ; {
-const mxArray * rtdwData = mxGetFieldByNumber ( ssDW , 0 , 1 ) ;
-mr_BattEv_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . c0lxguzdmo ) ,
-rtdwData , 0 , 0 , sizeof ( mdlrefDW -> rtdw . c0lxguzdmo ) ) ;
-mr_BattEv_restoreDataFromMxArray ( & ( mdlrefDW -> rtdw . aq4rfpgnmi ) ,
-rtdwData , 0 , 1 , sizeof ( mdlrefDW -> rtdw . aq4rfpgnmi ) ) ; } } void
+mr_BattEv_cacheDataAsMxArray ( ssDW , 0 , 0 , ( const void * ) & ( mdlrefDW
+-> rtb ) , sizeof ( mdlrefDW -> rtb ) ) ; { static const char *
+rtdwDataFieldNames [ 1 ] = { "mdlrefDW->rtdw.ix1vpir2az" , } ; mxArray *
+rtdwData = mxCreateStructMatrix ( 1 , 1 , 1 , rtdwDataFieldNames ) ;
+mr_BattEv_cacheDataAsMxArray ( rtdwData , 0 , 0 , ( const void * ) & (
+mdlrefDW -> rtdw . ix1vpir2az ) , sizeof ( mdlrefDW -> rtdw . ix1vpir2az ) )
+; mxSetFieldByNumber ( ssDW , 0 , 1 , rtdwData ) ; } ( void ) mdlrefDW ;
+return ssDW ; } void mr_BattEv_SetDWork ( lobjb0lvrdo * mdlrefDW , const
+mxArray * ssDW ) { ( void ) ssDW ; ( void ) mdlrefDW ;
+mr_BattEv_restoreDataFromMxArray ( ( void * ) & ( mdlrefDW -> rtb ) , ssDW ,
+0 , 0 , sizeof ( mdlrefDW -> rtb ) ) ; { const mxArray * rtdwData =
+mxGetFieldByNumber ( ssDW , 0 , 1 ) ; mr_BattEv_restoreDataFromMxArray ( (
+void * ) & ( mdlrefDW -> rtdw . ix1vpir2az ) , rtdwData , 0 , 0 , sizeof (
+mdlrefDW -> rtdw . ix1vpir2az ) ) ; } } void
 mr_BattEv_RegisterSimStateChecksum ( SimStruct * S ) { const uint32_T chksum
-[ 4 ] = { 1348885384U , 483056610U , 96337899U , 3095277435U , } ;
+[ 4 ] = { 2874555997U , 1465377650U , 2956992087U , 3796007646U , } ;
 slmrModelRefRegisterSimStateChecksum ( S , "BattEv" , & chksum [ 0 ] ) ; }
 mxArray * mr_BattEv_GetSimStateDisallowedBlocks ( ) { return NULL ; }
+#if defined(_MSC_VER)
+#pragma warning(disable: 4505) //unreferenced local function has been removed
+#endif

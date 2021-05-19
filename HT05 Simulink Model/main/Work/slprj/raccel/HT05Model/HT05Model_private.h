@@ -4,6 +4,7 @@
 #include "model_reference_types.h"
 #include "builtin_typeid_types.h"
 #include "multiword_types.h"
+#include "zero_crossing_types.h"
 #include "HT05Model.h"
 #if !defined(rt_VALIDATE_MEMORY)
 #define rt_VALIDATE_MEMORY(S, ptr)   if(!(ptr)) {\
@@ -26,7 +27,7 @@
 #ifndef __RTW_UTFREE__
 extern void * utMalloc ( size_t ) ; extern void utFree ( void * ) ;
 #endif
-extern void fusci251cj ( pijou5z0ta * localB , real_T rtp_IC ) ; extern void
+extern void fusci251cj ( real_T rtp_IC , pijou5z0ta * localB ) ; extern void
 ofnwunlxyp ( SimStruct * rtS_p , bzcsocffru * localDW ) ; extern void
 mtsjnxvi2x ( bzcsocffru * localDW ) ; extern void e2ib0nh2tk ( SimStruct *
 rtS_i , boolean_T bdrw0lzm3k , real_T epyamcb43r , pijou5z0ta * localB ,

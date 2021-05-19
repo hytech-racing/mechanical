@@ -59,7 +59,6 @@ MAKEFILE_FILESEP = /
 #  MODEL_MODULES       - Any additional generated source modules
 #  MAKEFILE_NAME       - Name of makefile created from template makefile <model>.mk
 #  MATLAB_ROOT         - Path to where MATLAB is installed.
-#  MATLAB_BIN          - Path to MATLAB executable.
 #  S_FUNCTIONS_LIB     - List of S-functions libraries to link. 
 #  NUMST               - Number of sample times
 #  NCSTATES            - Number of continuous states
@@ -80,15 +79,13 @@ MODEL                = EvPowertrainController
 MODULES              = EvPowertrainController.c EvPowertrainController_capi.c c_mexapi_version.c
 PRODUCT              = EvPowertrainControllerlib.lib
 MAKEFILE             = EvPowertrainController.mk
-MATLAB_ROOT          = C:/Program Files/MATLAB/R2020b
-ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2020b
-MATLAB_BIN           = C:/Program Files/MATLAB/R2020b/bin
-ALT_MATLAB_BIN       = C:/PROGRA~1/MATLAB/R2020b/bin
+MATLAB_ROOT          = C:/Program Files/MATLAB/R2021a
+ALT_MATLAB_ROOT      = C:/PROGRA~1/MATLAB/R2021a
 START_DIR            = C:/Users/xboxl/OneDrive/DOCUME~1/Github/MECHAN~1/HT05SI~1/main/Work
 S_FUNCTIONS_LIB      = 
 NUMST                = 1
 NCSTATES             = 0
-BUILDARGS            =  GENERATE_ERT_S_FUNCTION=0 GENERATE_ASAP2=0 EXTMODE_STATIC_ALLOC=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 TMW_EXTMODE_TESTING=0 OPTS="-DMATLAB_MEX_FILE -DTID01EQ=0"
+BUILDARGS            =  GENERATE_ERT_S_FUNCTION=0 GENERATE_ASAP2=0 EXTMODE_STATIC_ALLOC=0 EXTMODE_STATIC_ALLOC_SIZE=1000000 EXTMODE_TRANSPORT=0 TMW_EXTMODE_TESTING=0 OPTS="-DIS_SIM_TARGET -DMATLAB_MEX_FILE -DTID01EQ=0"
 MULTITASKING         = 0
 INTEGER_CODE         = 0
 MAT_FILE             = 0
@@ -107,7 +104,7 @@ ADDITIONAL_LDFLAGS      =
 DEFINES_CUSTOM          = 
 DEFINES_OTHER           = -DHAVESTDIO -DMDL_REF_SIM_TGT=1
 COMPILE_FLAGS_OTHER     = 
-SYSTEM_LIBS             = -L"C:\Program Files\MATLAB\R2020b\extern\lib\win64\microsoft" libfixedpoint.lib libmwmathutil.lib libmwipp.lib libmwsl_AsyncioQueue.lib sf_runtime.lib libmwslexec_simlog.lib libmwcoder_ToAsyncQueueTgtAppSvc.lib libmwsl_simtarget_instrumentation.lib libmwsl_simtarget_core.lib libmwstringutil.lib libcovrt.lib
+SYSTEM_LIBS             = -L"C:\Program Files\MATLAB\R2021a\extern\lib\win64\microsoft" libfixedpoint.lib libmwmathutil.lib libmwipp.lib libmwsl_AsyncioQueue.lib sf_runtime.lib libmwslexec_simlog.lib libmwcoder_ToAsyncQueueTgtAppSvc.lib libmwsl_simtarget_instrumentation.lib libmwsl_simtarget_core.lib libmwstringutil.lib
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
 
 #--------------------------- Model and reference models -----------------------
@@ -124,9 +121,6 @@ MODELREF_SFCN_SUFFIX       = _msf
 #-- In the case when directory name contains space ---
 ifneq ($(MATLAB_ROOT),$(ALT_MATLAB_ROOT))
 MATLAB_ROOT := $(ALT_MATLAB_ROOT)
-endif
-ifneq ($(MATLAB_BIN),$(ALT_MATLAB_BIN))
-MATLAB_BIN := $(ALT_MATLAB_BIN)
 endif
 
 #--------------------------- Tool Specifications -------------------------------

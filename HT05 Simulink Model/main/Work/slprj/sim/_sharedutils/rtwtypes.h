@@ -1,7 +1,6 @@
 #ifndef RTWTYPES_H
 #define RTWTYPES_H
 #include "tmwtypes.h"
-#include "simstruc_types.h"
 #ifndef POINTER_T
 #define POINTER_T
 
@@ -24,6 +23,8 @@ typedef void * pointer_T;
 
 typedef long long int64_T;
 
+#define MAX_int64_T                    ((int64_T)(9223372036854775807LL))
+#define MIN_int64_T                    ((int64_T)(-9223372036854775807LL-1LL))
 #endif
 
 #ifndef UINT64_T
@@ -31,6 +32,7 @@ typedef long long int64_T;
 
 typedef unsigned long long uint64_T;
 
+#define MAX_uint64_T                   ((uint64_T)(0xFFFFFFFFFFFFFFFFULL))
 #endif
 
 #ifndef CINT64_T

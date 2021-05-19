@@ -1,10 +1,10 @@
-rt_logging.obj
+rt_logging_simtarget.obj
 HT05Model.obj
 HT05Model_capi.obj
 HT05Model_data.obj
 HT05Model_tgtconn.obj
-rt_logging_mmi.obj
-rtw_modelmap_utils.obj
+rt_logging_mmi_simtarget.obj
+rtw_modelmap_utils_simtarget.obj
 raccel_main_new.obj
 raccel_sup.obj
 raccel_mat.obj

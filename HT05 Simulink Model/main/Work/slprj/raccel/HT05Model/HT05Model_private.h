@@ -24,14 +24,11 @@
   }
 #endif
 #endif
-#ifndef __RTW_UTFREE__
-extern void * utMalloc ( size_t ) ; extern void utFree ( void * ) ;
-#endif
-extern void fusci251cj ( real_T rtp_IC , pijou5z0ta * localB ) ; extern void
-ofnwunlxyp ( SimStruct * rtS_p , bzcsocffru * localDW ) ; extern void
-mtsjnxvi2x ( bzcsocffru * localDW ) ; extern void e2ib0nh2tk ( SimStruct *
-rtS_i , boolean_T bdrw0lzm3k , real_T epyamcb43r , pijou5z0ta * localB ,
-bzcsocffru * localDW ) ;
+extern void duilatdtko ( real_T rtp_IC , fhqirp0zey * localB ) ; extern void
+d5bphz5bsi ( SimStruct * rtS_p , hrr1ocggec * localDW ) ; extern void
+cadi3e44op ( hrr1ocggec * localDW ) ; extern void g31xp5tryr ( SimStruct *
+rtS_i , boolean_T np4yyi1lai , real_T kfqis0x3go , fhqirp0zey * localB ,
+hrr1ocggec * localDW ) ;
 #if defined(MULTITASKING)
 #error Models using the variable step solvers cannot define MULTITASKING
 #endif

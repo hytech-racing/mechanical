@@ -1,6 +1,6 @@
 ![HyTech Logo](https://hytechracing.gatech.edu/images/hytech_logo_small.png)
 
-# 2020 Mechanical
+#Mechanical
 
 Repository for code created by HyTech Mechanical subteam for simulations (MATLAB, Simulink, etc.), and other stuff.
 

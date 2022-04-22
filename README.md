@@ -2,7 +2,7 @@
 
 # Mechanical
 
-Simulations, scripts, and analysis tools used to model the performance of the 2021/2022 vehicle
+Simulations, scripts, and analysis tools used to model the performance of the 2021/2022 vehicle.
 
 This simulation model was originally created for ME 4013, Hybrid Vehicle Powertrains.  
 It was modified by Brandon Strecker and Christian Free for a Formula Hybrid concept (final project) and then simplified to Hytech.
@@ -24,8 +24,6 @@ Basic HyTech parameters have been added but may not be entirely accurate.  The m
     * HTTPS: `https://github.com/hytech-racing/mechanical.git`
 
 ## Repository File System
-
-Files are:
 
 TOP LEVEL:
 HyTech_Simulink.slx ---------- This is the model file based on HyTech's control scheme.  Open and go to the main page to see a To-Do list.

@@ -11,9 +11,9 @@ phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
 F = 20;               %Face width of gears [mm]
 
-d_sun = 28;            %Pitch diameter of each gear [mm]
+d_sun = 25;            %Pitch diameter of each gear [mm]
 d_planet1 = 48;
-d_planet2 = 14;
+d_planet2 = 15;
 d_ring = 90;
 
 n_sun = d_sun/m;    %Number of teeth on each gear

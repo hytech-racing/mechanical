@@ -81,7 +81,7 @@ Zn_ring = 1.249*cycles_ring^(-0.0138);
 
 Ytheta_sun = 1;         %Temperature factor (=1 for under 120C) (Section 14-15)
 Ytheta_planet1 = 1;
-Ythera_planet2 = 1;
+Ytheta_planet2 = 1;
 Ytheta_ring = 1;
 
 Yz_sun = 1.25;          %Reliability factor (Table 14-10)
@@ -176,14 +176,17 @@ Kh_ring = 1 + Cmc*(Cpf_ring*Cpm + Cma*Ce);
 % AUTOMATED
 mt = m;     %Transverse metric module = module for spur gears
 
-tr_sun =        %Rim thickness, based on CAD
-tr_planet1 = 
-tr_planet2 = 
-tr_ring = 
-ht_sun =        %Tooth height, based on CAD (CALCULATE MAYBE)
-ht_planet1 = 
-ht_planet2 = 
-ht_ring = 
+tr_sun = 10;       %Rim thickness, based on CAD
+tr_planet1 = 10;
+tr_planet2 = 10;
+tr_ring = 10;
+ht_sun = m*2.25;       %Tooth height, based on CAD (CALCULATE MAYBE)
+ht_planet1 = m*2.25;
+ht_planet2 = m*2.25;
+ht_ring = m*2.25;
+
+%added temporary values for above variables
+
 mb_sun = tr_sun/ht_sun;     %Eq 14-39
 mb_planet1 = tr_planet1/ht_planet1;
 mb_planet2 = tr_planet2/ht_planet2;

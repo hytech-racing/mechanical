@@ -53,6 +53,11 @@ Hb = 300; %Nitrided, through hardened 4140
 Wt_sun_planet1 = T_planet1 / (0.5*d_planet1);
 Wt_ring_planet2 = T_planet2 / (0.5*d_planet2);
 
+Wt_sun = Wt_sun_planet1;
+Wt_planet1 = Wt_sun_planet1;
+Wt_planet2 = Wt_ring_planet2;
+Wt_ring = Wt_ring_planet2;
+
 %Radial force on gear tooth, force perpendicular to the tangent of the pitch circle, in the direction of the radius of the gears
 Wr_sun_planet1 = Wt_sun_planet1 * tan(phi);
 Wr_ring_planet2 = Wt_ring_planet2 * tan(phi);

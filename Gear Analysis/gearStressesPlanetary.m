@@ -11,15 +11,22 @@ phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
 F = 20;               %Face width of gears [mm]
 
-d_sun = 21;            %Pitch diameter of each gear [mm]
-d_planet1 = 46;
-d_planet2 = 17;
-d_ring = 89;
+d_sun = 19;            %Pitch diameter of each gear [mm]
+d_planet1 = 48;
+d_planet2 = 19;
+d_ring = d_sun+d_planet1+d_planet2;
 
 n_sun = d_sun/m;    %Number of teeth on each gear
 n_planet1 = d_planet1/m;
 n_planet2 = d_planet2/m;
 n_ring = d_ring/m;
+
+%Both should be 1 so that all gear teeth wear evenly
+gcd1 = gcd(n_sun, n_planet1);
+gcd2 = gcd(n_planet2, n_ring);
+
+%Min gear tooth check
+n_min = 2*m/((sin(phi)).^2);
 
 gear_ratio = ((n_planet1*n_ring) / (n_planet2*n_sun)) + 1;
 

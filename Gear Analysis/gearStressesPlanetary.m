@@ -6,37 +6,39 @@
 %_planet2
 %_ring
 
-m = 1;              %Module [mm]
+m = 0.75;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
-F = 20;               %Face width of gears [mm]
+F = 12;               %Face width of gears [mm]
 
-d_sun = 19;            %Pitch diameter of each gear [mm]
-d_planet1 = 48;
-d_planet2 = 19;
-d_ring = d_sun+d_planet1+d_planet2;
+n_sun = 24;    %Number of teeth on each gear
+n_planet1 = 59;
+n_planet2 = 23;
 
-n_sun = d_sun/m;    %Number of teeth on each gear
-n_planet1 = d_planet1/m;
-n_planet2 = d_planet2/m;
-n_ring = d_ring/m;
+n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
+
+d_sun = n_sun.*m;            %Pitch diameter of each gear [mm]
+d_planet1 = n_planet1.*m;
+d_planet2 = n_planet2.*m;
+d_ring = n_ring.*m;
 
 %Both should be 1 so that all gear teeth wear evenly
 gcd1 = gcd(n_sun, n_planet1);
 gcd2 = gcd(n_planet2, n_ring);
 
 %Min gear tooth check
-n_min = 2*m/((sin(phi)).^2);
+n_min = 2*m/((sin(phi)).^2); %minimum to prevent undercutting
+n_sun_min = (16+(m.*1.25).*2)/m;
 
 gear_ratio = ((n_planet1*n_ring) / (n_planet2*n_sun)) + 1;
 
 omega_sun = 20000 * (2*pi/60);  %Angular velocity in rad/s (20,000 RPM = max motor speed)
 omega_carrier = omega_sun / gear_ratio;
-omega_planet2 = ((n_planet2 - n_ring) * omega_carrier) / n_planet2;
+omega_planet2 = ((d_sun + d_planet1) * omega_carrier - d_sun * omega_sun) / d_planet1;
 omega_planet1 = omega_planet2;  %FIX
 omega_ring = 0;
 
-T_sun = 22;         %Torque on each gear [Nm]
+T_sun = 21;         %Torque on each gear [Nm]
 T_planet1 = ((T_sun * omega_sun) / omega_planet1) /3;
 T_planet2 = T_planet1;
 T_ring = ((T_planet2 * omega_planet2) / omega_ring) * 3;
@@ -188,10 +190,10 @@ Kh_ring = 1 + Cmc*(Cpf_ring*Cpm + Cma*Ce);
 % AUTOMATED
 mt = m;     %Transverse metric module = module for spur gears
 
-tr_sun = 10;       %Rim thickness, based on CAD
-tr_planet1 = 10;
-tr_planet2 = 10;
-tr_ring = 10;
+tr_sun = 2.5*m;       %Rim thickness, based on CAD
+tr_planet1 = 2.5*m;
+tr_planet2 = 2.5*m;
+tr_ring = 2.5*m;
 ht_sun = m*2.25;       %Tooth height, based on CAD (CALCULATE MAYBE)
 ht_planet1 = m*2.25;
 ht_planet2 = m*2.25;

@@ -38,10 +38,11 @@ omega_planet2 = ((d_sun + d_planet1) * omega_carrier - d_sun * omega_sun) / d_pl
 omega_planet1 = omega_planet2;  %FIX
 omega_ring = 0;
 
-T_sun = 21;         %Torque on each gear [Nm]
-T_planet1 = ((T_sun * omega_sun) / omega_planet1) /3;
-T_planet2 = T_planet1;
-T_ring = ((T_planet2 * omega_planet2) / omega_ring) * 3;
+T_motor = 21;
+T_sun = T_motor/3;         %Torque at each gear tooth [Nm]
+T_planet1 = (-n_planet1/n_sun) * T_sun;
+T_planet2 = (n_planet2/n_planet1) * T_planet1;
+T_ring = (-n_ring/n_planet2) * T_planet2; %using n for gear ratios only holds true if module is consistent across stages
 
 radiusTire = 0.2; %m
 distanceTraveled = 1000 * 1000; %1000km
@@ -164,10 +165,10 @@ Y_planet1 = Y(closestIndex_planet1);
 Y_planet2 = Y(closestIndex_planet2);
 [~,closestIndex_ring] = min(abs(n_ring - n_Y));
 Y_ring = Y(closestIndex_ring);
-Ks_sun = 1.192*((F*sqrt(Y_sun)*m)^(0.0535));    %Size factor (Section 14-10)
-Ks_planet1 = 1.192*((F*sqrt(Y_planet1)*m)^(0.0535));
-Ks_planet2 = 1.192*((F*sqrt(Y_planet2)*m)^(0.0535));
-Ks_ring = 1.192*((F*sqrt(Y_ring)*m)^(0.0535));
+Ks_sun = 1.192*((F*sqrt(Y_sun)/d_sun)^(0.0535));    %Size factor (Section 14-10)
+Ks_planet1 = 1.192*((F*sqrt(Y_planet1)/d_planet1)^(0.0535));
+Ks_planet2 = 1.192*((F*sqrt(Y_planet2)/d_planet2)^(0.0535));
+Ks_ring = 1.192*((F*sqrt(Y_ring)/d_ring)^(0.0535));
 if Ks_sun < 1; Ks_sun = 1; end; if Ks_planet1 < 1; Ks_planet1 = 1; end; if Ks_planet2 < 1; Ks_planet2 = 1; end; if Ks_ring < 1; Ks_ring = 1; end
 
 b = F;
@@ -178,6 +179,7 @@ Cpf_sun = F/(10*d_sun) -0.025;      %Eq 14-32, F<1"
 Cpf_planet1 = F/(10*d_planet1) -0.025;
 Cpf_planet2 = F/(10*d_planet2) -0.025;
 Cpf_ring = F/(10*d_ring) -0.025;
+
 Cpm = 1.1;                          %For straddle-mounted pinion (Eq 14-33); NOTE: THIS IS NOT OUR CASE. DO RESEARCH
 A = 0.127; B = 0.0158; C = -0.93e-4;    %Table 14-9; Commercial, enclosed units
 Cma = A + B*(F/25.4) + C*(F/25.4)^2;    %Eq 14-34)
@@ -239,15 +241,15 @@ Zi_planet2 = (cos(phit)*sin(phit)/(2*mn))*mg_planet2_ring/(mg_planet2_ring-1);
 Zi_ring = Zi_planet2;
 
 % AUTOMATED
-AGMA_bs_sun = Wt_sun*Ko*Kv_sun*Ks_sun*(1/(b*mt))*(Kh_sun*Kb_sun/Yj_sun);
-AGMA_bs_planet1 = Wt_planet1*Ko*Kv_planet1*Ks_planet1*(1/(b*mt))*(Kh_planet1*Kb_planet1/Yj_planet1);
-AGMA_bs_planet2 = Wt_planet2*Ko*Kv_planet2*Ks_planet2*(1/(b*mt))*(Kh_planet2*Kb_planet2/Yj_planet2);
-AGMA_bs_ring = Wt_ring*Ko*Kv_ring*Ks_ring*(1/(b*mt))*(Kh_ring*Kb_ring/Yj_ring);
+AGMA_bs_sun = abs(Wt_sun*Ko*Kv_sun*Ks_sun*(1/(b*mt))*(Kh_sun*Kb_sun/Yj_sun));
+AGMA_bs_planet1 = abs(Wt_planet1*Ko*Kv_planet1*Ks_planet1*(1/(b*mt))*(Kh_planet1*Kb_planet1/Yj_planet1));
+AGMA_bs_planet2 = abs(Wt_planet2*Ko*Kv_planet2*Ks_planet2*(1/(b*mt))*(Kh_planet2*Kb_planet2/Yj_planet2));
+AGMA_bs_ring = abs(Wt_ring*Ko*Kv_ring*Ks_ring*(1/(b*mt))*(Kh_ring*Kb_ring/Yj_ring));
 
-AGMA_cs_sun = Ze*sqrt(Wt_sun*Ko*Kv_sun*Ks_sun*Kh_sun*Zr/(dw1_sun*b*Zi_sun));
-AGMA_cs_planet1 = Ze*sqrt(Wt_planet1*Ko*Kv_planet1*Ks_planet1*Kh_planet1*Zr/(dw1_planet1*b*Zi_planet1));
-AGMA_cs_planet2 = Ze*sqrt(Wt_planet2*Ko*Kv_planet2*Ks_planet2*Kh_planet2*Zr/(dw1_planet2*b*Zi_planet2));
-AGMA_cs_ring = Ze*sqrt(Wt_ring*Ko*Kv_ring*Ks_ring*Kh_ring*Zr/(dw1_ring*b*Zi_ring));
+AGMA_cs_sun = Ze*sqrt(abs(Wt_sun*Ko*Kv_sun*Ks_sun*Kh_sun*Zr/(dw1_sun*b*Zi_sun)));
+AGMA_cs_planet1 = Ze*sqrt(abs(Wt_planet1*Ko*Kv_planet1*Ks_planet1*Kh_planet1*Zr/(dw1_planet1*b*Zi_planet1)));
+AGMA_cs_planet2 = Ze*sqrt(abs(Wt_planet2*Ko*Kv_planet2*Ks_planet2*Kh_planet2*Zr/(dw1_planet2*b*Zi_planet2)));
+AGMA_cs_ring = Ze*sqrt(abs(Wt_ring*Ko*Kv_ring*Ks_ring*Kh_ring*Zr/(dw1_ring*b*Zi_ring)));
 
 if AGMA_bs_sun > AGMA_allowable_bs_sun || AGMA_cs_sun > AGMA_allowable_cs_sun
     fprintf('The sun gear failed!');

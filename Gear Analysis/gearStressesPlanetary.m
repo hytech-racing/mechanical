@@ -45,7 +45,7 @@ T_planet2 = (n_planet2/n_planet1) * T_planet1;
 T_ring = (-n_ring/n_planet2) * T_planet2; %using n for gear ratios only holds true if module is consistent across stages
 
 radiusTire = 0.2; %m
-distanceTraveled = 1000 * 1000; %1000km
+distanceTraveled = 1000 * 1000 * 10000; %1000km *temporarily 10,000,000km
 tireRotations = distanceTraveled ./ (pi*radiusTire*2);
 
 cycles_carrier = tireRotations;
@@ -84,15 +84,15 @@ FoS = 2; %Factor of safety
 Sf = FoS;
 Sh = FoS;
 
-Yn_sun = 3.517*cycles_sun^(-0.0817);	%Bending stress-cycle factor (nitrided steel) (Table 14-14)
-Yn_planet1 = 3.517*cycles_planet1^(-0.0817);
-Yn_planet2 = 3.517*cycles_planet2^(-0.0817);
-Yn_ring = 3.517*cycles_ring^(-0.0817);
+Yn_sun = 3.517*cycles_carrier^(-0.0817);	%Bending stress-cycle factor (nitrided steel) (Table 14-14)
+Yn_planet1 = 3.517*cycles_carrier^(-0.0817);
+Yn_planet2 = 3.517*cycles_carrier^(-0.0817);
+Yn_ring = 3.517*cycles_carrier^(-0.0817);
 
-Zn_sun = 1.249*cycles_sun^(-0.0138);    %Contact stress-cycle factor (nitrided steel) (Table 14-15)
-Zn_planet1 = 1.249*cycles_planet1^(-0.0138);
-Zn_planet2 = 1.249*cycles_planet2^(-0.0138);
-Zn_ring = 1.249*cycles_ring^(-0.0138);
+Zn_sun = 1.249*cycles_carrier^(-0.0138);    %Contact stress-cycle factor (nitrided steel) (Table 14-15)
+Zn_planet1 = 1.249*cycles_carrier^(-0.0138);
+Zn_planet2 = 1.249*cycles_carrier^(-0.0138);
+Zn_ring = 1.249*cycles_carrier^(-0.0138);
 
 Ytheta_sun = 1;         %Temperature factor (=1 for under 120C) (Section 14-15)
 Ytheta_planet1 = 1;

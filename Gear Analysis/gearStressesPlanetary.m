@@ -165,10 +165,10 @@ Y_planet1 = Y(closestIndex_planet1);
 Y_planet2 = Y(closestIndex_planet2);
 [~,closestIndex_ring] = min(abs(n_ring - n_Y));
 Y_ring = Y(closestIndex_ring);
-Ks_sun = 1.192*((F*sqrt(Y_sun)/d_sun)^(0.0535));    %Size factor (Section 14-10)
-Ks_planet1 = 1.192*((F*sqrt(Y_planet1)/d_planet1)^(0.0535));
-Ks_planet2 = 1.192*((F*sqrt(Y_planet2)/d_planet2)^(0.0535));
-Ks_ring = 1.192*((F*sqrt(Y_ring)/d_ring)^(0.0535));
+Ks_sun = 1.192*((F*sqrt(Y_sun)*m)^(0.0535));    %Size factor (Section 14-10)
+Ks_planet1 = 1.192*((F*sqrt(Y_planet1)*m)^(0.0535));
+Ks_planet2 = 1.192*((F*sqrt(Y_planet2)*m)^(0.0535));
+Ks_ring = 1.192*((F*sqrt(Y_ring)*m)^(0.0535));
 if Ks_sun < 1; Ks_sun = 1; end; if Ks_planet1 < 1; Ks_planet1 = 1; end; if Ks_planet2 < 1; Ks_planet2 = 1; end; if Ks_ring < 1; Ks_ring = 1; end
 
 b = F;

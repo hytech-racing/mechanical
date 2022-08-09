@@ -141,7 +141,7 @@ AGMA_allowable_cs_ring = (Sc / Sh) * ((Zn_ring * Zw_ring) / (Ytheta_ring * Yz_ri
 % Zi: Geometry Factor for Pitting Resistance; VARIES BY GEAR PAIRING
 
 % AUTOMATED
-Ko = 1.25;                          %Overload factor, uniform load on motor side, medium impact load on load side (Figure 14-17)
+Ko = 1.35;                          %Overload factor, uniform load on motor side, medium impact load on load side (Figure 14-17)
 
 % AUTOMATED
 V_sun = d_sun/(2*1000) * omega_sun;                            %Pitch line velocity [m/s] 
@@ -179,6 +179,11 @@ Cpf_sun = F/(10*d_sun) -0.025;      %Eq 14-32, F<1"
 Cpf_planet1 = F/(10*d_planet1) -0.025;
 Cpf_planet2 = F/(10*d_planet2) -0.025;
 Cpf_ring = F/(10*d_ring) -0.025;
+
+if F/(10*d_sun) < 0.05; Cpf_sun = 0.025; end            %Note below Eq 14-32 check
+if F/(10*d_planet1) < 0.05; Cpf_planet1 = 0.025; end
+if F/(10*d_planet2) < 0.05; Cpf_planet2 = 0.025; end
+if F/(10*d_ring) < 0.05; Cpf_ring = 0.025; end
 
 Cpm = 1.1;                          %For straddle-mounted pinion (Eq 14-33); NOTE: THIS IS NOT OUR CASE. DO RESEARCH
 A = 0.127; B = 0.0158; C = -0.93e-4;    %Table 14-9; Commercial, enclosed units

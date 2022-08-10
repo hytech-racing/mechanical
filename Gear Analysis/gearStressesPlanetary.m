@@ -60,8 +60,8 @@ Hb = 300; %Nitrided, through hardened 4140
 
 %% Gear Tooth Forces
 %Wt: Tangential force on gear tooth, force parallel to the tangent of the pitch circle (must be the same for meshing teeth):
-Wt_sun_planet1 = T_planet1 / (0.5*d_planet1);
-Wt_ring_planet2 = T_planet2 / (0.5*d_planet2);
+Wt_sun_planet1 = abs(T_planet1 / (0.5*d_planet1));
+Wt_ring_planet2 = abs(T_planet2 / (0.5*d_planet2));
 
 Wt_sun = Wt_sun_planet1;
 Wt_planet1 = Wt_sun_planet1;
@@ -144,10 +144,10 @@ AGMA_allowable_cs_ring = (Sc / Sh) * ((Zn_ring * Zw_ring) / (Ytheta_ring * Yz_ri
 Ko = 1.35;                          %Overload factor, uniform load on motor side, medium impact load on load side (Figure 14-17)
 
 % AUTOMATED
-V_sun = d_sun/(2*1000) * omega_sun;                            %Pitch line velocity [m/s] 
-V_planet1 = d_planet1/(2*1000) * omega_planet1;
-V_planet2 = d_planet2/(2*1000) * omega_planet2;
-V_ring = d_ring/(2*1000) * omega_ring;
+V_sun = abs(d_sun/(2*1000) * omega_sun);                            %Pitch line velocity [m/s] 
+V_planet1 = abs(d_planet1/(2*1000) * omega_planet1);
+V_planet2 = abs(d_planet2/(2*1000) * omega_planet2);
+V_ring = abs(d_ring/(2*1000) * omega_ring);
 Kv_sun = (6.1+V_sun)/6.1;           %Dynamic Factor for cut or milled gears (Equation 14-6b)
 Kv_planet1 = (6.1+V_planet1)/6.1;
 Kv_planet2 = (6.1+V_planet2)/6.1;
@@ -158,13 +158,13 @@ Y(12) = 0.245; Y(13) = 0.261; Y(14) = 0.277; Y(15) = 0.290; Y(16) = 0.296; Y(17)
 Y(28) = 0.353; Y(30) = 0.359; Y(34) = 0.371; Y(38) = 0.384; Y(43) = 0.397; Y(50) = 0.409; Y(60) = 0.422; Y(75) = 0.435; Y(100) = 0.447; Y(150) = 0.460; Y(300) = 0.472; Y(400) = 0.48; Y(1000) = 0.485;
 n_Y = [12,13,14,15,16,17,18,19,20,21,22,24,26,28,30,34,38,43,50,60,75,100,150,300,400,1000];
 [~,closestIndex_sun] = min(abs(n_sun - n_Y));
-Y_sun = Y(closestIndex_sun);                             %Lewis form factor (Table 14-2)
+Y_sun = Y(n_Y(closestIndex_sun));                             %Lewis form factor (Table 14-2)
 [~,closestIndex_planet1] = min(abs(n_planet1 - n_Y));
-Y_planet1 = Y(closestIndex_planet1);
+Y_planet1 = Y(n_Y(closestIndex_planet1));
 [~,closestIndex_planet2] = min(abs(n_planet2 - n_Y));
-Y_planet2 = Y(closestIndex_planet2);
+Y_planet2 = Y(n_Y(closestIndex_planet2));
 [~,closestIndex_ring] = min(abs(n_ring - n_Y));
-Y_ring = Y(closestIndex_ring);
+Y_ring = Y(n_Y(closestIndex_ring));
 Ks_sun = 1.192*((F*sqrt(Y_sun)*m)^(0.0535));    %Size factor (Section 14-10)
 Ks_planet1 = 1.192*((F*sqrt(Y_planet1)*m)^(0.0535));
 Ks_planet2 = 1.192*((F*sqrt(Y_planet2)*m)^(0.0535));
@@ -244,6 +244,12 @@ Zi_sun = (cos(phit)*sin(phit)/(2*mn))*mg_sun_planet1/(mg_sun_planet1+1);    %Sur
 Zi_planet1 = Zi_sun;
 Zi_planet2 = (cos(phit)*sin(phit)/(2*mn))*mg_planet2_ring/(mg_planet2_ring-1);
 Zi_ring = Zi_planet2;
+
+%Lewis Bending Equation (Eq 14-8)
+sigma_sun = (Kv_sun*Wt_sun)/(F*m*Y_sun);
+sigma_planet1 = (Kv_planet1*Wt_planet1)/(F*m*Y_planet1);
+sigma_planet2 = (Kv_planet2*Wt_planet2)/(F*m*Y_planet2);
+sigma_ring = (Kv_ring*Wt_ring)/(F*m*Y_ring);
 
 % AUTOMATED
 AGMA_bs_sun = abs(Wt_sun*Ko*Kv_sun*Ks_sun*(1/(b*mt))*(Kh_sun*Kb_sun/Yj_sun));

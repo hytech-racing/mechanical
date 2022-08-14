@@ -11,9 +11,9 @@ phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
 F = 12;               %Face width of gears [mm]
 
-n_sun = 24;    %Number of teeth on each gear
-n_planet1 = 59;
-n_planet2 = 23;
+n_sun = 26;    %Number of teeth on each gear
+n_planet1 = 61;
+n_planet2 = 22;
 
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
@@ -29,6 +29,12 @@ gcd2 = gcd(n_planet2, n_ring);
 %Min gear tooth check
 n_min = 2*m/((sin(phi)).^2); %minimum to prevent undercutting
 n_sun_min = (16+(m.*1.25).*2)/m;
+
+%Even Spacing Check
+spacing_int = (2*n_sun+2*n_planet1)/3;
+
+%Interference Check
+n_planet1_max = (n_sun+n_planet1)*sin(pi/3)-2;
 
 gear_ratio = ((n_planet1*n_ring) / (n_planet2*n_sun)) + 1;
 

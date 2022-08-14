@@ -21,6 +21,7 @@ d_sun = n_sun.*m;            %Pitch diameter of each gear [mm]
 d_planet1 = n_planet1.*m;
 d_planet2 = n_planet2.*m;
 d_ring = n_ring.*m;
+d_carrier = d_sun+d_planet1;
 
 %Both should be 1 so that all gear teeth wear evenly
 gcd1 = gcd(n_sun, n_planet1);
@@ -40,7 +41,7 @@ gear_ratio = ((n_planet1*n_ring) / (n_planet2*n_sun)) + 1;
 
 omega_sun = 20000 * (2*pi/60);  %Angular velocity in rad/s (20,000 RPM = max motor speed)
 omega_carrier = omega_sun / gear_ratio;
-omega_planet2 = ((d_sun + d_planet1) * omega_carrier - d_sun * omega_sun) / d_planet1;
+omega_planet2 = -omega_carrier*(d_carrier/d_planet2);
 omega_planet1 = omega_planet2;  %FIX
 omega_ring = 0;
 

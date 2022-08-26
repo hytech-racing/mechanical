@@ -6,14 +6,14 @@
 %_planet2
 %_ring
 
-m = 0.75;              %Module [mm]
+m = 0.7;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
 F = 12;               %Face width of gears [mm]
 
 n_sun = 26;    %Number of teeth on each gear
 n_planet1 = 61;
-n_planet2 = 22;
+n_planet2 = 23;
 
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
@@ -52,7 +52,7 @@ T_planet2 = (n_planet2/n_planet1) * T_planet1;
 T_ring = (-n_ring/n_planet2) * T_planet2; %using n for gear ratios only holds true if module is consistent across stages
 
 radiusTire = 0.2; %m
-distanceTraveled = 1000 * 1000 * 10000; %1000km *temporarily 10,000,000km
+distanceTraveled = 1000 * 1000; %1000km *temporarily 10,000,000km
 tireRotations = distanceTraveled ./ (pi*radiusTire*2);
 
 cycles_carrier = tireRotations;
@@ -67,7 +67,7 @@ Hb = 300; %Nitrided, through hardened 4140
 
 %% Gear Tooth Forces
 %Wt: Tangential force on gear tooth, force parallel to the tangent of the pitch circle (must be the same for meshing teeth):
-Wt_sun_planet1 = abs(T_planet1*1000/ (0.5*d_planet1));  %Nm*1000/mm = Nm/m = N
+Wt_sun_planet1 = abs(T_planet1*1000 / (0.5*d_planet1));  %Nm*1000/mm = Nm/m = N
 Wt_ring_planet2 = abs(T_planet2*1000 / (0.5*d_planet2));
 
 Wt_sun = Wt_sun_planet1;
@@ -84,10 +84,13 @@ W_sun_planet1 = Wt_sun_planet1 / cos(phi);      %N
 W_ring_planet2 = Wt_ring_planet2 / cos(phi);
 
 %% Calculation of AGMA allowable stresses:
-St = 0.568*Hb + 83.8; %Bending strength of nitrided through hardened steel (Figure 14-3) %MPa = %MPa = N/mm^2 + MPa
-Sc = 2.22*Hb + 200; %Contact strength (Figure 14-5) %MPa = N/mm^2 + MPa
+%St = 0.568*Hb + 83.8; %Bending strength of nitrided through hardened steel (Figure 14-3) %MPa = %MPa = N/mm^2 + MPa
+%Sc = 2.22*Hb + 200; %Contact strength (Figure 14-5) %MPa = N/mm^2 + MPa
 
-FoS = 2; %Factor of safety
+St = 517.1068;
+Sc = 1896.05826;
+
+FoS = 1.25; %Factor of safety
 Sf = FoS;
 Sh = FoS;
 
@@ -106,10 +109,10 @@ Ytheta_planet1 = 1;     %Factor, no units
 Ytheta_planet2 = 1;
 Ytheta_ring = 1;
 
-Yz_sun = 1.25;          %Reliability factor (Table 14-10)
-Yz_planet1 = 1.25;      %Factor, no units
-Yz_planet2 = 1.25;
-Yz_ring = 1.25;
+Yz_sun = 1;          %Reliability factor (Table 14-10)
+Yz_planet1 = 1;      %Factor, no units
+Yz_planet2 = 1;
+Yz_ring = 1;
 
 Zw_sun = 1;             %Harness ratio factor for pitting resistance (contact stress) (Figure 14-12)
 Zw_planet1 = 1;         %Factor, no units
@@ -160,6 +163,11 @@ Kv_planet1 = (6.1+V_planet1)/6.1;   %Factor, no units
 Kv_planet2 = (6.1+V_planet2)/6.1;
 Kv_ring = (6.1+V_ring)/6.1;
 
+Kv_sun = 1;
+Kv_planet1 = 1;
+Kv_planet2 = 1;
+Kv_ring = 1;
+
 % AUTOMATED
 Y(12) = 0.245; Y(13) = 0.261; Y(14) = 0.277; Y(15) = 0.290; Y(16) = 0.296; Y(17) = 0.303; Y(18) = 0.309; Y(19) = 0.314; Y(20) = 0.322; Y(21) = 0.328; Y(22) = 0.331; Y(24) = 0.337; Y(26) = 0.346;
 Y(28) = 0.353; Y(30) = 0.359; Y(34) = 0.371; Y(38) = 0.384; Y(43) = 0.397; Y(50) = 0.409; Y(60) = 0.422; Y(75) = 0.435; Y(100) = 0.447; Y(150) = 0.460; Y(300) = 0.472; Y(400) = 0.48; Y(1000) = 0.485;
@@ -172,10 +180,12 @@ Y_planet1 = Y(n_Y(closestIndex_planet1));
 Y_planet2 = Y(n_Y(closestIndex_planet2));
 [~,closestIndex_ring] = min(abs(n_ring - n_Y));
 Y_ring = Y(n_Y(closestIndex_ring));
-Ks_sun = 1.192*((F*sqrt(Y_sun)*m)^(0.0535));    %Size factor (Section 14-10)
-Ks_planet1 = 1.192*((F*sqrt(Y_planet1)*m)^(0.0535));
-Ks_planet2 = 1.192*((F*sqrt(Y_planet2)*m)^(0.0535));
-Ks_ring = 1.192*((F*sqrt(Y_ring)*m)^(0.0535));
+F_in = m/25.4;
+m_in = m/25.4;
+Ks_sun = 1.192*((F_in*sqrt(Y_sun)*m_in)^(0.0535));    %Size factor (Section 14-10)
+Ks_planet1 = 1.192*((F_in*sqrt(Y_planet1)*m_in)^(0.0535));
+Ks_planet2 = 1.192*((F_in*sqrt(Y_planet2)*m_in)^(0.0535));
+Ks_ring = 1.192*((F_in*sqrt(Y_ring)*m_in)^(0.0535));
 if Ks_sun < 1; Ks_sun = 1; end; if Ks_planet1 < 1; Ks_planet1 = 1; end; if Ks_planet2 < 1; Ks_planet2 = 1; end; if Ks_ring < 1; Ks_ring = 1; end
 
 b = F;

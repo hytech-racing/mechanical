@@ -6,14 +6,14 @@
 %_planet2
 %_ring
 
-m = 0.75;              %Module [mm]
+m = 0.7;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
 F = 12;               %Face width of gears [mm]
 
 n_sun = 26;    %Number of teeth on each gear
 n_planet1 = 61;
-n_planet2 = 22;
+n_planet2 = 23;
 
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
@@ -67,7 +67,7 @@ Hb = 300; %Nitrided, through hardened 4140
 
 %% Gear Tooth Forces
 %Wt: Tangential force on gear tooth, force parallel to the tangent of the pitch circle (must be the same for meshing teeth):
-Wt_sun_planet1 = abs(T_planet1*1000/ (0.5*d_planet1));  %Nm*1000/mm = Nm/m = N
+Wt_sun_planet1 = abs(T_planet1*1000 / (0.5*d_planet1));  %Nm*1000/mm = Nm/m = N
 Wt_ring_planet2 = abs(T_planet2*1000 / (0.5*d_planet2));
 
 Wt_sun = Wt_sun_planet1;

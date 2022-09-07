@@ -1,4 +1,4 @@
-function results = gearStressesFunc(n_planet1,n_planet2,n_sun,n_ring,F,m)
+function results = gearStressesFunc(n_planet1,n_planet2,n_sun,n_ring,F,m,Q)
 %% Kinematics and Gear Parameters
 %General Notes:
 %Subscripts:
@@ -146,20 +146,25 @@ AGMA_allowable_cs_ring = (Sc / Sh) * ((Zn_ring * Zw_ring) / (Ytheta_ring * Yz_ri
 % AUTOMATED
 Ko = 1.35;                          %Overload factor, uniform load on motor side, medium impact load on load side (Figure 14-17)
 
+
 % AUTOMATED
 V_sun = abs(d_sun/(2*1000) * omega_sun);                            %Pitch line velocity [m/s] 
 V_planet1 = abs(d_planet1/(2*1000) * omega_planet1);    %mm*rad/(s*1000) = m*rad/s = m/s
 V_planet2 = abs(d_planet2/(2*1000) * omega_planet2);
 V_ring = abs(d_ring/(2*1000) * omega_ring);
-Kv_sun = (6.1+V_sun)/6.1;           %Dynamic Factor for cut or milled gears (Equation 14-6b)
-Kv_planet1 = (6.1+V_planet1)/6.1;   %Factor, no units
-Kv_planet2 = (6.1+V_planet2)/6.1;
-Kv_ring = (6.1+V_ring)/6.1;
+% Kv_sun = (6.1+V_sun)/6.1;           %Dynamic Factor for cut or milled gears (Equation 14-6b)
+% Kv_planet1 = (6.1+V_planet1)/6.1;   %Factor, no units
+% Kv_planet2 = (6.1+V_planet2)/6.1;
+% Kv_ring = (6.1+V_ring)/6.1;
 
-Kv_sun = 1;
-Kv_planet1 = 1;
-Kv_planet2 = 1;
-Kv_ring = 1;
+B = 0.25*(12-Q)^(2/3);
+A = 50 + 56*(1-B);
+
+Kv_sun = ((A+sqrt(200*V_sun))/A)^B;
+Kv_planet1 = ((A+sqrt(200*V_planet1))/A)^B;
+Kv_planet2 = ((A+sqrt(200*V_planet2))/A)^B;
+Kv_ring = ((A+sqrt(200*V_ring))/A)^B;
+
 
 % AUTOMATED
 Y(12) = 0.245; Y(13) = 0.261; Y(14) = 0.277; Y(15) = 0.290; Y(16) = 0.296; Y(17) = 0.303; Y(18) = 0.309; Y(19) = 0.314; Y(20) = 0.322; Y(21) = 0.328; Y(22) = 0.331; Y(24) = 0.337; Y(26) = 0.346;

@@ -6,6 +6,8 @@ load('lapSimResult_8.14.22.mat');
 %small angle approximation used
 %wheel turn angle small so bearing angle relative to Fx, Fy, and Fz
 %negligible
+%R1 = outer bearing
+%R2 = inner bearing
 
 %pulling all directional forces
 F_x = Result.Fx(2:end,:);

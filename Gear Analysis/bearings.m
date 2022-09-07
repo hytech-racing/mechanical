@@ -12,17 +12,17 @@ F = Wr_sun_planet1*2; %Radial load on bearing, from Wr from gearStressesPlanetar
 a = 10/3; %Constant for roller bearings
 
 L = ((C*L10^(1/a))/F)^a; %Equation 11-1 and 11-2
-Lreq = cycles_sun/3 *2; %Unsure of exact number of revolutions of bearing relative to sun, this seems to be a safe estimate
+Lreq = cycles_sun/12; %Unsure of exact number of revolutions of bearing relative to sun, this seems to be a safe estimate
 fprintf('Needle planet bearing: L = %f revolutions\n', L);
 fprintf('Needle planet bearing: L/Lreq = %f\n', L/Lreq);
 
 %% Wheel Bearings
-C = 12.7e3; %Dynamic load rating in N
-C0 = 11.2e3; %Static load rating in N
+C = 49.4e3; %Dynamic load rating in N
+C0 = 40e3; %Static load rating in N
 L10 = 1e6; %L10 life at C is 10^6 revolutions
 
-Fr = ; %Expected radial load on bearings
-Fa = ; %Expected axial load on bearings
+Fr = 3.627261e+03; %Expected radial load on bearings
+Fa = 5.325829e+02; %Expected axial load on bearings
 
 a = 3; %Constant for ball bearings 
 V = 1; %Rotation factor for inner ring rotating

@@ -27,10 +27,14 @@ loc_bearing1 = [0, 0.02975, 0.2];
 loc_bearing2 = [0, 0.08075, 0.2];
 loc_b1_b2 = abs(loc_bearing2-loc_bearing1);
 
+%Mirror Inner wheel axis system about xz-plane
+F_y = [-F_y(:,1) F_y(:,2) -F_y(:,3) F_y(:,4)];
+% % F_y = -F_y;
+
 
 %Moment Formulas
 R_2z = (F_z.*loc_bearing1(2) - F_y.*loc_bearing1(3)) / loc_b1_b2(2);
-R_1z = -1.*(F_z.*loc_bearing2(2) - F_y.*loc_bearing2(3)) / loc_b1_b2(2);
+R_1z = (-F_z.*loc_bearing2(2) + F_y.*loc_bearing2(3)) / loc_b1_b2(2);
 R_2x = (F_x.*loc_bearing1(2)) / loc_b1_b2(2);
 R_1x = -1.*(F_x.*loc_bearing2(2)) / loc_b1_b2(2);
 
@@ -38,7 +42,7 @@ R_1y = F_y/2;
 R_2y = F_y/2;
 
 %separating axial and radial
-F_1rad = abs(sqrt(R_1x.^2 + R_1z.^2));
+F_1rad = sqrt(R_1x.^2 + R_1z.^2);
 F_1ax = abs(R_1y);
 
 F_2rad = abs(sqrt(R_2x.^2 + R_2z.^2));
@@ -50,6 +54,8 @@ F_1ax_eq_v = (sum(F_1ax.^a.*dist_delta) ./ dist_total).^(1/a);
 
 F_2rad_eq_v = (sum(F_2rad.^a.*dist_delta) ./ dist_total).^(1/a);
 F_2ax_eq_v = (sum(F_2ax.^a.*dist_delta) ./ dist_total).^(1/a);
+
+maximums = [max(F_1rad) max(F_2rad);max(F_1ax) max(F_2ax)];
 
 F_rad_eq = max([F_1rad_eq_v, F_2rad_eq_v]);
 F_ax_eq = max([F_1ax_eq_v, F_2ax_eq_v]);

@@ -20,6 +20,7 @@
 gear_ratio = 12;
 F = 12;
 m = 0.7;
+Q = 10;
 
 n_sun_min = 20;
 n_sun_max = 60;
@@ -43,7 +44,7 @@ for n_sun = n_sun_min:n_sun_max
         n_ring_1 = floor(n_ring);
         n_planet2_1 = n_ring_1 - (n_planet1 + n_sun);
         gear_ratio_1 = ((n_planet1*n_ring_1) / (n_planet2_1*n_sun)) + 1;
-        results = gearStressesFunc(n_planet1,n_planet2_1,n_sun,n_ring_1,F,m);
+        results = gearStressesFunc(n_planet1,n_planet2_1,n_sun,n_ring_1,F,m,Q);
         check_gear_ratio = gear_ratio_1 >= 12 && gear_ratio_1 <= 13;
         check_planet2 = n_planet2_1 >= n_planet2_min;
         if results(1) && check_planet2 && check_gear_ratio
@@ -53,7 +54,7 @@ for n_sun = n_sun_min:n_sun_max
         n_ring_2 = ceil(n_ring);
         n_planet2_2 = n_ring_2 - (n_planet1 + n_sun);
         gear_ratio_2 = ((n_planet1*n_ring_2) / (n_planet2_2*n_sun)) + 1;        
-        results = gearStressesFunc(n_planet1,n_planet2_2,n_sun,n_ring_2,F,m);
+        results = gearStressesFunc(n_planet1,n_planet2_2,n_sun,n_ring_2,F,m,Q);
         check_gear_ratio = gear_ratio_2 >= 12 && gear_ratio_2 <= 13;
         check_planet2 = n_planet2_2 >= n_planet2_min;
         if results(1) && check_planet2 && check_gear_ratio
@@ -65,7 +66,7 @@ for n_sun = n_sun_min:n_sun_max
             n_ring_ceil_i = ceil(n_ring)+i;
             n_planet2_ceil_i = n_ring_ceil_i - (n_planet1 + n_sun);
             gear_ratio_ceil_i = ((n_planet1*n_ring_ceil_i) / (n_planet2_ceil_i*n_sun)) + 1;        
-            results = gearStressesFunc(n_planet1,n_planet2_ceil_i,n_sun,n_ring_ceil_i,F,m);
+            results = gearStressesFunc(n_planet1,n_planet2_ceil_i,n_sun,n_ring_ceil_i,F,m,Q);
             check_gear_ratio = gear_ratio_ceil_i >= 12 && gear_ratio_ceil_i <= 13;
             check_planet2 = n_planet2_ceil_i >= n_planet2_min;
             if results(1) && check_planet2 && check_gear_ratio
@@ -75,7 +76,7 @@ for n_sun = n_sun_min:n_sun_max
             n_ring_floor_i = floor(n_ring)-i;
             n_planet2_floor_i = n_ring_floor_i - (n_planet1 + n_sun);
             gear_ratio_floor_i = ((n_planet1*n_ring_floor_i) / (n_planet2_floor_i*n_sun)) + 1;
-            results = gearStressesFunc(n_planet1,n_planet2_floor_i,n_sun,n_ring_floor_i,F,m);
+            results = gearStressesFunc(n_planet1,n_planet2_floor_i,n_sun,n_ring_floor_i,F,m,Q);
             check_gear_ratio = gear_ratio_floor_i >= 12 && gear_ratio_floor_i <= 13;
             check_planet2 = n_planet2_floor_i >= n_planet2_min;
             if results(1) && check_planet2 && check_gear_ratio

@@ -12,8 +12,8 @@ phi = deg2rad(phi); %Pressure angle in rad
 F = 15;               %Face width of gears [mm]
 
 n_sun = 25;    %Number of teeth on each gear
-n_planet1 = 61;
-n_planet2 = 24;
+n_planet1 = 62;
+n_planet2 = 25;
 
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
@@ -33,6 +33,7 @@ n_sun_min = (16+(m.*1.25).*2)/m;
 
 %Even Spacing Check
 spacing_int = (2*n_sun+2*n_planet1)/3;
+even_spacing = floor(spacing_int) == spacing_int;
 
 %Interference Check
 n_planet1_max = (n_sun+n_planet1)*sin(pi/3)-2;
@@ -48,7 +49,7 @@ omega_ring = 0;
 T_motor = 21;
 T_sun = T_motor/3;         %Torque at each gear tooth [Nm]
 T_planet1 = (-n_planet1/n_sun) * T_sun;
-T_planet2 = (n_planet2/n_planet1) * T_planet1;
+T_planet2 = T_planet1;
 T_ring = (-n_ring/n_planet2) * T_planet2; %using n for gear ratios only holds true if module is consistent across stages
 
 radiusTire = 0.2; %m
@@ -166,7 +167,7 @@ Kv_lplanet2 = (6.1+V_planet2)/6.1;
 Kv_lring = (6.1+V_ring)/6.1;
 
 %AGMA Kv
-Q = 7;                                %Quality Factor (measure of manufacturing precision)
+Q = 10;                                %Quality Factor (measure of manufacturing precision)
 B = 0.25*(12-Q)^(2/3);                          %Variables for Dynamic Factor (Equation 14-28)
 A = 50 + 56*(1-B);
 
@@ -242,10 +243,10 @@ if mb_planet2 < 1.2; Kb_planet2 = 1.6*log(2.242/mb_planet2); else; Kb_planet2 = 
 if mb_ring < 1.2; Kb_ring = 1.6*log(2.242/mb_ring); else; Kb_ring = 1; end
 
 % NOT AUTOMATED
-Yj_sun = 0.4;       % Bending strength geometry factor. Figure 14-6, NOT SURE FOR PLANETARY GEARS
+Yj_sun = 0.36;       % Bending strength geometry factor. Figure 14-6, NOT SURE FOR PLANETARY GEARS
 Yj_planet1 = 0.425;     %Factor, no units
-Yj_planet2 = 0.4;
-Yj_ring = 0.43;
+Yj_planet2 = 0.375;
+Yj_ring = 0.445;
 
 % AUTOMATED
 Ze = 191;   %Elastic Coefficient; Table 14-8, all gears are steel %Coefficient, sqrt(MPa) to get MPa
@@ -302,6 +303,14 @@ if AGMA_bs_sun < AGMA_allowable_bs_sun && AGMA_cs_sun < AGMA_allowable_cs_sun &&
     fprintf('The gears succeeded!');
 end
 fprintf('\n');
+
+
+if even_spacing
+    even_spacing_txt = 'Yes';
+else
+    even_spacing_txt = 'No';
+end
+fprintf('Gear Ratio: %2.4f \ngcd1: %d, gcd2: %d\nEven Spacing: %s\n', gear_ratio, gcd1, gcd2, even_spacing_txt);
 
 % %% Minimum Brinell Hardness
 % 

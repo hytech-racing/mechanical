@@ -6,10 +6,10 @@
 %_planet2
 %_ring
 
-m = 0.7;              %Module [mm]
+m = 0.75;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
-F = 12;               %Face width of gears [mm]
+F = 15;               %Face width of gears [mm]
 
 n_sun = 25;    %Number of teeth on each gear
 n_planet1 = 61;
@@ -158,15 +158,22 @@ V_sun = abs(d_sun/(2*1000) * omega_sun);                            %Pitch line 
 V_planet1 = abs(d_planet1/(2*1000) * omega_planet1);    %mm*rad/(s*1000) = m*rad/s = m/s
 V_planet2 = abs(d_planet2/(2*1000) * omega_planet2);
 V_ring = abs(d_ring/(2*1000) * omega_ring);
-Kv_sun = (6.1+V_sun)/6.1;           %Dynamic Factor for cut or milled gears (Equation 14-6b)
-Kv_planet1 = (6.1+V_planet1)/6.1;   %Factor, no units
-Kv_planet2 = (6.1+V_planet2)/6.1;
-Kv_ring = (6.1+V_ring)/6.1;
 
-Kv_sun = 1;
-Kv_planet1 = 1;
-Kv_planet2 = 1;
-Kv_ring = 1;
+%Lewis Kv
+Kv_lsun = (6.1+V_sun)/6.1;           %Dynamic Factor for cut or milled gears (Equation 14-6b)
+Kv_lplanet1 = (6.1+V_planet1)/6.1;   %Factor, no units
+Kv_lplanet2 = (6.1+V_planet2)/6.1;
+Kv_lring = (6.1+V_ring)/6.1;
+
+%AGMA Kv
+Q = 7;                                %Quality Factor (measure of manufacturing precision)
+B = 0.25*(12-Q)^(2/3);                          %Variables for Dynamic Factor (Equation 14-28)
+A = 50 + 56*(1-B);
+
+Kv_sun = ((A+sqrt(200*V_sun))/A)^B;             %Dynamic Factor (Equation 14-27)
+Kv_planet1 = ((A+sqrt(200*V_planet1))/A)^B;
+Kv_planet2 = ((A+sqrt(200*V_planet2))/A)^B;
+Kv_ring = ((A+sqrt(200*V_ring))/A)^B;
 
 % AUTOMATED
 Y(12) = 0.245; Y(13) = 0.261; Y(14) = 0.277; Y(15) = 0.290; Y(16) = 0.296; Y(17) = 0.303; Y(18) = 0.309; Y(19) = 0.314; Y(20) = 0.322; Y(21) = 0.328; Y(22) = 0.331; Y(24) = 0.337; Y(26) = 0.346;
@@ -214,10 +221,10 @@ Kh_ring = 1 + Cmc*(Cpf_ring*Cpm + Cma*Ce);
 % AUTOMATED
 mt = m;     %Transverse metric module = module for spur gears %mm
 
-tr_sun = 2.5*m;       %Rim thickness, based on CAD
-tr_planet1 = 2.5*m;     %mm
-tr_planet2 = 2.5*m;
-tr_ring = 2.5*m;
+tr_sun = 4*m;       %Rim thickness, based on CAD
+tr_planet1 = 4*m;     %mm
+tr_planet2 = 4*m;
+tr_ring = 4*m;
 ht_sun = m*2.25;       %Tooth height, based on CAD (CALCULATE MAYBE)
 ht_planet1 = m*2.25;    %mm
 ht_planet2 = m*2.25;
@@ -263,10 +270,10 @@ Zi_planet2 = (cos(phit)*sin(phit)/(2*mn))*mg_planet2_ring/(mg_planet2_ring-1);
 Zi_ring = Zi_planet2;
 
 %Lewis Bending Equation (Eq 14-8)
-sigma_sun = (Kv_sun*Wt_sun)/(F*m*Y_sun);    %N/(mm*mm) = MPa
-sigma_planet1 = (Kv_planet1*Wt_planet1)/(F*m*Y_planet1);
-sigma_planet2 = (Kv_planet2*Wt_planet2)/(F*m*Y_planet2);
-sigma_ring = (Kv_ring*Wt_ring)/(F*m*Y_ring);
+sigma_sun = (Kv_lsun*Wt_sun)/(F*m*Y_sun);    %N/(mm*mm) = MPa
+sigma_planet1 = (Kv_lplanet1*Wt_planet1)/(F*m*Y_planet1);
+sigma_planet2 = (Kv_lplanet2*Wt_planet2)/(F*m*Y_planet2);
+sigma_ring = (Kv_lring*Wt_ring)/(F*m*Y_ring);
 
 % AUTOMATED     %N/(mm*mm) = MPa
 AGMA_bs_sun = abs(Wt_sun*Ko*Kv_sun*Ks_sun*(1/(b*mt))*(Kh_sun*Kb_sun/Yj_sun));   

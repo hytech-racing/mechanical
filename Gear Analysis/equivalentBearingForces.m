@@ -23,8 +23,8 @@ a = 3; %Constant for ball bearings
 %Coordinates
 %Axis System: Wheel Center@Ground
 loc_F_data = [0, 0, 0];
-loc_bearing1 = [0, 0.02975, 0.2];
-loc_bearing2 = [0, 0.08075, 0.2];
+loc_bearing1 = [0, 0.02, 0.2];
+loc_bearing2 = [0, 0.058495, 0.2];
 loc_b1_b2 = abs(loc_bearing2-loc_bearing1);
 
 %Mirror Inner wheel axis system about xz-plane

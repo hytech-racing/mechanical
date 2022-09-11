@@ -41,7 +41,7 @@ omega_ring = 0;
 T_motor = 21;
 T_sun = T_motor/3;         %Torque at each gear tooth [Nm]
 T_planet1 = (-n_planet1/n_sun) * T_sun;
-T_planet2 = (n_planet2/n_planet1) * T_planet1;
+T_planet2 = T_planet1;
 T_ring = (-n_ring/n_planet2) * T_planet2; %using n for gear ratios only holds true if module is consistent across stages
 
 radiusTire = 0.2; %m

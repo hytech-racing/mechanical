@@ -18,9 +18,9 @@
 
 %% Inputs
 gear_ratio = 12;
-F = 12;
+F = 14;
 m = 0.7;
-Q = 10;
+Q = 12;
 
 n_sun_min = 20;
 n_sun_max = 60;

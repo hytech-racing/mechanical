@@ -40,6 +40,8 @@ omega_planet2 = -omega_carrier*(d_carrier/d_planet2);
 omega_planet1 = omega_planet2;  %FIX
 omega_ring = 0;
 
+Hb = 300; %Nitrided, through hardened 4140
+
 %% Gear Parameters Checks
 %Both should be 1 so that all gear teeth wear evenly
 gcd1 = gcd(n_sun, n_planet1);
@@ -55,13 +57,7 @@ spacing_int = (2*n_sun+2*n_planet1)/3;
 %Interference Check
 n_planet1_max = (n_sun+n_planet1)*sin(pi/3)-2;
 
-% radiusTire = 0.2; %m
-% distanceTraveled = 1000 * 1000; %1000km *temporarily 10,000,000km
-% tireRotations = distanceTraveled ./ (pi*radiusTire*2);
-
-Hb = 300; %Nitrided, through hardened 4140
-
-%% Gear Tooth Forces
+%% Gear Tooth Forces in each time step
 %Wt: Tangential force on gear tooth, force parallel to the tangent of the pitch circle (must be the same for meshing teeth):
 Wt_sun_planet1 = abs(T_planet1*1000 / (0.5*d_planet1))/3;  %Nm*1000/mm = Nm/m = N
 Wt_ring_planet2 = abs(T_planet2*1000 / (0.5*d_planet2))/3;
@@ -95,8 +91,8 @@ Ytheta_planet1 = 1;     %Factor, no units
 Ytheta_planet2 = 1;
 Ytheta_ring = 1;
 
-Yz_sun = 1;          %Reliability factor (Table 14-10)
-Yz_planet1 = 1;      %Factor, no units
+Yz_sun = 1;             %Reliability factor (Table 14-10)
+Yz_planet1 = 1;         %Factor, no units
 Yz_planet2 = 1;
 Yz_ring = 1;
 
@@ -106,116 +102,104 @@ Zw_planet2 = 1;
 Zw_ring = 1;
 
 %% Calculation of AGMA bending and contact stresses factors which do not vary with torque/speed:
+%Overload Factor
+    Ko = 1.35;          %Uniform load on motor side, medium impact load on load side (Figure 14-17)
 
-% Factors used in both AGMA bending and contact stress calculations
-% Wt: Tangential transmitted load [N] (Calculated in Gear Tooth Forces section); VARIES BY GEAR
-% Ko: Overload Factor; UNIFORM
-% Kv: Dynamic Factor; VARIES BY GEAR
-% Ks: Size Factor; VARIES BY GEAR
-% b: Face width of the narrower member (chosen gears have same F in this case) => b = F; UNIFORM
-% Kh: Load Distribution Factor; VARIES BY GEAR
+%Size Factor
+    Y(12) = 0.245; Y(13) = 0.261; Y(14) = 0.277; Y(15) = 0.290; Y(16) = 0.296; Y(17) = 0.303; Y(18) = 0.309; Y(19) = 0.314; Y(20) = 0.322; Y(21) = 0.328; Y(22) = 0.331; Y(24) = 0.337; Y(26) = 0.346;
+    Y(28) = 0.353; Y(30) = 0.359; Y(34) = 0.371; Y(38) = 0.384; Y(43) = 0.397; Y(50) = 0.409; Y(60) = 0.422; Y(75) = 0.435; Y(100) = 0.447; Y(150) = 0.460; Y(300) = 0.472; Y(400) = 0.48; Y(1000) = 0.485;
+    n_Y = [12,13,14,15,16,17,18,19,20,21,22,24,26,28,30,34,38,43,50,60,75,100,150,300,400,1000];
+    [~,closestIndex_sun] = min(abs(n_sun - n_Y));
+    Y_sun = Y(n_Y(closestIndex_sun));                             %Lewis form factor (Table 14-2)
+    [~,closestIndex_planet1] = min(abs(n_planet1 - n_Y));
+    Y_planet1 = Y(n_Y(closestIndex_planet1));
+    [~,closestIndex_planet2] = min(abs(n_planet2 - n_Y));
+    Y_planet2 = Y(n_Y(closestIndex_planet2));
+    [~,closestIndex_ring] = min(abs(n_ring - n_Y));
+    Y_ring = Y(n_Y(closestIndex_ring));
+    F_in = m/25.4;
+    m_in = m/25.4;
+    Ks_sun = 1.192*((F_in*sqrt(Y_sun)*m_in)^(0.0535));    %Size factor (Section 14-10)
+    Ks_planet1 = 1.192*((F_in*sqrt(Y_planet1)*m_in)^(0.0535));
+    Ks_planet2 = 1.192*((F_in*sqrt(Y_planet2)*m_in)^(0.0535));
+    Ks_ring = 1.192*((F_in*sqrt(Y_ring)*m_in)^(0.0535));
+    if Ks_sun < 1; Ks_sun = 1; end; if Ks_planet1 < 1; Ks_planet1 = 1; end; if Ks_planet2 < 1; Ks_planet2 = 1; end; if Ks_ring < 1; Ks_ring = 1; end
 
-% Factors used only in AGMA bending stress caclulation: 
-% mt: Transverse metric module (Same as P for spur gears); UNIFORM
-% Kb: Rim-Thickness Factor; VARIES BY GEAR
-% Yj: Geometry Factor for Bending Strength; VARIES BY GEAR
+% b: Face width of the narrower member (chosen gears have same F in this case) => b = F;
+    b = F;
 
-% Factors used only in AGMA contact stress calculation:
-% Ze: Elastic Coefficient; UNIFORM
-% Zr: Surface Condition Factor; UNIFORM
-% dw1: Pitch Diameter of the pinion; VARIES BY GEAR PAIRING
-% Zi: Geometry Factor for Pitting Resistance; VARIES BY GEAR PAIRING
+% Kh: Load Distribution Factor
+    Cmc = 1;                            %Uncrowned teeth (Eq 14-31)
+    Cpf_sun = F/(10*d_sun) -0.025;      %Eq 14-32, F<1"
+    Cpf_planet1 = F/(10*d_planet1) -0.025;      %mm/mm = factor
+    Cpf_planet2 = F/(10*d_planet2) -0.025;
+    Cpf_ring = F/(10*d_ring) -0.025;
 
-Ko = 1.35;          %Overload factor, uniform load on motor side, medium impact load on load side (Figure 14-17)
+    if F/(10*d_sun) < 0.05; Cpf_sun = 0.025; end            %Note below Eq 14-32 check
+    if F/(10*d_planet1) < 0.05; Cpf_planet1 = 0.025; end
+    if F/(10*d_planet2) < 0.05; Cpf_planet2 = 0.025; end
+    if F/(10*d_ring) < 0.05; Cpf_ring = 0.025; end
 
-Y(12) = 0.245; Y(13) = 0.261; Y(14) = 0.277; Y(15) = 0.290; Y(16) = 0.296; Y(17) = 0.303; Y(18) = 0.309; Y(19) = 0.314; Y(20) = 0.322; Y(21) = 0.328; Y(22) = 0.331; Y(24) = 0.337; Y(26) = 0.346;
-Y(28) = 0.353; Y(30) = 0.359; Y(34) = 0.371; Y(38) = 0.384; Y(43) = 0.397; Y(50) = 0.409; Y(60) = 0.422; Y(75) = 0.435; Y(100) = 0.447; Y(150) = 0.460; Y(300) = 0.472; Y(400) = 0.48; Y(1000) = 0.485;
-n_Y = [12,13,14,15,16,17,18,19,20,21,22,24,26,28,30,34,38,43,50,60,75,100,150,300,400,1000];
-[~,closestIndex_sun] = min(abs(n_sun - n_Y));
-Y_sun = Y(n_Y(closestIndex_sun));                             %Lewis form factor (Table 14-2)
-[~,closestIndex_planet1] = min(abs(n_planet1 - n_Y));
-Y_planet1 = Y(n_Y(closestIndex_planet1));
-[~,closestIndex_planet2] = min(abs(n_planet2 - n_Y));
-Y_planet2 = Y(n_Y(closestIndex_planet2));
-[~,closestIndex_ring] = min(abs(n_ring - n_Y));
-Y_ring = Y(n_Y(closestIndex_ring));
-F_in = m/25.4;
-m_in = m/25.4;
-Ks_sun = 1.192*((F_in*sqrt(Y_sun)*m_in)^(0.0535));    %Size factor (Section 14-10)
-Ks_planet1 = 1.192*((F_in*sqrt(Y_planet1)*m_in)^(0.0535));
-Ks_planet2 = 1.192*((F_in*sqrt(Y_planet2)*m_in)^(0.0535));
-Ks_ring = 1.192*((F_in*sqrt(Y_ring)*m_in)^(0.0535));
-if Ks_sun < 1; Ks_sun = 1; end; if Ks_planet1 < 1; Ks_planet1 = 1; end; if Ks_planet2 < 1; Ks_planet2 = 1; end; if Ks_ring < 1; Ks_ring = 1; end
+    Cpm = 1.1;                          %For straddle-mounted pinion (Eq 14-33); NOTE: THIS IS NOT OUR CASE. DO RESEARCH
+    A = 0.127; B = 0.0158; C = -0.93e-4;    %Table 14-9; Commercial, enclosed units
+    Cma = A + B*(F/25.4) + C*(F/25.4)^2;    %Eq 14-34)
+    Ce = 1;                             %Eq 14-35
+    Kh_sun = 1 + Cmc*(Cpf_sun*Cpm + Cma*Ce);            %Load Distribution Factor, Eq. 14-30
+    Kh_planet1 = 1 + Cmc*(Cpf_planet1*Cpm + Cma*Ce);    %Factor, no units
+    Kh_planet2 = 1 + Cmc*(Cpf_planet2*Cpm + Cma*Ce);
+    Kh_ring = 1 + Cmc*(Cpf_ring*Cpm + Cma*Ce);
 
-b = F;
+% mt: Transverse metric module (Same as P for spur gears)    
+    mt = m;     %Transverse metric module = module for spur gears %mm
 
-Cmc = 1;                            %Uncrowned teeth (Eq 14-31)
-Cpf_sun = F/(10*d_sun) -0.025;      %Eq 14-32, F<1"
-Cpf_planet1 = F/(10*d_planet1) -0.025;      %mm/mm = factor
-Cpf_planet2 = F/(10*d_planet2) -0.025;
-Cpf_ring = F/(10*d_ring) -0.025;
+% Kb: Rim-Thickness Factor
+    tr_sun = 2.5*m;       %Rim thickness, based on CAD
+    tr_planet1 = 2.5*m;     %mm
+    tr_planet2 = 2.5*m;
+    tr_ring = 2.5*m;
+    ht_sun = m*2.25;       %Tooth height, based on CAD (CALCULATE MAYBE)
+    ht_planet1 = m*2.25;    %mm
+    ht_planet2 = m*2.25;
+    ht_ring = m*2.25;
 
-if F/(10*d_sun) < 0.05; Cpf_sun = 0.025; end            %Note below Eq 14-32 check
-if F/(10*d_planet1) < 0.05; Cpf_planet1 = 0.025; end
-if F/(10*d_planet2) < 0.05; Cpf_planet2 = 0.025; end
-if F/(10*d_ring) < 0.05; Cpf_ring = 0.025; end
+    mb_sun = tr_sun/ht_sun;     %Eq 14-39
+    mb_planet1 = tr_planet1/ht_planet1;     %mm/mm = factor
+    mb_planet2 = tr_planet2/ht_planet2;
+    mb_ring = tr_ring/ht_ring;
+    if mb_sun < 1.2; Kb_sun = 1.6*log(2.242/mb_sun); else; Kb_sun = 1; end      %Kb, rim-thickness factor (Eq 14-40)
+    if mb_planet1 < 1.2; Kb_planet1 = 1.6*log(2.242/mb_planet1); else; Kb_planet1 = 1; end
+    if mb_planet2 < 1.2; Kb_planet2 = 1.6*log(2.242/mb_planet2); else; Kb_planet2 = 1; end
+    if mb_ring < 1.2; Kb_ring = 1.6*log(2.242/mb_ring); else; Kb_ring = 1; end
 
-Cpm = 1.1;                          %For straddle-mounted pinion (Eq 14-33); NOTE: THIS IS NOT OUR CASE. DO RESEARCH
-A = 0.127; B = 0.0158; C = -0.93e-4;    %Table 14-9; Commercial, enclosed units
-Cma = A + B*(F/25.4) + C*(F/25.4)^2;    %Eq 14-34)
-Ce = 1;                             %Eq 14-35
-Kh_sun = 1 + Cmc*(Cpf_sun*Cpm + Cma*Ce);            %Load Distribution Factor, Eq. 14-30
-Kh_planet1 = 1 + Cmc*(Cpf_planet1*Cpm + Cma*Ce);    %Factor, no units
-Kh_planet2 = 1 + Cmc*(Cpf_planet2*Cpm + Cma*Ce);
-Kh_ring = 1 + Cmc*(Cpf_ring*Cpm + Cma*Ce);
+% Yj: Geometry Factor for Bending Strength
+    Yj_sun = 0.4;       % Bending strength geometry factor. Figure 14-6, NOT SURE FOR PLANETARY GEARS
+    Yj_planet1 = 0.425;     %Factor, no units
+    Yj_planet2 = 0.4;
+    Yj_ring = 0.43;
 
-mt = m;     %Transverse metric module = module for spur gears %mm
+% Ze: Elastic Coefficient
+    Ze = 191;   %Elastic Coefficient; Table 14-8, all gears are steel %Coefficient, sqrt(MPa) to get MPa
 
-% NOT AUTOMATED
-tr_sun = 2.5*m;       %Rim thickness, based on CAD
-tr_planet1 = 2.5*m;     %mm
-tr_planet2 = 2.5*m;
-tr_ring = 2.5*m;
-ht_sun = m*2.25;       %Tooth height, based on CAD (CALCULATE MAYBE)
-ht_planet1 = m*2.25;    %mm
-ht_planet2 = m*2.25;
-ht_ring = m*2.25;
+% Zr: Surface Condition Factor
+    Zr = 1;     %Not yet standardized by AGMA, section 14-9 %Factor, no units
 
-mb_sun = tr_sun/ht_sun;     %Eq 14-39
-mb_planet1 = tr_planet1/ht_planet1;     %mm/mm = factor
-mb_planet2 = tr_planet2/ht_planet2;
-mb_ring = tr_ring/ht_ring;
-if mb_sun < 1.2; Kb_sun = 1.6*log(2.242/mb_sun); else; Kb_sun = 1; end      %Kb, rim-thickness factor (Eq 14-40)
-if mb_planet1 < 1.2; Kb_planet1 = 1.6*log(2.242/mb_planet1); else; Kb_planet1 = 1; end
-if mb_planet2 < 1.2; Kb_planet2 = 1.6*log(2.242/mb_planet2); else; Kb_planet2 = 1; end
-if mb_ring < 1.2; Kb_ring = 1.6*log(2.242/mb_ring); else; Kb_ring = 1; end
+% dw1: Pitch Diameter of the pinion
+    dw1_sun = d_sun;    %Section 14-3
+    dw1_planet1 = dw1_sun;  %mm
+    dw1_planet2 = d_planet2;
+    dw1_ring = dw1_planet2;
 
-% NOT AUTOMATED
-Yj_sun = 0.4;       % Bending strength geometry factor. Figure 14-6, NOT SURE FOR PLANETARY GEARS
-Yj_planet1 = 0.425;     %Factor, no units
-Yj_planet2 = 0.4;
-Yj_ring = 0.43;
+% Zi: Geometry Factor for Pitting Resistance
+    phit = phi; %spur gears
+    mn = 1; %spur gears
+    mg_sun_planet1 = n_planet1/n_sun;  
+    mg_planet2_ring = n_ring/n_planet2;
+    Zi_sun = (cos(phit)*sin(phit)/(2*mn))*mg_sun_planet1/(mg_sun_planet1+1);    %Surface Strength Geometry Factor. Eq 14-23
+    Zi_planet1 = Zi_sun;
+    Zi_planet2 = (cos(phit)*sin(phit)/(2*mn))*mg_planet2_ring/(mg_planet2_ring-1);
+    Zi_ring = Zi_planet2;
 
-Ze = 191;   %Elastic Coefficient; Table 14-8, all gears are steel %Coefficient, sqrt(MPa) to get MPa
-
-Zr = 1;     %Not yet standardized by AGMA, section 14-9 %Factor, no units
-
-dw1_sun = d_sun;    %Section 14-3
-dw1_planet1 = dw1_sun;  %mm
-dw1_planet2 = d_planet2;
-dw1_ring = dw1_planet2;
-
-%Factor, no units
-phit = phi; %spur gears
-mn = 1; %spur gears
-mg_sun_planet1 = n_planet1/n_sun;  
-mg_planet2_ring = n_ring/n_planet2;
-Zi_sun = (cos(phit)*sin(phit)/(2*mn))*mg_sun_planet1/(mg_sun_planet1+1);    %Surface Strength Geometry Factor. Eq 14-23
-Zi_planet1 = Zi_sun;
-Zi_planet2 = (cos(phit)*sin(phit)/(2*mn))*mg_planet2_ring/(mg_planet2_ring-1);
-Zi_ring = Zi_planet2;
-
-%% Loop to Apply Miner's Rule 
+%% Loop to Apply Miner's Rule (Takes Into Account Factors Dependent on Velocity and Torque)
 % https://www.weibull.com/hotwire/issue116/hottopics116.htm
 reliable_cycles_sun = [];
 reliable_cycles_planet1 = [];

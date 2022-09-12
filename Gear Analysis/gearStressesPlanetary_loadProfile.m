@@ -2,12 +2,11 @@
 m = 0.7;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
-F = 12;               %Face width of gears [mm]
+F = 10;               %Face width of gears [mm]
 
 n_sun = 26;    %Number of teeth on each gear
 n_planet1 = 61;
 n_planet2 = 23;
-
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
 d_sun = n_sun.*m;            %Pitch diameter of each gear [mm]
@@ -261,10 +260,10 @@ for i = [1:length(T_sun)-1]
     
 end
 
-C_sun = sum(cycles_sun'/reliable_cycles_sun);
-C_planet1 = sum(cycles_planet1'/reliable_cycles_planet1);
-C_planet2 = sum(cycles_planet2'/reliable_cycles_planet2);
-C_ring = sum(cycles_ring'/reliable_cycles_ring);
+C_sun = sum(cycles_sun'./reliable_cycles_sun);
+C_planet1 = sum(cycles_planet1'./reliable_cycles_planet1);
+C_planet2 = sum(cycles_planet2'./reliable_cycles_planet2);
+C_ring = sum(cycles_ring'./reliable_cycles_ring);
 
 if C_sun > 1; fprintf('The sun gear failed!');
 elseif C_planet1 > 1; fprintf('Planet gear 1 failed!');

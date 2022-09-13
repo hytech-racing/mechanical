@@ -2,11 +2,11 @@
 m = 0.7;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
-F = 10;               %Face width of gears [mm]
+F = 12;               %Face width of gears [mm]
 
-n_sun = 26;    %Number of teeth on each gear
+n_sun = 25;    %Number of teeth on each gear
 n_planet1 = 61;
-n_planet2 = 23;
+n_planet2 = 24;
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
 d_sun = n_sun.*m;            %Pitch diameter of each gear [mm]
@@ -16,24 +16,24 @@ d_ring = n_ring.*m;
 d_carrier = d_sun+d_planet1;
 
 %% Lap Sim
-lapSim = load('lapSimResult_8.14.22.mat');
-dist = lapSim.Result.dist(2:end) - lapSim.Result.dist(1:end-1); %distance traveled in each time step
-rotations_tire = dist/(pi*0.2); %tire rotations in each time step
+load('Result.mat');
+diff_dist = [0;diff(Result.dist)]; %distance traveled in each time step
+rotations_tire = diff_dist/(2*pi*0.2); %tire rotations in each time step
+tire_radius = 0.2; % [m]
 
-cycles_sun = 3*rotations_tire*(gear_ratio-1); %% NOT SURE WHY WE HAVE GEAR RATIO -1 ????
-cycles_planet1 = (cycles_sun/3) * n_planet1/n_sun;
-cycles_ring = cycles_sun*3;
-cycles_planet2 = (cycles_ring/3) * n_planet2/n_ring;
+gear_ratio = ((d_planet1*d_ring) / (d_planet2*d_sun)) + 1;
+cycles_per_step_sun = 3*rotations_tire*(gear_ratio-1); %% NOT SURE WHY WE HAVE GEAR RATIO -1 ????
+cycles_per_step_planet1 = (cycles_per_step_sun/3) * d_sun/d_planet1;
+cycles_per_step_ring = rotations_tire*3;
+cycles_per_step_planet2 = rotations_tire * d_ring/d_planet2;
 
-T_sun = mean(lapSim.Result.T,2); %taking an average of the 4 tires 
-T_planet1 = (-n_planet1/n_sun) * T_sun;
+T_sun = mean(Result.T,2); %taking an average of the 4 tires 
+T_planet1 = (-d_planet1/d_sun) * T_sun / 3;
 T_planet2 = T_planet1;
-T_ring = (-n_ring/n_planet2) * T_planet2; %using n for gear ratios only holds true if module is consistent across stages
+T_ring = (-d_ring/d_planet2) * T_planet2 * 3; %using n for gear ratios only holds true if module is consistent across stages
 
-gear_ratio = ((n_planet1*n_ring) / (n_planet2*n_sun)) + 1;
-
-RPM_tire = rotations_tire * (60/0.001); %Rotation of the tire per time step * number of time steps in a minute
-omega_sun = RPM_tire * gear_ratio * (2*pi/60);  %Angular velocity in rad/s (20,000 RPM = max motor speed)
+omega_tire= Result.v/tire_radius; % rad/s
+omega_sun = omega_tire * gear_ratio;  %Angular velocity in rad/s (20,000 RPM = max motor speed)
 omega_carrier = omega_sun / gear_ratio;
 omega_planet2 = -omega_carrier*(d_carrier/d_planet2);
 omega_planet1 = omega_planet2;  %FIX
@@ -41,25 +41,25 @@ omega_ring = 0;
 
 Hb = 300; %Nitrided, through hardened 4140
 
-%% Gear Parameters Checks
-%Both should be 1 so that all gear teeth wear evenly
-gcd1 = gcd(n_sun, n_planet1);
-gcd2 = gcd(n_planet2, n_ring);
-
-%Min gear tooth check
-n_min = 2*m/((sin(phi)).^2); %minimum to prevent undercutting
-n_sun_min = (16+(m.*1.25).*2)/m;
-
-%Even Spacing Check
-spacing_int = (2*n_sun+2*n_planet1)/3;
-
-%Interference Check
-n_planet1_max = (n_sun+n_planet1)*sin(pi/3)-2;
+%% Gear Parameters Checks (Not Used)
+% %Both should be 1 so that all gear teeth wear evenly
+% gcd1 = gcd(n_sun, n_planet1);
+% gcd2 = gcd(n_planet2, n_ring);
+% 
+% %Min gear tooth check
+% n_min = 2*m/((sin(phi)).^2); %minimum to prevent undercutting
+% n_sun_min = (16+(m.*1.25).*2)/m;
+% 
+% %Even Spacing Check
+% spacing_int = (2*n_sun+2*n_planet1)/3;
+% 
+% %Interference Check
+% n_planet1_max = (n_sun+n_planet1)*sin(pi/3)-2;
 
 %% Gear Tooth Forces in each time step
 %Wt: Tangential force on gear tooth, force parallel to the tangent of the pitch circle (must be the same for meshing teeth):
-Wt_sun_planet1 = abs(T_planet1*1000 / (0.5*d_planet1))/3;  %Nm*1000/mm = Nm/m = N
-Wt_ring_planet2 = abs(T_planet2*1000 / (0.5*d_planet2))/3;
+Wt_sun_planet1 = abs(T_planet1*1000 / (0.5*d_planet1));  %Nm*1000/mm = Nm/m = N
+Wt_ring_planet2 = abs(T_planet2*1000 / (0.5*d_planet2));
 
 Wt_sun = Wt_sun_planet1;
 Wt_planet1 = Wt_sun_planet1;
@@ -171,10 +171,10 @@ Zw_ring = 1;
     if mb_ring < 1.2; Kb_ring = 1.6*log(2.242/mb_ring); else; Kb_ring = 1; end
 
 % Yj: Geometry Factor for Bending Strength
-    Yj_sun = 0.4;       % Bending strength geometry factor. Figure 14-6, NOT SURE FOR PLANETARY GEARS
+    Yj_sun = 0.36;       % Bending strength geometry factor. Figure 14-6, NOT SURE FOR PLANETARY GEARS
     Yj_planet1 = 0.425;     %Factor, no units
-    Yj_planet2 = 0.4;
-    Yj_ring = 0.43;
+    Yj_planet2 = 0.375;
+    Yj_ring = 0.445;
 
 % Ze: Elastic Coefficient
     Ze = 191;   %Elastic Coefficient; Table 14-8, all gears are steel %Coefficient, sqrt(MPa) to get MPa
@@ -209,17 +209,17 @@ Q = 10;
 B = 0.25*(12-Q)^(2/3);
 A = 50 + 56*(1-B);
 
-for i = [1:length(T_sun)-1]
+for i = 1:length(T_sun)
     
     %Find Kv for the pitch line velocity of the current time step
     V_sun = abs(d_sun/(2*1000) * omega_sun(i));                            %Pitch line velocity [m/s] 
     V_planet1 = abs(d_planet1/(2*1000) * omega_planet1(i));                %mm*rad/(s*1000) = m*rad/s = m/s
     V_planet2 = abs(d_planet2/(2*1000) * omega_planet2(i));
     V_ring = abs(d_ring/(2*1000) * omega_ring);
-    Kv_sun_comp = ((A+sqrt(200*V_sun))/A)^B;
-    Kv_planet1_comp = ((A+sqrt(200*V_planet1))/A)^B;
-    Kv_planet2_comp = ((A+sqrt(200*V_planet2))/A)^B;
-    Kv_ring_comp = ((A+sqrt(200*V_ring))/A)^B;
+    Kv_sun = ((A+sqrt(200*V_sun))/A)^B;
+    Kv_planet1 = ((A+sqrt(200*V_planet1))/A)^B;
+    Kv_planet2 = ((A+sqrt(200*V_planet2))/A)^B;
+    Kv_ring = ((A+sqrt(200*V_ring))/A)^B;
     
     %Calclate actual bending stress for this time step
     AGMA_bs_sun = abs(Wt_sun(i)*Ko*Kv_sun*Ks_sun*(1/(b*mt))*(Kh_sun*Kb_sun/Yj_sun));   
@@ -251,7 +251,7 @@ for i = [1:length(T_sun)-1]
     reliable_cycles_planet21 = (Yn_planet2/3.517)^(1/-0.0817);
     reliable_cycles_planet22 = (Zn_planet2/1.249)^(1/-0.0138);
     reliable_cycles_planet2 = [reliable_cycles_planet2, max(reliable_cycles_planet21,reliable_cycles_planet22)];
-    
+
     Yn_ring = (AGMA_bs_ring * Sf/St) * Ytheta_ring * Yz_ring;
     Zn_ring = (AGMA_cs_ring * Sh/Sc) * (Ytheta_ring * Yz_ring / Zw_ring);
     reliable_cycles_ring1 = (Yn_ring/3.517)^(1/-0.0817);
@@ -260,14 +260,15 @@ for i = [1:length(T_sun)-1]
     
 end
 
-C_sun = sum(cycles_sun'./reliable_cycles_sun);
-C_planet1 = sum(cycles_planet1'./reliable_cycles_planet1);
-C_planet2 = sum(cycles_planet2'./reliable_cycles_planet2);
-C_ring = sum(cycles_ring'./reliable_cycles_ring);
+C_sun = (1000/22)*sum(cycles_per_step_sun'./reliable_cycles_sun);
+C_planet1 = (1000/22)*sum(cycles_per_step_planet1'./reliable_cycles_planet1);
+C_planet2 = (1000/22)*sum(cycles_per_step_planet2'./reliable_cycles_planet2);
+C_ring = (1000/22)*sum(cycles_per_step_ring'./reliable_cycles_ring);
 
-if C_sun > 1; fprintf('The sun gear failed!');
-elseif C_planet1 > 1; fprintf('Planet gear 1 failed!');
-elseif C_planet2 > 1; fprintf('Planet gear 2 failed!');
-elseif C_ring > 1; fprintf('The ring gear failed!');
-else; fprintf('The gears succeeded!'); end
+success = 1;
+if C_sun > 1; fprintf('The sun gear failed!\n');success = 0; end
+if C_planet1 > 1; fprintf('Planet gear 1 failed!\n');success = 0; end
+if C_planet2 > 1; fprintf('Planet gear 2 failed!\n');success = 0; end
+if C_ring > 1; fprintf('The ring gear failed!\n');success = 0; end
+if success; fprintf('The gears succeeded!\n'); end
 fprintf('\n');

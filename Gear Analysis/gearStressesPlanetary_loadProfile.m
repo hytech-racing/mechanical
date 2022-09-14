@@ -39,8 +39,6 @@ omega_planet2 = -omega_carrier*(d_carrier/d_planet2);
 omega_planet1 = omega_planet2;  %FIX
 omega_ring = 0;
 
-Hb = 300; %Nitrided, through hardened 4140
-
 %% Gear Parameters Checks (Not Used)
 % %Both should be 1 so that all gear teeth wear evenly
 % gcd1 = gcd(n_sun, n_planet1);
@@ -75,10 +73,7 @@ W_sun_planet1 = Wt_sun_planet1 / cos(phi);      %N
 W_ring_planet2 = Wt_ring_planet2 / cos(phi);
 
 %% Calculation of AGMA allowable stresses factors which do not vary with torque/speed:
-%St = 0.568*Hb + 83.8; %Bending strength of nitrided through hardened steel (Figure 14-3) %MPa = %MPa = N/mm^2 + MPa
-%Sc = 2.22*Hb + 200; %Contact strength (Figure 14-5) %MPa = N/mm^2 + MPa
-
-St = 517.1068;
+St = 517.1068;      %See Shigley's Grade 3 Caruburized and Hardened Steel (Tables 14-3 and 14-6)
 Sc = 1896.05826;
 
 FoS = 1.25; %Factor of safety
@@ -272,3 +267,23 @@ if C_planet2 > 1; fprintf('Planet gear 2 failed!\n');success = 0; end
 if C_ring > 1; fprintf('The ring gear failed!\n');success = 0; end
 if success; fprintf('The gears succeeded!\n'); end
 fprintf('\n');
+
+%% Hardening Requirements: See https://wp.kntu.ac.ir/asgari/AGMA%202001-D04.pdf (referenced by Shigley's tables 14-3 and 14-6)
+Uh = 6.4*10^6; %lb/in^2; hardening process factor for carburized and hardened
+Sc = Sc*145.038; %Converted from MPa to lb/in^2
+d_sun = d_sun/25.4; %mm to in
+d_planet1 = d_planet1/25.4;
+d_planet2 = d_planet2/25.4;
+d_ring = d_ring/25.4;
+Cg1 = n_planet1/(n_planet1 + n_sun);
+Cg2 = n_ring/(n_ring - n_planet2);
+he_min1 = Cg1*(Sc*d_planet1*sin(phit))/ Uh;
+he_min2 = Cg2*(Sc*d_ring*sin(phit))/Uh;
+he_min = max(he_min1, he_min2);
+fprintf('Minimum effective case depth at pitch line of gears = %f\n', he_min);
+
+he_max1 = 0.4*m;
+to = 0.5/25.4; %The smallest tooth thickness at the top land of any of the gears
+he_max2 = 0.56*to; 
+he_max = min(he_max1,he_max2);
+fprintf('Maximum effective case depth at pitch line of gears = %f\n', he_max);

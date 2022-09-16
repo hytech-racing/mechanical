@@ -1,8 +1,8 @@
 %% Gear Definitions
-m = 0.7;              %Module [mm]
+m = 0.75;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
-F = 12;               %Face width of gears [mm]
+F = 15;               %Face width of gears [mm]
 
 n_sun = 25;    %Number of teeth on each gear
 n_planet1 = 61;
@@ -227,32 +227,27 @@ for i = 1:length(T_sun)
     AGMA_cs_planet2 = Ze*sqrt(abs(Wt_planet2(i)*Ko*Kv_planet2*Ks_planet2*Kh_planet2*Zr/(dw1_planet2*b*Zi_planet2)));
     AGMA_cs_ring = Ze*sqrt(abs(Wt_ring(i)*Ko*Kv_ring*Ks_ring*Kh_ring*Zr/(dw1_ring*b*Zi_ring)));
     
+if AGMA_bs_planet2 > 1000
+    hhh = 1;
+end
+
     %Set allowable stress equal to the actual stress, then reverse the
     %allowable stress formulas to find the number of cycles 
     Yn_sun = (AGMA_bs_sun * Sf/St) * Ytheta_sun * Yz_sun;
     Zn_sun = (AGMA_cs_sun * Sh/Sc) * (Ytheta_sun * Yz_sun / Zw_sun);
-    reliable_cycles_sun1 = (Yn_sun/3.517)^(1/-0.0817);
-    reliable_cycles_sun2 = (Zn_sun/1.249)^(1/-0.0138);
-    reliable_cycles_sun = [reliable_cycles_sun, max(reliable_cycles_sun1,reliable_cycles_sun2)];
+    reliable_cycles_sun = [reliable_cycles_sun, reliableCyclesFunc(Yn_sun,Zn_sun)]; 
     
     Yn_planet1 = (AGMA_bs_planet1 * Sf/St) * Ytheta_planet1 * Yz_planet1;
     Zn_planet1 = (AGMA_cs_planet1 * Sh/Sc) * (Ytheta_planet1 * Yz_planet1 / Zw_planet1);
-    reliable_cycles_planet11 = (Yn_planet1/3.517)^(1/-0.0817);
-    reliable_cycles_planet12 = (Zn_planet1/1.249)^(1/-0.0138);
-    reliable_cycles_planet1 = [reliable_cycles_planet1, max(reliable_cycles_planet11,reliable_cycles_planet12)];
-    
+    reliable_cycles_planet1 = [reliable_cycles_planet1, reliableCyclesFunc(Yn_planet1,Zn_planet1)]; 
+
     Yn_planet2 = (AGMA_bs_planet2 * Sf/St) * Ytheta_planet2 * Yz_planet2;
     Zn_planet2 = (AGMA_cs_planet2 * Sh/Sc) * (Ytheta_planet2 * Yz_planet2 / Zw_planet2);
-    reliable_cycles_planet21 = (Yn_planet2/3.517)^(1/-0.0817);
-    reliable_cycles_planet22 = (Zn_planet2/1.249)^(1/-0.0138);
-    reliable_cycles_planet2 = [reliable_cycles_planet2, max(reliable_cycles_planet21,reliable_cycles_planet22)];
+    reliable_cycles_planet2 = [reliable_cycles_planet2, reliableCyclesFunc(Yn_planet2,Zn_planet2)];
 
     Yn_ring = (AGMA_bs_ring * Sf/St) * Ytheta_ring * Yz_ring;
-    Zn_ring = (AGMA_cs_ring * Sh/Sc) * (Ytheta_ring * Yz_ring / Zw_ring);
-    reliable_cycles_ring1 = (Yn_ring/3.517)^(1/-0.0817);
-    reliable_cycles_ring2 = (Zn_ring/1.249)^(1/-0.0138);
-    reliable_cycles_ring = [reliable_cycles_ring, max(reliable_cycles_ring1,reliable_cycles_ring2)];
-    
+    Zn_ring = (AGMA_cs_ring * Sh/Sc) * (Ytheta_ring * Yz_ring / Zw_ring);    
+    reliable_cycles_ring = [reliable_cycles_ring, reliableCyclesFunc(Yn_ring,Zn_ring)];
 end
 
 C_sun = (1000/22)*sum(cycles_per_step_sun'./reliable_cycles_sun);

@@ -1,6 +1,6 @@
 %Equivalent radial and axial force calculator
 %Eq 11-13
-load('lapSimResult_8.14.22.mat');
+load('Result.mat');
 
 %RI, RO, FI, FO
 %small angle approximation used

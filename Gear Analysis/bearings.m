@@ -21,8 +21,8 @@ C = 49.4e3; %Dynamic load rating in N
 C0 = 40e3; %Static load rating in N
 L10 = 1e6; %L10 life at C is 10^6 revolutions
 
-Fr = 5.038837e+03; %Expected radial load on bearings
-Fa = 5.325829e+02; %Expected axial load on bearings
+Fr = 4.941675e+03; %Expected radial load on bearings
+Fa = 5.221930e+02; %Expected axial load on bearings
 
 a = 3; %Constant for ball bearings 
 V = 1; %Rotation factor for inner ring rotating

@@ -2,11 +2,11 @@
 m = 0.7;              %Module [mm]
 phi = 20;              %Pressure angle in degrees
 phi = deg2rad(phi);    %Pressure angle in rad
-F = 14;                %Face width of gears [mm]
+F = 17;                %Face width of gears [mm]
 
-n_sun = 24;            %Number of teeth on each gear
-n_planet1 = 69;
-n_planet2 = 33;
+n_sun = 27;            %Number of teeth on each gear
+n_planet1 = 66;
+n_planet2 = 27;
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
 d_sun = n_sun.*m;            %Pitch diameter of each gear [mm]

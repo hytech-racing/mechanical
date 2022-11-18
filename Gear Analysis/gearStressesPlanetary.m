@@ -6,14 +6,19 @@
 %_planet2
 %_ring
 
-m = 0.75;              %Module [mm]
+m = 0.7;              %Module [mm]
 phi = 20;           %Pressure angle in degrees
 phi = deg2rad(phi); %Pressure angle in rad
 F = 15;               %Face width of gears [mm]
 
-n_sun = 25;    %Number of teeth on each gear
-n_planet1 = 62;
-n_planet2 = 25;
+n_sun = 27;    %Number of teeth on each gear
+n_planet1 = 66;
+n_planet2 = 27;
+
+% %current
+% n_sun = 27;          
+% n_planet1 = 66;
+% n_planet2 = 27;
 
 n_ring = n_sun+n_planet1+n_planet2; %equation is only true if module is equal in both stages
 
@@ -34,6 +39,8 @@ n_sun_min = (16+(m.*1.25).*2)/m;
 %Even Spacing Check
 spacing_int = (2*n_sun+2*n_planet1)/3;
 even_spacing = floor(spacing_int) == spacing_int;
+sun_spacing = floor(n_sun/3) == n_sun/3;
+ring_spacing = floor(n_ring/3) == n_ring/3;
 
 %Interference Check
 n_planet1_max = (n_sun+n_planet1)*sin(pi/3)-2;
@@ -310,7 +317,18 @@ if even_spacing
 else
     even_spacing_txt = 'No';
 end
-fprintf('Gear Ratio: %2.4f \ngcd1: %d, gcd2: %d\nEven Spacing: %s\n', gear_ratio, gcd1, gcd2, even_spacing_txt);
+even_spacing_txt = 'ignore';
+if sun_spacing
+    sun_spacing_txt = 'Yes';
+else
+    sun_spacing_txt = 'No';
+end
+if ring_spacing
+    ring_spacing_txt = 'Yes';
+else
+    ring_spacing_txt = 'No';
+end
+fprintf('Gear Ratio: %2.4f \ngcd1: %d, gcd2: %d\nEven Spacing: %s\nSun Spacing: %s\nRing Spacing: %s\n', gear_ratio, gcd1, gcd2, even_spacing_txt, sun_spacing_txt, ring_spacing_txt);
 
 % %% Minimum Brinell Hardness
 % 

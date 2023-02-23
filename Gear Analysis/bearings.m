@@ -4,11 +4,11 @@
 % Refer to Shigley's Mechanical Engineering Design Chapter 11 for more
 % detailed explanations of the analysis strategy
 
-C = 4.57e3; %Dynamic load rating in N
-C0 = 5.7e3; %Static load rating in N
+C = 3.69e3; %Dynamic load rating in N
+C0 = 4.05e3; %Static load rating in N
 L10 = 1e6; %L10 life at C is 10^6 revolutions
 
-F = Wr_sun_planet1*2; %Radial load on bearing, from Wr from gearStressesPlanetary, the number is equal for both stages, so multiply by 2
+F = 1275; %Radial load on bearing, from Wr from gearStressesPlanetary, the number is equal for both stages, so multiply by 2
 a = 10/3; %Constant for roller bearings
 
 L = ((C*L10^(1/a))/F)^a; %Equation 11-1 and 11-2

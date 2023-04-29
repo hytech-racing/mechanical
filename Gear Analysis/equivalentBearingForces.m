@@ -48,7 +48,7 @@ F_1ax = abs(R_1y);
 F_2rad = abs(sqrt(R_2x.^2 + R_2z.^2));
 F_2ax = abs(R_2y);
 
-%Shigley's Eq 11-13
+%Shigley's Eq 11-13 - Variable Loading Formula
 F_1rad_eq_v = (sum(F_1rad.^a.*dist_delta) ./ dist_total).^(1/a);
 F_1ax_eq_v = (sum(F_1ax.^a.*dist_delta) ./ dist_total).^(1/a);
 

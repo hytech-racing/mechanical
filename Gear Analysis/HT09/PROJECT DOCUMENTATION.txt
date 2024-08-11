@@ -1,0 +1,9 @@
+GOAL:
+
+1. Create KissSoft load profile to import into kissSoft for lifetime gear analysis
+	-previously used Result.mat (pretty sure this is a lapsim output)
+	-going to use 2024 competition data for HT09 simulation
+
+2. Calculate stresses in gears via MATLAB Script
+	-attempted for HT07/08, didn't end up using because it always claimed the gears would fail even if kissSoft said they would pass
+

@@ -63,7 +63,7 @@ mask = omega_sun == 0;
 omega_sun_KS = omega_sun;
 omega_sun_KS(mask) = 1e-9;
 sunMatrix = [1/(length(T_sun_KS))*ones(length(T_sun_KS),1), T_sun_KS/21, omega_sun_KS/2094.395]; %2094.395 = (9.549297 RPM per rad/s)/20000
-writematrix(sunMatrix,'sunDataCOMP.dat','Delimiter','space');
+writematrix(sunMatrix,'sunData.dat','Delimiter','space');
 
 
 mask = T_planet2 == 0;
@@ -73,7 +73,7 @@ mask = omega_planet2 == 0;
 omega_planet2_KS = omega_planet2;
 omega_planet2_KS(mask) = 1e-9;
 planet2Matrix = [1/(length(T_planet2_KS))*ones(length(T_planet2_KS),1), T_planet2_KS/21, omega_planet2_KS/2094.395];
-writematrix(planet2Matrix,'planet2DataCOMP.dat','Delimiter','space');
+writematrix(planet2Matrix,'planet2Data.dat','Delimiter','space');
 
 %% Calculating Alternating Bending Factor YM
 T_sun_KS2 = T_sun_KS(2:end);

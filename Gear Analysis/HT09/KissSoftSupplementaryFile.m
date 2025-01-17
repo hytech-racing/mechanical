@@ -48,12 +48,12 @@ T_ring = (-d_ring/d_planet2) * T_planet2;
 
 omega_tire= Result.v/tire_radius; % rad/s
 omega_sun = omega_tire * gear_ratio;  %Angular velocity in rad/s (20,000 RPM = max motor speed)
-omega_planet1 = -omega_sun * (d_planet1/d_sun);
+omega_planet1 = -omega_sun * (d_sun/d_planet1);
 omega_planet2 = omega_planet1;
 omega_ring = omega_tire;
 
 %% Lifecycle
-time_hrs = Result.t(end) * 1000 / 60 / 60;
+time_hrs = Result.t(end) * 200 / 60 / 60        %Number of hours to drive 200km lifetime
 
 %% Exporting Load Profile .dat File
 mask = T_sun == 0;

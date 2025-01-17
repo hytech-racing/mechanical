@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- COPYRIGHT DASSAULT SYSTEMES 2012 -->
+<?xml-stylesheet type="text/xsl" href="C:\Users\Spencer\Documents\GitHub\mechanical\Gear Analysis\KissSoft Files - HT09\Data\PLMExchangeReport.xsl"?>
+<Execution Id="2" Name="PLMImportExperienceFile" version="0.1" status="Succeeded">
+<Set Id="3" Name="ObjectSet">
+<Object Id="75" Oid="AA4718C800009070670EF16C023A92A2" type="Reference"/>
+</Set>
+<DataSource Id="4" Name="DefaultDataSource" type="VPM">
+</DataSource>
+<Set Id="5" Name="GroupSet">
+<OptionSet Id="6" Name="PLMImportExperienceDesign.OptionGroup.Required" nls="Required" filtering="Import">
+<Option Id="16" Name="PLMImportExperienceDesign.Option.Format" Sensitive="T" type="string" isSet="T" value="STEP (*.step)" nls="Format" filtering="Import"/>
+<Option Id="21" Name="PLMImportExperienceDesign.Option.Source" Sensitive="T" type="nls_string" isSet="T" value="PLMImportExperienceDesign.Option.Source.Choice.FileOnDisk" local="File on disk" nls="Source" filtering="Import"/>
+<Option Id="24" Name="PLMImportExperienceDesign.Option.Location" Sensitive="T" type="string" isSet="T" value="C:\Users\Spencer\Downloads\" nls="Location" filtering="Import"/>
+<Option Id="26" Name="PLMImportExperienceDesign.Option.Name" Sensitive="T" type="file" isSet="T" value="99183A540_Top-Lock Distorted-Thread Locknut.STEP" nls="Filename" filtering="Import"/>
+</OptionSet>
+<OptionSet Id="8" Name="PLMImportExperienceDesign.OptionGroup.Option" nls="Options" filtering="Import">
+<OptionSet Id="14" Name="PLMExchangeExperienceReportServices.OptionGroup.Option.Report" nls="Report" filtering="Import">
+<Option Id="50" Name="PLMExchangeExperienceReportServices.Option.Report.Save" Sensitive="T" type="boolean" isSet="T" value="T" nls="Save report" filtering="Import"/>
+<Option Id="57" Name="PLMExchangeExperienceReportServices.Option.Report.Location" Sensitive="T" type="folder" isSet="T" value="C:\Users\Spencer\Documents\GitHub\mechanical\Gear Analysis\KissSoft Files - HT09" nls="Location" filtering="Import"/>
+<Option Id="62" Name="PLMExchangeExperienceReportServices.Option.Report.Name" Sensitive="T" type="string" isSet="T" value="ImportReport_(8)" nls="Report name" filtering="Import"/>
+<Option Id="68" Name="Conversion report" type="folder" isSet="T" value="C:\Users\Spencer\AppData\Local\DassaultSystemes\CATReport\99183A540_Top-Lock Distorted-Thread Locknut.rpt" nls="Conversion report" filtering="PLMImportExperienceFile"/>
+<Option Id="71" Name="Conversion error report" type="folder" isSet="T" value="C:\Users\Spencer\AppData\Local\DassaultSystemes\CATReport\99183A540_Top-Lock Distorted-Thread Locknut.err" nls="Conversion error report" filtering="PLMImportExperienceFile"/>
+</OptionSet>
+</OptionSet>
+</Set>
+</Execution>
